@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C12FDCA913662EE2002AAB94 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12FDCA413662EE2002AAB94 /* audioeffect.cpp */; };
+		C12FDCAA13662EE2002AAB94 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12FDCA613662EE2002AAB94 /* audioeffectx.cpp */; };
+		C12FDCAB13662EE2002AAB94 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12FDCA813662EE2002AAB94 /* vstplugmain.cpp */; };
+		C12FDCB013662F31002AAB94 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12FDCAF13662F31002AAB94 /* Carbon.framework */; };
+		C12FDCB213662F31002AAB94 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12FDCB113662F31002AAB94 /* QuickTime.framework */; };
+		C12FDCDA136630AC002AAB94 /* ResonantLowPass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C12FDCD8136630AC002AAB94 /* ResonantLowPass.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C12FDC7E13662DD6002AAB94 /* ResonantLowPass.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResonantLowPass.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12FDC8013662DD6002AAB94 /* ResonantLowPass-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ResonantLowPass-Info.plist"; sourceTree = "<group>"; };
+		C12FDC8913662EE2002AAB94 /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffect.h; sourceTree = "<group>"; };
+		C12FDC8A13662EE2002AAB94 /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffectx.h; sourceTree = "<group>"; };
+		C12FDC8B13662EE2002AAB94 /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstfxstore.h; sourceTree = "<group>"; };
+		C12FDCA313662EE2002AAB94 /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffeditor.h; sourceTree = "<group>"; };
+		C12FDCA413662EE2002AAB94 /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffect.cpp; sourceTree = "<group>"; };
+		C12FDCA513662EE2002AAB94 /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffect.h; sourceTree = "<group>"; };
+		C12FDCA613662EE2002AAB94 /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffectx.cpp; sourceTree = "<group>"; };
+		C12FDCA713662EE2002AAB94 /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffectx.h; sourceTree = "<group>"; };
+		C12FDCA813662EE2002AAB94 /* vstplugmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vstplugmain.cpp; sourceTree = "<group>"; };
+		C12FDCAD13662F08002AAB94 /* ResonantLowPass_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResonantLowPass_Prefix.pch; sourceTree = "<group>"; };
+		C12FDCAF13662F31002AAB94 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		C12FDCB113662F31002AAB94 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		C12FDCD8136630AC002AAB94 /* ResonantLowPass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResonantLowPass.cpp; sourceTree = "<group>"; };
+		C12FDCD9136630AC002AAB94 /* ResonantLowPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResonantLowPass.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C12FDC7C13662DD6002AAB94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12FDCB013662F31002AAB94 /* Carbon.framework in Frameworks */,
+				C12FDCB213662F31002AAB94 /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C12FDC6A13662D86002AAB94 = {
+			isa = PBXGroup;
+			children = (
+				C12FDCB913662F3F002AAB94 /* source */,
+				C12FDCAE13662F1A002AAB94 /* Frameworks */,
+				C12FDC8613662EBD002AAB94 /* vst_sdk */,
+				C12FDC7F13662DD6002AAB94 /* Products */,
+				C12FDC8013662DD6002AAB94 /* ResonantLowPass-Info.plist */,
+				C12FDCAD13662F08002AAB94 /* ResonantLowPass_Prefix.pch */,
+			);
+			sourceTree = "<group>";
+		};
+		C12FDC7F13662DD6002AAB94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC7E13662DD6002AAB94 /* ResonantLowPass.vst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C12FDC8613662EBD002AAB94 /* vst_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC8713662EE2002AAB94 /* pluginterfaces */,
+				C12FDC8C13662EE2002AAB94 /* public.sdk */,
+			);
+			path = vst_sdk;
+			sourceTree = "<group>";
+		};
+		C12FDC8713662EE2002AAB94 /* pluginterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC8813662EE2002AAB94 /* vst2.x */,
+			);
+			path = pluginterfaces;
+			sourceTree = "<group>";
+		};
+		C12FDC8813662EE2002AAB94 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC8913662EE2002AAB94 /* aeffect.h */,
+				C12FDC8A13662EE2002AAB94 /* aeffectx.h */,
+				C12FDC8B13662EE2002AAB94 /* vstfxstore.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C12FDC8C13662EE2002AAB94 /* public.sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC8D13662EE2002AAB94 /* samples */,
+				C12FDCA113662EE2002AAB94 /* source */,
+			);
+			path = public.sdk;
+			sourceTree = "<group>";
+		};
+		C12FDC8D13662EE2002AAB94 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC8E13662EE2002AAB94 /* vst2.x */,
+			);
+			path = samples;
+			sourceTree = "<group>";
+		};
+		C12FDC8E13662EE2002AAB94 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC8F13662EE2002AAB94 /* adelay */,
+				C12FDC9313662EE2002AAB94 /* again */,
+				C12FDC9613662EE2002AAB94 /* mac */,
+				C12FDC9713662EE2002AAB94 /* minihost */,
+				C12FDC9A13662EE2002AAB94 /* vstxsynth */,
+				C12FDC9E13662EE2002AAB94 /* win */,
+				C12FDC9F13662EE2002AAB94 /* win.vc2003 */,
+				C12FDCA013662EE2002AAB94 /* win.vc6 */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C12FDC8F13662EE2002AAB94 /* adelay */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC9013662EE2002AAB94 /* editor */,
+				C12FDC9213662EE2002AAB94 /* win */,
+			);
+			path = adelay;
+			sourceTree = "<group>";
+		};
+		C12FDC9013662EE2002AAB94 /* editor */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC9113662EE2002AAB94 /* resources */,
+			);
+			path = editor;
+			sourceTree = "<group>";
+		};
+		C12FDC9113662EE2002AAB94 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		C12FDC9213662EE2002AAB94 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C12FDC9313662EE2002AAB94 /* again */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC9413662EE2002AAB94 /* source */,
+				C12FDC9513662EE2002AAB94 /* win */,
+			);
+			path = again;
+			sourceTree = "<group>";
+		};
+		C12FDC9413662EE2002AAB94 /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C12FDC9513662EE2002AAB94 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C12FDC9613662EE2002AAB94 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		C12FDC9713662EE2002AAB94 /* minihost */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC9813662EE2002AAB94 /* source */,
+				C12FDC9913662EE2002AAB94 /* win */,
+			);
+			path = minihost;
+			sourceTree = "<group>";
+		};
+		C12FDC9813662EE2002AAB94 /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C12FDC9913662EE2002AAB94 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C12FDC9A13662EE2002AAB94 /* vstxsynth */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDC9B13662EE2002AAB94 /* resource */,
+				C12FDC9C13662EE2002AAB94 /* source */,
+				C12FDC9D13662EE2002AAB94 /* win */,
+			);
+			path = vstxsynth;
+			sourceTree = "<group>";
+		};
+		C12FDC9B13662EE2002AAB94 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		C12FDC9C13662EE2002AAB94 /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C12FDC9D13662EE2002AAB94 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C12FDC9E13662EE2002AAB94 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C12FDC9F13662EE2002AAB94 /* win.vc2003 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win.vc2003;
+			sourceTree = "<group>";
+		};
+		C12FDCA013662EE2002AAB94 /* win.vc6 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win.vc6;
+			sourceTree = "<group>";
+		};
+		C12FDCA113662EE2002AAB94 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDCA213662EE2002AAB94 /* vst2.x */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C12FDCA213662EE2002AAB94 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDCA313662EE2002AAB94 /* aeffeditor.h */,
+				C12FDCA413662EE2002AAB94 /* audioeffect.cpp */,
+				C12FDCA513662EE2002AAB94 /* audioeffect.h */,
+				C12FDCA613662EE2002AAB94 /* audioeffectx.cpp */,
+				C12FDCA713662EE2002AAB94 /* audioeffectx.h */,
+				C12FDCA813662EE2002AAB94 /* vstplugmain.cpp */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C12FDCAE13662F1A002AAB94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDCAF13662F31002AAB94 /* Carbon.framework */,
+				C12FDCB113662F31002AAB94 /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C12FDCB913662F3F002AAB94 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C12FDCD8136630AC002AAB94 /* ResonantLowPass.cpp */,
+				C12FDCD9136630AC002AAB94 /* ResonantLowPass.h */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C12FDC7D13662DD6002AAB94 /* ResonantLowPass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C12FDC8313662DD6002AAB94 /* Build configuration list for PBXNativeTarget "ResonantLowPass" */;
+			buildPhases = (
+				C12FDC7A13662DD6002AAB94 /* Resources */,
+				C12FDC7B13662DD6002AAB94 /* Sources */,
+				C12FDC7C13662DD6002AAB94 /* Frameworks */,
+				C12FDCC013662F79002AAB94 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ResonantLowPass;
+			productName = ResonantLowPass;
+			productReference = C12FDC7E13662DD6002AAB94 /* ResonantLowPass.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C12FDC6C13662D86002AAB94 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C12FDC6F13662D86002AAB94 /* Build configuration list for PBXProject "ResonantLowPass" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = C12FDC6A13662D86002AAB94;
+			productRefGroup = C12FDC7F13662DD6002AAB94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C12FDC7D13662DD6002AAB94 /* ResonantLowPass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C12FDC7A13662DD6002AAB94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C12FDCC013662F79002AAB94 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "rm -rf $HOME/Library/Audio/Plug-Ins/VST/$PRODUCT_NAME.vst\ncp -r \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.vst\" \"$HOME/Library/Audio/Plug-Ins/VST/$PRODUCT_NAME.vst\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C12FDC7B13662DD6002AAB94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12FDCA913662EE2002AAB94 /* audioeffect.cpp in Sources */,
+				C12FDCAA13662EE2002AAB94 /* audioeffectx.cpp in Sources */,
+				C12FDCAB13662EE2002AAB94 /* vstplugmain.cpp in Sources */,
+				C12FDCDA136630AC002AAB94 /* ResonantLowPass.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C12FDC6D13662D86002AAB94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C12FDC6E13662D86002AAB94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		C12FDC8113662DD6002AAB94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ResonantLowPass_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = vst_sdk;
+				INFOPLIST_FILE = "ResonantLowPass-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ResonantLowPass;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		C12FDC8213662DD6002AAB94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ResonantLowPass_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = vst_sdk;
+				INFOPLIST_FILE = "ResonantLowPass-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ResonantLowPass;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				WRAPPER_EXTENSION = vst;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C12FDC6F13662D86002AAB94 /* Build configuration list for PBXProject "ResonantLowPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12FDC6D13662D86002AAB94 /* Debug */,
+				C12FDC6E13662D86002AAB94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C12FDC8313662DD6002AAB94 /* Build configuration list for PBXNativeTarget "ResonantLowPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12FDC8113662DD6002AAB94 /* Debug */,
+				C12FDC8213662DD6002AAB94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C12FDC6C13662D86002AAB94 /* Project object */;
+}

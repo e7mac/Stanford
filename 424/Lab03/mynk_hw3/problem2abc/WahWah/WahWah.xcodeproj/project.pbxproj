@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1252A1F1366361B0026F4E2 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1252A1A1366361B0026F4E2 /* audioeffect.cpp */; };
+		C1252A201366361B0026F4E2 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1252A1C1366361B0026F4E2 /* audioeffectx.cpp */; };
+		C1252A211366361B0026F4E2 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1252A1E1366361B0026F4E2 /* vstplugmain.cpp */; };
+		C1252A24136636380026F4E2 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1252A23136636380026F4E2 /* Carbon.framework */; };
+		C1252A26136636380026F4E2 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1252A25136636380026F4E2 /* QuickTime.framework */; };
+		C1252A321366365E0026F4E2 /* WahWah.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1252A301366365E0026F4E2 /* WahWah.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C12529F3136635480026F4E2 /* WahWah.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WahWah.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12529F5136635480026F4E2 /* WahWah-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WahWah-Info.plist"; sourceTree = "<group>"; };
+		C12529FC136636070026F4E2 /* WahWah_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WahWah_Prefix.pch; sourceTree = "<group>"; };
+		C12529FF1366361B0026F4E2 /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffect.h; sourceTree = "<group>"; };
+		C1252A001366361B0026F4E2 /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffectx.h; sourceTree = "<group>"; };
+		C1252A011366361B0026F4E2 /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstfxstore.h; sourceTree = "<group>"; };
+		C1252A191366361B0026F4E2 /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffeditor.h; sourceTree = "<group>"; };
+		C1252A1A1366361B0026F4E2 /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffect.cpp; sourceTree = "<group>"; };
+		C1252A1B1366361B0026F4E2 /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffect.h; sourceTree = "<group>"; };
+		C1252A1C1366361B0026F4E2 /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffectx.cpp; sourceTree = "<group>"; };
+		C1252A1D1366361B0026F4E2 /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffectx.h; sourceTree = "<group>"; };
+		C1252A1E1366361B0026F4E2 /* vstplugmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vstplugmain.cpp; sourceTree = "<group>"; };
+		C1252A23136636380026F4E2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		C1252A25136636380026F4E2 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		C1252A301366365E0026F4E2 /* WahWah.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WahWah.cpp; sourceTree = "<group>"; };
+		C1252A311366365E0026F4E2 /* WahWah.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WahWah.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C12529F1136635480026F4E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1252A24136636380026F4E2 /* Carbon.framework in Frameworks */,
+				C1252A26136636380026F4E2 /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C12529DE136635330026F4E2 = {
+			isa = PBXGroup;
+			children = (
+				C1252A2D1366363F0026F4E2 /* source */,
+				C1252A22136636270026F4E2 /* Frameworks */,
+				C12529FB136635E70026F4E2 /* vst_sdk */,
+				C12529F4136635480026F4E2 /* Products */,
+				C12529F5136635480026F4E2 /* WahWah-Info.plist */,
+				C12529FC136636070026F4E2 /* WahWah_Prefix.pch */,
+			);
+			sourceTree = "<group>";
+		};
+		C12529F4136635480026F4E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C12529F3136635480026F4E2 /* WahWah.vst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C12529FB136635E70026F4E2 /* vst_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C12529FD1366361B0026F4E2 /* pluginterfaces */,
+				C1252A021366361B0026F4E2 /* public.sdk */,
+			);
+			path = vst_sdk;
+			sourceTree = "<group>";
+		};
+		C12529FD1366361B0026F4E2 /* pluginterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C12529FE1366361B0026F4E2 /* vst2.x */,
+			);
+			path = pluginterfaces;
+			sourceTree = "<group>";
+		};
+		C12529FE1366361B0026F4E2 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C12529FF1366361B0026F4E2 /* aeffect.h */,
+				C1252A001366361B0026F4E2 /* aeffectx.h */,
+				C1252A011366361B0026F4E2 /* vstfxstore.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C1252A021366361B0026F4E2 /* public.sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A031366361B0026F4E2 /* samples */,
+				C1252A171366361B0026F4E2 /* source */,
+			);
+			path = public.sdk;
+			sourceTree = "<group>";
+		};
+		C1252A031366361B0026F4E2 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A041366361B0026F4E2 /* vst2.x */,
+			);
+			path = samples;
+			sourceTree = "<group>";
+		};
+		C1252A041366361B0026F4E2 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A051366361B0026F4E2 /* adelay */,
+				C1252A091366361B0026F4E2 /* again */,
+				C1252A0C1366361B0026F4E2 /* mac */,
+				C1252A0D1366361B0026F4E2 /* minihost */,
+				C1252A101366361B0026F4E2 /* vstxsynth */,
+				C1252A141366361B0026F4E2 /* win */,
+				C1252A151366361B0026F4E2 /* win.vc2003 */,
+				C1252A161366361B0026F4E2 /* win.vc6 */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C1252A051366361B0026F4E2 /* adelay */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A061366361B0026F4E2 /* editor */,
+				C1252A081366361B0026F4E2 /* win */,
+			);
+			path = adelay;
+			sourceTree = "<group>";
+		};
+		C1252A061366361B0026F4E2 /* editor */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A071366361B0026F4E2 /* resources */,
+			);
+			path = editor;
+			sourceTree = "<group>";
+		};
+		C1252A071366361B0026F4E2 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		C1252A081366361B0026F4E2 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C1252A091366361B0026F4E2 /* again */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A0A1366361B0026F4E2 /* source */,
+				C1252A0B1366361B0026F4E2 /* win */,
+			);
+			path = again;
+			sourceTree = "<group>";
+		};
+		C1252A0A1366361B0026F4E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C1252A0B1366361B0026F4E2 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C1252A0C1366361B0026F4E2 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		C1252A0D1366361B0026F4E2 /* minihost */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A0E1366361B0026F4E2 /* source */,
+				C1252A0F1366361B0026F4E2 /* win */,
+			);
+			path = minihost;
+			sourceTree = "<group>";
+		};
+		C1252A0E1366361B0026F4E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C1252A0F1366361B0026F4E2 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C1252A101366361B0026F4E2 /* vstxsynth */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A111366361B0026F4E2 /* resource */,
+				C1252A121366361B0026F4E2 /* source */,
+				C1252A131366361B0026F4E2 /* win */,
+			);
+			path = vstxsynth;
+			sourceTree = "<group>";
+		};
+		C1252A111366361B0026F4E2 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		C1252A121366361B0026F4E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C1252A131366361B0026F4E2 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C1252A141366361B0026F4E2 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		C1252A151366361B0026F4E2 /* win.vc2003 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win.vc2003;
+			sourceTree = "<group>";
+		};
+		C1252A161366361B0026F4E2 /* win.vc6 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = win.vc6;
+			sourceTree = "<group>";
+		};
+		C1252A171366361B0026F4E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A181366361B0026F4E2 /* vst2.x */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C1252A181366361B0026F4E2 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A191366361B0026F4E2 /* aeffeditor.h */,
+				C1252A1A1366361B0026F4E2 /* audioeffect.cpp */,
+				C1252A1B1366361B0026F4E2 /* audioeffect.h */,
+				C1252A1C1366361B0026F4E2 /* audioeffectx.cpp */,
+				C1252A1D1366361B0026F4E2 /* audioeffectx.h */,
+				C1252A1E1366361B0026F4E2 /* vstplugmain.cpp */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C1252A22136636270026F4E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A23136636380026F4E2 /* Carbon.framework */,
+				C1252A25136636380026F4E2 /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1252A2D1366363F0026F4E2 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C1252A301366365E0026F4E2 /* WahWah.cpp */,
+				C1252A311366365E0026F4E2 /* WahWah.h */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C12529F2136635480026F4E2 /* WahWah */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C12529F8136635480026F4E2 /* Build configuration list for PBXNativeTarget "WahWah" */;
+			buildPhases = (
+				C12529EF136635480026F4E2 /* Resources */,
+				C12529F0136635480026F4E2 /* Sources */,
+				C12529F1136635480026F4E2 /* Frameworks */,
+				C1252A34136636820026F4E2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WahWah;
+			productName = WahWah;
+			productReference = C12529F3136635480026F4E2 /* WahWah.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C12529E0136635330026F4E2 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C12529E3136635330026F4E2 /* Build configuration list for PBXProject "WahWah" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = C12529DE136635330026F4E2;
+			productRefGroup = C12529F4136635480026F4E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C12529F2136635480026F4E2 /* WahWah */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C12529EF136635480026F4E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1252A34136636820026F4E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "rm -rf $HOME/Library/Audio/Plug-Ins/VST/$PRODUCT_NAME.vst\ncp -r \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.vst\" \"$HOME/Library/Audio/Plug-Ins/VST/$PRODUCT_NAME.vst\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C12529F0136635480026F4E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1252A1F1366361B0026F4E2 /* audioeffect.cpp in Sources */,
+				C1252A201366361B0026F4E2 /* audioeffectx.cpp in Sources */,
+				C1252A211366361B0026F4E2 /* vstplugmain.cpp in Sources */,
+				C1252A321366365E0026F4E2 /* WahWah.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C12529E1136635330026F4E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C12529E2136635330026F4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		C12529F6136635480026F4E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WahWah_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = vst_sdk;
+				INFOPLIST_FILE = "WahWah-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WahWah;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		C12529F7136635480026F4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WahWah_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = vst_sdk;
+				INFOPLIST_FILE = "WahWah-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WahWah;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				WRAPPER_EXTENSION = vst;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C12529E3136635330026F4E2 /* Build configuration list for PBXProject "WahWah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12529E1136635330026F4E2 /* Debug */,
+				C12529E2136635330026F4E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C12529F8136635480026F4E2 /* Build configuration list for PBXNativeTarget "WahWah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12529F6136635480026F4E2 /* Debug */,
+				C12529F7136635480026F4E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C12529E0136635330026F4E2 /* Project object */;
+}

@@ -1,0 +1,207 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+
+\usepackage{setspace}\usepackage{graphics}\singlespacing
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\newenvironment{mylisting}{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}{\end{list}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Let's say the input signal changes from 
+\begin_inset Formula $\mu$
+\end_inset
+
+ to 
+\begin_inset Formula $\nu$
+\end_inset
+
+ at 
+\begin_inset Formula $n=0$
+\end_inset
+
+.
+ So when 
+\begin_inset Formula $n<0,\lambda(n)=\mu,$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda(n)^{p} & = & (a\lambda(n-1)^{p}+(1-a)\nu^{p})\\
+\Rightarrow\lambda(0)^{p} & = & (a\mu^{p}+(1-a)\nu^{p})\\
+\Rightarrow\lambda(1)^{p} & = & (a\lambda(0)^{p}+(1-a)\nu^{p})\\
+ & = & (a[(a\mu^{p}+(1-a)\nu^{p})^{1/p}]^{p}+(1-a)\nu^{p})\\
+ & = & (a(a\mu^{p}+(1-a)\nu^{p})+(1-a)\nu^{p})\\
+ & = & (a^{2}\mu^{p}+a(1-a)\nu^{p}+(1-a)\nu^{p})\\
+ & = & (a^{2}\mu^{p}+(a+1)(1-a)\nu^{p})\\
+\Rightarrow\lambda(2){}^{p} & = & (a\lambda(1)^{p}+(1-a)\nu^{p})\\
+ & = & (a[(a^{2}\mu^{p}+(a+1)(1-a)\nu^{p})^{1/p}]^{p}+(1-a)\nu^{p})\\
+ & = & (a(a^{2}\mu^{p}+(a+1)(1-a)\nu^{p})+(1-a)\nu^{p})\\
+ & = & (a^{3}\mu^{p}+(a^{2}+a+1)(1-a)\nu^{p})\\
+\Rightarrow\lambda(n){}^{p} & = & (a^{n+1}\mu^{p}+(a^{n}+a^{n-1}\ldots+a+1)(1-a)\nu^{p})\\
+ & = & (a^{n+1}\mu^{p}+(\frac{1-a^{n+1}}{1-a})(1-a)\nu^{p})\\
+ & = & (a^{n+1}\mu^{p}+(1-a^{n+1})\nu^{p})\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We want to find the time constant when 
+\begin_inset Formula $\lambda(n)$
+\end_inset
+
+ reaches the following value: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\mu+(1-1/e)(\nu-\mu) & = & (a^{n+1}\mu^{p}+(1-a^{n+1})\nu^{p})^{1/p}\\
+\Rightarrow a^{n+1}(\mu^{p}-\nu^{p})+\nu^{p} & = & [\mu+(1-1/e)(\nu-\mu)]^{p}\\
+\Rightarrow a^{n+1} & = & \frac{[\mu+(1-1/e)(\nu-\mu)]^{p}-\nu^{p}}{\mu^{p}-\nu^{p}}\\
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know that 
+\begin_inset Formula $a=e^{1/-\tau_{0}}$
+\end_inset
+
+and therefore 
+\begin_inset Formula $ln(a)=-1/\tau_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When the signal is increasing (attack), 
+\begin_inset Formula $\mu<\nu$
+\end_inset
+
+, and for simplicity, 
+\begin_inset Formula $\mu=0,\nu=1$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+a^{n+1} & = & \frac{\nu^{p}-[\mu+(1-1/e)(\nu-\mu)]^{p}}{\nu^{p}-\mu^{p}}\\
+\Rightarrow a^{n+1} & = & 1-(1-1/e)^{p}\\
+\Rightarrow n+1 & = & \frac{\ln(1-(1-1/e)^{p})}{\ln(a)}\\
+ & \approx & \frac{-(1-1/e)^{p},}{\ln(a)}\\
+\Rightarrow n & = & \tau_{0}(1-1/e)^{p}-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above approximation holds for large p only
+\end_layout
+
+\begin_layout Standard
+When the signal is decreasing (release), 
+\begin_inset Formula $\mu>\nu$
+\end_inset
+
+, and for simplicity, 
+\begin_inset Formula $\mu=1,\nu=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+a^{n+1} & = & \frac{[\mu+(1-1/e)(\nu-\mu)]^{p}-\nu^{p}}{\mu^{p}-\nu^{p}}\\
+\Rightarrow a^{n+1} & = & (1+(1-1/e)(-1))^{p}-0\\
+\Rightarrow n+1 & = & \frac{-p}{\ln(a)}\\
+\Rightarrow n & = & \frac{-p}{\ln(a)}-1\\
+ & n=\tau_{0}p-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

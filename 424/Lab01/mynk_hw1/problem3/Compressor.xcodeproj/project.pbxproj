@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C18C2ABA1368D50E00B023E5 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = C18C2AB91368D50E00B023E5 /* Readme.txt */; };
+		C18C2ABC1368D51900B023E5 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = C18C2ABB1368D51900B023E5 /* Readme.txt */; };
+		C1D8ADF613639BDC004F693A /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D8ADCD13639BDC004F693A /* audioeffect.cpp */; };
+		C1D8ADF713639BDC004F693A /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D8ADCF13639BDC004F693A /* audioeffectx.cpp */; };
+		C1D8ADF813639BDC004F693A /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D8ADD113639BDC004F693A /* vstplugmain.cpp */; };
+		C1D8AE1113639DC2004F693A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D8AE1013639DC2004F693A /* Carbon.framework */; };
+		C1D8AE1313639DC2004F693A /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D8AE1213639DC2004F693A /* QuickTime.framework */; };
+		C1D8AE1613639EDE004F693A /* Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1D8AE1413639EDE004F693A /* Compressor.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C18C2AB91368D50E00B023E5 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		C18C2ABB1368D51900B023E5 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		C1D8AD4F1363998E004F693A /* BasicRMp_Compressor.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicRMp_Compressor.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D8AD511363998E004F693A /* Compressor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Compressor-Info.plist"; sourceTree = "<group>"; };
+		C1D8AD8513639BDC004F693A /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffect.h; sourceTree = "<group>"; };
+		C1D8AD8613639BDC004F693A /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffectx.h; sourceTree = "<group>"; };
+		C1D8AD8713639BDC004F693A /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstfxstore.h; sourceTree = "<group>"; };
+		C1D8ADCC13639BDC004F693A /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aeffeditor.h; sourceTree = "<group>"; };
+		C1D8ADCD13639BDC004F693A /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffect.cpp; sourceTree = "<group>"; };
+		C1D8ADCE13639BDC004F693A /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffect.h; sourceTree = "<group>"; };
+		C1D8ADCF13639BDC004F693A /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffectx.cpp; sourceTree = "<group>"; };
+		C1D8ADD013639BDC004F693A /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioeffectx.h; sourceTree = "<group>"; };
+		C1D8ADD113639BDC004F693A /* vstplugmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vstplugmain.cpp; sourceTree = "<group>"; };
+		C1D8AE0C13639C3F004F693A /* Compressor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Compressor-Prefix.pch"; sourceTree = "<group>"; };
+		C1D8AE1013639DC2004F693A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		C1D8AE1213639DC2004F693A /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		C1D8AE1413639EDE004F693A /* Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compressor.cpp; sourceTree = "<group>"; };
+		C1D8AE1513639EDE004F693A /* Compressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compressor.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1D8AD4D1363998E004F693A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D8AE1113639DC2004F693A /* Carbon.framework in Frameworks */,
+				C1D8AE1313639DC2004F693A /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1D8AD4013639978004F693A = {
+			isa = PBXGroup;
+			children = (
+				C1D8AE0F13639DAF004F693A /* source */,
+				C1D8AE0E13639DA9004F693A /* Frameworks */,
+				C1D8AD5713639AB6004F693A /* vst_sdk */,
+				C1D8AD501363998E004F693A /* Products */,
+				C1D8AD511363998E004F693A /* Compressor-Info.plist */,
+				C1D8AE0C13639C3F004F693A /* Compressor-Prefix.pch */,
+			);
+			sourceTree = "<group>";
+		};
+		C1D8AD501363998E004F693A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8AD4F1363998E004F693A /* BasicRMp_Compressor.vst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1D8AD5713639AB6004F693A /* vst_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8AD8313639BDC004F693A /* pluginterfaces */,
+				C1D8AD8813639BDC004F693A /* public.sdk */,
+			);
+			path = vst_sdk;
+			sourceTree = "<group>";
+		};
+		C1D8AD8313639BDC004F693A /* pluginterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8AD8413639BDC004F693A /* vst2.x */,
+			);
+			path = pluginterfaces;
+			sourceTree = "<group>";
+		};
+		C1D8AD8413639BDC004F693A /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C18C2AB91368D50E00B023E5 /* Readme.txt */,
+				C1D8AD8513639BDC004F693A /* aeffect.h */,
+				C1D8AD8613639BDC004F693A /* aeffectx.h */,
+				C1D8AD8713639BDC004F693A /* vstfxstore.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C1D8AD8813639BDC004F693A /* public.sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8ADCA13639BDC004F693A /* source */,
+			);
+			path = public.sdk;
+			sourceTree = "<group>";
+		};
+		C1D8ADCA13639BDC004F693A /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8ADCB13639BDC004F693A /* vst2.x */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		C1D8ADCB13639BDC004F693A /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C18C2ABB1368D51900B023E5 /* Readme.txt */,
+				C1D8ADCC13639BDC004F693A /* aeffeditor.h */,
+				C1D8ADCD13639BDC004F693A /* audioeffect.cpp */,
+				C1D8ADCE13639BDC004F693A /* audioeffect.h */,
+				C1D8ADCF13639BDC004F693A /* audioeffectx.cpp */,
+				C1D8ADD013639BDC004F693A /* audioeffectx.h */,
+				C1D8ADD113639BDC004F693A /* vstplugmain.cpp */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C1D8AE0E13639DA9004F693A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8AE1013639DC2004F693A /* Carbon.framework */,
+				C1D8AE1213639DC2004F693A /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1D8AE0F13639DAF004F693A /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C1D8AE1413639EDE004F693A /* Compressor.cpp */,
+				C1D8AE1513639EDE004F693A /* Compressor.h */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1D8AD4E1363998E004F693A /* Compressor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1D8AD541363998E004F693A /* Build configuration list for PBXNativeTarget "Compressor" */;
+			buildPhases = (
+				C1D8AD4B1363998E004F693A /* Resources */,
+				C1D8AD4C1363998E004F693A /* Sources */,
+				C1D8AD4D1363998E004F693A /* Frameworks */,
+				C1D8AE3B1363A11D004F693A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Compressor;
+			productName = "___PROJECTNAMEA___";
+			productReference = C1D8AD4F1363998E004F693A /* BasicRMp_Compressor.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1D8AD4213639978004F693A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C1D8AD4513639978004F693A /* Build configuration list for PBXProject "Compressor" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = C1D8AD4013639978004F693A;
+			productRefGroup = C1D8AD501363998E004F693A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1D8AD4E1363998E004F693A /* Compressor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1D8AD4B1363998E004F693A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18C2ABA1368D50E00B023E5 /* Readme.txt in Resources */,
+				C18C2ABC1368D51900B023E5 /* Readme.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1D8AE3B1363A11D004F693A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "rm -rf $HOME/Library/Audio/Plug-Ins/VST/$PRODUCT_NAME.vst\ncp -r \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.vst\" \"$HOME/Library/Audio/Plug-Ins/VST/$PRODUCT_NAME.vst\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1D8AD4C1363998E004F693A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D8ADF613639BDC004F693A /* audioeffect.cpp in Sources */,
+				C1D8ADF713639BDC004F693A /* audioeffectx.cpp in Sources */,
+				C1D8ADF813639BDC004F693A /* vstplugmain.cpp in Sources */,
+				C1D8AE1613639EDE004F693A /* Compressor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C1D8AD4313639978004F693A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				PRODUCT_NAME = BasicCompressor;
+			};
+			name = Debug;
+		};
+		C1D8AD4413639978004F693A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				PRODUCT_NAME = BasicCompressor;
+			};
+			name = Release;
+		};
+		C1D8AD521363998E004F693A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Compressor-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = vst_sdk;
+				INFOPLIST_FILE = "Compressor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BasicRMp_Compressor;
+				SDKROOT = "";
+				VALID_ARCHS = i386;
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		C1D8AD531363998E004F693A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Compressor-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = vst_sdk;
+				INFOPLIST_FILE = "Compressor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BasicRMp_Compressor;
+				SDKROOT = "";
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				WRAPPER_EXTENSION = vst;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1D8AD4513639978004F693A /* Build configuration list for PBXProject "Compressor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1D8AD4313639978004F693A /* Debug */,
+				C1D8AD4413639978004F693A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1D8AD541363998E004F693A /* Build configuration list for PBXNativeTarget "Compressor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1D8AD521363998E004F693A /* Debug */,
+				C1D8AD531363998E004F693A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1D8AD4213639978004F693A /* Project object */;
+}

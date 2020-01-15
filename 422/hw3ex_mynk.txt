@@ -1,0 +1,22 @@
+hw3 extra credit comments
+------------
+
+I only found your cmf.py file. I assumed it was the only submission related to this problem
+Problem 4
+---------
+(a) Missing
+Prove that the power complementarity condition is satisfied if P (z) has only odd
+powers of z other than the constant term which is equal to 1.
+
+(b) Missing
+show that P (z) satisfies the power complementarity condition if a,b,c,d as given
+Write out the form of P (z) in terms of the angles θ and φ.
+
+(c) Your expression of the filter is incorrect (integer division in the expression). Also, the continuous Fourier transform (that you'd have to derive by hand) was expected (cf. solution)
+
+(d) 
+
+(e)
+
+
+

@@ -1,0 +1,41 @@
+hw1 comments
+------------
+Problem				1.a	1.b	1.c	1.d	1.e	1	3.a	3.b	3.c	3.d	3.e	3.f	3	4.a	4.b	4	5	Total
+Sanganeria, Mayank	5	5	5	5	5	25	2	8	3	8	2	7	30	10	15	25	5	85
+Total				5	5	5	5	5	25	2	8	4	8	2	11	35	10	15	25	5	90
+
+
+Problem 1
+---------
+(a) OK
+
+(b) OK
+
+(c) OK
+
+(d) OK
+
+(e) OK
+
+Problem 3
+---------
+(a) OK
+
+(b) OK
+
+(c) The phase terms of the Fourier transform are missing on the Fourier transform (cf. solution).
+
+(d) OK, coherent with (c).
+
+(e) OK
+
+(f) Error: didn't notice the aliasing error at the boundaries.
+
+Problem 4
+---------
+OK
+
+Problem 5
+---------
+OK
+

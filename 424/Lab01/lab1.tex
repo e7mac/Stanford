@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{setspace} 
+\usepackage{graphicx} 
+\usepackage{graphics} 
+\usepackage{wrapfig} 
+\usepackage{verbatim}
+\singlespacing
+
+\renewcommand\thesubsection{\thesection.\alph{subsection}}
+\newenvironment{mylisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
+
+
+\begin{document}
+
+\title{Music 424 Lab 1}
+\author{Derek Tingle\\ derek.tingle@gmail.com}
+\date{April 12, 2012}
+\maketitle
+
+% q1
+\section{}
+\subsection{}
+$\surd$
+
+\subsection{}
+
+\section{}
+
+\section{}
+
+\subsection{}
+
+\subsection{}
+Let's say the input signal changes from $\mu$ to $\nu$ at $n=0$. So when $n<0, \lambda(n) = \mu$. When $n\geq0$,
+\begin{eqnarray*}
+\lambda (n) &=& (a\lambda(n-1)^p + (1-a)\nu^p)^{1/p} \\
+\Rightarrow \lambda (0) &=& (a\mu^p + (1-a)\nu^p)^{1/p} \\
+\Rightarrow \lambda (1) &=& (a\lambda(0)^p + (1-a)\nu^p)^{1/p} \\
+&=& (a[(a\mu^p + (1-a)\nu^p)^{1/p}]^p + (1-a)\nu^p)^{1/p} \\
+&=& (a(a\mu^p + (1-a)\nu^p) + (1-a)\nu^p)^{1/p} \\
+&=& (a^2\mu^p + a(1-a)\nu^p + (1-a)\nu^p)^{1/p} \\
+&=& (a^2\mu^p + (a+1)(1-a)\nu^p)^{1/p} \\
+\Rightarrow \lambda (2) &=& (a\lambda(1)^p + (1-a)\nu^p)^{1/p} \\
+&=& (a[(a^2\mu^p + (a+1)(1-a)\nu^p)^{1/p} ]^p + (1-a)\nu^p)^{1/p} \\
+&=& (a(a^2\mu^p + (a+1)(1-a)\nu^p) + (1-a)\nu^p)^{1/p} \\
+&=& (a^3\mu^p + (a^2+a+1)(1-a)\nu^p)^{1/p} \\
+\Rightarrow \lambda (n) &=& (a^{n+1}\mu^p + (a^n+a^{n-1}\ldots+a+1)(1-a)\nu^p)^{1/p} \\
+&=& (a^{n+1}\mu^p + (\frac{1-a^{n+1}}{1-a})(1-a)\nu^p)^{1/p} \\
+&=& (a^{n+1}\mu^p + (1-a^{n+1})\nu^p)^{1/p} \\
+\end{eqnarray*}
+
+And we're interested in the time $n$ s.t.
+\begin{eqnarray*}
+\mu + (1-1/e)(\nu-\mu)&=& (a^{n+1}\mu^p + (1-a^{n+1})\nu^p)^{1/p} \\
+\Rightarrow a^{n+1}(\mu^p-\nu^p)+\nu^p &=&[\mu+(1-1/e)(\nu-\mu)]^p \\
+\Rightarrow a^{n+1} &=& \frac{[\mu+(1-1/e)(\nu-\mu)]^p - \nu^p}{\mu^p-\nu^p}\\
+\end{eqnarray*}
+
+When the signal is increasing (attack), $\mu < \nu$, and for simplicity, $\mu=0, \nu=1$
+\begin{eqnarray*}
+a^{n+1} &=& \frac{[\mu+(1-1/e)(\nu-\mu)]^p - \nu^p}{\mu^p-\nu^p} \\
+\Rightarrow a^{n+1} &=&-(1-1/e)^p + 1\\
+\Rightarrow n+1 &=& \frac{\ln(1-(1-1/e)^p)}{\ln(a)}\\
+& \approx & \frac{\ln(-(1-1/e)^p)}{\ln(a)} \\
+\Rightarrow n &=&  \frac{\ln(-(1-1/e)^p)}{\ln(a)} -1
+\end{eqnarray*}
+
+$n=\frac{-p}{\ln a}-1$
+
+\end{document}
+

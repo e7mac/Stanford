@@ -1,0 +1,24 @@
+hw7 comments
+------------
+
+Problem				1.a	1.b	1.c	1.d	1	2	Total
+Total				5	30	25	40	100	5	105
+Sanganeria, Mayank	5	28	24	40	97	5	102
+
+Problem 1
+---------
+(a) OK
+human/tonal/sharp
+
+(b) FP35 files are obvioulsy incorrect (no negative sample left and very harshly quantized), which explains why they just don't sound anything like the original. I'm not sure how that happened.
+4MT/FP35/4MTF/FP35F/128/256
+
+(c) Not submitted (can be found in .py file)
+Own grading
+
+(d) OK
+H/L/M SDG score
+
+Problem 2
+---------
+OK

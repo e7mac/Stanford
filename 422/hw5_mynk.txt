@@ -1,0 +1,26 @@
+hw5 comments
+------------
+
+Problem				1.a	1.b	1.c	1	2	Total
+Total				10	30	60	100	5	105
+Sanganeria, Mayank	10	29	60	99	0	99
+
+Problem 1
+---------
+(a)
+i. OK
+ii. OK
+iii. OK
+iv. OK
+
+(b)
+i. OK
+ii. Reasonably close but some bands don't achieve a good flat floor (bands 17-18). After review of your code, you had some problem on indexing band boundaries (they were off by one in some places). Maybe using the lowerLine and upperLine variables could be better for avoiding this kind of mistakes in the future. Similar issue for 256kb.
+iii. OK
+
+(c) Ok for our example. 
+In general OK. Your allocation is more shy than the class solution (cf. attached plot) since you are consistently allocating a little bit less bits than that implementation (20 on average).
+
+Problem 2
+---------
+Mussing

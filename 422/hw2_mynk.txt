@@ -1,0 +1,35 @@
+hw2 comments
+------------
+
+Problem				1.a	1.b	1.c	1.d	1	2	3	Total
+Total				20	20	15	15	70	30	5	105
+Sanganeria, Mayank	20	20	15	12	67	28	0	95
+
+Problem 1
+---------
+(a) OK
+
+(b) OK
+
+(c) OK
+Average BFP time (block size = 4096): 0.000894
+
+
+(d)
+"Describe the quantization noise you hear" Discussion a bit short.
+"How does floating point quantization (FP) noise sound compared to uniform quantization (MT)?" OK
+"What level of uniform quantization sounds similar to 3 scale bits, 5 mantissa bits floating point quantization?" In which case is there an improvement? Of course, they are not exactly equivalent, but you could still try to see which quantizations lead to a similar noise floor (ie. around 8-10 bits as suggested by the graph in problem 2)
+"How does floating point quantization compare to block floating point quantization (BFP) with different sub-block sizes?" OK though a bit short.
+"What “theoretical” compression ratios do you get?" OK.
+"Which quantization scheme (MT, FP, BFP) “sounds” better for a given compression ratio?" OK.
+
+Problem 2
+---------
+In the 3 plots, the drop above -3dB is too steep. Check solution and graph in the book for the expected drop.
+(i)
+(ii)
+(iii) 
+
+Problem 3
+---------
+Missing

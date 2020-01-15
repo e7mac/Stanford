@@ -1,0 +1,51 @@
+hw4 comments
+------------
+
+Problem				1.a	1.b	1.c	1.d	1.e	1.f	1.g	1.h	1	2	Total
+Total				5	15	5	5	15	15	20	20	100	5	105
+Sanganeria, Mayank	5	9	5	4	14	13	15	20	85	5	90
+
+Problem 1
+---------
+(a) OK
+*SPL and Intensity functions
+
+(b) 
+* Graphs OK
+* No numerical result provided
+* The graphical result provided is hidden and mostly illegible
+"How do these results compare with what you know the answer to be based on the signal definition?" Missing
+"What do we learn from this exercise about how block length affects our ability to detect tonal components in a signal?" Missing
+
+(c) OK
+* Thresh function OK
+* Graph OK
+
+(d) 
+* Bark function OK
+* Table Missing
+
+(e) 
+* Implementation OK. 
+* Graph OK but not very legible. The masked threshold is almost impossible to distinguish. The plotted masked threshold doesn't contain the threshold of hearing
+Optimization remark: if you already know the sign of dz, no need to use the absolute value, it's slows down the code.
+
+(f)
+* AssignMDCTLinesFromFreqLimits missing the last band
+* ScaleFactorBands OK
+"Are there any scale factor bands for which the masked threshold exceeds the signal everywhere in the band? If so, please list them." OK
+
+(g)
+* CalcSMRs function:
+    * The treatment of noise maskers is incorrect: the frequency and intensity computed are not related to the bands at all.
+    * MDCTscale is not processed
+"Test your SMR function by passing it a block of (unwindowed) time samples and MDCT frequency lines for the test signal you analyzed above." OK
+"Given the graph you made earlier showing the masked threshold versus the DFT spectrum for each critical band, do the SMRs returned by your function make sense?" Missing
+"Please provide a table showing the SMR you calculated for each scale factor band." OK
+
+(h)
+OK
+
+Problem 2
+---------
+OK

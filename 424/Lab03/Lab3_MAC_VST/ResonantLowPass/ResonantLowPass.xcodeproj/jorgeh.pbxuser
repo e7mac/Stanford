@@ -1,0 +1,174 @@
+// !$*UTF8*$!
+{
+	C12529D7136635270026F4E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C12FDCAD13662F08002AAB94 /* ResonantLowPass_Prefix.pch */;
+		name = "ResonantLowPass_Prefix.pch: 4";
+		rLen = 0;
+		rLoc = 47;
+		rType = 0;
+		vrLen = 47;
+		vrLoc = 0;
+	};
+	C12529D8136635270026F4E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C12FDCD9136630AC002AAB94 /* ResonantLowPass.h */;
+		name = "ResonantLowPass.h: 6";
+		rLen = 0;
+		rLoc = 182;
+		rType = 0;
+		vrLen = 550;
+		vrLoc = 0;
+	};
+	C12529DA136635270026F4E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C12FDCD8136630AC002AAB94 /* ResonantLowPass.cpp */;
+		name = "ResonantLowPass.cpp: 6";
+		rLen = 0;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 881;
+		vrLoc = 0;
+	};
+	C12FDC6C13662D86002AAB94 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = C12FDC7D13662DD6002AAB94 /* ResonantLowPass */;
+		addToTargets = (
+			C12FDC7D13662DD6002AAB94 /* ResonantLowPass */,
+		);
+		codeSenseManager = C12FDC7113662D86002AAB94 /* Code sense */;
+		ignoreBreakpointsInProjectsDict = {
+		};
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					324,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					558,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 325471827;
+			PBXWorkspaceStateSaveDate = 325471827;
+		};
+		perUserProjectItems = {
+			C12529D7136635270026F4E2 /* PBXTextBookmark */ = C12529D7136635270026F4E2 /* PBXTextBookmark */;
+			C12529D8136635270026F4E2 /* PBXTextBookmark */ = C12529D8136635270026F4E2 /* PBXTextBookmark */;
+			C12529DA136635270026F4E2 /* PBXTextBookmark */ = C12529DA136635270026F4E2 /* PBXTextBookmark */;
+			C12FDCDD13663173002AAB94 /* PlistBookmark */ = C12FDCDD13663173002AAB94 /* PlistBookmark */;
+			C16E500613664F3700B53D92 /* PBXTextBookmark */ = C16E500613664F3700B53D92 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C12FDC7013662D86002AAB94 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	C12FDC7013662D86002AAB94 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C12FDC7113662D86002AAB94 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C12FDC7D13662DD6002AAB94 /* ResonantLowPass */ = {
+		activeExec = 0;
+	};
+	C12FDCA413662EE2002AAB94 /* audioeffect.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {901, 9898}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 924}";
+		};
+	};
+	C12FDCA613662EE2002AAB94 /* audioeffectx.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {803, 21252}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1167}";
+		};
+	};
+	C12FDCAD13662F08002AAB94 /* ResonantLowPass_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {502, 303}}";
+			sepNavSelRange = "{47, 0}";
+			sepNavVisRange = "{0, 47}";
+		};
+	};
+	C12FDCD8136630AC002AAB94 /* ResonantLowPass.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {776, 5250}}";
+			sepNavSelRange = "{184, 0}";
+			sepNavVisRange = "{0, 1016}";
+		};
+	};
+	C12FDCD9136630AC002AAB94 /* ResonantLowPass.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {747, 2058}}";
+			sepNavSelRange = "{182, 0}";
+			sepNavVisRange = "{0, 550}";
+		};
+	};
+	C12FDCDD13663173002AAB94 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = C12FDC8013662DD6002AAB94 /* ResonantLowPass-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/jorgeh/Documents/courses/MUSIC424_TA/assignments/labs/lab2/ResonantLowPass/ResonantLowPass-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	C16E500613664F3700B53D92 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C12FDCD8136630AC002AAB94 /* ResonantLowPass.cpp */;
+		name = "ResonantLowPass.cpp: 6";
+		rLen = 0;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 1016;
+		vrLoc = 0;
+	};
+}

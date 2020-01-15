@@ -1,0 +1,56 @@
+hw3 comments
+------------
+
+Problem				1.a	1.b	1.c	1.d	1.e	1	2.a	2.b	2.c	2	3	Total
+Total				10	10	10	5	15	50	20	10	20	50	5	105
+Sanganeria, Mayank	8	8	10	5	8	39	20	10	17	47	0	86
+
+Problem 1
+---------
+(a) Despite the MDCT being called "slow" here, vectorizing the computation of each X[k] (or x[n]) was still expected in order to make it usable in a reasonable amount of time (a gain of about 10^3, still far from enough to catch up on the fast MDCT).
+"Describe how each block of aliased MDCT/IMDCT output relates to its input block and describe how overlap-add will recover the input signal x[n]." A little bit too succint to capture precisely how the aliasing happens in the transform. Here is an alternative description:
+The aliasing consists in:
+* In the left block, the half block is reversed and substracted to itself
+* In the right block, the half block is reversed and added to itself
+The aliasing in the left block (resp. right) mirrors the one in the right (resp. left) block of the previous (resp. next) block, thus cancels out by overlap and add
+
+
+(b) You shouldn't have multiplied the output of the imdct by 1/2 since it is not part of the transform.
+"What did you need to initialize to handle the first block of input samples ([0,1,2,3])?" Zero-padded by how much?
+"What did you need to do to get the last block of input samples ([3,1,-1,-3]) into the output?" Zero-padded by how much?
+"Is there any delay in your output signal? How much?" OK
+
+(c) OK
+
+(d) OK
+
+(e) In the x-axis, the frequency bins of the MDCT should be offset by 0.5.
+"Does either transform have better frequency resolution when the same (Sine) window is used?" Not really, answering the same or that the MDCT is better would have been a much better description of what's happening on your plot.
+"Does anything in this graph explain why we choose to use an FFT to do peak detection in the psychoacoustic stage instead of the MDCT?" No that's not the reason.
+"Does anything explain why a Hanning window is often used for FFT analysis in the psychoacoustic stage instead of a Sine window?" No that's the contrary (the smoother the window, the larger the main lobe). Here, we're more interested in the fact that we have much less energy in sidelobes.
+
+Problem 2
+---------
+(a) OK
+
+(b) OK
+
+(c) OK
+Discussion a little bit succint, which makes it a little bit cryptic, and does not discuss the differences between FP and Uni, or between different block sizes.
+
+Problem 3
+---------
+Missing (or impossible to find for me).
+
+Problem 4
+---------
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
