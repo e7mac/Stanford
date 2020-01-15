@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session version="2.0.0" name="hw4_100" sample-rate="48000" id-counter="3951">
+  <Config>
+    <Option name="output-auto-connect" value="2"/>
+    <Option name="mtc-port-name" value="control"/>
+    <Option name="mmc-port-name" value="control"/>
+    <Option name="midi-port-name" value="control"/>
+    <Option name="native-file-header-format" value="2"/>
+    <Option name="monitoring-model" value="1"/>
+    <Option name="slave-source" value="2"/>
+    <Option name="meter-falloff" value="32"/>
+    <end-marker-is-free val="no"/>
+  </Config>
+  <Sources>
+    <Source name="60681__k1m218__yawning1(2).wav" id="900" flags="" channel="0"/>
+    <Source name="60681__k1m218__yawning1(2).wav" id="902" flags="" channel="1"/>
+    <Source name="48412__luftrum__oceanwavescrushing.wav" id="1054" flags="" channel="0"/>
+    <Source name="48412__luftrum__oceanwavescrushing.wav" id="1056" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/60681__k1m218__yawning1(2).wav" id="1138" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/60681__k1m218__yawning1(2).wav" id="1140" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/48412__luftrum__oceanwavescrushing.wav" id="1158" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/48412__luftrum__oceanwavescrushing.wav" id="1160" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/23168__freqman__011-door-opens-and-shuts.wav" id="1203" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/23168__freqman__011-door-opens-and-shuts.wav" id="1205" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/19292__martian__footstep-on-wood-foley.wav" id="1360" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/54779__bevangoldswain__running-hard-surface.wav" id="1887" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/32261__sagetyrtle__restaurant4.wav" id="1905" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/32261__sagetyrtle__restaurant4.wav" id="1907" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/101250__timbre__88518-johnnytal-pizz-looped-hi-pass-reverse-reverb-chorus.wav" id="2040" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/101250__timbre__88518-johnnytal-pizz-looped-hi-pass-reverse-reverb-chorus.wav" id="2042" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/13272__schluppipuppie__crowd01.wav" id="2121" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/13272__schluppipuppie__crowd01.wav" id="2123" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/32158__zin__piano-2-140bpm(2).wav" id="2160" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/32158__zin__piano-2-140bpm(2).wav" id="2162" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/30266__unclesigmund__a-c-minor-bminor-e-chord-progression-on-guitar-with-echo.wav" id="2484" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/30266__unclesigmund__a-c-minor-bminor-e-chord-progression-on-guitar-with-echo.wav" id="2486" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/54084__guitarguy1985__civildefense.wav" id="2604" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/54084__guitarguy1985__civildefense.wav" id="2606" flags="" channel="1"/>
+    <Source name="/audio/music155/mayank/35643__sandyrb__usat-bomb.wav" id="2803" flags="" channel="0"/>
+    <Source name="/audio/music155/mayank/35643__sandyrb__usat-bomb.wav" id="2805" flags="" channel="1"/>
+  </Sources>
+  <Regions>
+    <Region id="904" name="60681__k1m218__yawning1(2)" start="0" length="178688" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="900" source-1="902" channels="2" master-source-0="900" master-source-1="902">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1058" name="48412__luftrum__oceanwavescrushing" start="0" length="5292000" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1054" source-1="1056" channels="2" master-source-0="1054" master-source-1="1056">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1142" name="60681__k1m218__yawning1(2)" start="0" length="178688" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1138" source-1="1140" channels="2" master-source-0="1138" master-source-1="1140">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1162" name="48412__luftrum__oceanwavescrushing" start="0" length="5292000" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1158" source-1="1160" channels="2" master-source-0="1158" master-source-1="1160">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1207" name="23168__freqman__011-door-opens-and-shuts" start="0" length="281600" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1203" source-1="1205" channels="2" master-source-0="1203" master-source-1="1205">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1362" name="19292__martian__footstep-on-wood-foley" start="0" length="749700" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1360" channels="1" master-source-0="1360">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1889" name="54779__bevangoldswain__running-hard-surface" start="0" length="125726" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1887" channels="1" master-source-0="1887">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="1909" name="32261__sagetyrtle__restaurant4" start="0" length="11403420" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1905" source-1="1907" channels="2" master-source-0="1905" master-source-1="1907">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="2044" name="101250__timbre__88518-johnnytal-pizz-looped-hi-pass-reverse-reverb-chorus" start="0" length="1536710" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2040" source-1="2042" channels="2" master-source-0="2040" master-source-1="2042">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="2125" name="13272__schluppipuppie__crowd01" start="0" length="1439905" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2121" source-1="2123" channels="2" master-source-0="2121" master-source-1="2123">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="2164" name="32158__zin__piano-2-140bpm(2)" start="0" length="226800" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2160" source-1="2162" channels="2" master-source-0="2160" master-source-1="2162">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="2488" name="30266__unclesigmund__a-c-minor-bminor-e-chord-progression-on-guitar-with-echo" start="0" length="2116800" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2484" source-1="2486" channels="2" master-source-0="2484" master-source-1="2486">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="2608" name="54084__guitarguy1985__civildefense" start="0" length="4153344" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2604" source-1="2606" channels="2" master-source-0="2604" master-source-1="2606">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+    <Region id="2807" name="35643__sandyrb__usat-bomb" start="0" length="248925" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2803" source-1="2805" channels="2" master-source-0="2803" master-source-1="2805">
+      <FadeIn default="yes" active="yes"/>
+      <FadeOut default="yes" active="yes"/>
+      <Envelope default="yes"/>
+    </Region>
+  </Regions>
+  <DiskStreams>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 1" speed="1" name="Audio 1" id="603"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="amb33 1.1" speed="1" name="amb33 1" id="1045"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="amb33 2.1" speed="1" name="amb33 2" id="1351"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Amb33 1.1" speed="1" name="Amb33 1" id="1634"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="amb33 3.1" speed="1" name="amb33 3" id="1756"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="amb33 4.1" speed="1" name="amb33 4" id="1878"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="amb33 5.1" speed="1" name="amb33 5" id="2464"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="amb33 6.1" speed="1" name="amb33 6" id="2794"/>
+  </DiskStreams>
+  <Locations>
+    <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+    <Location id="614" name="end" start="2278258" end="2278258" flags="IsMark,IsEnd" locked="no"/>
+    <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+    <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+  </Locations>
+  <Connections/>
+  <Routes>
+    <Route flags="MasterOut" default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=0:signal=0">
+      <IO name="master" id="18" active="yes" inputs="{RevReturn/out 1,Audio 1/out 1,amb33 1/out 1,amb33 2/out 1,Amb33 1/out 1,amb33 3/out 1,amb33 4/out 1,amb33 5/out 1,amb33 6/out 1}{RevReturn/out 2,Audio 1/out 2,amb33 1/out 2,amb33 2/out 2,Amb33 1/out 2,amb33 3/out 2,amb33 4/out 2,amb33 5/out 2,amb33 6/out 2}{RevReturn/out 3,Audio 1/out 3,amb33 1/out 3,amb33 2/out 3,Amb33 1/out 3,amb33 3/out 3,amb33 4/out 3,amb33 5/out 3,amb33 6/out 3}{RevReturn/out 4,Audio 1/out 4,amb33 1/out 4,amb33 2/out 4,Amb33 1/out 4,amb33 3/out 4,amb33 4/out 4,amb33 5/out 4,amb33 6/out 4}{Audio 1/out 5,amb33 1/out 5,amb33 2/out 5,Amb33 1/out 5,amb33 3/out 5,amb33 4/out 5,amb33 5/out 5,amb33 6/out 5}{Audio 1/out 6,amb33 1/out 6,amb33 2/out 6,Amb33 1/out 6,amb33 3/out 6,amb33 4/out 6,amb33 5/out 6,amb33 6/out 6}{Audio 1/out 7,amb33 1/out 7,amb33 2/out 7,Amb33 1/out 7,amb33 3/out 7,amb33 4/out 7,amb33 5/out 7,amb33 6/out 7}{Audio 1/out 8,amb33 1/out 8,amb33 2/out 8,Amb33 1/out 8,amb33 3/out 8,amb33 4/out 8,amb33 5/out 8,amb33 6/out 8}{Audio 1/out 9,amb33 1/out 9,amb33 2/out 9,Amb33 1/out 9,amb33 3/out 9,amb33 4/out 9,amb33 5/out 9,amb33 6/out 9}{Audio 1/out 10,amb33 1/out 10,amb33 2/out 10,Amb33 1/out 10,amb33 3/out 10,amb33 4/out 10,amb33 5/out 10,amb33 6/out 10}{Audio 1/out 11,amb33 1/out 11,amb33 2/out 11,Amb33 1/out 11,amb33 3/out 11,amb33 4/out 11,amb33 5/out 11,amb33 6/out 11}{Audio 1/out 12,amb33 1/out 12,amb33 2/out 12,Amb33 1/out 12,amb33 3/out 12,amb33 4/out 12,amb33 5/out 12,amb33 6/out 12}{Audio 1/out 13,amb33 1/out 13,amb33 2/out 13,Amb33 1/out 13,amb33 3/out 13,amb33 4/out 13,amb33 5/out 13,amb33 6/out 13}{Audio 1/out 14,amb33 1/out 14,amb33 2/out 14,Amb33 1/out 14,amb33 3/out 14,amb33 4/out 14,amb33 5/out 14,amb33 6/out 14}{Audio 1/out 15,amb33 1/out 15,amb33 2/out 15,Amb33 1/out 15,amb33 3/out 15,amb33 4/out 15,amb33 5/out 15,amb33 6/out 15}{Audio 1/out 16,amb33 1/out 16,amb33 2/out 16,Amb33 1/out 16,amb33 3/out 16,amb33 4/out 16,amb33 5/out 16,amb33 6/out 16}" outputs="{system:playback_1}{system:playback_2}{system:playback_3}{system:playback_8}{system:playback_9}{system:playback_10}{system:playback_11}{system:playback_4}{system:playback_5}{system:playback_12}{system:playback_13}{system:playback_14}{system:playback_15}{system:playback_16}{system:playback_6}{system:playback_7}" gain="1.000000000000" iolimits="-1,16,-1,16">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="19"/>
+        <Automation>
+          <AutomationList id="619" default="0" min_yval="0" max_yval="0" max_xval="0" state="Off" style="Absolute"/>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="22"/>
+      <controllable name="mute" id="23"/>
+      <remote_control id="1"/>
+      <extra>
+        <GUI color="40127:5923:11839" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="no" height="70"/>
+          <pan shown="no" height="70"/>
+        </GUI>
+      </extra>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=1:signal=1">
+      <IO name="RevBus" id="174" active="yes" inputs="{}{}" outputs="{zita-rev1:in.L}{zita-rev1:in.R}" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="484" default="0" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="483"/>
+          </StreamPanner>
+          <StreamPanner x="1" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="487" default="1" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="486"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="175"/>
+        <Automation>
+          <AutomationList id="673" default="0" min_yval="0" max_yval="0" max_xval="0" state="Off" style="Absolute"/>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="178"/>
+      <controllable name="mute" id="179"/>
+      <remote_control id="2"/>
+      <extra>
+        <GUI color="34764:1721:96" strip_width="Wide" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="no" height="70"/>
+          <pan shown="no" height="70"/>
+        </GUI>
+      </extra>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=2:signal=2">
+      <IO name="RevReturn" id="190" active="yes" inputs="{zita-rev1:out.W}{zita-rev1:out.X}{zita-rev1:out.Y}{zita-rev1:out.Z}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <Output x="1" y="1"/>
+          <Output x="0" y="1"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="191"/>
+        <Automation>
+          <AutomationList id="685" default="0" min_yval="0" max_yval="0" max_xval="0" state="Off" style="Absolute"/>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="194"/>
+      <controllable name="mute" id="195"/>
+      <remote_control id="3"/>
+      <extra>
+        <GUI color="26315:24967:28430" strip_width="Wide" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="no" height="70"/>
+          <pan shown="no" height="70"/>
+        </GUI>
+      </extra>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=3:signal=3" mode="Normal" diskstream-id="603">
+      <IO name="Audio 1" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="1.000506758690" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="703" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>0 1.00050673272584
+309248 0.550669513290995
+385024 0
+792576 1.16061510577741
+894976 0
+923008 1.45926829017498e-06
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="4"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_17 shown_editor="yes"/>
+              <Port_18 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="18"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="-79.714287"/>
+          <port number="18" value="+0.000000"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>28672 -79.7142857142857
+96256 90
+145408 -77.1428571428571
+264192 0
+</events>
+            </AutomationList>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3245"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=4:signal=4" mode="Normal" diskstream-id="1045">
+      <IO name="amb33 1" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="0.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2279424 0.139406567874078
+2347008 0.0216609968330295
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="5"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_18 shown_editor="yes"/>
+              <Port_17 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="17"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="+0.000000"/>
+          <port number="18" value="-128.571426"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute"/>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>10240 -128.571427958352
+311296 -113.142850399017
+389120 -15.4285705089569
+509952 65.4946517944336
+743424 149.142857142857
+</events>
+            </AutomationList>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3300"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=5:signal=5" mode="Normal" diskstream-id="1351">
+      <IO name="amb33 2" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="0.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="1240" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>149504 0
+215040 0.277716033257761
+235520 0
+307200 0
+344064 0.322614144607756
+649216 0.779615702032242
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="6"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_17 shown_editor="yes"/>
+              <Port_18 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="18"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="-90.000000"/>
+          <port number="18" value="-66.857140"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>159744 -90
+2215936 -90
+</events>
+            </AutomationList>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>768000 -66.8571428571429
+</events>
+            </AutomationList>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3355"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=6:signal=6" mode="Normal" diskstream-id="1634">
+      <IO name="Amb33 1" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="0.200770407915" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="1523" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>198656 0.200770405177046
+788480 0.00205677591984499
+819200 1.67215390063532
+1120256 0.200770405177046
+1280000 0.0640930636025516
+2158592 0.00323342541245586
+2327622 0.00116906725655256
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="7"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_18 shown_editor="yes"/>
+              <Port_17 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="17 18"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="+0.000000"/>
+          <port number="18" value="-113.142860"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute"/>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>239616 -113.142857142857
+</events>
+            </AutomationList>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3410"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=7:signal=7" mode="Normal" diskstream-id="1756">
+      <IO name="amb33 3" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="0.779615640640" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="1645" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>1138688 0.779615651075217
+1345536 0.0818576805284265
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="8"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_17 shown_editor="yes"/>
+              <Port_18 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="17 18"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="+74.571426"/>
+          <port number="18" value="+154.285721"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>1937727 74.5714285714286
+</events>
+            </AutomationList>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>1045710 154.285714285714
+</events>
+            </AutomationList>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3465"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=8:signal=8" mode="Normal" diskstream-id="1878">
+      <IO name="amb33 4" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="0.002056775615" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="1767" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>1171456 0.00205677565177095
+1230030 0.322614144607756
+1490944 0.340259432724974
+1812480 0.091811981478702
+1964032 0
+2256896 0
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="9"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_17 shown_editor="yes"/>
+              <Port_18 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="17 18"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="+10.285714"/>
+          <port number="18" value="-180.000000"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>1070286 10.2857142857143
+1528902 -48.8571428571429
+1684550 -15.4285714285714
+1815622 25.7142857142857
+</events>
+            </AutomationList>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>1165312 -180
+</events>
+            </AutomationList>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3520"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=9:signal=9" mode="Normal" diskstream-id="2464">
+      <IO name="amb33 5" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="0.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="2353" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+            <events>1527808 0
+1788998 0.00116906725655256
+1878016 0.517597491771252
+1953792 0.550669583732766
+2127872 0
+</events>
+          </AutomationList>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="10"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <extra>
+            <GUI>
+              <Port_17 shown_editor="yes"/>
+              <Port_18 shown_editor="yes"/>
+            </GUI>
+          </extra>
+          <Automation visible="17 18"/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="+72.000000"/>
+          <port number="18" value="+3.780370"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>1819718 72
+2530374 69.4285714285714
+</events>
+            </AutomationList>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Play" style="Absolute">
+              <events>1542144 3.78036975860596
+2395206 -15.4285714285714
+</events>
+            </AutomationList>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="yes" height="70"/>
+          <pan shown="no" height="70"/>
+          <Redirect-AMB_order_3_3_panner-17 height="70"/>
+          <Redirect-AMB_order_3_3_panner-18 height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3575"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=10:signal=10" mode="Normal" diskstream-id="2794">
+      <IO name="amb33 6" id="129" active="yes" inputs="{}" outputs="{master/in 1}{master/in 2}{master/in 3}{master/in 4}{master/in 5}{master/in 6}{master/in 7}{master/in 8}{master/in 9}{master/in 10}{master/in 11}{master/in 12}{master/in 13}{master/in 14}{master/in 15}{master/in 16}" gain="1.035897135735" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="0.10000000149" y="0.10000000149"/>
+          <Output x="0.20000000298" y="0.20000000298"/>
+          <Output x="0.300000011921" y="0.300000011921"/>
+          <Output x="0.40000000596" y="0.40000000596"/>
+          <Output x="0.5" y="0.5"/>
+          <Output x="0.600000023842" y="0.600000023842"/>
+          <Output x="0.699999988079" y="0.699999988079"/>
+          <Output x="0.800000011921" y="0.800000011921"/>
+          <Output x="0.899999976158" y="0.899999976158"/>
+          <Output x="1" y="1"/>
+          <Output x="1.10000002384" y="1.10000002384"/>
+          <Output x="1.20000004768" y="1.20000004768"/>
+          <Output x="1.29999995232" y="1.29999995232"/>
+          <Output x="1.39999997616" y="1.39999997616"/>
+          <Output x="1.5" y="1.5"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="130"/>
+        <Automation>
+          <AutomationList id="2683" default="0" min_yval="0" max_yval="0" max_xval="0" state="Off" style="Absolute"/>
+        </Automation>
+      </IO>
+      <controllable name="solo" id="133"/>
+      <controllable name="mute" id="134"/>
+      <remote_control id="11"/>
+      <Insert type="ladspa" unique-id="1965" count="1">
+        <Redirect active="yes" placement="PostFader">
+          <IO name="AMB order 3,3 panner" id="462" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="463"/>
+            <Automation>
+              <Automation/>
+            </Automation>
+          </IO>
+          <Automation visible=""/>
+        </Redirect>
+        <ladspa>
+          <port number="17" value="+0.000000"/>
+          <port number="18" value="+0.000000"/>
+        </ladspa>
+        <controls/>
+        <PortAutomation>
+          <port number="17">
+            <AutomationList id="514" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="18">
+            <AutomationList id="515" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="7086:5689:27105" shown_mixer="yes" height="70" shown_editor="yes">
+          <gain shown="no" height="70"/>
+          <pan shown="no" height="70"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="3630"/>
+    </Route>
+  </Routes>
+  <EditGroups/>
+  <MixGroups/>
+  <Playlists>
+    <Playlist name="Audio 1" orig_diskstream_id="603" frozen="no">
+      <Region id="1147" name="60681__k1m218__yawning1(2)" start="0" length="178688" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1138" source-1="1140" channels="2" master-source-0="1138" master-source-1="1140">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+      <Region id="1212" name="23168__freqman__011-door-opens-and-shuts" start="0" length="281600" position="262144" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="1" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1203" source-1="1205" channels="2" master-source-0="1203" master-source-1="1205">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+      <Region id="2010" name="23168__freqman__011-door-opens-and-shuts" start="0" length="281600" position="790528" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="2" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1203" source-1="1205" channels="2" master-source-0="1203" master-source-1="1205">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="amb33 6.1" orig_diskstream_id="2794" frozen="no">
+      <Region id="2812" name="35643__sandyrb__usat-bomb" start="0" length="248925" position="1995846" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2803" source-1="2805" channels="2" master-source-0="2803" master-source-1="2805">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="amb33 1.1" orig_diskstream_id="1045" frozen="no">
+      <Region id="1167" name="48412__luftrum__oceanwavescrushing" start="0" length="2278258" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="1158" source-1="1160" channels="2" master-source-0="1158" master-source-1="1160">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="amb33 2.1" orig_diskstream_id="1351" frozen="no">
+      <Region id="1367" name="19292__martian__footstep-on-wood-foley" start="0" length="749700" position="172032" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1360" channels="1" master-source-0="1360">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="Amb33 1.1" orig_diskstream_id="1634" frozen="no">
+      <Region id="1936" name="32261__sagetyrtle__restaurant4.1" start="0" length="1599310" position="606208" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="1905" source-1="1907" channels="2" master-source-0="1905" master-source-1="1907">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="amb33 3.1" orig_diskstream_id="1756" frozen="no">
+      <Region id="2140" name="13272__schluppipuppie__crowd01" start="0" length="1439905" position="821248" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2121" source-1="2123" channels="2" master-source-0="2121" master-source-1="2123">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="amb33 4.1" orig_diskstream_id="1878" frozen="no">
+      <Region id="2493" name="30266__unclesigmund__a-c-minor-bminor-e-chord-progression-on-guitar-with-echo.1" start="0" length="1084032" position="1172686" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="2484" source-1="2486" channels="2" master-source-0="2484" master-source-1="2486">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+    <Playlist name="amb33 5.1" orig_diskstream_id="2464" frozen="no">
+      <Region id="2613" name="54084__guitarguy1985__civildefense.1" start="0" length="715528" position="1535046" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="2604" source-1="2606" channels="2" master-source-0="2604" master-source-1="2606">
+        <FadeIn default="yes" active="yes"/>
+        <FadeOut default="yes" active="yes"/>
+        <Envelope default="yes"/>
+        <extra>
+          <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+        </extra>
+      </Region>
+    </Playlist>
+  </Playlists>
+  <UnusedPlaylists/>
+  <Click>
+    <IO name="click" id="24" active="yes" inputs="" outputs="{system:playback_1}{system:playback_2}" gain="1.000000000000" iolimits="0,0,-1,-1">
+      <Panner linked="no" link_direction="SameDirection" bypassed="no">
+        <Output x="0" y="0"/>
+        <Output x="1" y="0"/>
+        <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+          <Automation>
+            <AutomationList id="119" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+          </Automation>
+          <controllable name="panner" id="118"/>
+        </StreamPanner>
+      </Panner>
+      <controllable name="gaincontrol" id="25"/>
+      <Automation>
+        <AutomationList id="758" default="1" min_yval="0" max_yval="2" max_xval="0" state="Off" style="Absolute"/>
+      </Automation>
+    </IO>
+  </Click>
+  <NamedSelections/>
+  <TempoMap>
+    <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
+    <Meter start="1|1|0" note-type="4.000000" beats-per-bar="4.000000" movable="no"/>
+  </TempoMap>
+  <ControlProtocols>
+    <Protocol name="Wiimote" active="no"/>
+    <Protocol name="Mackie" active="no"/>
+    <Protocol name="Generic MIDI" active="no"/>
+  </ControlProtocols>
+</Session>

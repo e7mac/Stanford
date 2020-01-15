@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UndoHistory>
+  <UndoTransaction tv_sec="1329191892" tv_usec="192716" name="automation event move">
+    <MementoUndoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1601536 0
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1689600 1.00050673272584
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329191894" tv_usec="319003" name="automation event move">
+    <MementoUndoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1689600 1.00050673272584
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1640448 0
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329191902" tv_usec="566943" name="automation event move">
+    <MementoUndoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1640448 0
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329191908" tv_usec="90267" name="add gain automation event">
+    <MementoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+</events>
+      </AutomationList>
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+</events>
+      </AutomationList>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329191910" tv_usec="50785" name="add gain automation event">
+    <MementoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+</events>
+      </AutomationList>
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2228803 0.621042821441321
+</events>
+      </AutomationList>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329191928" tv_usec="503286" name="automation event move">
+    <MementoUndoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2228803 0.621042821441321
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2238464 0.153386825536565
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192056" tv_usec="890077" name="trim back">
+    <MementoCommand obj_id="1046" type_name="N6ARDOUR13AudioPlaylistE">
+      <Playlist name="amb33 1.1" orig_diskstream_id="1045" frozen="no">
+        <Region id="1167" name="48412__luftrum__oceanwavescrushing" start="0" length="5292000" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1158" source-1="1160" channels="2" master-source-0="1158" master-source-1="1160">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+      <Playlist name="amb33 1.1" orig_diskstream_id="1045" frozen="no">
+        <Region id="1167" name="48412__luftrum__oceanwavescrushing" start="0" length="2379598" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="1158" source-1="1160" channels="2" master-source-0="1158" master-source-1="1160">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192080" tv_usec="377062" name="trim back">
+    <MementoCommand obj_id="1635" type_name="N6ARDOUR13AudioPlaylistE">
+      <Playlist name="Amb33 1.1" orig_diskstream_id="1634" frozen="no">
+        <Region id="1936" name="32261__sagetyrtle__restaurant4" start="0" length="11403420" position="606208" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="id" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="1905" source-1="1907" channels="2" master-source-0="1905" master-source-1="1907">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+      <Playlist name="Amb33 1.1" orig_diskstream_id="1634" frozen="no">
+        <Region id="1936" name="32261__sagetyrtle__restaurant4.1" start="0" length="1599310" position="606208" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="1905" source-1="1907" channels="2" master-source-0="1905" master-source-1="1907">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192084" tv_usec="330782" name="trim back">
+    <MementoCommand obj_id="1879" type_name="N6ARDOUR13AudioPlaylistE">
+      <Playlist name="amb33 4.1" orig_diskstream_id="1878" frozen="no">
+        <Region id="2493" name="30266__unclesigmund__a-c-minor-bminor-e-chord-progression-on-guitar-with-echo" start="0" length="2116800" position="1172686" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="id" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeOut,External" scale-gain="1" source-0="2484" source-1="2486" channels="2" master-source-0="2484" master-source-1="2486">
+          <FadeIn default="yes" active="no"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+      <Playlist name="amb33 4.1" orig_diskstream_id="1878" frozen="no">
+        <Region id="2493" name="30266__unclesigmund__a-c-minor-bminor-e-chord-progression-on-guitar-with-echo.1" start="0" length="1084032" position="1172686" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeOut,External" scale-gain="1" source-0="2484" source-1="2486" channels="2" master-source-0="2484" master-source-1="2486">
+          <FadeIn default="yes" active="no"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192086" tv_usec="570468" name="trim back">
+    <MementoCommand obj_id="2465" type_name="N6ARDOUR13AudioPlaylistE">
+      <Playlist name="amb33 5.1" orig_diskstream_id="2464" frozen="no">
+        <Region id="2613" name="54084__guitarguy1985__civildefense" start="0" length="4153344" position="1535046" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="id" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,WholeFile,FadeIn,FadeOut,External" scale-gain="1" source-0="2604" source-1="2606" channels="2" master-source-0="2604" master-source-1="2606">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+      <Playlist name="amb33 5.1" orig_diskstream_id="2464" frozen="no">
+        <Region id="2613" name="54084__guitarguy1985__civildefense.1" start="0" length="715528" position="1535046" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="2604" source-1="2606" channels="2" master-source-0="2604" master-source-1="2606">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192094" tv_usec="921010" name="move marker">
+    <MementoCommand obj_id="14" type_name="N6ARDOUR9LocationsE">
+      <Locations>
+        <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+        <Location id="614" name="end" start="14400000" end="14400000" flags="IsMark,IsEnd" locked="no"/>
+        <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+        <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+      </Locations>
+      <Locations>
+        <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+        <Location id="614" name="end" start="12538368" end="12538368" flags="IsMark,IsEnd" locked="no"/>
+        <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+        <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+      </Locations>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192102" tv_usec="929258" name="move marker">
+    <MementoCommand obj_id="14" type_name="N6ARDOUR9LocationsE">
+      <Locations>
+        <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+        <Location id="614" name="end" start="12538368" end="12538368" flags="IsMark,IsEnd" locked="no"/>
+        <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+        <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+      </Locations>
+      <Locations>
+        <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+        <Location id="614" name="end" start="8890886" end="8890886" flags="IsMark,IsEnd" locked="no"/>
+        <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+        <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+      </Locations>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192117" tv_usec="666095" name="move marker">
+    <MementoCommand obj_id="14" type_name="N6ARDOUR9LocationsE">
+      <Locations>
+        <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+        <Location id="614" name="end" start="8890886" end="8890886" flags="IsMark,IsEnd" locked="no"/>
+        <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+        <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+      </Locations>
+      <Locations>
+        <Location id="613" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+        <Location id="614" name="end" start="2262883" end="2262883" flags="IsMark,IsEnd" locked="no"/>
+        <Location id="861" name="Loop" start="0" end="14400000" flags="IsAutoLoop,IsHidden" locked="no"/>
+        <Location id="862" name="Punch" start="0" end="14400000" flags="IsAutoPunch,IsHidden" locked="no"/>
+      </Locations>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192179" tv_usec="441430" name="automation event move">
+    <MementoUndoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2238464 0.153386825536565
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192179" tv_usec="996296" name="add gain automation event">
+    <MementoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2265969 0.11399919750961
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192180" tv_usec="924405" name="add gain automation event">
+    <MementoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2265969 0.11399919750961
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2265969 0.277716033257761
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192189" tv_usec="721257" name="trim back">
+    <MementoCommand obj_id="1046" type_name="N6ARDOUR13AudioPlaylistE">
+      <Playlist name="amb33 1.1" orig_diskstream_id="1045" frozen="no">
+        <Region id="1167" name="48412__luftrum__oceanwavescrushing" start="0" length="2379598" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="1158" source-1="1160" channels="2" master-source-0="1158" master-source-1="1160">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+      <Playlist name="amb33 1.1" orig_diskstream_id="1045" frozen="no">
+        <Region id="1167" name="48412__luftrum__oceanwavescrushing" start="0" length="2278258" position="0" ancestral-start="0" ancestral-length="0" stretch="1" shift="1" first_edit="nothing" layer="0" sync-position="0" flags="Opaque,DefaultFadeIn,DefaultFadeOut,FadeIn,FadeOut,External" scale-gain="1" source-0="1158" source-1="1160" channels="2" master-source-0="1158" master-source-1="1160">
+          <FadeIn default="yes" active="yes"/>
+          <FadeOut default="yes" active="yes"/>
+          <Envelope default="yes"/>
+          <extra>
+            <GUI waveform-visible="yes" envelope-visible="no" waveform-rectified="no" waveform-logscaled="no"/>
+          </extra>
+        </Region>
+      </Playlist>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192195" tv_usec="977869" name="automation event move">
+    <MementoUndoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2265969 0.277716033257761
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="934" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="934" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>0 0
+260096 0.0177614247347561
+311296 0.398664654228255
+729088 0.517597491771252
+831488 0.00472404295116387
+1658880 0.00472404122388809
+2159171 0.0260499878829857
+2279424 0.139406567874078
+2347008 0.0216609968330295
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192205" tv_usec="797657" name="add gain automation event">
+    <MementoCommand obj_id="1767" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="1767" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>1171456 0.00205677565177095
+1230030 0.322614144607756
+1490944 0.340259432724974
+1812480 0.091811981478702
+1964032 0
+</events>
+      </AutomationList>
+      <AutomationList id="1767" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>1171456 0.00205677565177095
+1230030 0.322614144607756
+1490944 0.340259432724974
+1812480 0.091811981478702
+1964032 0
+2146366 0.00472404095245907
+</events>
+      </AutomationList>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv_sec="1329192207" tv_usec="769743" name="automation event move">
+    <MementoUndoCommand obj_id="1767" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="1767" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>1171456 0.00205677565177095
+1230030 0.322614144607756
+1490944 0.340259432724974
+1812480 0.091811981478702
+1964032 0
+2146366 0.00472404095245907
+</events>
+      </AutomationList>
+    </MementoUndoCommand>
+    <MementoRedoCommand obj_id="1767" type_name="N6ARDOUR5CurveE">
+      <AutomationList id="1767" default="0" min_yval="0" max_yval="0" max_xval="0" state="Play" style="Absolute">
+        <events>1171456 0.00205677565177095
+1230030 0.322614144607756
+1490944 0.340259432724974
+1812480 0.091811981478702
+1964032 0
+2256896 0
+</events>
+      </AutomationList>
+    </MementoRedoCommand>
+  </UndoTransaction>
+</UndoHistory>
