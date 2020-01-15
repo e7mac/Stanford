@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/slork/!svn/ver/726/trunk/groups/2012/mayank-jiffer-hunter/version%201.0
+END
+launch_local_test.ck
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/slork/!svn/ver/711/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/launch_local_test.ck
+END
+config.ck
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/slork/!svn/ver/711/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/config.ck
+END
+node.ck
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/slork/!svn/ver/711/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/node.ck
+END
+synth.ck
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/slork/!svn/ver/722/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/synth.ck
+END
+server.ck
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/slork/!svn/ver/711/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/server.ck
+END
+launch_node.ck
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/slork/!svn/ver/711/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/launch_node.ck
+END
+launch_server.ck
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/slork/!svn/ver/711/trunk/groups/2012/mayank-jiffer-hunter/version%201.0/launch_server.ck
+END

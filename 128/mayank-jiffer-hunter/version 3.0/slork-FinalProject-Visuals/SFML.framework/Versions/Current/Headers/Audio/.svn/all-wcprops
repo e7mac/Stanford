@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio
+END
+AudioResource.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/AudioResource.hpp
+END
+SoundRecorder.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/SoundRecorder.hpp
+END
+Music.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/Music.hpp
+END
+SoundBuffer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/SoundBuffer.hpp
+END
+SoundStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/SoundStream.hpp
+END
+Listener.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/Listener.hpp
+END
+Sound.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/Sound.hpp
+END
+SoundBufferRecorder.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Audio/SoundBufferRecorder.hpp
+END

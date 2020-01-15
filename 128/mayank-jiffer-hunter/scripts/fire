@@ -1,0 +1,4 @@
+./stop_all
+./run_all
+cd ../version\ 3.0/
+chuck launch_server.ck

@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44337ED614FE4714009B2FA4 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337ED314FE4714009B2FA4 /* Main.cpp */; };
+		44337ED714FE4714009B2FA4 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337ED414FE4714009B2FA4 /* Shader.cpp */; };
+		44337EFD14FE4A5E009B2FA4 /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EE014FE4A5E009B2FA4 /* IpEndpointName.cpp */; };
+		44337EFE14FE4A5E009B2FA4 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EE514FE4A5E009B2FA4 /* NetworkingUtils.cpp */; };
+		44337EFF14FE4A5E009B2FA4 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EE614FE4A5E009B2FA4 /* UdpSocket.cpp */; };
+		44337F0114FE4A5E009B2FA4 /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EF114FE4A5E009B2FA4 /* OscOutboundPacketStream.cpp */; };
+		44337F0214FE4A5E009B2FA4 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EF414FE4A5E009B2FA4 /* OscPrintReceivedElements.cpp */; };
+		44337F0314FE4A5E009B2FA4 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EF614FE4A5E009B2FA4 /* OscReceivedElements.cpp */; };
+		44337F0414FE4A5E009B2FA4 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44337EF814FE4A5E009B2FA4 /* OscTypes.cpp */; };
+		443BBD0F156CDA4500EEF148 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 443BBD0E156CDA4500EEF148 /* Node.cpp */; };
+		449E42FF1515EFC60019FF87 /* DepthRenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 449E42FD1515EFC60019FF87 /* DepthRenderTarget.cpp */; };
+		449E43031515F1040019FF87 /* MultiSampleRenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 449E43011515F1040019FF87 /* MultiSampleRenderTarget.cpp */; };
+		44A64F1F1515FE8800E4D170 /* downsample.frag.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44A64F1D1515FE8800E4D170 /* downsample.frag.glsl */; };
+		44A64F201515FE8800E4D170 /* downsample.vert.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44A64F1E1515FE8800E4D170 /* downsample.vert.glsl */; };
+		44C66F8315135A3700BA3B72 /* phong.frag.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44C66F7D15135A3700BA3B72 /* phong.frag.glsl */; };
+		44C66F8415135A3700BA3B72 /* phong.vert.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44C66F7E15135A3700BA3B72 /* phong.vert.glsl */; };
+		44C66F8515135A3700BA3B72 /* specToon.frag.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44C66F7F15135A3700BA3B72 /* specToon.frag.glsl */; };
+		44C66F8815135A3700BA3B72 /* outlineToon.vert.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44C66F8215135A3700BA3B72 /* outlineToon.vert.glsl */; };
+		44DE47601517F24700989E75 /* specToon.vert.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44DE475F1517F1DD00989E75 /* specToon.vert.glsl */; };
+		44DE47611517F28400989E75 /* outlineToon.frag.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = 44C66F8115135A3700BA3B72 /* outlineToon.frag.glsl */; };
+		8DD76FB00486AB0100D96B5E /* slork-FinalProject-Visuals.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* slork-FinalProject-Visuals.1 */; };
+		AC3FE7F615182A6C00C99293 /* phongTexture.frag.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = AC3FE7F415182A5900C99293 /* phongTexture.frag.glsl */; };
+		AC3FE7F715182A6C00C99293 /* phongTexture.vert.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = AC3FE7F515182A5900C99293 /* phongTexture.vert.glsl */; };
+		AC3FE7FF151838DD00C99293 /* backgroundFuzz.frag.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = AC3FE7FD151838CF00C99293 /* backgroundFuzz.frag.glsl */; };
+		AC3FE800151838DD00C99293 /* backgroundFuzz.vert.glsl in Copy Shaders */ = {isa = PBXBuildFile; fileRef = AC3FE7FE151838CF00C99293 /* backgroundFuzz.vert.glsl */; };
+		C9EA8F0C12EE77060002670E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EA8F0B12EE77060002670E /* OpenGL.framework */; };
+		C9EA8FDF12EE79EB0002670E /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EA8FD912EE79EB0002670E /* sfml-graphics.framework */; };
+		C9EA8FE012EE79EB0002670E /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EA8FDA12EE79EB0002670E /* sfml-network.framework */; };
+		C9EA8FE112EE79EB0002670E /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EA8FDB12EE79EB0002670E /* sfml-system.framework */; };
+		C9EA8FE212EE79EB0002670E /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EA8FDC12EE79EB0002670E /* sfml-window.framework */; };
+		C9EA8FE312EE79EB0002670E /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EA8FDD12EE79EB0002670E /* SFML.framework */; };
+		C9EA905812EE7B1B0002670E /* sfml-graphics.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = C9EA8FD912EE79EB0002670E /* sfml-graphics.framework */; };
+		C9EA905912EE7B1B0002670E /* sfml-network.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = C9EA8FDA12EE79EB0002670E /* sfml-network.framework */; };
+		C9EA905A12EE7B1B0002670E /* sfml-system.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = C9EA8FDB12EE79EB0002670E /* sfml-system.framework */; };
+		C9EA905B12EE7B1B0002670E /* sfml-window.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = C9EA8FDC12EE79EB0002670E /* sfml-window.framework */; };
+		C9EA905C12EE7B1B0002670E /* SFML.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = C9EA8FDD12EE79EB0002670E /* SFML.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76FB00486AB0100D96B5E /* slork-FinalProject-Visuals.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C98951FD12EF80A600B97901 /* Copy Shaders */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = shaders;
+			dstSubfolderSpec = 7;
+			files = (
+				AC3FE7FF151838DD00C99293 /* backgroundFuzz.frag.glsl in Copy Shaders */,
+				AC3FE800151838DD00C99293 /* backgroundFuzz.vert.glsl in Copy Shaders */,
+				AC3FE7F615182A6C00C99293 /* phongTexture.frag.glsl in Copy Shaders */,
+				AC3FE7F715182A6C00C99293 /* phongTexture.vert.glsl in Copy Shaders */,
+				44DE47611517F28400989E75 /* outlineToon.frag.glsl in Copy Shaders */,
+				44DE47601517F24700989E75 /* specToon.vert.glsl in Copy Shaders */,
+				44C66F8315135A3700BA3B72 /* phong.frag.glsl in Copy Shaders */,
+				44C66F8415135A3700BA3B72 /* phong.vert.glsl in Copy Shaders */,
+				44A64F1F1515FE8800E4D170 /* downsample.frag.glsl in Copy Shaders */,
+				44A64F201515FE8800E4D170 /* downsample.vert.glsl in Copy Shaders */,
+				44C66F8515135A3700BA3B72 /* specToon.frag.glsl in Copy Shaders */,
+				44C66F8815135A3700BA3B72 /* outlineToon.vert.glsl in Copy Shaders */,
+			);
+			name = "Copy Shaders";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EA905412EE7AEF0002670E /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9EA905812EE7B1B0002670E /* sfml-graphics.framework in Copy Files */,
+				C9EA905912EE7B1B0002670E /* sfml-network.framework in Copy Files */,
+				C9EA905A12EE7B1B0002670E /* sfml-system.framework in Copy Files */,
+				C9EA905B12EE7B1B0002670E /* sfml-window.framework in Copy Files */,
+				C9EA905C12EE7B1B0002670E /* SFML.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EA90C412EE7F1D0002670E /* Copy Models */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = models;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Models";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		44337ED314FE4714009B2FA4 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		44337ED414FE4714009B2FA4 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		44337ED514FE4714009B2FA4 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		44337EDC14FE4A5E009B2FA4 /* Framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Framework.h; sourceTree = "<group>"; };
+		44337EE014FE4A5E009B2FA4 /* IpEndpointName.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IpEndpointName.cpp; sourceTree = "<group>"; };
+		44337EE114FE4A5E009B2FA4 /* IpEndpointName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpEndpointName.h; sourceTree = "<group>"; };
+		44337EE214FE4A5E009B2FA4 /* NetworkingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingUtils.h; sourceTree = "<group>"; };
+		44337EE314FE4A5E009B2FA4 /* PacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketListener.h; sourceTree = "<group>"; };
+		44337EE514FE4A5E009B2FA4 /* NetworkingUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkingUtils.cpp; sourceTree = "<group>"; };
+		44337EE614FE4A5E009B2FA4 /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UdpSocket.cpp; sourceTree = "<group>"; };
+		44337EE714FE4A5E009B2FA4 /* TimerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerListener.h; sourceTree = "<group>"; };
+		44337EE814FE4A5E009B2FA4 /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
+		44337EEE14FE4A5E009B2FA4 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageMappingOscPacketListener.h; sourceTree = "<group>"; };
+		44337EEF14FE4A5E009B2FA4 /* OscException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscException.h; sourceTree = "<group>"; };
+		44337EF014FE4A5E009B2FA4 /* OscHostEndianness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscHostEndianness.h; sourceTree = "<group>"; };
+		44337EF114FE4A5E009B2FA4 /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscOutboundPacketStream.cpp; sourceTree = "<group>"; };
+		44337EF214FE4A5E009B2FA4 /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscOutboundPacketStream.h; sourceTree = "<group>"; };
+		44337EF314FE4A5E009B2FA4 /* OscPacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscPacketListener.h; sourceTree = "<group>"; };
+		44337EF414FE4A5E009B2FA4 /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscPrintReceivedElements.cpp; sourceTree = "<group>"; };
+		44337EF514FE4A5E009B2FA4 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscPrintReceivedElements.h; sourceTree = "<group>"; };
+		44337EF614FE4A5E009B2FA4 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscReceivedElements.cpp; sourceTree = "<group>"; };
+		44337EF714FE4A5E009B2FA4 /* OscReceivedElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscReceivedElements.h; sourceTree = "<group>"; };
+		44337EF814FE4A5E009B2FA4 /* OscTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscTypes.cpp; sourceTree = "<group>"; };
+		44337EF914FE4A5E009B2FA4 /* OscTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscTypes.h; sourceTree = "<group>"; };
+		443BBD0D156CD8F300EEF148 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		443BBD0E156CDA4500EEF148 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		449E42FD1515EFC60019FF87 /* DepthRenderTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DepthRenderTarget.cpp; sourceTree = "<group>"; };
+		449E42FE1515EFC60019FF87 /* DepthRenderTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthRenderTarget.h; sourceTree = "<group>"; };
+		449E43011515F1040019FF87 /* MultiSampleRenderTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiSampleRenderTarget.cpp; sourceTree = "<group>"; };
+		449E43021515F1040019FF87 /* MultiSampleRenderTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSampleRenderTarget.h; sourceTree = "<group>"; };
+		44A64F1D1515FE8800E4D170 /* downsample.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = downsample.frag.glsl; path = shaders/downsample.frag.glsl; sourceTree = "<group>"; };
+		44A64F1E1515FE8800E4D170 /* downsample.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = downsample.vert.glsl; path = shaders/downsample.vert.glsl; sourceTree = "<group>"; };
+		44C417DF151331A300586593 /* CustomVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVertex.h; sourceTree = "<group>"; };
+		44C66F7D15135A3700BA3B72 /* phong.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = phong.frag.glsl; path = shaders/phong.frag.glsl; sourceTree = "<group>"; };
+		44C66F7E15135A3700BA3B72 /* phong.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = phong.vert.glsl; path = shaders/phong.vert.glsl; sourceTree = "<group>"; };
+		44C66F7F15135A3700BA3B72 /* specToon.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = specToon.frag.glsl; path = shaders/specToon.frag.glsl; sourceTree = "<group>"; };
+		44C66F8115135A3700BA3B72 /* outlineToon.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = outlineToon.frag.glsl; path = shaders/outlineToon.frag.glsl; sourceTree = "<group>"; };
+		44C66F8215135A3700BA3B72 /* outlineToon.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = outlineToon.vert.glsl; path = shaders/outlineToon.vert.glsl; sourceTree = "<group>"; };
+		44CF852015154BF5005A527B /* CustomMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMaterial.h; sourceTree = "<group>"; };
+		44DE475F1517F1DD00989E75 /* specToon.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = specToon.vert.glsl; path = shaders/specToon.vert.glsl; sourceTree = "<group>"; };
+		8DD76FB20486AB0100D96B5E /* slork-FinalProject-Visuals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "slork-FinalProject-Visuals"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3FE7F415182A5900C99293 /* phongTexture.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = phongTexture.frag.glsl; path = shaders/phongTexture.frag.glsl; sourceTree = "<group>"; };
+		AC3FE7F515182A5900C99293 /* phongTexture.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = phongTexture.vert.glsl; path = shaders/phongTexture.vert.glsl; sourceTree = "<group>"; };
+		AC3FE7FD151838CF00C99293 /* backgroundFuzz.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = backgroundFuzz.frag.glsl; path = shaders/backgroundFuzz.frag.glsl; sourceTree = "<group>"; };
+		AC3FE7FE151838CF00C99293 /* backgroundFuzz.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = backgroundFuzz.vert.glsl; path = shaders/backgroundFuzz.vert.glsl; sourceTree = "<group>"; };
+		C6A0FF2C0290799A04C91782 /* slork-FinalProject-Visuals.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "slork-FinalProject-Visuals.1"; sourceTree = "<group>"; };
+		C9EA8F0B12EE77060002670E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		C9EA8FD912EE79EB0002670E /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "sfml-graphics.framework"; sourceTree = "<group>"; };
+		C9EA8FDA12EE79EB0002670E /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "sfml-network.framework"; sourceTree = "<group>"; };
+		C9EA8FDB12EE79EB0002670E /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "sfml-system.framework"; sourceTree = "<group>"; };
+		C9EA8FDC12EE79EB0002670E /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "sfml-window.framework"; sourceTree = "<group>"; };
+		C9EA8FDD12EE79EB0002670E /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SFML.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EA8F0C12EE77060002670E /* OpenGL.framework in Frameworks */,
+				C9EA8FDF12EE79EB0002670E /* sfml-graphics.framework in Frameworks */,
+				C9EA8FE012EE79EB0002670E /* sfml-network.framework in Frameworks */,
+				C9EA8FE112EE79EB0002670E /* sfml-system.framework in Frameworks */,
+				C9EA8FE212EE79EB0002670E /* sfml-window.framework in Frameworks */,
+				C9EA8FE312EE79EB0002670E /* SFML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* slork-FinalProject-Visuals */ = {
+			isa = PBXGroup;
+			children = (
+				44337ED214FE4714009B2FA4 /* source */,
+				44A64F211515FEA000E4D170 /* shaders */,
+				4448792414FE43DA00D88B27 /* models */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				C9EA90E912EE7FA60002670E /* Dependencies */,
+			);
+			name = "slork-FinalProject-Visuals";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* slork-FinalProject-Visuals */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44337ED214FE4714009B2FA4 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				44337ED314FE4714009B2FA4 /* Main.cpp */,
+				44CF852015154BF5005A527B /* CustomMaterial.h */,
+				44C417DF151331A300586593 /* CustomVertex.h */,
+				449E42FD1515EFC60019FF87 /* DepthRenderTarget.cpp */,
+				449E42FE1515EFC60019FF87 /* DepthRenderTarget.h */,
+				44337EDC14FE4A5E009B2FA4 /* Framework.h */,
+				449E43011515F1040019FF87 /* MultiSampleRenderTarget.cpp */,
+				449E43021515F1040019FF87 /* MultiSampleRenderTarget.h */,
+				443BBD0E156CDA4500EEF148 /* Node.cpp */,
+				443BBD0D156CD8F300EEF148 /* Node.h */,
+				44337ED414FE4714009B2FA4 /* Shader.cpp */,
+				44337ED514FE4714009B2FA4 /* Shader.h */,
+				44337EDF14FE4A5E009B2FA4 /* ip */,
+				44337EED14FE4A5E009B2FA4 /* osc */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		44337EDF14FE4A5E009B2FA4 /* ip */ = {
+			isa = PBXGroup;
+			children = (
+				44337EE014FE4A5E009B2FA4 /* IpEndpointName.cpp */,
+				44337EE114FE4A5E009B2FA4 /* IpEndpointName.h */,
+				44337EE214FE4A5E009B2FA4 /* NetworkingUtils.h */,
+				44337EE314FE4A5E009B2FA4 /* PacketListener.h */,
+				44337EE414FE4A5E009B2FA4 /* posix */,
+				44337EE714FE4A5E009B2FA4 /* TimerListener.h */,
+				44337EE814FE4A5E009B2FA4 /* UdpSocket.h */,
+			);
+			path = ip;
+			sourceTree = "<group>";
+		};
+		44337EE414FE4A5E009B2FA4 /* posix */ = {
+			isa = PBXGroup;
+			children = (
+				44337EE514FE4A5E009B2FA4 /* NetworkingUtils.cpp */,
+				44337EE614FE4A5E009B2FA4 /* UdpSocket.cpp */,
+			);
+			path = posix;
+			sourceTree = "<group>";
+		};
+		44337EED14FE4A5E009B2FA4 /* osc */ = {
+			isa = PBXGroup;
+			children = (
+				44337EEE14FE4A5E009B2FA4 /* MessageMappingOscPacketListener.h */,
+				44337EEF14FE4A5E009B2FA4 /* OscException.h */,
+				44337EF014FE4A5E009B2FA4 /* OscHostEndianness.h */,
+				44337EF114FE4A5E009B2FA4 /* OscOutboundPacketStream.cpp */,
+				44337EF214FE4A5E009B2FA4 /* OscOutboundPacketStream.h */,
+				44337EF314FE4A5E009B2FA4 /* OscPacketListener.h */,
+				44337EF414FE4A5E009B2FA4 /* OscPrintReceivedElements.cpp */,
+				44337EF514FE4A5E009B2FA4 /* OscPrintReceivedElements.h */,
+				44337EF614FE4A5E009B2FA4 /* OscReceivedElements.cpp */,
+				44337EF714FE4A5E009B2FA4 /* OscReceivedElements.h */,
+				44337EF814FE4A5E009B2FA4 /* OscTypes.cpp */,
+				44337EF914FE4A5E009B2FA4 /* OscTypes.h */,
+			);
+			path = osc;
+			sourceTree = "<group>";
+		};
+		4448792414FE43DA00D88B27 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		44A64F211515FEA000E4D170 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				AC3FE7FD151838CF00C99293 /* backgroundFuzz.frag.glsl */,
+				AC3FE7FE151838CF00C99293 /* backgroundFuzz.vert.glsl */,
+				44A64F1D1515FE8800E4D170 /* downsample.frag.glsl */,
+				44A64F1E1515FE8800E4D170 /* downsample.vert.glsl */,
+				44C66F7D15135A3700BA3B72 /* phong.frag.glsl */,
+				44C66F7E15135A3700BA3B72 /* phong.vert.glsl */,
+				AC3FE7F415182A5900C99293 /* phongTexture.frag.glsl */,
+				AC3FE7F515182A5900C99293 /* phongTexture.vert.glsl */,
+				44C66F7F15135A3700BA3B72 /* specToon.frag.glsl */,
+				44DE475F1517F1DD00989E75 /* specToon.vert.glsl */,
+				44C66F8115135A3700BA3B72 /* outlineToon.frag.glsl */,
+				44C66F8215135A3700BA3B72 /* outlineToon.vert.glsl */,
+			);
+			name = shaders;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0FF2C0290799A04C91782 /* slork-FinalProject-Visuals.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		C9EA90E912EE7FA60002670E /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E700C5D314E90AB80056CBB4 /* Frameworks */,
+				C9EA8FD912EE79EB0002670E /* sfml-graphics.framework */,
+				C9EA8FDA12EE79EB0002670E /* sfml-network.framework */,
+				C9EA8FDB12EE79EB0002670E /* sfml-system.framework */,
+				C9EA8FDC12EE79EB0002670E /* sfml-window.framework */,
+				C9EA8FDD12EE79EB0002670E /* SFML.framework */,
+				C9EA8F0B12EE77060002670E /* OpenGL.framework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		E700C5D314E90AB80056CBB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* slork-FinalProject-Visuals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "slork-FinalProject-Visuals" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+				C9EA905412EE7AEF0002670E /* Copy Files */,
+				C9EA90C412EE7F1D0002670E /* Copy Models */,
+				C98951FD12EF80A600B97901 /* Copy Shaders */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "slork-FinalProject-Visuals";
+			productInstallPath = "$(HOME)/bin";
+			productName = "slork-FinalProject-Visuals";
+			productReference = 8DD76FB20486AB0100D96B5E /* slork-FinalProject-Visuals */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "slork-FinalProject-Visuals" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* slork-FinalProject-Visuals */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* slork-FinalProject-Visuals */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44337ED614FE4714009B2FA4 /* Main.cpp in Sources */,
+				44337ED714FE4714009B2FA4 /* Shader.cpp in Sources */,
+				44337EFD14FE4A5E009B2FA4 /* IpEndpointName.cpp in Sources */,
+				44337EFE14FE4A5E009B2FA4 /* NetworkingUtils.cpp in Sources */,
+				44337EFF14FE4A5E009B2FA4 /* UdpSocket.cpp in Sources */,
+				44337F0114FE4A5E009B2FA4 /* OscOutboundPacketStream.cpp in Sources */,
+				44337F0214FE4A5E009B2FA4 /* OscPrintReceivedElements.cpp in Sources */,
+				44337F0314FE4A5E009B2FA4 /* OscReceivedElements.cpp in Sources */,
+				44337F0414FE4A5E009B2FA4 /* OscTypes.cpp in Sources */,
+				449E42FF1515EFC60019FF87 /* DepthRenderTarget.cpp in Sources */,
+				449E43031515F1040019FF87 /* MultiSampleRenderTarget.cpp in Sources */,
+				443BBD0F156CDA4500EEF148 /* Node.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "slork-FinalProject-Visuals";
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "slork-FinalProject-Visuals";
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = include;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "slork-FinalProject-Visuals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "slork-FinalProject-Visuals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

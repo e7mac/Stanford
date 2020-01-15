@@ -1,0 +1,6 @@
+array=( albacore.local banhmi.local chowder.local donut.local empanada.local foiegras.local gelato.local hamburger.local kimchi.local lasagna.local meatloaf.local nachos.local quinoa.local ratatouille.local spam.local tiramisu.local)
+
+for var in "${array[@]}"
+do
+  ./remote_run_node $var
+done

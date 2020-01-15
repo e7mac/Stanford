@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include
+END
+assimp.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/assimp.h
+END
+LogStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/LogStream.h
+END
+aiAnim.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiAnim.h
+END
+aiVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiVersion.h
+END
+ProgressHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/ProgressHandler.h
+END
+aiCamera.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiCamera.h
+END
+aiVector3D.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiVector3D.h
+END
+aiMaterial.inl
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMaterial.inl
+END
+aiMesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMesh.h
+END
+aiScene.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiScene.h
+END
+aiMatrix3x3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMatrix3x3.inl
+END
+aiMatrix4x4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMatrix4x4.inl
+END
+aiTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiTexture.h
+END
+NullLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/NullLogger.h
+END
+aiColor4D.inl
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiColor4D.inl
+END
+aiTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiTypes.h
+END
+aiConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiConfig.h
+END
+aiLight.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiLight.h
+END
+aiDefines.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiDefines.h
+END
+assimp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/assimp.hpp
+END
+aiVector3D.inl
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiVector3D.inl
+END
+aiPostProcess.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiPostProcess.h
+END
+aiQuaternion.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiQuaternion.h
+END
+aiVector2D.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiVector2D.h
+END
+aiMaterial.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMaterial.h
+END
+aiAssert.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiAssert.h
+END
+aiMatrix3x3.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMatrix3x3.h
+END
+IOSystem.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/IOSystem.h
+END
+aiMatrix4x4.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiMatrix4x4.h
+END
+Logger.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/Logger.h
+END
+aiColor4D.h
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiColor4D.h
+END
+aiFileIO.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/aiFileIO.h
+END
+IOStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/IOStream.h
+END
+DefaultLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/include/DefaultLogger.h
+END

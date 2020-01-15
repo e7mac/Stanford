@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/slork/!svn/ver/1010/trunk/groups/2012/mayank-jiffer-hunter/scripts
+END
+autosvn
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/slork/!svn/ver/822/trunk/groups/2012/mayank-jiffer-hunter/scripts/autosvn
+END
+update_all_complete
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/slork/!svn/ver/885/trunk/groups/2012/mayank-jiffer-hunter/scripts/update_all_complete
+END
+remote_run_node
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/slork/!svn/ver/804/trunk/groups/2012/mayank-jiffer-hunter/scripts/remote_run_node
+END
+remote_stop_node
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/slork/!svn/ver/833/trunk/groups/2012/mayank-jiffer-hunter/scripts/remote_stop_node
+END
+fire
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/slork/!svn/ver/843/trunk/groups/2012/mayank-jiffer-hunter/scripts/fire
+END
+ping_all
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/slork/!svn/ver/1000/trunk/groups/2012/mayank-jiffer-hunter/scripts/ping_all
+END
+autossh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/slork/!svn/ver/801/trunk/groups/2012/mayank-jiffer-hunter/scripts/autossh
+END
+autosvn_complete
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/slork/!svn/ver/885/trunk/groups/2012/mayank-jiffer-hunter/scripts/autosvn_complete
+END
+run_node
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/slork/!svn/ver/925/trunk/groups/2012/mayank-jiffer-hunter/scripts/run_node
+END
+stop_node
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/slork/!svn/ver/927/trunk/groups/2012/mayank-jiffer-hunter/scripts/stop_node
+END
+update_all
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/slork/!svn/ver/992/trunk/groups/2012/mayank-jiffer-hunter/scripts/update_all
+END
+run_all
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/slork/!svn/ver/1010/trunk/groups/2012/mayank-jiffer-hunter/scripts/run_all
+END
+stop_all
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/slork/!svn/ver/1010/trunk/groups/2012/mayank-jiffer-hunter/scripts/stop_all
+END

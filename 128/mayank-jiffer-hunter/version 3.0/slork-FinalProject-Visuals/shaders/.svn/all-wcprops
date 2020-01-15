@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders
+END
+downsample.frag.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/downsample.frag.glsl
+END
+downsample.vert.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/downsample.vert.glsl
+END
+specToon.frag.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/specToon.frag.glsl
+END
+phong.frag.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/phong.frag.glsl
+END
+specToon.vert.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/specToon.vert.glsl
+END
+phong.vert.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/phong.vert.glsl
+END
+phongTexture.frag.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/phongTexture.frag.glsl
+END
+phongTexture.vert.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/phongTexture.vert.glsl
+END
+backgroundFuzz.frag.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/backgroundFuzz.frag.glsl
+END
+backgroundFuzz.vert.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/backgroundFuzz.vert.glsl
+END
+outlineToon.frag.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/outlineToon.frag.glsl
+END
+outlineToon.vert.glsl
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/shaders/outlineToon.vert.glsl
+END

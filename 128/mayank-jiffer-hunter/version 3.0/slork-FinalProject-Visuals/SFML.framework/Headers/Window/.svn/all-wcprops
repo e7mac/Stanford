@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window
+END
+VideoMode.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/VideoMode.hpp
+END
+WindowListener.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/WindowListener.hpp
+END
+Input.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/Input.hpp
+END
+Event.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/Event.hpp
+END
+WindowHandle.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/WindowHandle.hpp
+END
+Context.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/Context.hpp
+END
+OpenGL.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/OpenGL.hpp
+END
+Window.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/Window.hpp
+END
+WindowSettings.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/WindowSettings.hpp
+END
+WindowStyle.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Headers/Window/WindowStyle.hpp
+END

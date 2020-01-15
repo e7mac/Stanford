@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc
+END
+OscTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscTypes.h
+END
+OscHostEndianness.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscHostEndianness.h
+END
+OscPrintReceivedElements.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscPrintReceivedElements.cpp
+END
+OscPacketListener.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscPacketListener.h
+END
+MessageMappingOscPacketListener.h
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/MessageMappingOscPacketListener.h
+END
+OscException.h
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscException.h
+END
+OscOutboundPacketStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscOutboundPacketStream.cpp
+END
+OscReceivedElements.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscReceivedElements.cpp
+END
+OscTypes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscTypes.cpp
+END
+OscPrintReceivedElements.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscPrintReceivedElements.h
+END
+OscOutboundPacketStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscOutboundPacketStream.h
+END
+OscReceivedElements.h
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/source/osc/OscReceivedElements.h
+END

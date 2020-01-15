@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics
+END
+Rect.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Rect.hpp
+END
+Shape.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Shape.hpp
+END
+String.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/String.hpp
+END
+Sprite.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Sprite.hpp
+END
+Font.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Font.hpp
+END
+RenderWindow.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/RenderWindow.hpp
+END
+View.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/View.hpp
+END
+Color.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Color.hpp
+END
+Drawable.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Drawable.hpp
+END
+Matrix3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Matrix3.inl
+END
+Image.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Image.hpp
+END
+PostFX.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/PostFX.hpp
+END
+Glyph.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Glyph.hpp
+END
+RenderTarget.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/RenderTarget.hpp
+END
+Matrix3.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Matrix3.hpp
+END
+Rect.inl
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Graphics/Rect.inl
+END

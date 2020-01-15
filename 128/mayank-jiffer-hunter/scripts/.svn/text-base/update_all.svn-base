@@ -1,0 +1,6 @@
+array=( albacore.local banhmi.local chowder.local donut.local empanada.local foiegras.local gelato.local hamburger.local icetea.local jambalaya.local kimchi.local lasagna.local meatloaf.local nachos.local omelet.local pho.local quinoa.local ratatouille.local spam.local tiramisu.local udon.local vindaloo.local waffle.local xanax.local)
+
+for var in "${array[@]}"
+do
+  ./autosvn $var
+done

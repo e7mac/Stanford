@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f       
+    set timeout 20
+	set IPaddress [lindex $argv 0]
+	set Username "slork"
+	set Password "hoagie"
+
+	spawn ssh -o "StrictHostKeyChecking no" $Username@$IPaddress "./slork/groups/2012/mayank-jiffer-hunter/scripts/stop_node"
+	expect "*assword:"
+	send "$Password\r"
+	interact
+	
+exit

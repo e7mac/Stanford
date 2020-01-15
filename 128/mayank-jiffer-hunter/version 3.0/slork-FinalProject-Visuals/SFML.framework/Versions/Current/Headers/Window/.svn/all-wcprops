@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window
+END
+VideoMode.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/VideoMode.hpp
+END
+WindowListener.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/WindowListener.hpp
+END
+Input.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/Input.hpp
+END
+Event.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/Event.hpp
+END
+WindowHandle.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/WindowHandle.hpp
+END
+Context.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/Context.hpp
+END
+OpenGL.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/OpenGL.hpp
+END
+Window.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/Window.hpp
+END
+WindowSettings.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/WindowSettings.hpp
+END
+WindowStyle.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/slork/!svn/ver/760/trunk/groups/2012/mayank-jiffer-hunter/version%203.0/slork-FinalProject-Visuals/SFML.framework/Versions/Current/Headers/Window/WindowStyle.hpp
+END

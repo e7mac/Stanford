@@ -1,0 +1,6 @@
+kill -9 `ps ux | awk '/Runtime/ && !/awk/ {print $2}'`
+kill -9 `ps ux | awk '/chuck/ && !/awk/ {print $2}'`
+kill -9 `ps ux | awk '/miniAudicle/ && !/awk/ {print $2}'`
+kill -9 `ps ux | awk '/Terminal/ && !/awk/ {print $2}'`
+kill -9 `ps ux | awk '/Preview/ && !/awk/ {print $2}'`
+
