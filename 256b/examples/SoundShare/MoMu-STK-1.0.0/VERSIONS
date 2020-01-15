@@ -1,0 +1,18 @@
+---
+MoMu STK-1.0.0
+  - initial release based on STK 4.4.2!
+  - includes everything in STK 4.4.2 except:
+	-RtAudio.h/cpp
+	-RtError.h
+	-RtMidi.h/cpp
+	-RtWvIn.h/cpp
+	-RtWvOut.h/cpp
+  - slight modifications were made to:
+	-Stk.h
+	-Stk.cpp -> Stk.mm
+	-UdpSocket.h/cpp -> StkUdpSocket.h/cpp
+	-makefunc.c
+	-makemidi.c
+	-makewavs.c
+	-sine.c
+

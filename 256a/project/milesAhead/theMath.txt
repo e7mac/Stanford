@@ -1,0 +1,10 @@
+tick is on a sample-by-sample basis
+sample rate = s_rate
+tempo = t bpm = t/60 bp second = t/60*s_rate bpsample
+second = s_rate samples
+on-time = x1 samples
+off-time = x2 samples
+duration of note = x2-x1 samples
+therefore.. in 4/4
+whole note = (x2-x1)*(t/60*s_rate) = 4
+

@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>A Simple LateX Template</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Microsoft Theme" content="network 0011, default">
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body background="../../_themes/network/netbkgnd.gif" bgcolor="#FFFFFF" text="#000000" link="#0066CC" vlink="#999999" alink="#669999"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+
+<h5 align="center"><font face="Arial">Technion - Israel Institute of Technology<br>
+Department of Computer Science<br>
+<font SIZE="2">CS 236610: </font>Advanced Topics
+A Simple LaTeX Template</font></h5>
+<h3 align="center">
+A Simple LaTeX Template</h3>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+
+<p dir="ltr"><font size="2">
+<nobr><A HREF="../../index.htm" TARGET="">Home&nbsp;Page</A></nobr><br><nobr><A HREF="../../latex.htm" TARGET="">The&nbsp;Technion&nbsp;Guide&nbsp;to&nbsp;LaTeX2e</A></nobr><br><nobr><A HREF="../short/short.htm" TARGET="">A&nbsp;Short&nbsp;LaTeX&nbsp;Example</A></nobr><br><nobr><U>A&nbsp;Simple&nbsp;LaTeX&nbsp;Template</U></nobr><br><nobr><A HREF="../paper/main.htm" TARGET="">A&nbsp;Full&nbsp;Paper&nbsp;Example</A></nobr><br><nobr><A HREF="../../packages/index.htm" TARGET="">Other&nbsp;LaTeX&nbsp;Packages</A></nobr><br><nobr><A HREF="../howto/howto.htm" TARGET="">The&nbsp;&nbsp;Long&nbsp;&quot;howto&quot;&nbsp;LaTeX&nbsp;Template</A></nobr><br><nobr><A HREF="../../bib_files/index.htm" TARGET="">Useful&nbsp;Bibliography&nbsp;Files</A></nobr><br><nobr><A HREF="../../programs/dup" TARGET="">The&nbsp;&quot;dup&quot;&nbsp;program</A></nobr><br><nobr><A HREF="../../packages/prog2tex/index.htm" TARGET="">Prog2Tex&nbsp;-&nbsp;produce&nbsp;beautiful&nbsp;program&nbsp;listings</A></nobr><br><nobr><A HREF="../../samples/alex/index.htm" TARGET="">One&nbsp;Pager&nbsp;Article</A></nobr><br><nobr><A HREF="../../speaker.pdf" TARGET="">How&nbsp;to&nbsp;Present&nbsp;a&nbsp;Paper</A></nobr><br><nobr><A HREF="../../NAMSSpeakersGuide.pdf" TARGET="">Speaker&#39;s&nbsp;Guide</A></nobr><br><nobr><A HREF="../../howtoref.pdf" TARGET="">A&nbsp;Guide&nbsp;for&nbsp;New&nbsp;Referees</A></nobr><br><nobr><A HREF="../../cute_tips.htm" TARGET="">Cute&nbsp;Tips</A></nobr><br><nobr><A HREF="../bbbold/bbbold.html" TARGET="">The&nbsp;Blackboard&nbsp;Bold&nbsp;and&nbsp;Its&nbsp;Relatives</A></nobr></font></p>
+
+<!--mstheme--></font></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+
+<blockquote>
+  <p>
+   Input files
+  <!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!--msthemelist--><tr><td valign="top" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">The main LaTeX input file: <a href="simple.tex">simple.tex</a><!--mstheme--></font><table border="1" style="border-collapse: collapse" cellpadding="3" cellspacing="0" bordercolordark="#330066" bordercolorlight="#330066">
+     <tbody>
+      <tr>
+       <td><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+        <!--mstheme--></font><pre>\title{A Very Simple \LaTeXe{} Template}
+\author{
+        Vitaly Surazhsky \\
+                Department of Computer Science\\
+        Technion---Israel Institute of Technology\\
+        Technion City, Haifa 32000, \underline{Israel}
+            \and
+        Yossi Gil\\
+        Department of Computer Science\\
+        Technion---Israel Institute of Technology\\
+        Technion City, Haifa 32000, \underline{Israel}
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is the paper's abstract \ldots
+\end{abstract}
+
+\section{Introduction}
+This is time for all good men to come to the aid of their party!
+
+\paragraph{Outline}
+The remainder of this article is organized as follows.
+Section~\ref{previous work} gives account of previous work.
+Our new and exciting results are described in Section~\ref{results}.
+Finally, Section~\ref{conclusions} gives the conclusions.
+
+\section{Previous work}\label{previous work}
+A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+
+\section{Results}\label{results}
+In this section we describe the results.
+
+\section{Conclusions}\label{conclusions}
+We worked hard, and achieved very little.
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}
+This is never printed
+  </pre><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+     </tbody>
+     </table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+    <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">A bibliography file with one entry: <a href="simple.bib">simple.bib</a>
+     <!--mstheme--></font><table border="1" style="border-collapse: collapse" cellpadding="3" cellspacing="0" bordercolordark="#330066" bordercolorlight="#330066">
+       <tbody>
+        <tr>
+         <td><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+          <!--mstheme--></font><pre>@Booklet{Gil:02,
+  author       = {Joseph (Yossi) Gil},
+  TITLE        = {{\LaTeXe} for Graduate Students},
+  year         = {2002},
+  howpublished = {manuscript},
+  address      = {Haifa, Israel},
+}</pre><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+       </tbody>
+     </table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+  <!--msthemelist--></table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+  <p>
+   Output files
+  <!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!--msthemelist--><tr><td valign="top" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">Device independent output: <a href="simple.dvi">simple.dvi</a><!--msthemelist--><tr><td valign="baseline" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+    PostScript output, produced from dvi: <a href="simple.ps">simple.ps</a><!--msthemelist--><tr><td valign="baseline" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+     PDF output, produced from dvi: <a href="simple.pdf">simple.pdf</a>
+  <!--msthemelist--></table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+  <p>
+   Auxiliary files
+  <!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!--msthemelist--><tr><td valign="top" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">Auxiliary file, including labels and other symbol table information:
+     <a href="../../simple.aux">simple.aux</a><!--msthemelist--><tr><td valign="baseline" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">Processed bibliography file, to be 
+     included in the bibliography section: <a href="simple.bbl">simple.bbl</a><!--msthemelist--></table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+  <p>
+   Run logs
+  <!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!--msthemelist--><tr><td valign="top" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">Log of running LaTeX: <a href="simple.log">simple.log</a>
+    <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../../_themes/network/anetbul1.gif" width="12" height="12" hspace="15" alt="bullet"></td><td valign="top" width="100%"><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">Log of running BibTeX: <a href="simple.blg">simple.blg</a>
+  <!--msthemelist--></table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+  <p>
+   All files in one zip: <a href="all.zip">all.zip</a><!--mstheme--></font><!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--></table><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+</blockquote>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="trebuchet ms, Arial, Helvetica">
+
+<p dir="ltr"><span lang="en"><font size="2">L</font></span><span lang="en-us"><font size="2">ast 
+updated on 29/09/2004</font></span></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+
+</html>

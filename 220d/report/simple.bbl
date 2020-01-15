@@ -1,0 +1,53 @@
+\begin{thebibliography}{1}
+
+\bibitem{Bencina}
+R.~Bencina.
+\newblock Implementing real-time granular synthesis.
+\newblock
+  \url{http://www.rossbencina.com/static/code/granular-synthesis/BencinaAudioAnecdotes310801.pdf},
+  August 2001.
+
+\bibitem{Flocking}
+C.~Clark.
+\newblock Flocking.
+\newblock \url{https://github.com/colinbdclark/Flocking}.
+
+\bibitem{Crockford}
+D.~Crockford.
+\newblock {\em JavaScript: The Good Parts}.
+\newblock Yahoo Press, May 2008.
+
+\bibitem{NaCl}
+Google.
+\newblock Native client.
+\newblock \url{https://developers.google.com/native-client/}.
+
+\bibitem{Faust}
+Grame.
+\newblock Faust.
+\newblock \url{http://faust.grame.fr}.
+
+\bibitem{faust-tutorial}
+Grame.
+\newblock Faust tutorial 2.
+\newblock \url{http://faust.grame.fr/images/faust-doc/Faust_tutorial2.pdf}.
+
+\bibitem{Roads}
+C.~Roads.
+\newblock {\em Microsound}.
+\newblock MIT Press, January 2004.
+
+\bibitem{Faust-Granulator}
+M.~Sanganeria.
+\newblock Faust granulator.
+\newblock \url{https://github.com/e7mac/faust-code/blob/master/granulator.dsp},
+  December 2012.
+
+\bibitem{Flocking-Granulator}
+M.~Sanganeria.
+\newblock Flocking granulator.
+\newblock
+  \url{http://github.com/e7mac/Flocking/blob/master/flocking/flocking-ugens.js#L1716-L1827},
+  December 2012.
+
+\end{thebibliography}

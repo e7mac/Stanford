@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <!-- <script src="jquery-1.7.1.min.js" language="javascript"></script>  -->
+        <script src="jquery-1.7.1.min.js"></script>
+        <script src="faustui.js"></script> 
+        <script src="fausttools.js"></script> 
+        <title>
+            Title
+        </title>
+        
+        <!-- Our javascript code -->
+        <script type="text/javascript">
+            
+            // init() once the page has finished loading.
+            window.onload = init;
+            
+            function init() 
+            {
+                initAudio("noise.dsp");
+            }
+            
+            </script>
+    </head>
+    <body>
+        
+        <h1><center> FAUST generator </center></h1>
+        <center><div id="FaustMeta"></center> </div>
+        <p>
+        <center><div id="FaustUI"></center> </div>
+             
+    </body>
+</html>

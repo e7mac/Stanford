@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script src="jquery-1.7.1.min.js"></script>
+        <script src="faustui.js"></script> 
+        <script src="fausttools.js"></script> 
+        <title id=titre>Simple FAUST editor</title>
+    </head>
+    
+    <script>
+        timeout = 1000;
+        timehandler = 0;
+        
+        // init() once the page has finished loading.
+        window.onload = init;
+        
+        function init() 
+        {
+            initDefaultAudio();
+        }
+        
+        function handleBuildFaustNode(value) 
+        {
+            if (timehandler) clearTimeout(timehandler);
+            timehandler = setTimeout(function() { buildFaustNode(value); }, timeout);
+        }
+        
+        </script>
+    
+    <body>
+        <center>
+            
+            <h1>Simple FAUST editor</h1>
+            <br/>
+            
+            <table>
+                
+                <tr>
+                    <td><center>Type FAUST code here (or copy a .dsp file)</center></td>
+                    <td><center><H3> FAUST audio node</H3> </center></td>
+                </tr>   
+                
+                <tr>    
+                    <td>
+                        <center><textarea id="faust" rows = 30 cols = 80 oninput = handleBuildFaustNode(this.value)
+                            ondragenter = "cancel(event)"
+                            ondragover = "cancel(event)">
+                        </textarea></center></td>
+                    <td><center><div id = "FaustUI"> </div></center></td>
+                </tr>
+                
+            </table>
+            
+        </center>
+        
+        <p>
+        <center>
+            <table>
+                <tr>
+                    <td class="sound">Sound file:</td> <td> <input type="text" id ="sound" size=20 value="t1.wav"/></td>
+                    <tr>
+            </table>
+            <table>
+                <tr>
+                    <td><center><button type="button" onclick="playsound()">Play</button></center></td>
+                    <td><center><button type="button" onclick="stopsound()">Stop</button></center></td>
+                </tr>
+            </table>
+        </center>
+        
+    </body>
+</html>

@@ -1,0 +1,23 @@
+RoundTrippy
+Sound Visualization software
+Author: Mayank Sanganeria
+CCRMA, Stanford University
+
+
+Building the project
+---------------------------------------
+Download all the files in one folder.
+Ensure that Jack (jackaudio.org) is installed on the machine. 
+On the terminal, run the 'make' command.
+
+
+Running the project
+---------------------------------------
+Before running, ensure that Jack server is running (on terminal, type 'qjackctl'). On the window that pops up, click 'Start'
+To run, type ./roundTrippy
+Running the program causes the usage text to be printed to the console.
+
+Ideas
+---------------------------------------
+I wanted to make something in 3 dimensions that spun and initially I was thinking of a sphere. However, I finally implemented a cylinder because its looking awesome. Most of the work was in 3d geometry - working out the (x,y,z) and playing with sin and cos functions to adjust the OpenGL parameters. While trying to control the size of the cylinder, I stumbled upon the "white" screen with the audio waveform in the middle and the spectrum rotating around it. The spectrogram is also implemented by changing the intensity of the line instead of just height. The peaks are made smooth by multiplying with a cos function that goes from 0 to 1 to 0 as you traverse 2pi. The audio wave slowly fades away and becomes thicker to give a trippy feel.
+The size of the cylinder is varied according to the energy in the spectrum but it is limited between a minimum and maximum. There is a basic "pitch detection" feature which approximates the frequency bin with the highest amplitude as the pitch and displays it on screen.

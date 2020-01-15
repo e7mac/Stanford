@@ -1,0 +1,14 @@
+Building the project
+---------------------------------------
+Download procreate.cpp, makefile, RtAudio.cpp, RtAudio.h, RtError.h in one folder.
+Ensure that Jack (jackaudio.org) is installed on the machine. 
+On the terminal, run the 'make' command.
+
+Before running, ensure that Jack server is running (on terminal, type 'qjackctl'). On the window that pops up, click 'Start'
+
+Ideas
+---------------------------------------
+The global namespace has been cleaned and the state is being passed to the callback function using a pointer to a custom defined struct called 'callbackData'. The variable names still carry the "g_" prefix though, which could be removed.
+There is only one callback function which runs every time and checks for the type of signal to be generated on every iteration. The state between functions is kept in the g_t variable inside the struct 'callbackData' and is just a count of the number of samples. This idea is the same as Ge's HelloSine program.
+A separate function handles the parsing and checks for the correct number of parameters.
+The setup of the RtAudio is unchanged from the HelloSine.cpp program.

@@ -1,0 +1,5 @@
+
+			update		rev		revmix		data file		amp		freq
+Bass-echo - 400			Echo	0.5			mccleary10		1		50+4w
+mid-jumper  200			JCRev	0.2			mccleary5		2		20+40w		
+bamboozle   50			Echo/NRev	0.5/0.1			mccleary10		2		40+5w

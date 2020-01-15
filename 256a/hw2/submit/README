@@ -1,0 +1,16 @@
+Building the project
+---------------------------------------
+Download all the files in one folder.
+Ensure that Jack (jackaudio.org) is installed on the machine. 
+On the terminal, run the 'make' command.
+
+
+Running the project
+---------------------------------------
+Before running, ensure that Jack server is running (on terminal, type 'qjackctl'). On the window that pops up, click 'Start'
+To run, type ./midi
+It uses the default midi device
+
+Ideas
+---------------------------------------
+The program basically runs on the back of midi.cpp by Jorge Herrera and the demo by Ge Wang. I haven't written the required classes but have simply used what was already made. For polyphony, I simply used an array of KS (karplus strong) objects which are summed up and sent to the buffer for audio output. Individual voices are generated in their own KS objects. Velocity is simply used in the sense that a 0 zero velocity means no sound but I haven't mapped it to gain yet.

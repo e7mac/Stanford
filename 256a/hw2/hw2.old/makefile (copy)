@@ -1,0 +1,30 @@
+CXX=g++
+INCLUDES=
+OBJS=   RtAudio.o Delayed.o ks.o
+
+#ifeq ($(UNAME), Linux)
+#	FLAGS=-D__UNIX_JACK__ -c
+#	LIBS = -lstdc++ -lm -ljack
+	FLAGS=-D__UNIX_JACK__ -c
+	LIBS = `pkg-config --cflags --libs jack` -lpthread
+#endif
+
+#ifeq ($(UNAME), Darwin)
+#	FLAGS=-D__MACOSX_CORE__ -c
+#	LIBS=-framework CoreAudio -framework CoreMIDI -framework CoreFoundation \
+#	-framework IOKit -framework Carbon -lstdc++ -lm
+#endif
+
+Delayed: $(OBJS)
+	$(CXX) -o Delayed $(OBJS) $(LIBS)
+
+Delayed.o: Delayed.cpp RtAudio.h
+	$(CXX) $(FLAGS) Delayed.cpp -o Delayed.o
+
+RtAudio.o: RtAudio.h RtAudio.cpp RtError.h
+	$(CXX) $(FLAGS) RtAudio.cpp -o RtAudio.o
+ks.o: ks.h ks.cpp
+	$(CXX) $(FLAGS) ks.cpp -o ks.o
+
+clean:
+	rm -f *~ *# *.o Delayed

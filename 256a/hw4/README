@@ -1,0 +1,17 @@
+Building the project
+---------------------------------------
+Download all the files in one folder.
+Ensure that Jack (jackaudio.org) is installed on the machine. 
+On the terminal, run the 'make' command.
+
+
+Running the project
+---------------------------------------
+Before running, ensure that Jack server is running (on terminal, type 'qjackctl'). On the window that pops up, click 'Start'
+To run, type ./CallAndNetsponse [ip address] [local port] [remote port]
+Find ip address by going to the site whatsmyip.org
+It uses the default midi device
+
+Ideas
+---------------------------------------
+The idea was to create a collaborative midi system that can be used for real time jamming over the network. It borrows code from the midi homework and adds osc send/receive functionality to it. Being a minimal assignment, once I got networking functional, I decided to leave it alone. Obvious additions to the project include making it multiple people instead of just 2 and adding some sort of game feel to it - by making a rubber chicken that jumps to different people's screens and indicates that they must play something and relegate the other players to the background with maybe reducing their volume.

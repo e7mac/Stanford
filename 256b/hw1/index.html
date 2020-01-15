@@ -1,0 +1,32 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>256b HW1</title>
+	<link href="http://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet" type="text/css" >
+	<link href="hw.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+	<div id="title">256b HW1</div>
+	<div id="subtitle">Instructions</div>
+<div id="text">	
+<p>	
+To run the programs, please download the zip files, unzip them into separate directories and run the Xcode project in the directory. If you click Run, the project should run on hte device / simulator.
+	</p>
+	<div id="subtitle">Source</div>
+<div id="text">	
+<p>	
+<a href="hw1Sine.zip">Sine Wave</a>
+<a href="hw1FM.zip">FM Synthesis</a>
+<a href="hw1delay.zip">Delayed Input</a>
+	</p>
+	<div id="subtitle">Readme</div>
+<div id="text">	
+<p>	
+The Sine wave program was a simple program constructed from the tutorial material. I wanted to add something to it, so I wrote a WaveView class which would display the contents of the audio buffer at any time. The difficulty I faced was in figuring out where to refresh the WaveView. For now, I am doing it in the Acceleration callback but I have got very interesting thoughts from Ge and Mike on the mailing list. For FM, synthesis, it was a simple change of formula that was required but to get the note trigger working, I tried not using the STK Envelope and doing a "handmade" envelope instead. For the delay line, I rewrote the DelayLine class since I had a much better idea of what I wanted now than when I did it in 256a. There were 2 choices to implement the pinch - UIGestureRecognizer and Mo_Touch. Since we were using the MoMu toolkit, I decided to use Mo_Touch.
+	</p>
+</body>
+</html>

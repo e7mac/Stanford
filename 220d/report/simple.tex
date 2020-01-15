@@ -1,0 +1,55 @@
+\title{Music 220D Report}
+\author{
+        Mayank Sanganeria \\
+                Fall 2012,CCRMA\\
+        Stanford University\\
+        Advisor: Julius O. Smith
+}
+\date{\today}
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+
+\begin{document}
+\maketitle
+\section{Introduction}\label{intro}
+For my 220D this quarter, I wanted to explore Web Audio and Faust. To this end, I started learning JavaScript and Faust in parallel. While exploring Web Audio, I also came across the NaCl system built by Google for Chrome and explored that as well.
+
+\section{Faust}\label{faust}
+Faust (Function AUdio STream)~\cite{Faust} is an audio signal processing language. Building audio processing units straight from a block diagram form instead of having to translate everything into traditional code was extremely exciting and enjoyable. The fact that Faust exports to almost all conceivable platforms makes it especially useful. I tried out the WebKit version and was very impressed by its performance. It is very exciting that Faust could be present in a future version of WebKit.
+
+Since granular synthesis lends itself more easily to an implementation in code , I thought it would be an interesting exercise to build a granular synthesis unit in Faust. I couldn’t find any granular synthesizers built in Faust online which was encouraging.
+
+\subsection{Granular Synthesizer}\label{granular-synthesis}
+I implemented a real time granulator, as defined by Curtis Roads~\cite{Roads}. The granular synthesizer can be accessed at Github~\cite{Faust-Granulator}.
+
+The most challenging aspect of getting the granular synthesizer to work in Faust was getting an uncorrelated random number generators working for each grain line. I was unable to simply use a single RNG function, as one would do in C code, since a new random number was generated only once every sampling period where $n$ random numbers were required. I tried creating functions that depended on $i$ for the $i^{th}$ grain but they formed determinstic patterns and provided a repeating rhythmic pattern which was undesired. I settled on using the multi-channel noiser as given in the Faust tutorial~\cite{faust-tutorial} to get $n$ different white noise generators and used a sequence macro to extract the $i^{th}$ channel from the noiser to use for the $i^{th}$ grain line.
+
+A sample-and-hold was used to randomly select grain positions. With noise as input, and a trigger that was activated once the grain had finished playing, the sample-and-hold provided a new start position for the grains at the right time.
+
+The number of grains was made controllable by defining a maximum number of grain lines and having all of them run in parallel but multiplying them with a conditional to silence all the unwanted grain lines.
+
+\section{JavaScript}\label{javascript}
+On Myles Borins’ advice, I read Douglas Crockford’s book~\cite{Crockford}. I had read a few other JavaScript books earlier but they were all just reference books and never addressed good style. Crockford's book was really useful in terms of dealing with JavaScript’s quirks and leveraging those to write solid code.
+
+Having done that, I thought that it would be useful working on a JavaScript library to get experience in JavaScript architecture and decided to work on Colin Clark’s Flocking library~\cite{Flocking} and contribute a granulator to the library, since he was looking for a granular synthesis ugen and I had experience in building granulators before.
+
+I made a granulator ugen~\cite{Flocking-Granulator} for his library that Colin Clark was happy with and will be incorporating into Flocking. The pull request is currently pending code review. 
+
+In his article on granular synthesis architectures~\cite{Bencina}, Ross Bencina 
+discusses a lot of different architectures for implementing real time granular synthesizers. The architecture where the grains are triggered using a separate process (mathematical function or random function) was particularly interesting and I am excited about implementing and listening to it.
+
+\section{NaCl}\label{nacl}
+Based on my interest in Web Audio, Julius Smith suggested exploring Google
+s Native Client (NaCl)~\cite{NaCl} as an alternative method to having audio on the web. NaCl allows Chrome to run pre-compiled C++ code straight out of the browser. The NaCl SDK compiles C/C++ code to an *.nexe file format which can be included on an HTML page and communicates with the HTML file using messages. This allows access to computation that runs at native speed on web pages. The advantage to having this system is that it allows high speed computation for all purposes – audio, graphics and anything coded in C/C++. The downside, though, is that it is supported only in Chrome and will not be supported by any other browsers in the conceivable future. Even the support in Chrome is experimental currently and requires a flag to be manually set before NaCl applications can be run. 
+
+I ran some very simple examples with GUIs on NaCl. The system works really well but the lack of support on other browsers takes away from the utility of everything it enables. The support on the iOS version of Chrome is also lacking at the moment.
+
+\section{Future Work}\label{future}
+Having experience with Faust will help tremendously while taking Physical Audio Signal Processing next quarter. I have also been implementing some other audio effects in Faust independently and then comparing with the included code to increase my fluency in the language.
+
+I will also continue to contribute different architectures of granular Synthesis to Flocking as well as Faust.
+
+\bibliographystyle{abbrv}
+\bibliography{simple}
+
+\end{document}
