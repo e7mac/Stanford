@@ -1,0 +1,18 @@
+Music 192A Studio Exercise 1
+Mayank Sanganeria
+
+Drum track - I put on a low and high shelf as instructed. Q for the mid-range would max out at 10 so it was not possible to go to 12.1 . I boosted the gain for the snares at 1 kHz till the point beyond which the drums sounded distorted. I also put the drums slightly off center to the right.
+
+Bass track - I boosted the lows so that it was clear over the drums. I put the bass slightly off center to the left.
+
+Rhythm guitar tracks - going by the L and R tracks, it seemed like it was recorded for guitars to be on the right so I stuck with that and gave it most of the space between 1 kHz and 10 kHz.
+
+Keyboard track - I gave it a space around 750 Hz and levels such that the chord stabs were not too loud but the ambient parts were audible through the guitar. The keyboards were put left to balance the right-heavy rhythm guitar.
+
+Lead vocal track - I gave it some space around 500 Hz so that the power would come through and it would sit between the bass and the keyboard. I put the vocals off center to the left to keep the balance.
+
+Backing vocal track - I put it slightly off center to the right to balance with the lead vocals.
+
+Lead guitar track - I put powerful mids and highs so that it would cut across everything else when it was playing was put slightly to the right to balance the keyboard and vocals.
+
+With the final mix, I played it back over the studio speakers and then through the headphones on the CD Recorder. While listening over the studio speakers, I made slight adjustments until I could imagine concrete positions for the band members. I had to adjust the mix after listening to the headphones as a lot of my lows were put lower than what it could reproduce.

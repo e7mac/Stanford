@@ -1,0 +1,25 @@
+Music 192A Studio Exercise 1
+Mayank Sanganeria
+
+I set up the Shure KSM-141 mics in omnidirectional configuration. 
+
+Spaced Pair
+
+1. The first setting is such that I am trying to get the hole in the middle. To achieve this, I put the mics really close to the piano and far apart. The distance between the mice is about 6-7 times the distance between the mice and the piano. In this configuration, I made the first recording. The 'hole' configuration sounds a bit like surround sound to me. It seems like the sounds are coming from separate sources on the left and right. Very wide stereo field.
+
+2. This recording was done with a more conventional spaced pair set up. The distance  was 1/3 as recommended. Now it seems like the sound is coming from a single source but it does not quite sound like mono. This is more balanced than the previous one.
+real tanticlockwise and was vertically above the other mic. I don't like this better than the proper spaced pair setup. The field is not wide enough.
+
+5. Co-incident but the angle set really high. About 135 degrees apart. (almost facing each other). This has a wider stereo field and I like this better.
+
+6. Now the co-incident but further from the source. Gain was increased for this one. 
+
+7. This is the near co-incident setup. Further from the source. Seems more balanced than the co-incident but had a few weird effects in the middle where it seemed like the source was moving.
+
+8. Near co-incident but closer to the source. Stereo width seemed a little more narrow than when it is closer.
+
+Now I set up the MS pair. Josephson C42 as M, Shure C-414XLS in figure 8 configuration as S.
+
+9. MS is really cool. I love how setting the levels for the S microphone spreads the stereo width. 
+
+10. This recording was me modifying the S levels to modify the stereo width during the song. The stereo width really gets modified when the sliders are moved above 0 dB - not much below that. At max, it feels a bit like the overly spaced omni spaced pair. At about 5 dB is the stereo width that feels most right.

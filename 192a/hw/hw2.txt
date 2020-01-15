@@ -1,0 +1,25 @@
+Music 192A HW2
+Mayank Sanganeria
+
+1. In order to determine whether a ground loop is causing a hum, isolate each device and listen to the signal to check if the hum is still there. If isolation causes the hum to disappear, it means that a ground loop was causing the hum to be there. Proceed to connect more devices together and the connections that cause a hum to be added, is part of a ground loop. 
+Ground loops can be eliminated by using isolation transformers(expensive), wiring the building with a star connection (ideal but impractical) or by disconnecting the ground connections from the devices (dangerous).
+
+2 A. T-R-S. Balanced. Professional audio
+2 B. T-S. Unbalanced. Guitar amp
+2 C. XLR. Balanced. Microphone
+2 D. RCA. Unbalanced. Consumer audio system
+
+3. Absolute pressure implies that the microphone is omnidirectional since it cannot determine where the sound pressure originated from in space. 
+Pressure-gradient implies possible directional sensitivity since it is sensitive to the pressure difference between the front and rear of the sensing element, both of which are then accessible to the sound wave.
+
+While there is no direct relationship between transducer type and directional sensitivity, the following is a typical more fine-grained difference.
+Dynamic microphones typically offer fixed polar patterns, usually omni-directional and cardioid.
+Condenser microphones can be made with switchable polar patterns.
+
+4 A. 1 - buffer amplifier
+4 B. 7 - balanced (differential) input amplifier
+4 C. 6 - high pass filter
+4 D. 2 - inverting amplifier
+4 E. 5 - low pass filter
+4 F. 3 - non-inverting amplifier
+4 G. 4 - summing amplifier
