@@ -1,0 +1,254 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/* RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #288ce4;
+}
+a:focus {
+  outline: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+#discovery {
+  color: #444;
+  font-family: "Helvetica Neue", arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#discovery header {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #dee2e7;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+  font-size: 12px;
+}
+#discovery h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #888;
+}
+#discovery #discovery-options {
+  float: right;
+}
+#discovery a#discovery-help {
+  margin-right: 1em;
+  font-size: 0.9em;
+}
+#discovery a#discovery-close {
+  color: #BBB;
+  font-size: 14px;
+}
+#discovery a#discovery-close:hover {
+  color: #999;
+  text-decoration: none;
+}
+#discovery ul {
+  display: inline-block;
+}
+#discovery ul li {
+  float: left;
+  width: 48%;
+  margin-bottom: 3%;
+}
+#discovery ul li:nth-child(odd) {
+  margin-right: 4%;
+}
+.discovery-unit a.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+  line-height: 1.2em;
+}
+.discovery-unit a.avatar img {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  float: left;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+.discovery-unit a.top-comment {
+  display: block;
+  color: #333;
+}
+.discovery-unit a.top-comment p {
+  line-height: 1.4em;
+  font-size: 13px;
+}
+.discovery-unit a.top-comment .user {
+  font-weight: bold;
+  color: #999;
+}
+.discovery-unit a.top-comment:hover {
+  text-decoration: none;
+  color: #666;
+}
+.discovery-unit a.top-comment:hover .user {
+  color: #AAA;
+}
+#discovery-note {
+  background-color: #288ce4;
+  font-size: 12px;
+  padding: 0.8em 1.1em;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 1em;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+#discovery-note a {
+  color: #fff;
+  text-decoration: underline;
+}

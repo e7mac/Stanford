@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0170)http://www.meebo.com/cim/iframe_v100_cim_11_26_8.html#id=hikeup&ss=http%3A%2F%2Fs.meebocdn.net%2Fcim%2Fskin_v100_cim_11_26_8%2Fhikeup.w3c.css&frame=3&frameId=meebo-iframe -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+var loc = window.location.toString(),
+	hashIndex = loc.indexOf('#');
+
+if(hashIndex > 0) {
+	var hash = loc.substring(hashIndex + 1).split('&'),
+		k = {};
+		
+	for (var i = hash.length - 1; i >= 0; --i) {
+		var parts = hash[i].split('=');
+		if(parts[0]) {
+			k[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
+		}
+	}
+
+	if (k.ss && !/["<>]/.test(k.ss)) {
+		document.write('<link rel="stylesheet" href="' + k.ss + '">');
+	}
+}
+
+window.onload = function() {
+	var frameMgr;
+	try {
+		// Attempt to access the meebo iframe by name. We fall back to using the index if we
+		// run into problems (like if someone else embeds an iframe with the name 'meebo-iframe')
+		// or if someone is running an outdated embed code
+		try {
+			frameMgr = window.parent.frames[k.frameId].frames[0].gFrameMgr;
+		} catch (e) {
+			frameMgr = window.parent.frames[Number(k.frame)].frames[0].gFrameMgr;
+		}
+		// Attempt to read the ready function in order to trigger exception handling if needed
+		frameMgr.onFrameReady;
+	} catch(e) {
+		return setTimeout(arguments.callee, 500);
+	}
+	frameMgr.onFrameReady(window, k.id);
+}
+</script><link rel="stylesheet" href="http://s.meebocdn.net/cim/skin_v100_cim_11_26_8/hikeup.w3c.css">
+</head>
+<body id="hikeup">
+<m class="meebo-132" style="bottom: 26px; " ev_id="1"></m><a class="meebo-0 meebo-133"></a></body><link rel="stylesheet" type="text/css" href="data:text/css,"></html>

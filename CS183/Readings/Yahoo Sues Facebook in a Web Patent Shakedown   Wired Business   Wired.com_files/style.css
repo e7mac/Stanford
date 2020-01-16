@@ -1,0 +1,1295 @@
+/*
+THEME NAME: Wired: Global
+THEME URI: http://www.wired.com/
+DESCRIPTION: The generic theme for all Wired blogs, with options for headers and post layouts
+VERSION: 1.18
+AUTHOR: Wired Team
+*/
+
+/*
+    WIRED BLOGS GLOBAL CSS
+
+    Body classes include post type, layout and url sections
+    ex: single 2011 post-test wide-post
+
+    GLOBAL DIV STRUCTURE, main sections
+
+    #global_header
+      #leaderboard
+      #global_navigation
+      #extra_navigation
+
+    #adSkinLayer1
+      #shell
+        #page
+
+          #content
+            #header
+              a#blog_header
+
+            .post
+              #post_nav
+                #post_nav_previous .post_nav_link
+                #post_nav_next .post_nav_link
+
+                .entry-header
+                    .social_bookmarking_module
+                .entry
+                .entry-footer
+
+              #social_tools
+                .social_bookmarking_module
+                #disqus_thread
+
+          /#content
+
+          #sidebar
+            .widget
+
+          #footer
+
+        /#page
+      /#shell
+    /#adSkinLayer1
+
+    Put all Layout specific CSS in the section at the bottom of this file
+*/
+
+
+/* Global Settings ************************************************************/
+
+body, #content {
+    font-family: Arial,Verdana,sans-serif;
+    color: #333;
+}
+
+p {
+    margin: 20px 0;
+}
+    p img {
+        padding: 0;
+    }
+
+a:hover, a:visited {
+    color: #007CA5;
+}
+    a img {
+        border: none;
+    }
+
+    a:hover {
+        background-color: #E5F8FF;
+    }
+    a img:hover {
+        background-color: #fff;
+    }
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden,
+.screen-reader-text {
+    display: none;
+}
+
+.rss_icon {
+    background-image: url('images/rss_icon.gif');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+}
+
+#footer {
+    margin-top: 20px;
+}
+    #footer p {
+        margin: 5px 0px;
+    }
+
+fieldset {
+    border: none;
+}
+
+/* Headlines ******************************************************************/
+
+h1, h2, h3 {
+    font-family: Arial,Verdana,sans-serif;
+    line-height: 1.3;
+    font-size: 1.7em;
+    color: #000;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 30px;
+}
+    .single h1 {
+        margin-top: 0px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+h2 {
+    font-size: 1.3em;
+}
+    h2 a, h2 a:visited {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .index h2,
+    .archive h2,
+    .page h2 {
+        font-size: 1.7em;
+    }
+
+    .index .entry h2,
+    .index .archive h2 {
+        font-size: 1.3em;
+    }
+
+    #page h2 a:hover {
+        background-color: #e5f8ff;
+    }
+
+h3 {
+    font-size: 1.1em;
+}
+
+    h3 a, h3 a:visited {
+        color: #000;
+        font-weight: bold;
+    }
+
+    #page h3 a:hover {
+        background-color: #e5f8ff;
+    }
+
+
+/* Dividers *******************************************************************/
+
+hr {
+    display: none;
+}
+
+    #shell .post hr {
+        display: block;
+    }
+
+
+/* Ad wrappers ****************************************************************/
+
+.advertisement {
+    text-align: center;
+}
+    .left_column .advertisement,
+    #sidebar .advertisement {
+        text-align: left;
+    }
+
+#content .advertisement div.ad-served {
+    margin-top: 30px !important;
+    border-bottom: 10px solid #000000;
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+}
+
+.footer_ad .advertisement div.ad-served {
+    margin-top: 30px !important;
+}
+
+.slideshowAd .advertisement {
+    width: 100%;
+    min-height: 350px;
+    background-color: #EEE;
+}
+
+/* Template/Containers ********************************************************/
+
+#global_navigation a,
+#global_navigation a:hover {
+    text-decoration: none;
+}
+
+/* Blog Header */
+/* This is the fallback if a header graphic is not set in the theme options */
+#blog_header {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: solid 10px #000;
+}
+    #page a#blog_header:hover {
+        background-color: transparent;
+    }
+
+    #blog_header .blogName {
+        font-weight: bold;
+        font-size: 2em;
+        line-height: 2em;
+        margin-bottom: 0px;
+    }
+    #blog_header .blogInfo {
+        font-size: 1.3em;
+        margin-bottom: 0px;
+    }
+
+#content {
+    font-size: 1.35em;
+    float: left;
+    width: 660px;
+    margin-right: 40px;
+}
+    .home #content img,
+    .index #content img {
+        max-width: 660px;
+    }
+
+#messages {
+    margin-top: 30px;
+}
+
+/* Post and Entry *************************************************************/
+
+#shell .post {
+    border-bottom: 10px solid #000;
+    padding-bottom: 25px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+    .single #shell .post {
+        padding-top: 35px;
+    }
+
+.entry {
+    line-height: 20px;
+}
+    .entry ul,
+    .entry ol {
+        list-style-position: inside;
+    }
+
+    /* Fix wide photos on blog index  */
+    .index .entry img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/* Entry Header and Footer ****************************************************/
+
+.entry-header,
+.entry-footer {
+    font-size: 12px;
+    margin: 5px 0;
+}
+    .entry-header ul {
+        margin-bottom: 3px;
+    }
+
+    #commenting_links li,
+    .entry-header li,
+    .entry-footer li {
+        display: inline;
+        list-style-type: none;
+    }
+
+    .entry-header .author {
+        margin-right: 5px;
+    }
+
+    .entry-header .authorEmail a {
+        display: inline-block;
+        text-indent: -9999px;
+        width: 14px;
+        height: 13px;
+        background: url('images/envelope.gif') no-repeat center bottom;
+        margin-right: 5px;
+    }
+
+    .entry-header .social_bookmarking_module.top {
+        float: right;
+        border: none;
+        height: 62px;
+        margin-top: -30px;
+    }
+        .entry-header .social_bookmarking_module.top div {
+            float: left;
+            margin-left: 10px;
+            height: 62px;
+        }
+        /* Some of the buttons need a nudge to line up properly */
+        .entry-header .social_bookmarking_module.top div.sb_facebook-count {
+            margin-left: 0px;
+        }
+        .entry-header .social_bookmarking_module.top div.sb_twitter-count {
+            margin-left: 0px;
+        }
+
+    .entry-header .social_bookmarking_module.byline {
+        width: 450px;
+        border: none;
+    }
+        .entry-header .social_bookmarking_module.byline div {
+            margin-top: 3px;
+        }
+
+.entry-footer {
+}
+    .entry-footer .entryTags {
+        margin-bottom: 3px;
+    }
+
+.bio {
+    line-height: 20px;
+    font-size: 12px;
+    padding: 20px 0 10px;
+    margin: 10px 0;
+    font-style: italic;
+    background: url('images/border_stripes.gif') no-repeat;
+    border-bottom: 5px solid #000;
+}
+    .bio .bio_avatar {
+        float: left;
+    }
+    .bio .bio_copy {
+        margin-left: 70px;
+    }
+    .bio img {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+        padding-top: 3px;
+        border-bottom: 5px solid #000;
+    }
+    .bio p {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .bio p em, .bio p i {
+        font-style: normal;
+    }
+
+#social_tools {
+    clear: both;
+}
+    #social_tools .social_bookmarking_module.bottom {
+        clear: both;
+        height: 30px;
+        margin: 10px 0px;
+    }
+
+/* Caption Styles *************************************************************/
+
+#embed p {
+    margin: 0;
+}
+
+#embed #caption, #embed_wide #caption, .wp-caption-text {
+    color: #DDD;
+    background: #000;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.wp-caption-text {
+    margin: -5px 10px 0 0;
+}
+
+.wp-caption-text img.creative-commons {
+    float: right;
+    margin-left:10px;
+    position:relative;
+    top: -3px;
+    right:0;
+}
+
+/* Post Navigation ************************************************************/
+
+#post_nav {
+    width: 660px;
+    height: 40px;
+}
+    .post_nav_link {
+        width: 330px;
+        height: 40px;
+        font-size: 0.85em;
+        text-transform: uppercase;
+    }
+
+    #post_nav_previous {
+        float: left;
+    }
+
+    #post_nav_next {
+        float: right;
+        text-align: right;
+    }
+
+/* Pagination/Navigation ******************************************************/
+
+#page .navigation {
+    margin-top: 40px;
+    position: relative;
+    height: 25px;
+}
+
+#page .navigation a, #comments_pagination span.current {
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 90%;
+    position: absolute;
+    bottom: 0;
+    height: 1em;
+    padding: 5px 7px 7px;
+}
+
+#page .navigation a:hover {
+    color: #FFF;
+    background-color: #007CA5;
+}
+
+.navigation .nolink {
+    display: none;
+}
+
+.navigation .next a {
+    right: 0;
+}
+
+.navigation .back a {
+    left: 0;
+}
+
+.archiveLink {
+    text-align: right;
+    padding: 20px 0px;
+}
+
+/* Sidebar/X-Rail *************************************************************/
+
+#sidebar {
+    width: 300px;
+    float: left;
+    padding-top: 45px;
+    font-size: 12px;
+}
+    #sidebar a, #sidebar a:hover {
+        text-decoration: none;
+    }
+
+    #sidebar h2 {
+        font-family: 'purista-web-1', 'purista-web-2', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+    }
+        #sidebar h2 span {
+            color: #000;
+        }
+
+    #sidebar h3 {
+        font-family: 'purista-web-1', 'purista-web-2', Helvetica, Arial, sans-serif;
+        font-size:18px;
+        font-weight:700;
+        color: #666;
+    }
+        #sidebar h3 span {
+            color: #000;
+        }
+
+    #sidebar h4 {
+        font-family: 'purista-web-1', 'purista-web-2', Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        display: block;
+        width: 298px;
+        height: 20px;
+        background-color: #ECECEC;
+        background-image: none;
+        color: #666;
+        line-height: 20px;
+        text-indent: 5px
+    }
+        #sidebar h4 span {
+            display: inline;
+        }
+
+    #sidebar .widget {
+        color: #666;
+        font-weight: normal;
+        clear: both;
+        margin-bottom: 30px;
+    }
+
+    #sidebar .advertisement {
+        margin-bottom: 30px;
+    }
+
+.widget ul {
+    list-style-type: none;
+}
+    .widget.widget_recent_entries ul li {
+        background-image: url('images/small-square.gif');
+        background-position: 0 2px;
+        background-repeat: no-repeat;
+        list-style-type: none;
+        display: block;
+        margin: 0px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+    }
+
+.widget .xrcBlockList {
+    margin-bottom: 15px;
+}
+    .widget .xrcBlockList li {
+        padding-bottom: 10px;
+    }
+
+.widget ul.xrcTwoColumnList {
+    width: 140px;
+    padding-right: 10px;
+    float: left;
+}
+    .widget .xrcTwoColumnList li {
+        padding-bottom: 10px;
+    }
+
+.widget .xrcInlineList {
+    margin-bottom: 10px;
+}
+
+    .widget .xrcInlineList li {
+        margin-bottom: 5px;
+    }
+
+.widget .xrcInlineList dt {
+    font-weight: bold;
+}
+
+    .widget .xrcInlineList dt,
+    .widget .xrcInlineList dd {
+        display: inline;
+    }
+
+
+.widget h4 {
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-color: #ececec;
+    height: 20px;
+}
+
+.widget h4 a {
+    display: block;
+    height: 20px;
+}
+    .widget h4 a.rsswidget {
+        float: left;
+        line-height: 20px;
+    }
+    .widget h4 a.rsswidget img {
+        margin-top: 3px;
+    }
+
+/* Archives */
+
+body.archives #content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+    body.archives #content ul li {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+body.archives #archives_month {
+    width: 300px;
+    margin-right: 30px;
+    float: left;
+}
+
+body.archives #archives_subject {
+    width: 300px;
+    float: left;
+}
+
+blockquote {
+    margin: 15px 30px 0 10px;
+    padding-left: 20px;
+    border-left: 5px solid #ddd;
+}
+
+blockquote cite {
+    margin: 5px 0 0;
+    display: block;
+}
+
+.small {
+    font-size: 0.75em;
+    line-height: 20px;
+    color: #666;
+}
+
+.formRule {
+    font-size: 0.75em;
+    font-style: normal;
+    color: #666;
+}
+
+.bullet {
+    background: url('images/square.gif') no-repeat;
+    width: 8px;
+    height: 8px;
+    display: inline;
+}
+
+.xspacer {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    padding: 5px 0 5px 20px;
+    margin: 0;
+    display: inline;
+    float: right;
+}
+
+.alignleft {
+    padding: 5px 20px 5px 0;
+    margin: 0;
+    display: inline;
+    float: left;
+}
+
+.aligncenter {
+    padding: 0px 0 5px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.alignnone {
+    padding: 0px 0 5px 0px;
+    display: block;
+}
+
+#content img.image-full {
+    width: auto;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.divider {
+    background-color: #F2F2F2;
+    height: 9px;
+    clear: both;
+}
+
+.single .divider {
+    margin: 25px 0;
+}
+
+.statusIcon {
+    display: none;
+}
+
+.anchorBtn {
+    cursor: pointer;
+}
+
+.anchorBtn span {
+    display: none;
+}
+
+/* Pullquote */
+.pullquote, .pullquote-left {
+    width: 200px;
+    float: left;
+    margin: 5px 40px 20px 0;
+    padding: 20px 0;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.pullquote-right {
+    width: 200px;
+    float: right;
+    margin: 5px 0 20px 40px;
+    padding: 20px 0;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+/* Sidebar */
+.sidebar-right, .sidebar-left {
+    margin: 5px 0px 20px 30px;
+    padding: 26px 0 20px;
+    /* 26px aligns 1st line of text to baseline grid */
+    float: right;
+    width: 200px;
+    text-align: left;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.sidebar-left {
+    margin: 5px 30px 20px 0px;
+    float: left;
+}
+
+.mobify_backtotop_link {
+    display: none;
+}
+
+.iw_moreAbout {
+    margin-top: 20px!important;
+}
+
+.iw_moreAbout li, .iw_moreAbout ul {
+    display: inline;
+    line-height: 20px !important;
+}
+
+.iw_moreAbout h5 {
+    display: inline;
+}
+
+/* See Also */
+#see_also {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#see_also ul li {
+    list-style-type: square;
+    line-height: 20px;
+}
+
+#around_wired {
+    margin-bottom: 20px;
+}
+
+#around_web {
+    margin-bottom: 20px;
+}
+
+#shell, #page, #content {
+    background-color: transparent !important;
+}
+
+/* Left rail styles in content well *******************************************/
+
+.left_rail {
+    clear: left;
+    float: left;
+    padding: 10px 0px 0 0;
+    text-align: left;
+    width: 250px;
+    border-bottom: 5px solid #f2f2f2;
+    border-top: 5px solid #f2f2f2;
+    margin: 0 30px 30px 0;
+    font-size: .9em;
+}
+
+.left_rail .wrapper {
+    clear: both;
+    padding: 0;
+}
+
+.left_rail .title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.left_rail img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 0 0 3px;
+    padding: 0 10px 10px 0;
+}
+
+
+/* Search Results */
+.search-excerpt {
+    background-color: #000;
+    color: #FFF;
+}
+
+/* Storyboard Podcast Player */
+.podcast_storyboard {
+    width: 330px;
+    border: 1px solid #c7c7c7;
+    margin: 10px 25px 10px 0;
+    padding-bottom: 3px;
+    float: left;
+    background-color: #f5f5f5;
+    height: auto;
+}
+    .podcast_storyboard_player {
+        width: 215px;
+        float: right;
+    }
+        .podcast_storyboard_player p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial,Helvetica,san-serif;
+            font-size: .9em;
+            font-weight: bold;
+            text-align: left;
+            margin: 5px 0;
+        }
+        .podcast_storyboard_player p.subscribe {
+            font-weight: normal;
+            font-size: 90%;
+        }
+
+    body.underwire .podcast_storyboard_logo {
+        width: 114px;
+        float: left;
+        margin-top: 5px;
+        background: url('/images_blogs/underwire/2009/08/storyboard_podcast_logo.gif') repeat-x;
+    }
+
+/* END Storyboad Podcast Player */
+
+/******************************************************************************/
+/* Layout Specific CSS ********************************************************/
+/******************************************************************************/
+
+/* Wide Post/Page *************************************************************/
+
+.wide-post,
+.wide-page {
+}
+    .wide-post #content,
+    .wide-page #content {
+        width: 1000px;
+    }
+    /*display wide posts in 660px width in home and index pages*/
+    .home #content,
+    .index #content {
+       width: 660px !important;
+    }
+
+    .wide-post h1,
+    .wide-page h1 {
+        width: 1000px;
+    }
+
+    .wide-post .left_column,
+    .wide-page .left_column {
+        float: left !important;
+        width: 660px;
+    }
+
+    .wide-post .right_column,
+    .wide-page .right_column {
+        float: right !important;
+    }
+        .wide-post .right_column #sidebar,
+        .wide-page .right_column #sidebar{
+            padding-top: 0;
+        }
+
+
+/* Event **********************************************************************/
+
+body.event #content .entry div {
+    background: #000;
+    color: #ccc;
+    padding-bottom: 20px;
+}
+
+body.event #content p {
+    padding: 0 20px;
+}
+     body.event #content p:first-child {
+     padding: 0px;
+     }
+
+    body.event #content .entry a {
+        display: block;
+        color: #fff;
+        font-weight: bold;
+        font-family: "tandelle-1", "tandelle-2", Helvetica, Arial, sans-serif;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+        body.event #content .entry a:hover {
+            background: none !important;
+            color: #00bcec;
+        }
+
+    body.event #list {
+        padding-bottom: 20px;
+    }
+
+    body.event #list .subcat {
+        padding-bottom: 0px;
+        display: block;
+        clear: both;
+        border-bottom: 10px solid #000;
+        margin-bottom: 40px;
+    }
+
+        body.event #list .subcat h2 {
+            color: #7BAD00;
+            font-family: "purista-web-1", "purista-web-2", Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+
+    body.event #list ul li {
+        list-style-type: none;
+        margin-bottom: 20px;
+        color: #999;
+        font-size: 12px;
+        line-height: 20px;
+        clear: both;
+    }
+
+        body.event #list ul li a {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+        }
+
+        body.event #list ul li img {
+            float: left;
+            margin: 0 20px 0px 0;
+        }
+
+
+    body.event #list .subcat_item1 {
+        min-height: 100px;
+    }
+
+    body.event #list .subcat_item1 a {
+        font-size: 26px;
+        line-height: 30px;
+        padding-right: 40px;
+        font-family: "tandelle-1", "tandelle-2", Helvetica, Arial, sans-serif;
+        color: #000;
+    }
+
+    body.event .wf-active #list .subcat_item1 a {
+       font-size: 40px;
+       line-height: 40px;
+       padding-bottom: 20px;
+    }
+
+/* Author Archive
+*******************************************************************************/
+
+.author.archive {
+}
+    .author.archive h1 {
+        font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 28px;
+        width: 440px;
+        border-top: #CCC solid 5px;
+        padding-top: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+
+    .author.archive h2 {
+        font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 20px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+        .author.archive h2.author_title {
+            font-size: 18px;
+            color: #CCC;
+        }
+        .author.archive h2.latest_posts {
+            font-family: "periodico-text-1", "periodico-text-2", Helvetica, Arial, Verdana, sans-serif;
+            border-bottom: #CCC solid 5px;
+            margin-bottom: 10px;
+        }
+        .author.archive h2 a {
+            color: #BBB;
+        }
+
+    .author_header {
+        color: #000;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .author_header a {
+        color: #00bcec;
+    }
+        .author_header a:hover {
+            background: #00bcec;
+            color: #FFF;
+        }
+
+    .author_bio {
+        margin-right: 220px;
+        font-size: 13px;
+        line-height: 20px;
+        width: 430px;
+        color: #666;
+    }
+        .author_bio .social_bookmarking_module {
+            margin-top: 20px;
+        }
+
+    .author_image {
+        float: right;
+        width: 200px;
+        min-height: 200px;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 20px;
+    }
+        .author_image p {
+            margin: 5px 0;
+        }
+
+        .author_image img {
+            width: 200px;
+            height: 200px;
+            border: #999 solid 1px;
+            border-bottom: #000 solid 5px;
+        }
+
+    .author.archive #shell .post {
+        border-bottom: none;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+        .author.archive #shell .post .entry-header a {
+            color: #999;
+        }
+
+    .author_tweet {
+        font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        text-align: right;
+        margin: 30px 20px;
+    }
+        .author_tweet p {
+            line-height: 28px;
+            margin: 0;
+        }
+        .author_tweet a, .author_tweet a:link, .author_tweet a:visited {
+            color: #00BCEC;
+        }
+
+/* Xrail Book Promo **********************************************************************/
+
+
+#xrail-book-widget {
+    width:300px;
+    display: block;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    overflow:hidden;
+    color:#000;
+}
+#xrail-book-widget h3 {
+    display: block;
+    font-family: "calibre-1","calibre-2",helvetica,arial,sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    height: 14px;
+    text-transform: normal;
+    float:left;
+    color:#000;
+}
+#xrail-book-widget a{
+    color: #000;
+    background:#FFF;
+    border:0;
+    outline:none;
+}
+#xrail-book-widget a:hover{
+    color: #00AAF6;
+    background:#FFF;
+}
+#xrail-book-widget span.book-author {
+    font-family: "periodico-text-1","periodico-text-2",helvetica,arial,sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    float:left;
+    margin-left:5px;
+    margin-top:6px;
+}
+/* Normal Layout */
+#xrail-book-widget .book-cover {
+    float:left;
+    margin-top:20px;
+    margin-right:20px;
+}
+#xrail-book-widget .book-cover img{
+    width:100px;
+}
+#xrail-book-widget .book-cover a{
+    border:0px;
+    outline:none;
+}
+#xrail-book-widget ul.book-details {
+    list-style:none;
+    float:left;
+    width: 180px;
+    font-family: "calibre-1","calibre-2",helvetica,arial,sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top:18px;
+    color: #000;
+}
+#xrail-book-widget ul.book-details li{
+    margin:0px;
+    padding-bottom:3px;
+}
+#xrail-book-widget li.book-title {
+    font-family: "periodico-text-1","periodico-text-2",helvetica,arial,sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height:26px;
+}
+#xrail-book-widget a{
+    color: #000;
+    background:#FFF;
+}
+#xrail-book-widget a:hover{
+    color: #00AAF6;
+    background:#FFF;
+}
+#xrail-book-widget li.book-title-small {
+    font-family: "periodico-text-1","periodico-text-2",helvetica,arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style:italic;
+    line-height:16px;
+    padding-top:5px;
+}
+#xrail-book-widget li.book-also {
+    padding-top:15px;
+}
+/* Wide Layout */
+#xrail-book-widget .book-cover-wide {
+    float:left;
+    margin-top:20px;
+    margin-right:20px;
+}
+#xrail-book-widget .book-cover-wide img{
+    width:300px;
+}
+#xrail-book-widget ul.book-details-wide {
+    list-style:none;
+    float:left;
+    width: 300px;
+    font-family: "calibre-1","calibre-2",helvetica,arial,sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top:10px;
+    color: #000;
+}
+#xrail-book-widget ul.book-details-wide li{
+    margin:0px;
+    padding-bottom:3px;
+}
+#xrail-book-widget li.book-title-wide {
+    font-family: "periodico-text-1","periodico-text-2",helvetica,arial,sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height:28px;
+    color: #000;
+}
+#xrail-book-widget li.book-also-wide {
+    padding-top:0px;
+        text-transform:uppercase;
+}
+
+.bottom-nav {
+    border-bottom: 1px solid #000000;
+    border-bottom-right-radius: 50px;
+    border-right: 1px solid #000000;
+    float: left;
+    margin-bottom: 20px;
+    width: 660px;
+}
+
+.bottom-nav img {
+    float:left;
+    width:130px;
+    -ms-interpolation-mode: bicubic;
+}
+
+
+.magbug_top {
+    padding:10px 0 0;
+    line-height:17px;
+}
+
+.magbug_top img {
+    width:200px;
+}
+
+.magbug_bottom {
+    float: right;
+    height: 88px;
+    line-height: 17px;
+    padding: 7px 0 0 30px;
+    width: 500px;
+}
+
+
+.magbug p {
+  margin:0px 0px 5px;
+  font-size:14px;
+  font-family:"calibre-1","calibre-2",Helvetica,Arial,Verdana,sans-serif;
+  font-weight:bold;
+}
+
+
+ul.magbug {
+    list-style-type:none;
+}
+
+ul.magbug li {
+    font-size:11px;
+    margin-bottom:1px;
+    font-family:"periodico-text-1","periodico-text-2",Helvetica,Arial,Verdana,sans-serif;
+
+}
+
+
+
+/******************************************************************************/

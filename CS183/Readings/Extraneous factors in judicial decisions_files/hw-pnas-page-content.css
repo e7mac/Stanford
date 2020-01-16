@@ -1,0 +1,150 @@
+/*****************************************************************
+ * HW-provided CSS stylesheet specific to PNAS content pages
+ *****************************************************************/
+#ref-list .cit-title {
+	position: absolute;
+	left: -9999px;
+}
+.link-ref {
+	vertical-align: baseline;
+}
+#content-block div.section p.h-lead {
+	display: inline;
+}
+#content-block div.section div.h-p-wrap {
+	margin: 15px 0;
+}
+div.ref-list .cit-vol {
+	font-weight: normal;
+}
+.fig-caption p.first-child {
+	display: inline;
+	text-align: left;
+}
+
+.fig-label, .table-label {
+	margin-right: .5em;
+}
+.fig-caption, .table-caption {
+	text-align: left;
+}
+.fig-caption p.first-child,
+.table-caption p.first-child {
+	display: inline;
+	text-align:left;
+}
+
+#content-block div.article a,
+#content-block div.article a:link,
+#content-block div.article a:active,
+#content-block div.social-bookmarking a,
+#content-block div.social-bookmarking a:link,
+#content-block div.social-bookmarking a:active {
+	color: #333333;
+}
+#content-block div.article a:visited,
+#content-block div.social-bookmarking a:visited {
+	color: #003333;
+}
+#content-block div.article a.view-more:hover {
+	background-color: #383838;
+	color: white;
+}
+#hovering-ref cite abbr.cit-jnl-abbrev,
+#hovering-ref cite .ie6-abbr-wrap {
+	margin-right: .5em;
+}
+
+div.ref-list cite {
+	margin-left:.4em;
+}
+
+/* for col expansion */
+div.hide-cols div#col-2-min {
+  background-color: #D8DBE3;
+}
+div.hide-cols div#col-3-min {
+  background-color: #B1B7C7;
+}
+div.hide-cols div#col-2.palette,
+div.hide-cols div#col-3.palette {
+  right: 5px; top: 5px;
+}
+
+div.ref-cit .cit-metadata span.cit-pub-id-doi {
+  display: inline;
+}
+
+.xref-sep {font-weight:normal;}
+
+ul.author-notes li.fn-present-address {
+    font-size: 0.833em;
+}
+ol.affiliation-list address sup {
+    vertical-align:super;
+}
+div.contributors ol.fn-track sup ,
+ul.author-notes li.fn-present-address sup,
+div.contributors ul.pnas-footnotes sup {
+    vertical-align:super;
+    font-size: 0.70em;
+}
+
+#fn-group-1 ul li.corresp .corresp-label {
+font-size:0.85em;
+line-height:0;
+vertical-align:super;
+}
+
+ul.table-fn{
+list-style-type:none;
+margin:1em 0;
+}
+
+div.contributors .author-notes, div.contributors .presentation-list {
+list-style-type:none;
+}
+
+div.fn-group ul li.corresp {
+line-height:1.7;
+}
+#pageid-content .hidenotes {
+    left: -50px;
+    position: relative;
+    width: 500px;
+}
+
+div.contributors ul.pnas-footnotes {
+	font-size: 0.833em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+div.contributors ul.pnas-footnotes li {
+	margin: 5px 0 0;
+	padding: 0;
+	text-align: left;
+}
+
+div.fn-group li.corresp a.rev-xref {
+    background-color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    margin-right: 2px;
+    padding: 0;
+}
+
+div.fn-group a.rev-xref {text-decoration:none; margin-right: 2px;}
+
+#content-block ul.table-footnotes { list-style-type: none; }
+
+.cb-contents #content_box_errata { margin: 0; }
+.cb-contents #content_box_errata li { margin-left: 0; }
+.cb-contents #content_box_errata li span.relmanager-prefix-relation-type{ text-transform:lowercase; }
+
+.ref-list .ref-cit .cit-metadata span.cit-pub-id-sep { display:inline; }
+
+.social-bookmark-links li.social-bookmarking-item-googleplus { display: -webkit-inline-box; }
+ul.social-bookmark-links li { margin-right: 9px;}

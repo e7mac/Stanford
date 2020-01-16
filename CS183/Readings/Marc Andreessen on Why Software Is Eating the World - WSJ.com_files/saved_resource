@@ -1,0 +1,38 @@
+KRUX.configOnload({
+ "publisher": {
+  "uuid": "1c6ac852-8938-481a-84b8-4806affc8c13",
+  "name": "Dow Jones",
+  "id": 68
+ },
+ "blocklist": [],
+ "tags": [],
+ "segments": [],
+ "site": {
+  "id": 988,
+  "name": "online journal"
+ },
+ "dnt": null,
+ "services": {
+  "pixel": "//beacon.krxd.net/pixel.gif",
+  "userData": "//apiservices.krxd.net/user_data/segments",
+  "stats": "//apiservices.krxd.net/stats",
+  "monitor": "//health-stats.krxd.net/jserror",
+  "social": "//beacon.krxd.net/social.gif",
+  "data": "//beacon.krxd.net/data.gif",
+  "event": "//beacon.krxd.net/event.gif",
+  "log": "//health-stats.krxd.net/jslog.gif"
+ },
+ "msg": "WARNING - no matching config found. Using empty tags.",
+ "params": {
+  "revenue_optimization": false,
+  "capture_leakage": true,
+  "control_tag_stats_prefix": "wsj",
+  "site_level_supertag_config": "all",
+  "supertag_requires_approval": false,
+  "control_tag_version": "stable",
+  "datatag_version": 1,
+  "max_slot_time": 1000,
+  "capture_js_errors": true
+ },
+ "geo":{"COUNTRY":"US", "REGION":"CA", "CITY":"STANFORD", "GEOREGION":"246", "DMA":"807", "PMSA":"7400", "AREACODE":"650", "COUNTY":"SANTACLARA", "FIPS":"06085", "LATITUDE":"37.4162", "LONGITUDE":"-122.1722", "TIMEZONE":"PST", "ZIP":"94305", "CONTINENT":"NA"}
+});

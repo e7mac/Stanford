@@ -1,0 +1,22 @@
+/** custom styling for frameset sidebar **/
+
+div.hw-gen-page {
+  width: 427px;
+  background-image:none;
+  padding-top: 0px;
+
+}
+
+body {
+background:white none no-repeat fixed 0%;
+color:black;
+font-family:"Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif;
+font-size:100%;
+line-height:1;
+width: 427px;
+background-color:white;
+padding-top:0px;
+margin:0px;
+}
+
+#col-3 {float:left;}

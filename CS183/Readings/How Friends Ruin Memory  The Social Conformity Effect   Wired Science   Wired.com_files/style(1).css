@@ -1,0 +1,359 @@
+/*
+THEME NAME: Wired: Wired Science
+THEME URI: http://www.wired.com/wiredscience
+DESCRIPTION: Child theme for Wired Science
+TEMPLATE: wired-global
+VERSION: 1.1
+AUTHOR: Wired Team
+TAGS: child theme
+
+Please only add overrides specific to Wired Science in this file.
+Primary CSS files inherit from the Wired Global theme
+
+*/
+
+h1, h2 {
+    font-family: "periodico-text-1", "periodico-text-2", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 10px;
+}
+    h2 a,
+    h2 a:visited {
+        font-family: "periodico-text-1", "periodico-text-2", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 30px;
+    }
+
+.post h1 {
+    font-size: 30px;
+}
+
+.post .entry h1,
+.post .entry h2 {
+    font-size: 24px;
+}
+
+#sidebar h4 {
+    background-color: #000 !important;
+    color: #FFF !important;
+}
+    #sidebar h4 a {
+        color: #FFF;
+    }
+
+    #sidebar li {
+        margin-bottom: 5px;
+    }
+
+    #sidebar .books {
+        margin-bottom: 10px;
+    }
+    #sidebar .books li {
+        display: inline;
+        margin-right: 5px;
+    }
+
+/* Author Archive
+*******************************************************************************/
+
+.author.archive {
+}
+    .author.archive h1 {
+        font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 28px;
+        width: 440px;
+        border-top: #72BF44 solid 5px;
+        padding-top: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+
+    .author.archive h2 {
+        font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 20px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+        .author.archive h2.author_title,
+        .author.archive h2.author_title a,
+        .author.archive h2.author_title a:visited {
+            font-size: 20px;
+            font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        }
+        .author.archive h2.latest_posts {
+            font-family: "periodico-text-1", "periodico-text-2", Helvetica, Arial, Verdana, sans-serif;
+            border-bottom: #72BF44 solid 5px;
+        }
+        .author.archive h2 a {
+            color: #BBB;
+        }
+
+    .author_header {
+        color: #000;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .author_header a {
+        color: #00bcec;
+    }
+        .author_header a:hover {
+            background: #00bcec;
+            color: #FFF;
+        }
+
+    .author_bio {
+        margin-right: 220px;
+        font-size: 13px;
+        line-height: 20px;
+        width: 430px;
+        color: #666;
+    }
+        .author_bio .social_bookmarking_module {
+            margin-top: 20px;
+        }
+
+    .author_image {
+        float: right;
+        width: 200px;
+        min-height: 200px;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 20px;
+    }
+        .author_image p {
+            margin: 5px 0;
+        }
+
+        .author_image img {
+            width: 200px;
+            height: 200px;
+            border-bottom: #72BF44 solid 5px;
+        }
+
+    .author.archive #shell .post {
+        border-bottom: none;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+        .author.archive #shell .post .entry-header a {
+            color: #999;
+        }
+
+    .author_tweet {
+        font-family: "calibre-1", "calibre-2", Helvetica, Arial, Verdana, sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        text-align: right;
+        margin: 50px 20px;
+    }
+        .author_tweet p {
+            line-height: 28px;
+            margin: 0;
+        }
+        .author_tweet a, .author_tweet a:link, .author_tweet a:visited {
+            color: #00BCEC;
+        }
+
+/* Science Blog Category Landing Page */
+
+body.science-blogs #shell .post {
+    border-bottom: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+    body.science-blogs #shell .post .entry-header a {
+        color: #999;
+    }
+
+/* Widgets
+*******************************************************************************/
+
+.blogger_tile {
+    width: 300px;
+    height: 120px;
+    border-bottom: 10px solid #72BF44;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+    .blogger_tile .blurb {
+        display: block;
+        float: left;
+        width: 175px;
+    }
+
+    .blogger_tile .image {
+        display: block;
+        float: left;
+        height: 100px;
+    }
+
+    .blogger_tile.alpha {
+        margin-right: 20px;
+    }
+
+    .blogger_tile.omega {
+        margin-left: 20px;
+    }
+
+    .blogger_tile img.biopic {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .blogger_tile img.biopic.small {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .blogger_tile p {
+        margin: 0;
+    }
+
+
+
+/* Listing of Science Bloggers */
+.WiredScienceBlogsWidget {
+    border-top: solid 10px #000;
+    padding-top: 10px;
+}
+
+    .WiredScienceBlogsWidget .column_wrap {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: solid 5px #000;
+        margin-bottom: 10px;
+    }
+
+    .WiredScienceBlogsWidget .blogger_tile {
+        width: 140px;
+        height: 35px;
+        margin-bottom: 10px;
+        float: left;
+        font-size: 9px;
+        line-height: 11px;
+        border-bottom: none;
+    }
+
+    .WiredScienceBlogsWidget .blogger_tile.alpha {
+        margin-right: 10px;
+    }
+
+    .WiredScienceBlogsWidget .blogger_tile.omega {
+        margin-left: 10px;
+    }
+
+    .WiredScienceBlogsWidget .blogger_tile a,
+    .WiredScienceBlogsWidget .blogger_tile a:hover {
+        color: #000;
+        background-color: #FFF !important;
+    }
+
+    .WiredScienceBlogsWidget .blogger_tile img {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .WiredScienceBlogsWidget .blogger_tile .blurb {
+        display: block;
+        font-size: 9px;
+        border-bottom: 5px solid #b1e724;
+        float: left;
+        width: 95px;
+        height: 30px;
+    }
+
+.WiredScienceBlogsWidget .twitter {
+    padding-left: 20px;
+    height: 20px;
+    background: url('images/icons.gif') no-repeat -4px -62px;
+}
+
+/* Single Blogger Profile */
+.WiredScienceBloggerProfileWidget {
+
+}
+    .WiredScienceBloggerProfileWidget .profile_pic {
+        float: left;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+        .WiredScienceBloggerProfileWidget .profile_pic img {
+            border-bottom:solid 10px #72BF44;
+            margin: 0 10px 5px 0;
+            width:100px;
+            height:100px;
+        }
+
+    .WiredScienceBloggerProfileWidget .profile_bio {
+        font-size: 12px;
+        line-height: 18px;
+        color: #666;
+        margin-top: -5px;
+    }
+
+    .WiredScienceBloggerProfileWidget h3 {
+        margin-bottom:10px;
+        font-size:18px;
+        font-weight:700;
+        color:#999;
+    }
+        .WiredScienceBloggerProfileWidget h3 span {
+            color:#000;
+        }
+
+/* Envolve Chat
+*******************************************************************************/
+
+div.env-primaryBG {
+    background-color: #BBE134;
+}
+
+
+
+/* Science Blogs Landing Pg
+*******************************************************************************/
+
+#science-blogs-latest a:hover,
+#science-blogs-latest h2 a:hover {
+    background-color: #E6E6EF;
+}
+
+#science-blogs-latest .post{
+    display: inline-block;
+    clear:both;
+    border-bottom: 1px solid #000;
+    margin-bottom: 0;
+}
+
+#science-blogs-latest .post:hover{
+background:#F0F0FB;
+}
+
+#science-blogs-latest .entryExcerpt {
+    display: block;
+    line-height: 20px;
+}
+
+#science-blogs-latest .entryExcerpt p {
+    margin: 10px 0 0 0;
+}
+
+
+#science-blogs-latest .entryExcerpt img {
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+#science-blogs-latest h2 a,
+#science-blogs-latest h2 a:visited {
+    font-weight: 200;
+}
+

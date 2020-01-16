@@ -1,0 +1,50 @@
+.partner_bug {
+    border-bottom: 5px solid #000000;
+    border-top: 5px solid #000000;
+    clear: both;
+    display: block;
+    float: left;
+    line-height: 10px;
+    margin: 5px 30px 20px 0;
+    padding: 20px 0;
+    width: 200px;
+}
+.partner_none {
+    color: #CC0000;
+}
+
+.bug {
+    clear: both;
+    display: block;
+    float: left;
+    line-height: 0;
+    margin: 5px 30px 20px 0;
+    padding: 0;
+    width: 200px;
+}
+
+.bug_text {
+    border-bottom: 10px solid #000000;
+    color: #666666;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 20px 0;
+}
+
+.bug .align-right,
+.partner_bug .align-right {
+    float: right;
+    margin: 5px 0 20px 30px;
+}
+
+.bug .align-left,
+.partner_bug .align-left {
+    float: left;
+    margin: 5px 30px 20px 0;
+}
+
+.bug a:hover,
+.partner_bug a:hover {
+    background: none repeat scroll 0 0 transparent !important;
+}
+

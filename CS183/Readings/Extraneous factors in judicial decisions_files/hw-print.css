@@ -1,0 +1,109 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Print Stylesheet
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+	background: #FFF;
+	color: #000;
+	font-family: Times, "Times New Roman", Garamond, serif;
+	
+	margin: 0;
+	padding: 0;
+	
+	overflow: visible;
+} 
+
+/***********************************
+	Hidden elements 
+*********************************** */
+
+.hw-gen-page #skip-link,
+#header ul.header-buttons,
+#header ul.banner-ads,
+
+#header,
+
+#authstring,
+
+#content-block .section .section-nav,
+#content-block #intro-header .section-nav,
+
+#content-block div.social-bookmarking,
+#content-block a.rev-xref-ref,
+
+div.leaderboard-ads,
+
+
+
+/*#content-block .fig,*/
+
+.cit .cit-form-select label, 
+.notonscreen, 
+
+.cit .cit-form-select,
+.cit .cit-form-select input,
+
+div#hovering-abs-ptr,
+
+.search-results-gca,
+
+#col-2, 
+#col-3,
+#footer,
+#footer .footer-links
+{
+	float: none;	
+	position: static;
+	left: auto;
+	top: auto;
+	height: auto;
+	width: auto;
+	visibility:hidden;
+	display: none;
+	
+}
+
+/***********************************
+	Display elements, clean up 
+	for print display
+*********************************** */
+
+body *,
+div.hw-gen-page,
+#content-block, 
+#header,
+#header div.main-logo,
+#header .main-logo a,
+.main-logo strong, 
+#header .button-list a span, 
+.secondary-logo,
+.secondary-logo strong, 
+.quicksearch label, 
+.prev-next a span
+{
+	overflow: visible;
+	float: none;
+	width: auto;
+	height: auto;
+	position: static;
+	background-image: none;
+	background: #FFF;
+}
+
+#content-block, .pagetype-proxied #content-block {
+	border-right:none;
+}
+
+
+/***********************************
+	Reformatted Elements
+*********************************** */
+
+div.pagetype-content div#content-block h4 {
+	font-family: Times, "Times New Roman", Garamond, serif;
+}
+
+#print-slug ol {list-style-type:none;margin:1em 0;font-size:1em;}
+#print-slug ol li{margin:0;font-size:1em;}
+#print-slug span.jnl-title {display:block;font-size:1.2em;font-weight:bold;border-bottom:1px solid #000;}
+div.hw-gen-page  #content-block .print-only {display:block;}

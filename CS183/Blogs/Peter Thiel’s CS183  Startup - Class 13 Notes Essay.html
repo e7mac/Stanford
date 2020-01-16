@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://blakemasters.tumblr.com/post/23435743973/peter-thiels-cs183-startup-class-13-notes-essay -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/ga.js"></script><script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script>
+<!-- Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 -->
+
+
+    
+    <title>Peter Thiel’s CS183: Startup - Class 13 Notes Essay</title>
+    <meta name="description" content="Peter Thiel’s CS183: Startup - Class 13 Notes Essay Here is an essay version of my class notes from Class 13 of CS183: Startup. Errors and omissions are mine. Credit for good stuff is Peter’s...">
+    <link rel="shortcut icon" href="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_591383af1d7d_16.png">
+    <link rel="apple-touch-icon" href="http://25.media.tumblr.com/avatar_591383af1d7d_128.png">
+    <link rel="alternate" type="application/rss+xml" href="http://blakemasters.tumblr.com/rss">
+
+    <!-- DEFAULT VARIABLES -->
+    <meta name="color:Post Type Text" content="#555555">
+    <meta name="color:Post Type Photo" content="#555555">
+    <meta name="color:Post Type Photoset" content="#555555">
+    <meta name="color:Post Type Quote" content="#555555">
+    <meta name="color:Post Type Link" content="#555555">
+    <meta name="color:Post Type Chat" content="#555555">
+    <meta name="color:Post Type Video" content="#555555">
+    <meta name="color:Post Type Audio" content="#555555">
+    <meta name="image:Header" content="">
+    <meta name="if:Show About Widget" content="1">
+    <meta name="if:Show Stuff I Like Widget" content="1">
+    <meta name="if:Show Latest Tweets Widget" content="0">
+    <meta name="if:Show People I Follow Widget" content="1">
+    <meta name="text:Number of Tweets" content="3">
+    <meta name="text:Google Analytics ID" content="">
+    <meta name="text:Disqus Shortname" content="">
+
+    <style type="text/css" media="screen">
+    /* Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 */
+
+    /* RESET */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
+    }
+    body { line-height: 1; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+    :focus { outline: 0; }
+    del { text-decoration: line-through; }
+    table { border-collapse: collapse; border-spacing: 0; }
+
+    /* GLOBAL ELEMENTS */
+    body { background: #fff; }
+    body, input, textarea { color: #000; font: 14px/20px "helvetica neue",helvetica,arial,sans-serif; }
+    p, ul, ol, dd, pre { margin-bottom: 20px; }
+    pre, code { font: 12px Monaco,monospace; line-height: 20px; }
+    blockquote { border-left: 5px solid #ddd; color: #555; font-style: italic; margin-bottom: 20px; padding-left: 10px; }
+    table { border: 1px solid #ccc; border-width: 1px 1px 0 1px; font-size: 14px; line-height: 20px; margin: 0 0 22px 0; text-align: left; }
+    caption { text-align: left; }
+    tr { border-bottom: 1px solid #ccc; }
+    th, td { padding: .7em 1.25em; }
+    hr { background-color: black; border: 0; color: black; height: 1px; margin-bottom: 20px; }
+    a:link, a:visited { color: #555; }
+    a:focus, a:hover, a:active { color: #3EA99F; }
+    h1, h2, h3, h4, h5, h6 {  font-weight:normal; clear:both; }
+    img { background: #eee; }
+    a img:focus, a img:hover, a img:active { background: #3EA99F; }
+
+    /* DEFAULT CSS */
+    #header .menu {
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 3px;
+        overflow: hidden;
+        padding: 20px 0 10px;
+        width: 900px;
+    }
+        #header #pages {
+            float: left;
+            width: 580px;
+        }
+            #header #pages ul {
+                float: left;
+                margin-bottom: 0;
+            }
+                #header #pages li {
+                    float: left;
+                    margin-right: 10px;
+                    padding: 4px 10px 3px 0;
+                }
+                    #header #pages a, #header #pages a:visited {
+                        color: #555;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+                    #header #pages a:focus, #header #pages a:hover, #header #pages a:active {
+                        color: #3EA99F;
+                    }
+        #header #search {
+            float: right;
+        }
+            #header #search input {
+                border: 1px solid #ccc;
+                line-height: 20px;
+                padding: 4px;
+            }
+            #header #search input.search-button {
+                background: #eee;
+                color: #555;
+                padding: 3px;
+                width: 60px;
+            }
+    #header #branding {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 3px;
+        padding: 30px 0;
+        width: 900px;
+    }
+        #header h1 a {
+            color: #111;
+            font: 70px Georgia,serif;
+            font-weight: normal;
+            line-height: 100px;
+            text-decoration: none;
+        }
+        #header h1 a:focus, #header h1 a:hover, #header h1 a:active {
+            color: #3EA99F;
+
+#header h3 a {
+            color: #111;
+            font: 16px Georgia,serif;
+            font-weight: normal;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        }
+        #header img {
+            max-width: 900px;
+        }
+    #main {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        clear: both;
+        margin: 0 auto 3px;
+        overflow: hidden;
+        width: 900px;
+    }
+        #container {
+            border-right: 1px solid #ccc;
+            float: left;
+            min-height: 400px;
+            width: 580px;
+        }
+            .post-meta {
+                border-bottom: 1px solid #ccc;
+                color: #555;
+                overflow: hidden;
+                padding: 9px 0;
+            }
+                .post-meta .type {
+                    float: left;
+                }
+                    .post-meta .type a {
+                        border-bottom: 1px solid #ccc;
+                        font-weight: bold;
+                        padding: 0 10px 10px;
+                        text-decoration: none;
+                    }
+                    .post-type-text .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-photo .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-photoset .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-quote .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-link .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-chat .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-video .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-audio .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-meta .type a:focus, .post-meta .type a:hover, .post-meta .type a:active {
+                        margin-left: 5px;
+                    }
+                .post-meta .date, .post-meta .comments, .post-meta .note-count {
+                    float: left;
+                    padding: 0 10px;
+                }
+            .post-content {
+                padding: 30px 30px 60px;
+            }
+            .post-content div:last-child, .post-content div:last-child p,
+            .post-content div:last-child ul, .post-content div:last-child ol,
+            .post-content div:last-child blockquote {
+                margin-bottom: 0;
+            }
+                .post-content h3 {
+                    font: 20px Georgia,serif;
+                    margin-bottom: 20px;
+                }
+                    .post-content h3 a, .post-content h3 a:visited {
+                        color: #111;
+                        text-decoration: none;
+                    }
+                    .post-content h3 a:focus, .post-content h3 a:hover, .post-content h3:active {
+                        color: #dd3333;
+                    }
+                .post-content img {
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+
+                    padding: 0px;
+                }
+                .post-type-text .post-content ul {
+                    padding-left: 30px;
+                }
+                    .post-type-text .post-content ul ul {
+                        margin-bottom: 0;
+                    }
+                    .post-type-text .post-content ul li {
+                        list-style-type: disc;
+                    }
+                        .post-type-text .post-content ul ul li {
+                            list-style-type: circle;
+                        }
+                .post-type-text .post-content ol {
+                    padding-left: 30px;
+                }
+                    .post-type-text .post-content ol ol {
+                        margin-bottom: 0;
+                    }
+                    .post-type-text .post-content ol li {
+                        list-style-type: decimal;
+                    }
+                        .post-type-text .post-content ol ol li {
+                            list-style-type: decimal;
+                        }
+                .post-type-photoset .post-content .html_photoset {
+                    background: #eee;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+                .post-type-link .post-content .link-wrap {
+                    margin-bottom: 20px;
+                }
+                .post-type-chat .post-content .label {
+                    color: #333;
+                    font-weight: bold;
+                }
+                .post-type-video .post-content .video-wrap {
+                    background: #f0f0f0;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+                .post-type-audio .post-content .caption {
+                    margin-top: 10px;
+                }
+                .tags {
+                    font-size: 13px;
+                }
+                .tags a {
+                    text-decoration: none;
+                }
+                .tags a:after {
+                    content: ",";
+                }
+                .tags a:last-child:after {
+                    content: "";
+                }
+            #disqus_thread {
+                border-top: 1px solid #ccc;
+                padding: 10px 30px 0;
+            }
+                #disqus_thread h3 {
+                    color: #111;
+                    font: 18px Georgia,serif;
+                    margin: 20px 0 10px;
+                }
+                #dsq-content .dsq-subscribe-menu {
+                    font-size: 12px;
+                }
+            #post-notes {
+                border-top: 1px solid #ccc;
+                padding: 30px;
+            }
+                #post-notes ol li {
+                    border-bottom: 1px dotted #ccc;
+                    padding: 10px 0;
+                }
+                    #post-notes ol li img {
+                        background: none;
+                        padding-right: 3px;
+                        vertical-align: middle;
+                    }
+            .pagination {
+                border-top: 1px solid #ccc;
+                overflow: hidden;
+                padding: 20px 0;
+            }
+                .pagination .previous-page {
+                    float: left;
+                }
+                .pagination .next-page {
+                    float: right;
+                    margin-right: 30px;
+                }
+                    .pagination a {
+                        font: 20px Georgia,serif;
+                        text-decoration: none;
+                    }
+      
+#facebook {
+                padding: 9px 20px;
+                margin: 0 0 10px;
+float: center;
+align: center;
+}
+
+  #sidebar {
+            float: left;
+            padding-bottom: 30px;
+            width: 319px;
+        }
+        
+         #sidebar img {
+           padding: 3px;
+
+           color: #3EA99F;
+          
+        }
+
+#sidebar hr {color: #ccc; background-color: #fff; border: 1px dotted #ccc; border-style: none none dotted; }
+    
+  #sidebar h4 {
+                border-top: 1px dotted #ccc;
+               
+ border-bottom: 1px dotted #ccc;
+                color: #999;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                padding: 9px 20px;
+                text-transform: uppercase;
+            }
+                #sidebar h4 a, #sidebar h3 a:visited {
+                    color: #999;
+                    text-decoration: none;
+                }
+                #sidebar h4 a:focus, #sidebar h3 a:hover, #sidebar h3 a:active {
+                    color: #3EA99F;
+                }
+
+
+
+ #sidebar h3 {
+                border-bottom: 1px dotted #ccc;
+                color: #999;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                padding: 9px 20px;
+                text-transform: uppercase;
+            }
+                #sidebar h3 a, #sidebar h3 a:visited {
+                    color: #999;
+                    text-decoration: none;
+                }
+                #sidebar h3 a:focus, #sidebar h3 a:hover, #sidebar h3 a:active {
+                    color: #3EA99F;
+                }
+
+            #sidebar ul {
+                margin-bottom: 0;
+            }
+            .widget {
+                border-bottom: 1px solid #ccc;
+                color: #333;
+                font-size: 13px;
+                padding: 0 20px 20px 20px;
+            }
+                .widget h3 {
+                    font: 20px Georgia,serif;
+                    margin-bottom: 20px;
+                }
+                    .widget h3 a, .widget h3 a:visited {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                    .widget h3 a:focus, .widget h3 a:hover, .widget h3 a:active {
+                        color: #3EA99F;
+                    }
+                .widget img {
+                    padding: 5px;
+                    max-width: 250px;
+                }
+                .widget p:last-child, .widget ul:last-child, .widget ol:last-child, .widget blockquote:last-child {
+                    margin-bottom: 0;
+                }
+            #about {
+                overflow: hidden;
+            }
+                #about img {
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    float: left;
+                    margin: 0 10px 0 0;
+                    padding: 3px;
+                }
+            .like_post {
+                border-bottom: 1px dotted #ccc;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+            .like_post:last-child {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+                .like_post ul {
+                    padding-left: 20px;
+                }
+                    .like_post ul ul {
+                        margin-bottom: 0;
+                    }
+                    .like_post ul li {
+                        list-style-type: disc;
+                    }
+                        .like_post ul ul li {
+                            list-style-type: circle;
+                        }
+                .like_post ol {
+                    padding-left: 20px;
+                }
+                    .like_post ol ol {
+                        margin-bottom: 0;
+                    }
+                    .like_post ol li {
+                        list-style-type: decimal;
+                    }
+                        .like_post ol ol li {
+                            list-style-type: decimal;
+                        }
+                .like_post p:last-child, .like_post ul:last-child, .like_post ol:last-child, .like_post blockquote:last-child {
+                    margin-bottom: 0;
+                }
+            #tweets {
+                margin-bottom: 10px;
+            }
+                #tweets .content {
+                    margin-bottom: 10px;
+                }
+                    #tweets a {
+                        text-decoration: none;
+                    }
+            #following_container {
+                overflow: hidden;
+                padding-bottom: 20px;
+            }
+                #following_container li {
+                    display: inline;
+                    padding: 0;
+                    margin: 0;
+                }
+    #footer {
+        border-top: 1px solid #ccc;
+        clear: both;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 900px;
+    }
+        #colophon {
+            color: #555;
+            float: right;
+            font-size: 12px;
+            padding: 10px 0 20px;
+        }
+            #footer a {
+                border-bottom: 1px dotted #555;
+                text-decoration: none;
+            }
+    
+    
+    blockquote p { margin-bottom: 0px; }
+    .sup{font-size:xx-small; vertical-align:top;}
+
+
+    </style>
+    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30558224-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995">
+<meta property="og:title" content="Peter Thiel’s CS183: Startup - Class 13 Notes Essay">
+<meta property="og:url" content="http://blakemasters.tumblr.com/post/23435743973/peter-thiels-cs183-startup-class-13-notes-essay">
+<meta property="og:description" content="Here is an essay version of my class notes from Class 13 of CS183: Startup. Errors and omissions are mine. Credit for good stuff is Peter’s entirely.
+Class 13 Notes Essay— You Are Not A Lottery...">
+<meta property="og:type" content="tumblr-feed:entry">
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS -->
+<meta charset="utf-8">
+<meta name="twitter:url" value="http://blakemasters.tumblr.com/post/23435743973/peter-thiels-cs183-startup-class-13-notes-essay">
+<meta name="twitter:site" value="tumblr">
+<meta name="twitter:creator" value="bgmasters">
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"></head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="access">
+                <div class="menu">
+                    <div id="pages">
+                        <ul>
+                            <li><a href="http://blakemasters.tumblr.com/">Home</a></li>
+                            <li><a href="http://blakemasters.tumblr.com/about">About</a></li><li><a href="http://blakemasters.tumblr.com/numbers">#s</a></li>
+                            
+                            
+<!-- ><li><a href="http://thefivetribe.com/?page_id=2405">Links</a></li>  -->                         
+ <li class="archive"><a href="http://blakemasters.tumblr.com/archive">Archive</a></li>
+                           <!-- <li class="mobile"><a href="/mobile">Mobile</a></li> -->
+                          <!--  <li class="rss"><a href="http://blakemasters.tumblr.com/rss">RSS</a></li> -->
+                        </ul>
+                    </div><!-- #pages -->
+                    <div id="search">
+                        <form action="http://blakemasters.tumblr.com/search" method="get">
+                            <input type="text" name="q" value="">
+                            <input type="submit" value="Search" class="search-button">
+                        </form>
+                    </div><!-- #search -->
+                </div><!-- .menu -->
+            </div><!-- #access -->
+            <div id="branding">
+                <h1>
+                    
+                    <a href="http://blakemasters.tumblr.com/">Blake Masters</a>
+                </h1>
+<h2>"Your mind is software. Program it. Your body is a shell. Change it. Death is a disease. Cure it. Extinction is approaching. Fight it."</h2>
+            </div><!-- #branding -->
+        </div><!-- #header -->
+        <div id="main">
+            <div id="container">
+                <div id="content">
+                
+                    <div id="post-23435743973" class="post post-type-text">
+                        <div class="post-meta">
+                            <div class="type">
+                                <!-- <a href="http://blakemasters.tumblr.com/post/23435743973/peter-thiels-cs183-startup-class-13-notes-essay">Text</a> -->
+                            </div><!-- .type -->
+                        
+                            <div class="date">
+                                May 20, 2012
+                            </div><!-- .date -->
+                        
+                        
+                        
+                            <div class="note-count">
+                                <a href="http://blakemasters.tumblr.com/post/23435743973/peter-thiels-cs183-startup-class-13-notes-essay#notes">47 notes</a>
+                            </div><!-- .note-count -->
+                        
+                        </div><!-- .post-meta -->
+                        <div class="post-content">
+                        
+                            <h3><a href="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/Peter Thiel’s CS183  Startup - Class 13 Notes Essay.html">Peter Thiel’s CS183: Startup - Class 13 Notes Essay</a></h3>
+                            <p class="MsoNormal"><span>Here is an essay version of my class notes from Class 13 of CS183: Startup. Errors and omissions are mine.</span>&nbsp;<span>Credit for good stuff is Peter’s entirely.</span></p>
+<p align="center" class="MsoNormal"><u><span>Class 13 Notes Essay—</span></u><u><span> You Are Not A Lottery Ticket</span></u></p>
+<p class="MsoNormal"><strong><span>I. The Question of Luck</span></strong></p>
+<p class="MsoNormal"><strong><span>A. Nature of the Problem</span></strong></p>
+<p class="MsoNormal"><span>The biggest philosophical question underlying startups is how much luck is involved when they succeed. As important as the luck vs. skill question is, however, it’s very hard to get a good handle on. Statistical tools are meaningless if you have a sample size of one. It would be great if you could run experiments. Start Facebook 1,000 times under identical conditions. If it works 1,000 out of 1,000 times, you’d conclude it was skill. If it worked just 1 time, you’d conclude it was just luck. But obviously these experiments are impossible.</span></p>
+<p class="MsoNormal"><span>The first cut at the luck vs. skill question is thus almost just a bias that one can have. Some people gravitate toward explaining things as lucky. Others are inclined to find a greater degree of skill. It depends on which narrative you buy. The internal narrative is that talented people got together, worked hard, and made things work. The external narrative chalks things up to right place, right time. You can change your mind about all this, but it’s tough to have a really principled, well-reasoned view on way or the other.</span></p>
+<p class="MsoNormal"><span><!-- more -->But people do tend to be extremely biased towards the luck side of things. Skill probably plays a much greater role than people typically think. We’ll talk about through some anti-luck thoughts and arguments shortly. But the first thing to understand is that there’s no straightforward way to make an airtight argument.</span></p>
+<p class="MsoNormal"><strong><span>B. Anti-Luck</span></strong></p>
+<p class="MsoNormal"><span>The weak argument against the luck hypothesis involves presenting scattered data points as evidence of repeatability. Several people have successfully started multiple companies that became worth more than a billion dollars. Steve Jobs did Next Computer, Pixar, and arguably both the original Apple Computer as well as the modern Apple. Jack Dorsey founded Twitter and Square. Elon Musk did PayPal, Tesla, SpaceX, and SolarCity. The counter-narrative is that these examples are just examples of one big success; the apparently distinct successes are all just linked together. But it seems very odd to argue that Jobs, Dorsey, or Musk just got lucky.</span></p>
+<p class="MsoNormal"><strong><span>C.&nbsp; A Sign of The Times</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>It’s worth noting how much perspectives on this have changed over time. The famous Thomas Jefferson’s line is: “</span><span>I’m a great believer in&nbsp;</span><span>luck</span><span>, and I find the harder I work the more I have of it.”</span><span> From the 18<sup>th</sup> century all the way through the 1950s or ‘60s, luck was perceived as something to be mastered, dominated, and controlled. It was not this weird external force that couldn’t be understood.</span></p>
+<p class="MsoNormal"><span>Today’s default view is more Malcolm Gladwell than Thomas Jefferson; success, we are told, “seems to stem as much from context as from personal attributes.”&nbsp;</span>You can’t control your destiny. Things have to combine just right. It’s all kind of an accident.</p>
+<p class="MsoNormal"><strong><span>D.&nbsp; Applied to Startups</span></strong></p>
+<p class="MsoNormal"><span>The theme that luck plays a big role is also dominant in the startup community. Paul Graham has attributed a great deal of startups’ success to luck. When we come to startups, theme is that luck plays a big role. Paul Graham. Robert Cringely wrote a book called Accidental Empires. The point is not to pick on these people—they’re obviously very competent and quite successful. The point is that they represent the dominant ethos as to how to think about startups.</span>&nbsp;</p>
+<p class="MsoNormal"><span>This is further illustrated by considering what would happen if a successful entrepreneur publicly stated that his success was fully attributable to skill. That entrepreneur would be perceived as ridiculous, arrogant, and wrong. The level of proof that he offered or the soundness of his arguments wouldn’t matter. When we know that someone successful is skilled, we tend to discount that or not to talk about it. There’s always a large role for luck. No one is allowed to show how he actually controlled everything.</span></p>
+<p class="MsoNormal"><span>It’s worth noting that the existence of this class—being willing to teach this class—is a structural reason in support of the anti-luck bias. A class on startups would be worthless if it simply relayed a bunch of stories about people who won lotteries. There is something very odd about a guide to playing slot machines. To the extent it’s all a matter of luck, there is no point in learning very much. But it’s not all a matter of luck. And the part of it that is can be channeled and mastered. Note that this is class 13. We are not going to be like the people who build buildings without a 13<sup>th</sup> floor and superstitiously jump from class 12 to 14. Luck isn’t something to circumvent or be afraid of. So we have class 13. We’ll dominate luck.</span>&nbsp;</p>
+<p class="MsoNormal"><strong><span>E.&nbsp; Past vs. Future</span></strong></p>
+<p class="MsoNormal"><span>One useful division in thinking about luck is to separate it out into luck involving the past and luck involving the future. The past piece basically asks, “How did I get here?” If you’re successful, you were probably born in the right country. You won the geographic/genetic/inheritance lotteries. There’s the classic debate of whether you had to work hard and these facilitated your success or whether you’re just fooling yourself if you don’t think these things actually drove it.</span></p>
+<p class="MsoNormal"><span>It’s probably more fruitful to focus on the future side of things. Let others fight about the past. The more interesting questions are: Is the future a future that’s going to be dominated by luck, or not? Is the future determinate or indeterminate?</span>&nbsp;</p>
+<p class="MsoNormal"><strong><span>II.&nbsp; Determinate vs. Indeterminate Futures</span></strong></p>
+<p class="MsoNormal"><span>As a society, we now gravitate towards explaining things by chance and luck rather than skill and calculation. This dynamic is necessarily abstract and very hard to ground empirically. All we can do here is point out that we seem to have shifted to the extreme luck side of the spectrum and suggest that it might make sense to dial back the pendulum the other way. &nbsp;</span></p>
+<p class="MsoNormal"><span>Naturally, we can use a 2 x 2 matrix to help us think about the future. On the vertical axis you have optimism and pessimism. On the horizontal axis you have determinate and indeterminate. The determinate perspective is that things are knowable and you can control them. The indeterminate perspective is that things are unknowable and uncontrollable. There are just too many chance events.</span>&nbsp;</p>
+<p class="MsoNormal"><span>What would you do if you were to land in a given quadrant? If you believe that the future is fundamentally indeterminate, you would stress diversification. This is true whether you’re optimistic or pessimistic. And indeed, chasing optionality seems to be what most everybody does. People go to junior high and then high school. They do all sorts of activities and join lots of clubs along the way. They basically spend 10 years building a diverse resume. They are preparing for a completely unknowable future. Whatever winds up happening, the diversely prepared can find something in their resume to build on.</span></p>
+<p class="MsoNormal"><span>Contrast this with the determinate version. If the future is determinate, it makes much more sense to have firm convictions. You won’t join tons of different clubs or do every single activity. There is just one thing—the best thing—that you should do. This is decidedly <em>not </em>how people build up their resumes these days.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c8vyaovk1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Overlay this diversification/conviction dynamic over the optimism/pessimism question and you get further refinement. Whether you look forward to the future or are afraid of it ends up making a big difference.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c8wz23gC1qbb0b4.png"></span></p>
+<p class="MsoNormal"><strong><span>A. Determinate Optimism</span></strong></p>
+<p class="MsoNormal"><span>Up until the 1950s and ‘60s, the prevailing belief about the future was one of determinate optimism. There had always been a relatively well-defined way in which people thought the future would be much better than the present. You could go west and get 640 acres of land. Specific projects to improve society were undertaken. There was a general orientation toward working to make a better future.</span></p>
+<p class="MsoNormal"><strong><span>B.&nbsp; Indeterminate Optimism</span></strong></p>
+<p class="MsoNormal"><span>But the U.S. has shifted away from this quadrant. The outlook, at least up through 2007, was still optimistic. But ever since about 1982 it has also been much more indeterminate. The idea was that the future would get better, but not in ways that you could know. Unlike the determinate future of the past, which contained many secrets, today the future seems to contain very few. There is much more room for mystery. God, Mother Nature, and Market are unknowable and inscrutable. But the universe is still fundamentally benevolent. It is thus best to just figure out incremental things to do and wait for progress to come.</span></p>
+<p class="MsoNormal"><strong><span>C. When Things Are More Pessimistic</span></strong></p>
+<p class="MsoNormal"><span>Or you could think future won’t be very good at all. In a strange way, China falls squarely in the determinate pessimistic quadrant. It is the opposite of the U.S.’s optimistic indeterminacy. The China view is that there is indeed a calculus as to what to do to improve things for society. Things are determinate. But when you go through that calculus, there’s no cause for celebration. China will get old before it gets rich. It is forever destined to be a poor version of the U.S. It can and will copy things. But there’s not enough time to catch up, even if it executes perfectly. This explains why you end up with all these things that seem draconian from a more optimistic perspective; <em>e.g. </em>the one child policy, massive environmental pollution, and thousands of people dying in coal mines each year. The fundamental view is pessimistic, but in a very determinate, calculated way.</span>&nbsp;</p>
+<p class="MsoNormal"><span>And then there is the pessimistic indeterminate quadrant. This is probably the worst of all worlds; the future isn’t that great and you have no idea what to do. Examples would be Japan from the 1990s to the present, or Europe today.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c8uwMyjq1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>There is a very widespread view that the U.S. is shifting from the upper right quadrant of optimistic indeterminacy to the lower left of pessimistic determinacy. The argument, in other words, is that we’re drifting towards China. This is a future where everything goes to pot, and not just in a figurative sense.</span></p>
+<p class="MsoNormal"><strong><span>D. Financial Overlay</span></strong></p>
+<p class="MsoNormal"><span>We can put a financial overlay on this to illustrate things better. We’ll start with some definitions. Investment is putting money in specific things you believe in, like a stock or a company. You’re looking for high returns. Savings, by contrast, is when you hold onto your money so that you’re able to spend it in the future. You typically get very low returns.</span></p>
+<p class="MsoNormal"><span>To the extent you’re optimistic about the future, you’ll have a low savings rate. There is simply less need to save. The future will be better, and things will take care of themselves. But if you’re pessimistic, your savings rate will be higher. Since you expect that the future will be worse than the present, you want to have cash saved up for when that day comes.</span>&nbsp;</p>
+<p class="MsoNormal"><strong><span>E. Savings</span></strong></p>
+<p class="MsoNormal"><span>The U.S. has a savings rate that not that much higher than zero. It’s at something like 4%. If you include the government savings rate of -10% of GDP, the savings rate is at -6%. In a funny way, that would imply that the U.S. is wildly optimistic about the future (though one suspects that government spending isn’t so well thought out as this). But no matter how you slice it, the U.S. has a pretty low savings rate.</span></p>
+<p class="MsoNormal"><span>China has savings rate of close to 40%. People like to criticize this because it seems odd to them that poor people are saving money while rich people in the U.S. are spending money. This creates trade deficits, and so China, the argument goes, should start consuming more and saving less. This criticism overlooks one of the key drivers of China’s high savings rate; it’s very hard to consume your capital when you are fundamentally pessimistic about the future and believe that you’ll get old before you become rich.</span></p>
+<p class="MsoNormal"><strong><span>F. Investment</span></strong></p>
+<p class="MsoNormal"><span>In a determinate world, there are lots of things that people can do. There are thus many things to invest in. You get a high investment rate. In an indeterminate world, the investment rate is much lower. It’s not clear where people should put their money, so they don’t invest. We have a very low rate of investment in U.S.&nbsp;&nbsp; Corporations are the main places where investment happens. But instead of investing, companies today are generating huge cash flows—about $1 trillion annually at this point. They are hoarding cash because they have no idea what else to do with it. Almost by definition, you wouldn’t have free cash flows if you knew where or how to invest. The consumer side isn’t all that different. People have no idea. So we end up with a low investment rate, low savings rate, and take an optimistic view of a fundamentally indeterminate future.</span></p>
+<p class="MsoNormal"><span>The pessimistic quadrants are always kind of stable. This is especially true of the indeterminate pessimistic quadrant; if you think that things are going to pot and you believe you can’t control them, they probably will. You’ll be stuck going nowhere for a long time. Under determinate pessimism, you’ll be like China—stuck methodically copying things without any hope for a radically better future.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c8ybPUgN1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>The big question is whether indeterminate optimism—which characterized the U.S. from 1982 to at least 2007—is or can be a stable quadrant at all. That the U.S. has a low savings rate and low investment rate is very odd indeed. If you have both low investment and low savings, one must wonder how the future is supposed to happen at all. That no one is thinking about the future is evinced by the low investment rate. So how can people be so optimistic (not saving any money) about a future that no one is working toward?&nbsp;</span>&nbsp;</p>
+<p class="MsoNormal"><strong><span>G. Calculus vs. Statistics</span></strong></p>
+<p class="MsoNormal"><span>There are several different frameworks one could use to get a handle on the indeterminate vs. determinate question. The math version is calculus vs. statistics. In a determinate world, calculus dominates. You can calculate specific things precisely and deterministically. When you send a rocket to the moon, you have to calculate precisely where it is at all times. It’s not like some iterative startup where you launch the rocket and figure things out step by step. Do you make it to the moon? To Jupiter? Do you just get lost in space? There were lots of companies in the ‘90s that had launch parties but no landing parties.</span></p>
+<p class="MsoNormal"><span>But the indeterminate future is somehow one in which probability and statistics are the dominant modality for making sense of the world. Bell curves and random walks define what the future is going to look like. The standard pedagogical argument is that high schools should get rid of calculus and replace it with statistics, which is really important and actually useful. There has been a powerful shift toward the idea that statistical ways of thinking are going to drive the future.</span></p>
+<p class="MsoNormal"><span>With calculus, you can calculate things far into the future. You can even calculate planetary locations years or decades from now. But there are no specifics in probability and statistics—only distributions. In these domains, all you can know about the future is that you can’t know it. You cannot dominate the future; antitheories dominate instead. The Larry Summers line about the economy was something like, “I don’t know what’s going to happen, but anyone who says he knows what will happen doesn’t know what he’s talking about.” Today, all prophets are false prophets. That can only be true if people take a statistical view of the future.</span></p>
+<p class="MsoNormal"><strong><span>H. Substance vs. Process</span></strong></p>
+<p class="MsoNormal"><span>Another way to look at the determinate vs. indeterminate question is through the lens of substance vs. process. What people do and what technology they build will depend on how they view the future. From an indeterminate perspective, they won’t know what to build. There’s nothing that specifically looks promising; it’s all just a distribution. So they will think less substantively and more procedurally. You want to have the right process for navigating the distribution. This tracks the HP board debate we talked about earlier: it’s Perkins’ old-school substance (lets talk tech and engineering) versus Dunn’s process. If everything is indeterminate, it’s presumptuous to think that the board could think or know anything about the future.</span>&nbsp;</p>
+<p class="MsoNormal"><span>How each quadrant shakes out in practice looks something like this:</span></p>
+<ul><li>Optimistic, determinate: Engineering and art. Very specific engagements.</li>
+<li>Optimistic, indeterminate: Law and finance.</li>
+<ul><li>Law is a process of applying specific rules, not a certain substantive result. You assume that by following the process you end up making things better. And finance is pretty thoroughly statistical.</li>
+</ul><li>Pessimistic, indeterminate: Insurance.</li>
+<ul><li>You can’t make money but you can protect against expected losses.</li>
+</ul><li>Pessimistic, determinate: Wartime rationing.</li>
+</ul><p class="MsoNormal"><strong><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c8ztrzpQ1qbb0b4.png"></span></strong></p>
+<p class="MsoNormal"><strong><span>I. The End of Big Projects</span></strong></p>
+<p class="MsoNormal"><span>The U.S. used to fall squarely in the definite optimism quadrant. There used to be all sorts of circulating ideas about large projects that would take many years to build and improve things in very dramatic, powerful ways. A 19<sup>th</sup> century example is the Transcontinental railroad. A 20<sup>th</sup> century example is Robert Moses, who in the 1920s simultaneously held twelve fairy high-level government posts. He started out as Parks Commissioner. But to build parks—at least on the grand scale that Moses had in mind—you have to bulldoze neighborhoods, build roads and highways, and do a lot of planning and construction. Moses managed to get the authority to do all these things. At his height, Moses was significantly more powerful than the mayor or governor of New York. He pretty much rebuilt all of the state of New York in 30-40 years.</span></p>
+<p class="MsoNormal"><span>From today’s perspective, this is crazy. Surely Moses had too much power. Such ambitious projects, especially if architected by a single person, would probably go nowhere today. The difference was that then, unlike now, people believed in a determinate future. The future could be planned. Moses seemed smart enough and reasonably ethical. Instead of asking whether anyone should do it, people simply asked who would do it well.</span></p>
+<p class="MsoNormal"><span>All this came to an end in 1965, when Moses planned highway that would run through Greenwich Village. A sufficiently large number of people thought that the old buildings that would have to be torn down should be preserved, and protested the development. It was the last time that new highways were built in the state.</span></p>
+<p class="MsoNormal"><span>An example that is a little closer to home is the Reber plan. John Reber was a teacher and amateur theater producer in San Francisco. In the 1940s he came up with a plan to radically reconstruct the San Francisco Bay Area. The basic plan was to construct two large earth and rock dams, one between San Francisco and Oakland and the second between Marin Country and Richmond. They would drain water from the north and south sides and replace it with freshwater. Some 20,000 acres of land would be filled in. A 32-lane highway would be built. And high-rise buildings would be scattered throughout the thoroughly reconstructed city.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c90prHyZ1qbb0b4.jpg"></span></p>
+<p class="MsoNormal"><span>Less important than the actual details is the fact that this plan was not some nutty, fringe thing. There were Congressional hearings and testimony on its viability. It turned out that various things wouldn’t work—the freshwater lakes would evaporate too quickly, for instance— but people were interested. Today, by contrast, the idea would be dismissed as lunacy. This is especially true if it came from someone like John Reber. What credentials does a schoolteacher have for redesigning the entire Bay Area? The John Rebers of the world have long since learned to keep their plans to themselves. Even safer is not to develop any grand plans at all.</span></p>
+<p class="MsoNormal"><strong><span>J. Indefinite Optimism and Finance</span></strong></p>
+<p class="MsoNormal"><span><img align="right" src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c925HBYj1qbb0b4.png">In a future of definite optimism, you get underwater cities and cities in space. In a world of indefinite optimism, you get finance. The contrast couldn’t be starker. The big idea in finance is that stock market is fundamentally random. It’s all Brownian motion. All you can know is that you cant know anything. It’s all a matter of diversification. There are clever ways to combine various investments to get higher returns and lower risk, but you can only push out the efficient frontier a bit. You can’t know anything substantive about any specific business. But it’s still optimistic; finance doesn’t work if you’re pessimistic. You have to assume you’re going to make money.</span></p>
+<p class="MsoNormal"><span>Indefinite optimism can be really strange. Think about what happens when someone in Silicon Valley builds a successful company and sells it. What do the founders do with that money? Under indefinite optimism, it unfolds like this:</span></p>
+<ul><li>Founder doesn’t know what to do with the money. Gives it to large bank.</li>
+<li>Bank doesn’t know what to do with the money. Gives it to portfolio of institutional investors in order to diversify.</li>
+<li>Institutional investors don’t know what to do with money. Give it to portfolio of stocks in order to diversify.</li>
+<li>Companies are told that they are evaluated on whether they generate money. So they try to generate free cash flows. If and when they do, the money goes back to investor on the top. And so on.</li>
+</ul><p class="MsoNormal"><span>What’s odd about this dynamic is that, at all stages, no one ever knows what to do with the money. It’s obviously a limit case. But it reflects a very bizarre cultural phenomenon. Money plays a much more important role if the future is indefinite. There, having is always better than specific things. It’s pure optionality, and that optionality encapsulates the indefinite view. In a definite future, by contrast, money is simply a means to an end.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c93dx1EQ1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>It’s worth questioning whether the circular investment dynamic actually works. Can that really be self-sustaining? Can things work out when no one is thinking of substantive things to do or adding new ideas into the system? The era of indefinite optimism is arguably coming to an end. Look at government bonds, which are essentially the purest version of money. Yields keep going down. People keep holding because they don’t know what else to do. Today you can earn 1.8% on a government bond. But expected inflation is 2.1%. The expected return over the next decade is -0.3%. You get negative returns when people run out of ideas.</span></p>
+<p class="MsoNormal"><span>Indeterminacy has reoriented people’s ideas about investing. Whereas before investors actually had ideas, today they focus on managing risk. Very rarely in the hedge fund world do people ask questions about what’s going to happen in the future. It’s less, “What should we do?” and more, “How do we manage risk? Yet again, process trumps substance. Venture capital has fallen victim to this too. &nbsp;Instead of being about well-formed ideas about future, the big question today is how can you get access to good deals. In theory at least, VC should have very little in common with such a statistical approach to the future. &nbsp;</span></p>
+<p class="MsoNormal"><strong><span>K. Indeterminacy and Politics</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>If you think that the future is indeterminate, the most important people are statisticians. Pollsters become more important than politicians. There has been a massive upward trend on polling in the last 30 years. We have polls on everything. And we believe them to be authoritative—it’s dangerous to try and outthink a statistically shifting bloc of voters. Unsurprisingly, then, politicians react to the polls instead of thinking about the future. This helps explain the strange mystery in 2008 of why John McCain picked Sarah Palin as a running mate. The McCain people reviewed all the polls about Republican governors and senators. Most were very unpopular. Palin, by contrast, had an 89% approval rating in Alaska (some of which seems attributable to Alaskans’ receiving an annual $1000+ oil royalty check). Just parsing poll data, Palin was the obvious choice. That didn’t work out quite as well as they expected. This has nothing to do with Palin’s merits as a candidate; it just goes to show how statistical poll data, and not clear thinking, can dominate politics. Taking a principled stand on unpopular positions is not what our leaders are incented to do. </span></p>
+<p class="MsoNormal">We can broaden this idea to the government itself. The size of government hasn’t changed all that much in the last 40-50 years. But what the government actually does <em>has</em> changed radically. In the past, the government would get behind specific ideas and execute them. Think the space program. Today, the government doesn’t do as many specific things. Mainly it just shifts money around from some people to other people. What do you do about poverty? Well, we don’t know. So let’s just give people money, hope it helps, and let them figure it out. If you can’t actually know what to do, just spreading money around is all you’ve got.</p>
+<p class="MsoNormal"><strong><span>L. Indeterminacy and Literature</span></strong></p>
+<p class="MsoNormal"><span>Science fiction literature also provides a version of the shift to indeterminacy. Fifty or 60 years ago, sci-fi portrayed the future in specific, definite terms. In 1968, Arthur C. Clark described the future of information consumption in <em>2001: A Space Odyssey</em>:</span></p>
+<blockquote>
+<p class="MsoNormal"><span>“The text was updated automatically</span><span></span></p>
+<p class="MsoNormal"><span>on every hour… one could spend an</span><span></span></p>
+<p class="MsoNormal"><span>entire lifetime doing nothing but</span><span></span></p>
+<p class="MsoNormal"><span>absorbing the ever-changing flow of</span><span></span></p>
+<p class="MsoNormal"><span>information from the news satellites.”</span><span></span></p>
+</blockquote>
+<p class="MsoNormal"><span>In this world, information would update automatically. It was a very definite view of the future. But interestingly enough, the future in that future was indefinite. There would be an ever-changing flow of information that you couldn’t know in advance. This seems remarkably prescient.</span></p>
+<p class="MsoNormal">Contrast that with William Gibson’s 1984 book, <em>Neuromancer</em>:&nbsp;</p>
+<blockquote>
+<p class="MsoNormal"><span>“The sky above the port</span><span></span></p>
+<p class="MsoNormal"><span>was the color of television,</span><span></span></p>
+<p class="MsoNormal"><span>tuned to a dead channel.”</span></p>
+</blockquote>
+<p class="MsoNormal"><span>Here, 14 years after Clarke’s <em>2001</em>, the future is one in which you can’t see anything. It’s all a random probability cloud.</span></p>
+<p class="MsoNormal"><strong><span>M. Indeterminacy and Philosophy</span></strong></p>
+<p class="MsoNormal">There’s a philosophy version of this too. Marx and Hegel dominate the optimistic determinant quadrant. The future is going to be better and you can do specific things in 5-year plans. Rawls and Nozick are optimistic but indeterminate. The socialistic version is that you should have a welfare state because that’s what people would want behind a veil of ignorance. The libertarian version is that no one really knows anything, so people have to be free to run about and stumble upon success. Plato and Aristotle are squarely pessimistic and definite. You can figure out the nature of things, but there’s no reason to be excited about the future. Epicurus and Lucretius represent pessimistic indeterminacy. The universe is void. Things just bump into each other randomly. Sometimes they join, sometimes they fracture. You can’t do much to control it. You should therefore just be stoic and adopt an attitude of equanimity. Try to enjoy life, even though it’s all just going to fall apart.</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c94fynYh1qbb0b4.png"></p>
+<p class="MsoNormal"><span>Our society is arguably being pulled in the Epicurean and Lucretian direction. This trend has emerged recently with the financial crises. Whereas before 2007, people were indeterminate but optimistic, pessimism seems to be creeping in. Whether things will fully shift that direction is hard to say. But indefinite pessimism has never been the dominant paradigm in America.</span></p>
+<p class="MsoNormal"><strong><span>N. Indeterminacy and Death</span></strong></p>
+<p class="MsoNormal"><span>Another place where indeterminacy dominates is actuarial tables and death.&nbsp; None of us knows precisely long we’re going to live. But we often consult actuarial tables that chart our probability of dying in a given year. College students have about a 1 in 1000 chance of dying in a particular year. As people get older, the probabilities shift. People who are currently 100 years old have a 50% chance of dying that year. Only one person in 10,000 makes it to age 100. Only one in 10 million lives to be 110 years. We seem have a very good probabilistic handle on something that, by its very nature, we can’t know in any other way.</span></p>
+<p class="MsoNormal"><span>This is why life extension gets bad wrap. People assume that probabilities dominate—so much so that trying to find a way around them is perceived as strange or even crazy. People seem to think that you should just acquiesce to the probabilities. Things were very different from 1600-1850, when people were excited about the prospect of a magic bullet and actually searched for the fountain of youth. Perspectives shifted when people stopped believing in the existence of a literal fountain. The notion that people could dramatically change things died along with that belief. So nobody tries anymore. In a luck-driven world, chance is too powerful. It enervates people. Belief in secrets is an effective truth. Belief in luck is an <em>ineffective</em> truth; it will stop you from actually doing things.</span>&nbsp;</p>
+<div class="movieclips-player"><object data="http://static.movieclips.com/embedplayer.swf?shortid=TzCRF" height="304" type="application/x-shockwave-flash" width="560"><param name="movie" value="http://static.movieclips.com/embedplayer.swf?shortid=TzCRF"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="allowfullscreen" value="true"></object></div>
+<!--0.00797295570374-->
+<p><em><span>No Country for Old Men</span>&nbsp;explores the view of future where everything is random and everyone dies. You can’t overcome chance by understanding it. Understanding is vain.</em></p>
+<p class="MsoNormal"><strong><span>O. Indeterminacy and Cosmology</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>Indeterminacy has also invaded cosmology. Consider the rise of the many-worlds interpretation of quantum mechanics, which grew popular in the 1970s. The basic idea is that anytime anything can happen, the universe splits. Each branch is a new world, where that thing does or doesn’t happen. Reality is a many-branched tree where everything—every quantum outcome—actually happens. Some 55-60% of theoretical physicists believe in many-worlds today. Only about 10-15% believed it 50 years ago. There have been no experiments that have proven the theory. Probably no such experiments are possible. So why do so many physicists believe in a theory of reality that can’t be proven? If you ask them, they say that it just “seems aesthetically better.” But is that true? Are infinite universes really better than just one? Or does this just reflect the shift to viewing the future as fundamentally indeterminate?</span></p>
+<p class="MsoNormal"><span>All these examples suggest and illustrate the massive shift to indeterminacy that we’ve experienced in the last 30-40 years.</span></p>
+<p class="MsoNormal"><strong><span>III. Is Indeterminate Optimism Possible?</span></strong></p>
+<p class="MsoNormal"><span>We’re in a sort of limbo today. Which quadrant will we shift to? Can we go back to the indeterminate optimism that we had in the U.S. from 1982 through 2007? Or will we shift over to some other quadrant?</span></p>
+<p class="MsoNormal"><span>Indefinite futures are inherently iterative. You can’t plan them out; things just unfold on top of each other. The question is thus whether an iterative process can lead, if not to the best of all possible worlds, at least to a world where there is a path of monotonic and potentially never-ending improvement. If it can, we may not get to the tallest mountain in the universe. But at least we’ll always go uphill.</span>&nbsp;</p>
+<p class="MsoNormal"><strong><span>A. Indeterminate Optimism in the World</span></strong></p>
+<p class="MsoNormal"><span>This is Darwin’s theory of evolution. At first there are only very basic organisms. Over billions of years, a tree of life emerges. Not all possible living things actually develop. There are no supersonic flying birds with titanium wings. Things may not be entirely perfect. Humans have appendices that are apparently useless. We can identify lots of poor “design decisions.” But there is a trajectory of relentless, never-ending progress. The Darwinist metaphor plays a central role in thinking about indefinite optimism.</span></p>
+<p class="MsoNormal"><span>How well can this idea of indeterminate optimism be extended to economies? Perhaps not so well. The paradigmatic counterexample is failed cities. Look at pictures of Los Angeles. It should have been greatest city in the world. L.A. could have been built from scratch in early 20<sup>th</sup> century. It would have been magnificent. But there were no grand plans. Instead we got incremental sprawl. The market didn’t solve the problem. L.A. is still one of best cities in world. But it is nowhere near what it could have been. The L.A. experiment at least suggests there are grounds to be pessimistic about indeterminacy.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c95uyA0s1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>The more hardcore version of this is </span><span>São Paulo</span><span>. The airport is located 5 miles away from downtown. The ride takes 10-minutes via helicopter. But during rush hour it can take 3 hours by car. Traffic is unimaginably bad. The metro area has about 20 million inhabitants. There are subcities and districts with about 500k to 1M million people each. Mostly people live in high-rise slums. Living standards seem to get worse with each passing year. Mumbai and Lagos are other examples of a trajectory of more crowding and urban decline. There seems to be no reason to be optimistic about what city planning can do for these areas. This can even be stretched into anti-globalization argument; most emerging countries actually cannot catch up with the developed world because they are too messed up and can’t be rebuilt.</span></p>
+<p class="MsoNormal"><span>The economics vs. environmentalism debate tracks the optimistic vs. pessimistic one. The market economy solves problems iteratively. The idea is that we shouldn’t worry about the environment because we’ll figure out solutions as we go along. That’s classic indeterminate optimism. The environmental counter-narrative is that we’re all screwed: things are too far gone, and there is more to do than we could possibly do. That’s still indeterminate, but thoroughly pessimistic.</span>&nbsp;</p>
+<p class="MsoNormal"><span>It’s worth noting that the something like geoengineering would fall in the definite optimistic quadrant. Maybe we could scatter iron filings throughout the ocean to induce phytoplankton absorb carbon dioxide. Potential solutions of that nature are not even remotely in the public debate. Only radically indefinite things make for acceptable discourse.</span></p>
+<p class="MsoNormal"><strong><span>B. Applied to Startups</span></strong></p>
+<p class="MsoNormal"><span>In the startup context, obsession with indeterminacy leads to the following phenomena:</span></p>
+<ul><li>Darwinistic A/B testing</li>
+<li>Iterative processes</li>
+<li>Machine learning</li>
+<li>No thinking about the future</li>
+<li>Short time horizons</li>
+</ul><p class="MsoNormal"><span>This is not to say that all of these things are totally wrong. If they’re wrong, they’re not self-evidently wrong. But it’s far from clear that they are actually right. It’s certainly interesting to wonder whether, like the many-worlds theory in quantum mechanics, these elements are social byproducts of the shift to indeterminacy.</span></p>
+<p class="MsoNormal"><span>Going through each phenomenon, it’s easy to poke holes that suggest that there are better ways. Darwinism takes billions of years to work reasonably well. Startups don’t have that time. And even though Darwinism is optimistic in the macro sense, it’s not always experienced that way by the participants. There can be lots of carnage and destruction along the way. When people mention Darwinist theory in a business context, they’re probably about to do something really mean. And iteration and machine learning are often excuses for the last two phenomena—not thinking about the future and short time horizons. There are many counterexamples, of course. But definite plans tend to be underrated in today’s startup culture.</span></p>
+<p class="MsoNormal"><strong><span>IV. The Return of Design</span></strong></p>
+<p class="MsoNormal"><span>Finance, perhaps more than anything else, encapsulates indeterminate thinking. The peak of the finance bubble in 2007 will thus be seen as the peak of indeterminate thinking.</span></p>
+<p class="MsoNormal"><span>Apple is absolute antithesis of finance. It does deliberate design on every level. There is the obvious product design piece. The corporate strategy is well defined. There are definite, multi-year plans. Things are methodically rolled out.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>A. Design and Value</span></strong></p>
+<p class="MsoNormal"><span>This class offers no investment advice. Going out and buying Apple stock may not be the best thing to do. But over the last decade people have been badly behind the curve with respect to Apple stock. The indeterminate finance world would ignore anyone who claimed to have secret plan to build new products. Steve Jobs took over at $3 per share. In 2003, after Apple already had some good traction, the stock traded at just $6 per share. Institutional investors systematically underweight Apple because they don’t know how to think about the future. Retail people did all the buying.</span></p>
+<p class="MsoNormal"><span><img align="right" src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tumblr_m4c97gXpc91qbb0b4.png">On the heels of Apple has come the theme of well-designed products being really important. Airbnb, Pinterest, Dropbox, and Path all have a very anti-statistical feel. There’s a sense in which there’s some telepathic link between these products and what people want. That link—great design—seems to work better and faster than Darwinistic A/B testing or iteratively searching through an incredibly large search space. The return of design is a large part of the countercurrent going against the dominating ethos of indeterminacy.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>B. Designing Plans</span></strong></p>
+<p class="MsoNormal"><span>Related to this is the observation that companies with really good plans typically do not sell. If your startup gets traction, people make offers to buy it. In an indefinite world, you will take the money and sell, because money is what you want. PayPal had and executed many good ideas. But by 2002, to be quite honest, it had run out of them. There were no clear ideas on what to do next. So there was a certain logic to selling the company.</span></p>
+<p class="MsoNormal"><span>But when companies have definite plans, those plans tend to anchor decisions not to sell. There is no reason to stop when you can do so much more. The internal narrative—the secret plan—organizes people around the specific things that are going to be built in the months and years ahead.</span></p>
+<p class="MsoNormal"><span>In an indefinite world, investors will value secret plans at zero. But in a determinate world, robustness of the secret plan is one of the most important metrics. Any company with a good secret plan will always be undervalued in a world where nobody believes in secrets and nobody believes in plans. The ability to execute against long-term secret plan is thus incredibly powerful and important.</span></p>
+<p class="MsoNormal"><span>Young people today tend to be indeterminately optimistic. They iterate, one resume line at a time. They buy into a narrative of never-ending improvement, even if they have no idea what that path might look like. It’s possibly that may work. We shouldn’t <em>completely</em> discount the indeterminate future, since there’s always a role for chance. But it’s too crowded a strategy. It gives luck too much dominion over life. Something to be said for the alternative of actually having a plan.</span></p>
+<p class="MsoNormal"><span>It’s important to note that you can always form a definite plan even in the most indefinite of worlds. If you do go into law or finance, for example, you should still have a plan. Most Wall Street or law firm associates stay at one place for awhile and then do a horizontal-diagonal jump to another firm that offers more money. That iterative recipe is a recipe for disaster. Much better would be a plan to stay at the same bank or firm for 10 or 15 years. Eventually there won’t be anyone left who knows what’s going on but you. You should plan on being partner or managing director from day one. Your plans can change, but if you don’t have them, you’re just floating with the current.</span></p>
+<p class="MsoNormal"><strong><span>C. Designing Perspectives</span></strong></p>
+<p class="MsoNormal"><span>Our society has been indeterminately optimistic for the last quarter century. But that quadrant is fraying at edges. We’re falling downwards towards pessimism. Can we shift instead to definite optimism? Computer Science is our best hope. CS is about deterministic as you can get. It’s incredibly odd that we view tech startups through such an indeterminate lens. But where you go from here—and what lens you use—is up to you. An alternative title for this lecture would be “Control Alt Delete.” The best edit is often a complete re-write. And maybe it’s time to start writing lots of things from scratch.</span></p>
+<hr><p><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license"><img align="right" alt="Creative Commons License" src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/88x31.png"></a></p>
+<p><a href="http://twitter.com/bgmasters" title="http://twitter.com/bgmasters">@bgmasters</a></p>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tags">
+                                <p>Tags: <a href="http://blakemasters.tumblr.com/tagged/cs183" class="single-tag">cs183</a> </p>
+                            </div>
+                        
+                        </div><!-- post-content -->
+                    </div><!-- .post -->
+                    
+                    <div id="post-notes">
+<ol class="notes">
+
+    <!-- START NOTES -->
+                            
+                                                        
+        
+        <li class="note like tumblelog_bleongcw without_commentary">
+
+                                                                                <a rel="nofollow" href="http://bleongcw.tumblr.com/" title="Bernard Leong "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_4590d2815425_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://bleongcw.tumblr.com/" title="Bernard Leong">bleongcw</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_bisceglie without_commentary">
+
+                                                                                <a rel="nofollow" href="http://bisceglie.tumblr.com/" title="bisceglie "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_0c1b3d03ea67_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://bisceglie.tumblr.com/" title="bisceglie">bisceglie</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_yahsurvivor without_commentary">
+
+                                                                                <a rel="nofollow" href="http://yahsurvivor.tumblr.com/" title="Mori Yasir Lazarus "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_f64e803db1ad_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://yahsurvivor.tumblr.com/" title="Mori Yasir Lazarus">yahsurvivor</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_orchmail without_commentary">
+
+                                                                                <a rel="nofollow" href="http://orchology.com/" title="Ritu&#39;s Blog "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_5132328f4f55_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://orchology.com/" title="Ritu&#39;s Blog">orchmail</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_jokru without_commentary">
+
+                                                                                <a rel="nofollow" href="http://jokru.tumblr.com/" title="Jonas&#39; Tumblr "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_fdc4872fc2d1_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://jokru.tumblr.com/" title="Jonas&#39; Tumblr">jokru</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_joshuajberk without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.joshuajberk.com/" title="Loud Sounds "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_4bcf6eb7cd6a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.joshuajberk.com/" title="Loud Sounds">joshuajberk</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_joshuajberk without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://www.joshuajberk.com/" title="Loud Sounds"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_4bcf6eb7cd6a_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://www.joshuajberk.com/" class="tumblelog" title="Loud Sounds">joshuajberk</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_namitc without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://namitc.tumblr.com/" title="Namit&#39;s Blog"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://namitc.tumblr.com/" class="tumblelog" title="Namit&#39;s Blog">namitc</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_classfy without_commentary">
+
+                                                                                <a rel="nofollow" href="http://classfy.tumblr.com/" title="CLASSFY "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_676c6c2eb797_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://classfy.tumblr.com/" title="CLASSFY">classfy</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_welf without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://welf.tumblr.com/" title="Мысли и идеи"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_4fee4e6a28bc_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://welf.tumblr.com/" class="tumblelog" title="Мысли и идеи">welf</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_dangoldin without_commentary">
+
+                                                                                <a rel="nofollow" href="http://dangoldin.tumblr.com/" title="Dan&#39;s Blog "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_7a72424b9cab_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://dangoldin.tumblr.com/" title="Dan&#39;s Blog">dangoldin</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_daviddickinson without_commentary">
+
+                                                                                <a rel="nofollow" href="http://daviddickinson.tumblr.com/" title="David Dickinson "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_bac96037e63e_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://daviddickinson.tumblr.com/" title="David Dickinson">daviddickinson</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_imrayzar without_commentary">
+
+                                                                                <a rel="nofollow" href="http://imrayzar.tumblr.com/" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; } "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_57d35446147f_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://imrayzar.tumblr.com/" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; }">imrayzar</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_imrayzar without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://imrayzar.tumblr.com/" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; }"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_57d35446147f_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://imrayzar.tumblr.com/" class="tumblelog" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; }">imrayzar</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_inspired-by-chaos without_commentary">
+
+                                                                                <a rel="nofollow" href="http://inspired-by-chaos.tumblr.com/" title="learn and re-invent "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_3029bff4f714_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://inspired-by-chaos.tumblr.com/" title="learn and re-invent">inspired-by-chaos</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_badnima without_commentary">
+
+                                                                                <a rel="nofollow" href="http://badnima.tumblr.com/" title="I am Nima "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_a01440990303_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://badnima.tumblr.com/" title="I am Nima">badnima</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_sdparadigm without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sdparadigm.tumblr.com/" title="John Muller "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_890bb565bbaf_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sdparadigm.tumblr.com/" title="John Muller">sdparadigm</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_orchmail without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://orchology.com/" title="Ritu&#39;s Blog"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_5132328f4f55_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://orchology.com/" class="tumblelog" title="Ritu&#39;s Blog">orchmail</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_s-m-i without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://tmblr.ttms.us/" title="second brain"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_4e15b9a94756_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://tmblr.ttms.us/" class="tumblelog" title="second brain">s-m-i</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_campyspod without_commentary">
+
+                                                                                <a rel="nofollow" href="http://cambel.ca/" title="Campy&#39;s Pod "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_06a5cb9d28c9_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://cambel.ca/" title="Campy&#39;s Pod">campyspod</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_oknevermind without_commentary">
+
+                                                                                <a rel="nofollow" href="http://oknevermind.tumblr.com/" title="Free blog "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://oknevermind.tumblr.com/" title="Free blog">oknevermind</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_holopainen without_commentary">
+
+                                                                                <a rel="nofollow" href="http://holopainen.tumblr.com/" title="fuck you clowne! "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://holopainen.tumblr.com/" title="fuck you clowne!">holopainen</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_edgeperspectives without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://edgeperspectives.tumblr.com/" title="John Hagel&#39;s Edge Perspectives"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_da039265dad8_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://edgeperspectives.tumblr.com/" class="tumblelog" title="John Hagel&#39;s Edge Perspectives">edgeperspectives</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_d15w with_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://d15w.tumblr.com/" title="scars, stories, and what i know"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_b1af376be875_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://d15w.tumblr.com/" class="tumblelog" title="scars, stories, and what i know">d15w</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a> and added:                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                            <blockquote>
+                            <a rel="nofollow" href="http://d15w.tumblr.com/post/23536206913" title="View post">
+                                best, THE BEST lectures...Determinate/Indeterminate                            </a>
+                        </blockquote>
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_zdanielshi without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://www.punylittlehuman.com/" title="Puny Little Human"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_9632906dd30f_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://www.punylittlehuman.com/" class="tumblelog" title="Puny Little Human">zdanielshi</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_imusings without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://imusings.tumblr.com/" title="Imusings: learning within chaos"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_72d60c4788c5_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://imusings.tumblr.com/" class="tumblelog" title="Imusings: learning within chaos">imusings</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_teinett without_commentary">
+
+                                                                                <a rel="nofollow" href="http://teinett.tumblr.com/" title="Teinett "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_12e2bc3f1307_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://teinett.tumblr.com/" title="Teinett">teinett</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_ryanthehunter without_commentary">
+
+                                                                                <a rel="nofollow" href="http://ryanthehunter.tumblr.com/" title="Ryan Hunter Photography "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_f2d3bf8938ca_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://ryanthehunter.tumblr.com/" title="Ryan Hunter Photography">ryanthehunter</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_amfisher2 without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://amfisher2.tumblr.com/" title="Untitled"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://amfisher2.tumblr.com/" class="tumblelog" title="Untitled">amfisher2</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_pegobry without_commentary">
+
+                                                                                <a rel="nofollow" href="http://pegobry.tumblr.com/" title="PEG 2.0 "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_203840aaa73a_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://pegobry.tumblr.com/" title="PEG 2.0">pegobry</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_masonite without_commentary">
+
+                                                                                <a rel="nofollow" href="http://masonite.tumblr.com/" title="::: masongentry.com ::: "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_7fad7e9db3c6_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://masonite.tumblr.com/" title="::: masongentry.com :::">masonite</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_johnndege without_commentary">
+
+                                                                                <a rel="nofollow" href="http://johnndege.com/" title="john ndege "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_a6ebc830e110_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://johnndege.com/" title="john ndege">johnndege</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_johnndege without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://johnndege.com/" title="john ndege"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_a6ebc830e110_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://johnndege.com/" class="tumblelog" title="john ndege">johnndege</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_greatgrowlingengine without_commentary">
+
+                                                                                <a rel="nofollow" href="http://greatgrowlingengine.tumblr.com/" title="The Great Growling Engine "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://greatgrowlingengine.tumblr.com/" title="The Great Growling Engine">greatgrowlingengine</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_greatgrowlingengine without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://greatgrowlingengine.tumblr.com/" title="The Great Growling Engine"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://greatgrowlingengine.tumblr.com/" class="tumblelog" title="The Great Growling Engine">greatgrowlingengine</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_hve23 without_commentary">
+
+                                                                                <a rel="nofollow" href="http://hve23.tumblr.com/" title="Harish Venkatesan used to live here. "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_1378f9c6eca3_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://hve23.tumblr.com/" title="Harish Venkatesan used to live here.">hve23</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_r4vi without_commentary">
+
+                                                                                <a rel="nofollow" href="http://r4vi.tumblr.com/" title="Push Eject "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_011952e10d2a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://r4vi.tumblr.com/" title="Push Eject">r4vi</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_gbattle without_commentary">
+
+                                                                                <a rel="nofollow" href="http://leftovertakeout.com/" title="Leftover Takeout "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_d55dad1fbe0e_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://leftovertakeout.com/" title="Leftover Takeout">gbattle</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_viiv without_commentary">
+
+                                                                                <a rel="nofollow" href="http://viiv.tumblr.com/" title="mine "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_b53e84ce81c0_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://viiv.tumblr.com/" title="mine">viiv</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_skudal with_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://kjetilholmefjord.com/" title=""><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_d076d836a19f_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://kjetilholmefjord.com/" class="tumblelog" title="">skudal</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a> and added:                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                            <blockquote>
+                            <a rel="nofollow" href="http://kjetilholmefjord.com/post/23438534682" title="View post">
+                                haven’t already checked...out, I definitely recommend                            </a>
+                        </blockquote>
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_sostark without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sostark.net/" title="PCA2 "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_1946a7467ed0_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sostark.net/" title="PCA2">sostark</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_netspencer without_commentary">
+
+                                                                                <a rel="nofollow" href="http://inspiration.netspencer.com/" title="my inspiration "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_8b41022f126e_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://inspiration.netspencer.com/" title="my inspiration">netspencer</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_cjshannon without_commentary">
+
+                                                                                <a rel="nofollow" href="http://cjshannon.tumblr.com/" title="Shit I Like "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://cjshannon.tumblr.com/" title="Shit I Like">cjshannon</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_nitjyot without_commentary">
+
+                                                                                <a rel="nofollow" href="http://nitjyot.tumblr.com/" title="In search of waterloo sunset "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_61c1e9200d24_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://nitjyot.tumblr.com/" title="In search of waterloo sunset">nitjyot</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_rohamgh without_commentary">
+
+                                                                                <a rel="nofollow" href="http://roh.am/" title="Roh.am "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_13aa266a22af_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://roh.am/" title="Roh.am">rohamgh</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_atsoukalidis without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://atsoukalidis.tumblr.com/" title="Abraham Tsoukalidis"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_b9e115f66a58_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://atsoukalidis.tumblr.com/" class="tumblelog" title="Abraham Tsoukalidis">atsoukalidis</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_atsoukalidis without_commentary">
+
+                                                                                <a rel="nofollow" href="http://atsoukalidis.tumblr.com/" title="Abraham Tsoukalidis "><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_b9e115f66a58_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://atsoukalidis.tumblr.com/" title="Abraham Tsoukalidis">atsoukalidis</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_blakemasters without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://blakemasters.tumblr.com/" title="Blake Masters"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/avatar_591383af1d7d_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                            <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="tumblelog" title="Blake Masters">blakemasters</a> posted this                                                                        </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+    
+    
+    <!-- END NOTES -->
+</ol></div>
+                
+                
+                </div><!-- #content -->
+            </div><!-- #container -->
+            <div id="sidebar">
+<h3><center> view by tag </center></h3>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+<a href="http://blakemasters.tumblr.com/tagged/crossfit" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/19b15830093e36e0b8cc.jpg" title="Posts tagged CrossFit" style="border:5px solid #fff;"></a> </div>
+
+
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://blakemasters.tumblr.com/tagged/family" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/25930fdc3c75cbc7facf.jpg" title="Posts tagged family" style="border:5px solid #fff;"></a>
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://blakemasters.tumblr.com/tagged/work" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/0fee9fba06c7c3eed101.jpg" title="Posts tagged work" style="border:5px solid #fff;"></a>
+</div>
+
+
+
+<div class="separator" style="clear: both; text-align: center;"> 
+<a href="http://blakemasters.tumblr.com/peter-thiels-cs183-startup" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/645d833868857327bc7b.jpg" target="”_blank”" title="Posts tagged cs183" style="border:5px solid #fff;"></a> </div>
+
+
+<div class="separator" style="clear: both; text-align: center;"> 
+<a href="http://blakemasters.tumblr.com/tagged/misc" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/b30d13dd203d9bc56917.jpg" target="”_blank”" title="Posts tagged misc" style="border:5px solid #fff;"></a> </div><p></p>
+
+
+
+
+
+            
+			 
+
+
+
+
+            
+
+ 
+            
+            </div><!-- #sidebar -->
+        </div><!-- #main -->
+        <div id="footer">
+            <div id="colophon"><p>Powered by <a href="http://www.tumblr.com/">Tumblr</a>. <a href="http://www.tumblr.com/theme/10375">Minimal Theme</a> designed by <a href="http://arturkim.com/">Artur Kim</a>.</p></div>
+        </div><!-- #footer -->
+    </div><!-- #wrapper -->
+
+<script type="text/javascript" src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/tweets.js"></script>
+
+
+
+<!-- BEGIN TUMBLR CODE --><iframe src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/iframe.html" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="./Peter Thiel’s CS183  Startup - Class 13 Notes Essay_files/quant.js"></script><noscript>&lt;img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/&gt;</noscript><!-- END TUMBLR CODE -->
+
+<div style="display: none; " id="hiddenlpsubmitdiv"></div><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body><link rel="stylesheet" type="text/css" href="data:text/css,"></html>

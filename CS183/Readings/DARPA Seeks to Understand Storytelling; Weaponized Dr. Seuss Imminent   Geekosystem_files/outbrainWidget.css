@@ -1,0 +1,726 @@
+/* Version 6.0.0*/
+
+        /*
+        css for video markign
+        */
+        .outbrain_rec_li .textual-video-img {
+            display: inline !important;
+        }
+		.div-wrapper{
+			margin: 0px 0px;
+			border:none; 
+			padding:0 0 0 0;
+			padding-bottom:10px;
+			direction:ltr;
+			text-align:left;
+			vertical-align:middle;
+		}
+		
+		.div-wrapper-right{
+			margin: 0px 0px;
+			border:none; 
+			padding:0 0 0 0;
+			padding-bottom:10px;
+			direction:rtl;
+			text-align:right;
+			vertical-align:middle;
+			/*unicode-bidi:embed;*/
+		}
+		
+
+		.rateInfo{
+			vertical-align:absmiddle;
+			
+		}
+
+		.normal_font{
+		}
+
+		.table-css{
+			font-size:1em;
+			margin:0px 0px 0px 0px;
+		}
+		
+		.outbrain_my_rating {
+			font-size:90%; 
+			color:#999999;
+			border:none;
+		}
+
+		.outbrain_personal_avg_rating{
+			font-size:90%; 
+			display:inline;
+			border:none;
+		}
+
+		.rates{
+			background-position: left top;
+			background-repeat:no-repeat;
+			padding-top:0px;
+		}
+
+		.ratesIE6{
+			background-position: left top;
+			padding-top:0px;
+		}
+		
+		.outbrain_frame_page .rates,
+		.outbrain_frame_page .ratesIE6{
+
+		}
+		
+		.outbrain-img{
+			display:inline;
+			border:none;
+			padding:0px;
+			float:none;
+			max-width:400px;/*!important;*/
+		}
+		
+		.star-span{
+			cursor: pointer;
+			cursor: hand;
+			background: none;
+		}
+		
+		.outbrain_frame_page .star-span{ /*	frame page	*/
+		}
+
+	/*	Recommendation CSS	*/
+
+		.outbrain-recommendationsFieldset .Outbrain_recommendations_legend,
+		.outbrain-recommendationsFieldset-sc .Outbrain_recommendations_legend,
+		.outbrain-recommendationsFieldset-ie .Outbrain_recommendations_legend{
+			padding:0px;
+			margin:0px;
+		}
+
+    .outbrain-recommendationsFieldset.outbrain-border      legend,
+		.outbrain-recommendationsFieldset-sc.outbrain-border legend,
+		.outbrain-recommendationsFieldset-ie.outbrain-border legend{
+			color:#999999;
+			font-size:90%;
+	}
+    .outbrain-recommendationsFieldset.outbrain-no-border      legend,
+		.outbrain-recommendationsFieldset-sc.outbrain-no-border legend,
+		.outbrain-recommendationsFieldset-ie.outbrain-no-border legend{
+			font-size:100%;
+      font-weight:bold;
+		}
+	
+		.div-wrapper ul, .div-wrapper-right ul{
+			margin:0 0 0 0;
+		}
+
+		.outbrain-recommendationsFieldset-ie legend{
+			/*margin-bottom:6px;*/
+			margin-bottom:0.48em;
+		}
+		
+		.div-wrapper .outbrain-recommendationsFieldset-ie ul, .div-wrapper-right .outbrain-recommendationsFieldset-ie ul{	/*	IE only	*/
+			margin-bottom:0.72em;
+		}
+		.div-wrapper .outbrain-recommendationsFieldset ul, .div-wrapper-right .outbrain-recommendationsFieldset ul{	/*	not only	*/
+			margin-bottom:0.4em;
+		}
+		.div-wrapper .outbrain-recommendationsFieldset-sc ul, .div-wrapper-right .outbrain-recommendationsFieldset-sc ul{	/*	saffari chrome	*/
+			margin-bottom:0.4em;
+		}
+		
+		.div-wrapper li{
+			/*list-style-position:outside !important;*/
+		}
+		.outbrain_rec_li{
+			list-style-position:outside !important;
+		}
+    
+
+    /* The title of the Ads for new marking box*/
+		.outbrain_nm_ad_ul_class{
+			border-top:1px dashed #999999;
+			border-bottom:1px dashed #999999;
+			padding-bottom:3px !important;
+			padding-top:3px !important;
+			padding-left:0px;
+			padding-right:0px;
+		}
+    
+		.outbrain_nm_ad_no_reg_ul_class{
+    	padding-bottom:3px !important;
+      padding-top   :3px !important;
+      padding-left  :0px;
+      padding-right :0px;
+    }    
+    
+    .outbrain_nm_reg_ul_class,.outbrain_nm_ad_ul_class,.outbrain_nm_no_ad_ul_class .outbrain_nm_ad_no_reg_ul_class{
+			margin-top:0.4em !important; /*override regular ul definitions*/
+		}
+		
+    /* The li on new marking*/
+		.outbrain_ad_title_li,
+		.outbrain_reg_title_li	{
+			list-style-type:none !important;
+			list-style-position:outside;
+			font-size:0.8em;
+			margin:0px;
+			padding-bottom:2px;
+			background-image:none !important;
+		}
+
+
+		.outbrain_ad_title_li:before ,
+		.outbrain_reg_title_li:before {
+			content:"" !important;/*all kind of wp styling*/
+		}
+
+    .outbrain_ad_title_A {
+      color:#999999 !important;
+      text-decoration: none !important;
+    }
+        
+    .outbrain_reg_title_li{
+      color:#999999 !important;
+    }
+        
+		.outbrain_rec_reg_ul{
+			margin-bottom:0px !important; /*override regular ul definitions*/
+		}
+		
+		
+    .outbrain_nm_reg_ul_class li,
+    .outbrain_nm_ad_ul_class li,
+    .outbrain_nm_ad_no_reg_ul_class li    {/*NM has no padding in the side*/
+			margin:0px 8px !important;	
+		}
+		
+		.outbrain-recommendationsFieldset{
+			position: relative;
+			border-top:1px outset;
+			border-left:1px outset;
+			border-right:1px inset;
+			border-bottom:1px inset;
+			margin-bottom: 0px;
+			
+		}
+		
+		.outbrain-recommendationsFieldset-ie{
+			position: relative;
+			border-top-width:1px; 
+			border-top-style:inset;
+			border-left-width:1px;
+			border-left-style:inset;
+			border-right-width:1px;
+			border-right-style:outset;
+			border-bottom-width:1px;
+			border-bottom-style:outset;
+      
+			margin-bottom: 0px;
+		}
+		
+		.outbrain-recommendationsFieldset-sc{
+			position: relative;
+			border-top:1px inset;
+			border-left:1px inset;
+			border-right:1px outset;
+			border-bottom:1px outset;
+			margin-bottom: 0px;
+		}
+		
+		.moreRecommendationsLinkDiv{
+			/*	width:100%; //due to ads legend	*/
+		}
+
+		.rec-header{
+		}
+
+		.rec-link:link{
+		}
+
+		.rec-src-link{
+		}
+
+		.rec-stats{
+			font-size:0.9em;
+		}
+
+		.outbrain-tbody-css{
+		}
+
+		.outbrain-bold{
+			font-weight:bold;
+			background: none;
+		}
+		
+		.outbrain-italic{
+			font-style:italic;
+		}
+		
+		.recommendationsBloggerName{
+			font-style:italic;
+			font-size:0.9em;
+			background: none;
+		}
+
+
+
+		.div-wrapper .star-span{
+			float:left;
+		}
+
+		.div-wrapper-right .star-span{	/*	rtl	*/
+			float:right;
+		}
+
+		/* Legend of Ads and show more */
+		.outbrain-table-recommendations-bottom{
+			width:100%;
+			border:0px !important;
+			direction:ltr;
+		}
+		.outbrain-table-recommendations-bottom td{
+			border:0px !important;
+		}
+
+		.div-wrapper-right .outbrain-table-recommendations-bottom{
+			width:100%;
+			border:0px !important;
+			direction:rtl !important;
+		}
+		.div-wrapper-right .outbrain-table-recommendations-bottom td{			
+			border:0px !important;
+		}
+		
+		.div-wrapper .what_is_container{
+      display:block;
+      font-size:11px;
+      padding:0 0 4px 0px;
+      text-align:right;
+      cursor:pointer;
+		}
+		
+		.div-wrapper-right .what_is_container{
+      display:block;
+      font-size:11px;
+      padding:0 0 4px 0px;
+      text-align:left;
+      cursor:pointer; 
+		}
+		.div-wrapper .moreRecommendationsLinkDiv{
+			text-align:right;
+		}
+		
+		.div-wrapper-right .moreRecommendationsLinkDiv{	/*	rtl	*/
+			text-align:left;
+		}
+		
+		 .Outbrain_recommendations_pc_legend{
+			font-style:italic; 
+			padding:0px;
+			margin:0px;
+			color:#999999;
+			font-size:90%;
+		}
+
+		.Outbrain_recommendations_pc_legend a:link,
+		.Outbrain_recommendations_pc_legend a:visited,
+		.Outbrain_recommendations_pc_legend a:active
+		{
+			color:#999999;
+			font-size:90%;
+			text-decoration:none !important;
+		}
+		.Outbrain_recommendations_pc_legend a:hover{
+			color:#999999;
+			font-size:90%;
+			text-decoration:underline !important;
+		}
+		 
+		.div-wrapper table{
+			direction:ltr;
+		}
+
+	.div-wrapper-right table{	/*	rtl	*/
+		direction:rtl;
+	}
+	
+  .div-wrapper ul {
+  	padding:0 0 0 16px;
+  } 
+  .div-wrapper-right ul{
+		padding:0 16px 0 0;
+	}
+  /* override the default section */
+	.div-wrapper .outbrain-recommendationsFieldset-ie ul{	/*	IE only*/
+		padding:0 0 0 24px;
+	}
+	.div-wrapper-right .outbrain-recommendationsFieldset-ie ul{	/*	rtl	*/
+    padding:0 24px 0 0;
+	}
+	/* override the Ie section */
+  .div-wrapper .outbrain-ie8 ul{
+		padding:0 0 0 16px;
+	}
+  .div-wrapper-right .outbrain-ie8 ul{	/*	rtl	*/
+		padding:0 16px 0 0;
+	}
+    
+  /*No bullets feature*/
+  .div-wrapper .outbrain-no-bullets  UL,
+  .div-wrapper-right .outbrain-no-bullets  UL{
+    padding:0px;
+    margin-left:0px;
+    margin-right:0px;
+  }
+  
+  .div-wrapper .outbrain-no-bullets   LI,
+  .div-wrapper-right .outbrain-no-bullets  LI{
+    list-style-type:none;
+    list-style-position:inside;
+    display:block;
+  }
+
+  .div-wrapper .outbrain-no-bullets.outbrain-ie-old    LI,
+  .div-wrapper-right .outbrain-no-bullets .outbrain-ie-old LI{
+    padding:0px 8px; 
+  }
+  
+  .outbrain-no-bullets,.outbrain-no-border{
+    border-width:0px;
+    margin-top:10px;
+  }
+  
+  .div-wrapper .outbrain-no-border UL,
+  .div-wrapper-right .outbrain-no-border UL{
+    padding-top:5px;
+  }
+  .div-wrapper .outbrain-no-border.outbrain-no-bullets.outbrain-ie-old legend
+   {
+    margin: 0 0 0 -8px; 
+  }
+  .div-wrapper-right .outbrain-no-border.outbrain-no-bullets.outbrain-ie-old  legend {
+    margin: 0 -8px 0 0; 
+  }
+  
+  .outbrain_waiting_background{
+    background-Color: #cccccc;
+    text-decoration:  none;
+  }
+  
+  
+  
+  .Outbrain_recommendationsWait_outer
+    {
+    position: absolute;
+    top: 15;
+    width: 200%;
+    left: -50%;
+  }
+
+  .Outbrain_recommendationsWait_inner
+    {
+    position: absolute;
+    left: 50%;
+  }
+  
+  .Outbrain_recommendationsWait_inner P
+  {
+    position: relative;
+    left: -50%;
+      }
+      
+  .ob_commentOut{
+    padding-right:10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .ob_commentOver{
+    padding-right:10px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .ob_bigInfo_off, .ob_bigInfo_on,.ob_smallInfo_off,.ob_smallInfo_on{
+    background-repeat:no-repeat !important;
+    background-color:transparent !important;
+    -moz-box-shadow:none !important;
+    vertical-align:middle;
+    padding:0px !important;
+    margin:0px !important;
+    border:0px !important;
+    display:inline !important;
+  }
+  
+  
+  .ob_bigInfo_off{
+    background-position:0px 0px !important; 
+  }		
+  
+  .ob_bigInfo_on{
+    background-position:-16px 0px !important; 
+  }		
+
+  .ob_smallInfo_off{
+    background-position:0px -17px !important; 
+  }		
+  
+  .ob_smallInfo_on {
+    background-position:-14px -17px !important; 
+  }
+  
+  .outbrain_tooltip{
+    font-family:Tahoma,Verdana,Arial;
+    font-size:11px;
+  }
+
+  .outbrain_tooltip_close{
+    float:right;
+  }
+  
+  .outbrain_tooltip_close img{
+    background-image:url('http://widgets.outbrain.com/close-frame.gif');
+    background-repeat:no-repeat;
+    background-position:0px 0px;
+    cursor: pointer;
+  }
+  
+  #WzTtDiV, #WzTtDiV * {
+    vertical-align:top !important;
+  }
+  
+  .outbrain-tooltip-content a:link,
+  .outbrain-tooltip-content a:visited, 
+  .outbrain-tooltip-content a:active
+  {
+    color:#2200CC;
+  }
+    
+  /* Dual stuff */
+  .outbrain_dual_ad_whats_class{
+  }
+    
+  .outbrain_dual_ad_class{
+    padding-bottom:0px;
+  }
+ 
+  .outbrain_dual_ad_whats_class{
+    display:block;
+    font-size:10px;
+    padding:0 0 4px 0px;
+    text-align:right;
+  }
+ 
+  .outbrain_dual_ad_ul_class {
+    position:relative;
+	}
+  
+  /* override the default section */
+	.outbrain-recommendationsFieldset-ie .outbrain_dual_ad_ul_class {	/*	IE only*/
+		padding-left:24px;
+	}
+
+  /* override the default section */
+	.outbrain-ie8 .outbrain_dual_ad_ul_class {	/*	IE only*/
+		padding-left:16px;
+	}
+  
+  /* DualBox stuff */
+  .div-wrapper .outbrain_dualBox_ad_class .what_is_container{
+    text-align: left;
+  }
+  .div-wrapper-right .outbrain_dualBox_ad_class .what_is_container{
+    text-align: right;
+  }  
+  
+  .outbrain_dualBox_reg_ul_class {
+    margin:0px;
+  }
+  .div-wrapper .outbrain_dualBox_reg_ul_class .outbrain_rec_li,
+  .div-wrapper .outbrain_dualBox_ad_ul_class .outbrain_rec_li,
+  .div-wrapper-right .outbrain_dualBox_reg_ul_class .outbrain_rec_li,
+  .div-wrapper-right .outbrain_dualBox_ad_ul_class .outbrain_rec_li {
+    margin:0px;padding:3px 0;
+  }
+  
+  .div-wrapper .outbrain_dualBox_reg_ul_class.recommendations_ul,
+  .div-wrapper .outbrain_dualBox_ad_ul_class.recommendations_ul,
+  .div-wrapper-right .outbrain_dualBox_reg_ul_class.recommendations_ul,
+  .div-wrapper-right .outbrain_dualBox_ad_ul_class.recommendations_ul{
+    margin:0px;
+  }
+  
+  .outbrain_dualBox_ad_class .what_is_link{
+    font-size:12px;
+    color:#666666;
+    font-style: italic;
+  }
+ .outbrain-might-like{
+    padding-bottom:4px;
+    font-weight:bold;
+  }
+
+  
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------*/
+#OBTB_overlay {
+	position: fixed;
+	z-index:200;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+}
+
+.OBTB_overlayMacFFBGHack {background: url('http://widgets.outbrain.com/3rd_party/thickbox_images/macFFBgHack.png') repeat;}
+.OBTB_overlayBG {
+	background-color:#000;
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+
+* html #OBTB_overlay { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#OBTB_window {
+	position: fixed;
+	z-index: 202;
+	display:none;
+	top:50%;
+	left:50%;
+}
+
+* html #OBTB_window { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#OBTB_window img#OBTB_Image {
+	display:block;
+	margin: 15px 0 0 15px;
+}
+
+#OBTB_caption{
+	height:25px;
+	padding:7px 30px 10px 25px;
+	float:left;
+}
+
+#OBTB_closeWindow{
+	height:25px;
+	padding:11px 25px 10px 0;
+	float:right;
+}
+
+#OBTB_closeAjaxWindow{
+	padding:7px 10px 5px 0;
+	margin-bottom:1px;
+	text-align:right;
+	float:right;
+}
+
+#OBTB_ajaxWindowTitle{
+	float:left;
+	padding:7px 0 5px 10px;
+	margin-bottom:1px;
+}
+
+#OBTB_title{
+	height:27px;
+}
+
+#OBTB_ajaxContent{
+	clear:both;
+	padding:2px 15px 15px 15px;
+	overflow:auto;
+	text-align:left;
+	line-height:1.4em;
+}
+
+#OBTB_ajaxContent.OBTB_modal{
+	padding:15px;
+}
+
+#OBTB_ajaxContent p{
+	padding:5px 0px 5px 0px;
+}
+
+#OBTB_load{
+	position: fixed;
+	display:none;
+	height:13px;
+	width:208px;
+	z-index:103;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -104px; /* -height/2 0 0 -width/2 */
+}
+
+* html #OBTB_load { /* ie6 hack */
+position: absolute;
+margin-top: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+
+#OBTB_HideSelect{
+	z-index:99;
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color:#fff;
+	border:none;
+	filter:alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	height:100%;
+	width:100%;
+}
+
+* html #OBTB_HideSelect { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+#OBTB_iframeContent{
+	clear:both;
+	border:none;
+	margin-bottom:-1px;
+	margin-top:1px;
+	_margin-bottom:1px;
+  overflow:hidden;
+}
+
+  
+  
+  #OBTB_iframeContent div.ol-pop {
+  position: relative;
+  padding: 20px;
+  font-size: 1.2em;
+  line-height: 1.4;
+  background: #fff;
+  z-index: 3;
+
+  }
+  
+  #OBTB_iframeDBLcontainer{
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background-color: #fff;
+    overflow:hidden;
+  }
+  
+  #OBTB_closeWindowButton IMG{border-width:0px;}
+  
+  #OBTB_closeWindowButton{
+    left:0;
+    margin-left:-15px;
+    margin-top:-15px;
+    position:absolute;
+  }
+  
+  #WzTtDiV td{padding:0px;border-right:none; line-height: 1px;} 
+  #WzTtDiV tr{line-height: 1px;}
+  

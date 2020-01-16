@@ -1,0 +1,492 @@
+/*****************************************************************
+ * HW-provided Top-level CSS stylesheet for PNAS site
+ *
+ * Should contain (or import) all styles used across many pages
+ * within the site, and overrides to HW global CSS stylesheet.
+ * 
+ *****************************************************************/
+
+/** requires sidebar styles **/
+@import url("hw-pnas-sidebars.css");
+
+/*****************************************************************
+ * Common page elements
+ *****************************************************************/
+div.hw-gen-page {
+	position: relative;
+	background-color: white;
+	padding: 5px;
+	width: 970px; /* 640px; */
+	top: 0px;
+	margin: 0 auto;
+}
+
+div.section-break {
+	clear: both;
+	padding: 1em 0em;
+	margin: 0px;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #999999;
+}
+
+/**********************************************************
+ * header styles
+ **********************************************************/
+
+/***********
+   PNAS uses a fixed width header with graphical images for buttons
+   as well as a large logo positioned to the right and a short, wide
+   logo treatment below it
+ ***********/
+/***
+	Content body has to be pushed below fixed header elements
+  Header element heights:
+   60px  : banner ad space at very top
+   10px  : padding below ad space
+   61px  : height of main logo, and button elements to left of it
+   23px  : long bar with "Proceedings of ..." written out
+   30px  : buttons/quicksearch under main logo bar
+  -----
+  184px  Total for header
+  
+ ***/
+ /** push the content area below the header **/
+ /** this allows the header to be cleared regardless of whether or not there
+     is an authstring block between the header and the content area */
+#header-clear {
+ 	/* margin-top: 180px; */
+ 	/* height without sub-head: 146px */
+ 	margin: 0; padding: 0;
+ 	margin-top: 154px;
+}
+
+#col-2 {
+	background-color: #8992ab;
+}
+#col-3 {
+	background-color: #3b4a73;
+}
+/* the relative positioning makes all the block elements within the header
+   able to be absolutely positioned within the header container block */
+#header {
+	width: 970px; /* 640px; */
+	position: relative;
+	clear: both;
+	padding: 0;
+	height: 154px;
+}
+#header a {
+	text-decoration: none;
+}
+div.main-logo {
+	position: absolute;
+	display: block;
+	width: 175px;
+	height: 61px;
+	top: 80px;
+	right: 1px;
+	background-image: url(../img/header/pnashead.gif);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+}
+div.main-logo a {
+	display: block;
+	width: 259px;
+	height: 61px;
+}
+img.main-logo {
+	position: absolute;
+	top: 50px;
+	right: 1px;
+	/*width: 259px;
+	height: 61px;*/
+}
+#header .button-list {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+#header .button-list li {
+	display: inline;
+}
+
+/*************************/
+#header .header-buttons a {
+	position: absolute;
+	background-image: url(../img/header/smallbuttons_top.jpg);
+	background-repeat: no-repeat;
+	border-bottom: 5px solid #056c11;
+}
+#header .header-buttons a:hover {
+	border-bottom: 5px solid #5c2946;
+}
+.header-buttons {
+	width: 450px; /*380px;*/
+	top: 113px;
+	height: 21px;
+}
+.header-buttons a {
+	height: 19px;
+}
+.header-buttons a.ifora-link {
+	width: 78px;
+	left: 0px;
+	background-position: left top;
+}
+.header-buttons a.edboard-link {
+	background-position: -78px top;
+	width: 79px;
+	left: 78px;
+}
+.header-buttons a.about-link {
+	background-position: -158px top;
+	width: 38px;
+	left: 157px;
+}
+.header-buttons a.subscribe-link {
+	background-position: -196px top;
+	width: 52px;
+	left: 195px;
+}
+.header-buttons a.advertise-link {
+	background-position: -248px top;
+	width: 52px;
+	left: 247px;
+}
+.header-buttons a.contact-link {
+	background-position: -300px top;
+	width: 45px;
+	left: 299px;
+}
+
+.header-buttons a.feedback-link {
+	background-position: -345px top;
+	width: 54px;
+	left: 344px;
+}
+
+.header-buttons a.sitemap-link {
+	background-position: -399px top;
+	width: 46px;
+	left: 398px;
+}
+/*
+.header-buttons a.rss {
+	background-position: -380px top;
+	width: 60px;
+	left: 380px;
+}*/
+#header .sub-header-buttons a {
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+#header .sub-header-buttons a:hover {
+	background-position: top left;
+}
+
+.sub-header-buttons {
+	width: /*710px;*/ 380px;
+	height: 34px;
+	top: 134px;
+}
+.sub-header-buttons a {
+	height: 34px;
+	bottom: 0px;
+}
+.sub-header-buttons a.cur-issue-link {
+	background-image: url(../img/header/current_head2.gif);
+	width: 126px;
+	/*left: 0px;*/
+	right: 254px;
+}
+.sub-header-buttons a.archives-link {
+	background-image: url(../img/header/archives_head2.gif);
+	width: 107px;
+	/*left: 127px;*/
+	right: 146px;
+}
+.sub-header-buttons a.submission-link {
+	background-image: url(../img/header/online_head2.gif);
+	width: 145px;
+	/*left: 235px;*/
+	right: 0px;
+}
+.secondary-logo {
+	display: block;
+	position: absolute;
+	right: 0px; /* left: 0px; */
+	width: 970px; /* 640px; */
+	top: 131px;
+	height: 23px;
+	/*background-image: url(../img/header/pnasbar.gif);*/
+	background-image: url(../img/header/masthead_banner.jpg);
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-color: #3b4a73;
+	padding: 0em;
+	margin: 0px;
+	z-index: 5;
+}
+
+#authstring {
+	display: block;
+	list-style: none;
+	font-size: .8em;
+	position: absolute;
+	margin: 0; padding: 0;
+	top: 80px;
+	left: 5px;
+	text-align: left;
+}
+#authstring li {
+	display: inline;
+	position: relative;
+}
+#authstring a,
+#authstring a:link,
+#authstring a:active {
+	color: #333333;
+}
+#authstring a:visited {
+	color: #003333;
+}
+.banner-ads {
+	display: block;
+	list-style: none;
+	width: 970px; /* 640px; */
+	height: 60px;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 10px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-bottom: 1px solid #CCCCCC;
+	text-align: center;
+}
+.banner-ads li {
+	display: inline;
+	position: relative;
+	height: 60px;
+	margin: 0;
+	padding: 0 5px;
+}
+/*
+.banner-ads li.position-1 {
+	margin-left: 21px;
+	width: 220px;
+}
+.banner-ads li.position-2,
+.banner-ads li.position-3 {
+	margin-left: 6px;
+	width: 372px;
+}
+*/
+
+/* error pages */
+#pageid-error #header {
+	height: 90px;
+}
+#pageid-error h1 {
+	font-size: 1.5em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin-top: .7em;
+}
+#pageid-error div.main-logo,
+#pageid-error .secondary-logo,
+#content-block {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-position: center right;
+}
+#pageid-error div.main-logo {
+	width: 183px;
+}
+#pageid-error .secondary-logo {
+	background-position: -154px 0px;
+}
+#pageid-error #content-block {
+	width: 600px;
+}
+
+/* quicksearch form */
+#header form {
+	display: block;
+	position: absolute;
+	width: /*259px;*/ 265px;
+	padding-left: 324px;
+	height: 34px;
+	background-color: #626E8F;
+	top: 134px;
+	right: 0px; /*left: 381px;*/
+}
+.formbox {
+	position: relative;
+	width: 252px;
+	height: 30px;
+}
+.quicksearch input {
+	display: inline;
+	font-size: .75em;
+	margin: 0px;
+	padding: 0px;
+}
+.quicksearch input.qs-submit {
+	position: absolute;
+	height: 18px;
+	width: 19px;
+	left: 125px;
+	top: 5px;
+	padding: 0em;
+}
+.quicksearch input#qs-input {
+	position: absolute;
+	top: 5px;
+	height: 16px;
+	width: 110px;
+	left: 5px;
+}
+.quicksearch img {
+	position: absolute;
+	top: 8px;
+	left: 154px;
+	width: 96px;
+	height: 12px;
+	border: none;
+}
+
+#footer {
+	margin: 0;
+	padding-top: 1em;
+}
+#footer .copyright a {
+	color: #5c2946;
+}
+#footer ul {
+	margin-top: .75em;
+}
+
+/* The following elements are all ones we want to position offscreen--
+   their content is replaced on the visible page by background images */
+.main-logo strong,
+#header .button-list a span,
+.secondary-logo strong,
+.quicksearch label,
+.sidebar-qs label,
+.prev-next a span {
+	position: absolute;
+	left: -9999px;
+}
+
+/*****************************************************************
+ * Fix for search navigation on canned search results.
+ * PNAS moved it from col2 to the content well, so we need to adjust display
+ *****************************************************************/
+ 
+#content-block  .search-nav {
+    margin: 0;
+    height: 1.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 15px;
+    left: 540px;
+    width: 180px
+}
+
+#content-block  .bottom-search-nav {
+    top: auto;
+    bottom: 15px;
+}
+
+/* needs to be reset for pages w/ search-nav and actual column 2 */
+#content-block #col-2 .search-nav {
+	position: static;
+	margin:0px 10px 1em 10px;
+	padding:.5em 0px .5em 0px;
+	width: 198px;
+	height: auto;
+}
+#content-block  .search-nav a.next-results-link {
+    float: right;
+    display: block;
+    height: 1.5em;
+}
+
+#content-block  .search-nav a.prev-results-link {
+    float: left;
+    display: block;
+    height: 1.5em;
+}
+#content-block #col-2 .search-nav a.prev-results-link,
+#content-block #col-2  .search-nav a.next-results-link {
+	float: none;
+	display: inline;
+}
+
+#pageid-section-index .search-nav span.article-nav-sep {
+    display: none;
+}
+
+/* link styles */
+#content-block a,
+#content-block a:link,
+#content-block a:active {
+  color: #333333;
+}
+#content-block a:visited {
+	color: #003333;
+}
+/* Citation */
+.cit-series-title {
+	font-style: italic;
+}
+.cit-series-title .pub-sertitle-cozzarelliprizewinner {
+	display: none;
+}
+ul.cit-auth-list {
+	display:block;
+	padding-left: 2em;
+}
+
+.hw-gen-page #skip-link {
+color:white;
+left:-9999px;
+position:absolute;
+}
+.hw-gen-page #skip-link a{
+color:white;
+left:-9999px;
+position:absolute;
+}
+
+/* Popup styles */
+
+div#hovering-abs h2,
+div#hovering-abs h3 {
+    display: none;
+}
+.secondary-logo strong{
+    color:white;
+}
+#pageid-alerts-signupetoc #proxied-contents .alerts_signup span.alerts-font-face {
+    padding-right:30px;
+}
+#pageid-alerts-signupetoc #proxied-contents .alerts_signup label {
+    margin-left:0px;
+}
+#pageid-alerts-signupetoc #proxied-contents .alerts_signup tbody tr {
+    margin-bottom:5px;
+    padding-bottom:5px;
+}
+#pageid-alerts-signupetoc #proxied-contents .alerts_signup {
+    width:600px  !important;
+}
+img.etoc-advsrch {
+    padding-top:0;
+}
+#feedburner-rss a {
+    margin-left:5px;
+}

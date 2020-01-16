@@ -1,0 +1,127 @@
+.social_bookmarking_module {
+    position: relative;
+    font-size: 10px !important;
+    min-height: 20px;
+}
+    .social_bookmarking_module .left {
+        left: 0pt;
+        min-height: 20px;
+        position: absolute;
+    }
+    .social_bookmarking_module .right {
+        min-height: 20px;
+        position: absolute;
+        right: 0pt;
+    }
+
+.social_bookmarking_module ul {
+    list-style-type: none;
+}
+.social_bookmarking_module li {
+    display: inline;
+    margin-right: 5px;
+    vertical-align: top;
+}
+    .social_bookmarking_module li a {
+        background-position: 0pt 0pt;
+        background-repeat: no-repeat;
+        display: inline-block;
+        font-size: 0pt;
+        height: 24px;
+        overflow: hidden;
+        text-indent: -9999em;
+    }
+
+.social_bookmarking_module div.clear {
+    clear: both;
+    height: 1px;
+    width: 1px;
+}
+
+.social_bookmarking_module li.sb_digg a {
+    background-image: url("icons/digg.png");
+    opacity:0.4;
+}
+.social_bookmarking_module li.sb_facebook a {
+    background-image: url("icons/facebook.png");
+    opacity:0.4;
+}
+.social_bookmarking_module li.sb_twitter a {
+    background-image: url("icons/twitter.png");
+    opacity:0.4;
+}
+.social_bookmarking_module li.sb_stumbleupon a {
+    background-image: url("icons/stumbleupon.png");
+    opacity:0.4;
+}
+.social_bookmarking_module li.sb_reddit a {
+    background-image: url("icons/reddit.png");
+    opacity:0.4;
+}
+.social_bookmarking_module li.sb_sharethis a {
+    background-image: url("icons/sharethis.png");
+    opacity:0.4;
+}
+.social_bookmarking_module li.sb_email a {
+    background-image: url("icons/email.png");
+    opacity:0.4;
+}
+
+.social_bookmarking_module li.sb_digg a,
+.social_bookmarking_module li.sb_facebook a,
+.social_bookmarking_module li.sb_twitter a,
+.social_bookmarking_module li.sb_stumbleupon a,
+.social_bookmarking_module li.sb_reddit a,
+.social_bookmarking_module li.sb_sharethis a,
+.social_bookmarking_module li.sb_email a {
+    width: 24px;
+}
+.social_bookmarking_module li.sb_digg a:hover,
+.social_bookmarking_module li.sb_facebook a:hover,
+.social_bookmarking_module li.sb_twitter a:hover,
+.social_bookmarking_module li.sb_stumbleupon a:hover,
+.social_bookmarking_module li.sb_reddit a:hover,
+.social_bookmarking_module li.sb_sharethis a:hover,
+.social_bookmarking_module li.sb_email a:hover {
+    opacity: 1;
+}
+
+.sb_button.sb_linkedin-small {
+    height: 20px;
+    text-align: left;
+    width: 90px;
+}
+    .sb_button.sb_linkedin a,
+    .sb_button.sb_linkedin-count a,
+    .sb_button.sb_linkedin-small a {
+        background-color: #FFFFFF;
+        margin-right: 20px;
+        width: auto !important;
+    }
+
+.sb_button.sb_google-small {
+    background-color: #FFFFFF;
+}
+
+.sb_button.sb_facebook div {
+    max-width: 380px;
+    overflow: visible;
+}
+
+.social_bookmarking_module.byline ul {
+    min-height: 30px;
+}
+    .social_bookmarking_module.byline ul li {
+        display: inline;
+    }
+
+#twitter-widget {
+    padding-bottom:20px;
+    margin-bottom:10px;
+}
+    #twitter-widget .twtr-doc {
+        -moz-border-radius:0;
+    }
+    #twitter-widget .twtr-timeline {
+        -moz-border-radius:0;
+    }

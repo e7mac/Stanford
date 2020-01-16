@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/ga.js"></script><script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script>
+<!-- Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 -->
+
+
+    
+    <title>Peter Thiel’s CS183: Startup - Class 18 Notes Essay</title>
+    <meta name="description" content="Peter Thiel’s CS183: Startup - Class 18 Notes Essay Here is an essay version of my class notes. Errors and omissions are mine. Credit for good stuff is Peter’s. Thanks to Joel Cazares for helping...">
+    <link rel="shortcut icon" href="http://25.media.tumblr.com/avatar_591383af1d7d_16.png">
+    <link rel="apple-touch-icon" href="http://25.media.tumblr.com/avatar_591383af1d7d_128.png">
+    <link rel="alternate" type="application/rss+xml" href="http://blakemasters.tumblr.com/rss">
+
+    <!-- DEFAULT VARIABLES -->
+    <meta name="color:Post Type Text" content="#555555">
+    <meta name="color:Post Type Photo" content="#555555">
+    <meta name="color:Post Type Photoset" content="#555555">
+    <meta name="color:Post Type Quote" content="#555555">
+    <meta name="color:Post Type Link" content="#555555">
+    <meta name="color:Post Type Chat" content="#555555">
+    <meta name="color:Post Type Video" content="#555555">
+    <meta name="color:Post Type Audio" content="#555555">
+    <meta name="image:Header" content="">
+    <meta name="if:Show About Widget" content="1">
+    <meta name="if:Show Stuff I Like Widget" content="1">
+    <meta name="if:Show Latest Tweets Widget" content="0">
+    <meta name="if:Show People I Follow Widget" content="1">
+    <meta name="text:Number of Tweets" content="3">
+    <meta name="text:Google Analytics ID" content="">
+    <meta name="text:Disqus Shortname" content="">
+
+    <style type="text/css" media="screen">
+    /* Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 */
+
+    /* RESET */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
+    }
+    body { line-height: 1; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+    :focus { outline: 0; }
+    del { text-decoration: line-through; }
+    table { border-collapse: collapse; border-spacing: 0; }
+
+    /* GLOBAL ELEMENTS */
+    body { background: #fff; }
+    body, input, textarea { color: #000; font: 14px/20px "helvetica neue",helvetica,arial,sans-serif; }
+    p, ul, ol, dd, pre { margin-bottom: 20px; }
+    pre, code { font: 12px Monaco,monospace; line-height: 20px; }
+    blockquote { border-left: 5px solid #ddd; color: #555; font-style: italic; margin-bottom: 20px; padding-left: 10px; }
+    table { border: 1px solid #ccc; border-width: 1px 1px 0 1px; font-size: 14px; line-height: 20px; margin: 0 0 22px 0; text-align: left; }
+    caption { text-align: left; }
+    tr { border-bottom: 1px solid #ccc; }
+    th, td { padding: .7em 1.25em; }
+    hr { background-color: black; border: 0; color: black; height: 1px; margin-bottom: 20px; }
+    a:link, a:visited { color: #555; }
+    a:focus, a:hover, a:active { color: #3EA99F; }
+    h1, h2, h3, h4, h5, h6 {  font-weight:normal; clear:both; }
+    img { background: #eee; }
+    a img:focus, a img:hover, a img:active { background: #3EA99F; }
+
+    /* DEFAULT CSS */
+    #header .menu {
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 3px;
+        overflow: hidden;
+        padding: 20px 0 10px;
+        width: 900px;
+    }
+        #header #pages {
+            float: left;
+            width: 580px;
+        }
+            #header #pages ul {
+                float: left;
+                margin-bottom: 0;
+            }
+                #header #pages li {
+                    float: left;
+                    margin-right: 10px;
+                    padding: 4px 10px 3px 0;
+                }
+                    #header #pages a, #header #pages a:visited {
+                        color: #555;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+                    #header #pages a:focus, #header #pages a:hover, #header #pages a:active {
+                        color: #3EA99F;
+                    }
+        #header #search {
+            float: right;
+        }
+            #header #search input {
+                border: 1px solid #ccc;
+                line-height: 20px;
+                padding: 4px;
+            }
+            #header #search input.search-button {
+                background: #eee;
+                color: #555;
+                padding: 3px;
+                width: 60px;
+            }
+    #header #branding {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 3px;
+        padding: 30px 0;
+        width: 900px;
+    }
+        #header h1 a {
+            color: #111;
+            font: 70px Georgia,serif;
+            font-weight: normal;
+            line-height: 100px;
+            text-decoration: none;
+        }
+        #header h1 a:focus, #header h1 a:hover, #header h1 a:active {
+            color: #3EA99F;
+
+#header h3 a {
+            color: #111;
+            font: 16px Georgia,serif;
+            font-weight: normal;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        }
+        #header img {
+            max-width: 900px;
+        }
+    #main {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        clear: both;
+        margin: 0 auto 3px;
+        overflow: hidden;
+        width: 900px;
+    }
+        #container {
+            border-right: 1px solid #ccc;
+            float: left;
+            min-height: 400px;
+            width: 580px;
+        }
+            .post-meta {
+                border-bottom: 1px solid #ccc;
+                color: #555;
+                overflow: hidden;
+                padding: 9px 0;
+            }
+                .post-meta .type {
+                    float: left;
+                }
+                    .post-meta .type a {
+                        border-bottom: 1px solid #ccc;
+                        font-weight: bold;
+                        padding: 0 10px 10px;
+                        text-decoration: none;
+                    }
+                    .post-type-text .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-photo .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-photoset .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-quote .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-link .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-chat .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-video .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-audio .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-meta .type a:focus, .post-meta .type a:hover, .post-meta .type a:active {
+                        margin-left: 5px;
+                    }
+                .post-meta .date, .post-meta .comments, .post-meta .note-count {
+                    float: left;
+                    padding: 0 10px;
+                }
+            .post-content {
+                padding: 30px 30px 60px;
+            }
+            .post-content div:last-child, .post-content div:last-child p,
+            .post-content div:last-child ul, .post-content div:last-child ol,
+            .post-content div:last-child blockquote {
+                margin-bottom: 0;
+            }
+                .post-content h3 {
+                    font: 20px Georgia,serif;
+                    margin-bottom: 20px;
+                }
+                    .post-content h3 a, .post-content h3 a:visited {
+                        color: #111;
+                        text-decoration: none;
+                    }
+                    .post-content h3 a:focus, .post-content h3 a:hover, .post-content h3:active {
+                        color: #dd3333;
+                    }
+                .post-content img {
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+
+                    padding: 0px;
+                }
+                .post-type-text .post-content ul {
+                    padding-left: 30px;
+                }
+                    .post-type-text .post-content ul ul {
+                        margin-bottom: 0;
+                    }
+                    .post-type-text .post-content ul li {
+                        list-style-type: disc;
+                    }
+                        .post-type-text .post-content ul ul li {
+                            list-style-type: circle;
+                        }
+                .post-type-text .post-content ol {
+                    padding-left: 30px;
+                }
+                    .post-type-text .post-content ol ol {
+                        margin-bottom: 0;
+                    }
+                    .post-type-text .post-content ol li {
+                        list-style-type: decimal;
+                    }
+                        .post-type-text .post-content ol ol li {
+                            list-style-type: decimal;
+                        }
+                .post-type-photoset .post-content .html_photoset {
+                    background: #eee;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+                .post-type-link .post-content .link-wrap {
+                    margin-bottom: 20px;
+                }
+                .post-type-chat .post-content .label {
+                    color: #333;
+                    font-weight: bold;
+                }
+                .post-type-video .post-content .video-wrap {
+                    background: #f0f0f0;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+                .post-type-audio .post-content .caption {
+                    margin-top: 10px;
+                }
+                .tags {
+                    font-size: 13px;
+                }
+                .tags a {
+                    text-decoration: none;
+                }
+                .tags a:after {
+                    content: ",";
+                }
+                .tags a:last-child:after {
+                    content: "";
+                }
+            #disqus_thread {
+                border-top: 1px solid #ccc;
+                padding: 10px 30px 0;
+            }
+                #disqus_thread h3 {
+                    color: #111;
+                    font: 18px Georgia,serif;
+                    margin: 20px 0 10px;
+                }
+                #dsq-content .dsq-subscribe-menu {
+                    font-size: 12px;
+                }
+            #post-notes {
+                border-top: 1px solid #ccc;
+                padding: 30px;
+            }
+                #post-notes ol li {
+                    border-bottom: 1px dotted #ccc;
+                    padding: 10px 0;
+                }
+                    #post-notes ol li img {
+                        background: none;
+                        padding-right: 3px;
+                        vertical-align: middle;
+                    }
+            .pagination {
+                border-top: 1px solid #ccc;
+                overflow: hidden;
+                padding: 20px 0;
+            }
+                .pagination .previous-page {
+                    float: left;
+                }
+                .pagination .next-page {
+                    float: right;
+                    margin-right: 30px;
+                }
+                    .pagination a {
+                        font: 20px Georgia,serif;
+                        text-decoration: none;
+                    }
+      
+#facebook {
+                padding: 9px 20px;
+                margin: 0 0 10px;
+float: center;
+align: center;
+}
+
+  #sidebar {
+            float: left;
+            padding-bottom: 30px;
+            width: 319px;
+        }
+        
+         #sidebar img {
+           padding: 3px;
+
+           color: #3EA99F;
+          
+        }
+
+#sidebar hr {color: #ccc; background-color: #fff; border: 1px dotted #ccc; border-style: none none dotted; }
+    
+  #sidebar h4 {
+                border-top: 1px dotted #ccc;
+               
+ border-bottom: 1px dotted #ccc;
+                color: #999;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                padding: 9px 20px;
+                text-transform: uppercase;
+            }
+                #sidebar h4 a, #sidebar h3 a:visited {
+                    color: #999;
+                    text-decoration: none;
+                }
+                #sidebar h4 a:focus, #sidebar h3 a:hover, #sidebar h3 a:active {
+                    color: #3EA99F;
+                }
+
+
+
+ #sidebar h3 {
+                border-bottom: 1px dotted #ccc;
+                color: #999;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                padding: 9px 20px;
+                text-transform: uppercase;
+            }
+                #sidebar h3 a, #sidebar h3 a:visited {
+                    color: #999;
+                    text-decoration: none;
+                }
+                #sidebar h3 a:focus, #sidebar h3 a:hover, #sidebar h3 a:active {
+                    color: #3EA99F;
+                }
+
+            #sidebar ul {
+                margin-bottom: 0;
+            }
+            .widget {
+                border-bottom: 1px solid #ccc;
+                color: #333;
+                font-size: 13px;
+                padding: 0 20px 20px 20px;
+            }
+                .widget h3 {
+                    font: 20px Georgia,serif;
+                    margin-bottom: 20px;
+                }
+                    .widget h3 a, .widget h3 a:visited {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                    .widget h3 a:focus, .widget h3 a:hover, .widget h3 a:active {
+                        color: #3EA99F;
+                    }
+                .widget img {
+                    padding: 5px;
+                    max-width: 250px;
+                }
+                .widget p:last-child, .widget ul:last-child, .widget ol:last-child, .widget blockquote:last-child {
+                    margin-bottom: 0;
+                }
+            #about {
+                overflow: hidden;
+            }
+                #about img {
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    float: left;
+                    margin: 0 10px 0 0;
+                    padding: 3px;
+                }
+            .like_post {
+                border-bottom: 1px dotted #ccc;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+            .like_post:last-child {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+                .like_post ul {
+                    padding-left: 20px;
+                }
+                    .like_post ul ul {
+                        margin-bottom: 0;
+                    }
+                    .like_post ul li {
+                        list-style-type: disc;
+                    }
+                        .like_post ul ul li {
+                            list-style-type: circle;
+                        }
+                .like_post ol {
+                    padding-left: 20px;
+                }
+                    .like_post ol ol {
+                        margin-bottom: 0;
+                    }
+                    .like_post ol li {
+                        list-style-type: decimal;
+                    }
+                        .like_post ol ol li {
+                            list-style-type: decimal;
+                        }
+                .like_post p:last-child, .like_post ul:last-child, .like_post ol:last-child, .like_post blockquote:last-child {
+                    margin-bottom: 0;
+                }
+            #tweets {
+                margin-bottom: 10px;
+            }
+                #tweets .content {
+                    margin-bottom: 10px;
+                }
+                    #tweets a {
+                        text-decoration: none;
+                    }
+            #following_container {
+                overflow: hidden;
+                padding-bottom: 20px;
+            }
+                #following_container li {
+                    display: inline;
+                    padding: 0;
+                    margin: 0;
+                }
+    #footer {
+        border-top: 1px solid #ccc;
+        clear: both;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 900px;
+    }
+        #colophon {
+            color: #555;
+            float: right;
+            font-size: 12px;
+            padding: 10px 0 20px;
+        }
+            #footer a {
+                border-bottom: 1px dotted #555;
+                text-decoration: none;
+            }
+    
+    
+    blockquote p { margin-bottom: 0px; }
+    .sup{font-size:xx-small; vertical-align:top;}
+
+
+    </style>
+    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30558224-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995">
+<meta property="og:title" content="Peter Thiel’s CS183: Startup - Class 18 Notes Essay">
+<meta property="og:url" content="http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay">
+<meta property="og:description" content="Here is an essay version of my class notes. Errors and omissions are mine. Credit for good stuff is Peter’s. Thanks to Joel Cazares for helping proof this.
+I. Traits of the Founder
+Founders are...">
+<meta property="og:type" content="tumblr-feed:entry">
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS -->
+<meta charset="utf-8">
+<meta name="twitter:url" value="http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay">
+<meta name="twitter:site" value="tumblr">
+<meta name="twitter:creator" value="bgmasters">
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"></head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="access">
+                <div class="menu">
+                    <div id="pages">
+                        <ul>
+                            <li><a href="http://blakemasters.tumblr.com/">Home</a></li>
+                            <li><a href="http://blakemasters.tumblr.com/about">About</a></li><li><a href="http://blakemasters.tumblr.com/numbers">#s</a></li>
+                            
+                            
+<!-- ><li><a href="http://thefivetribe.com/?page_id=2405">Links</a></li>  -->                         
+ <li class="archive"><a href="http://blakemasters.tumblr.com/archive">Archive</a></li>
+                           <!-- <li class="mobile"><a href="/mobile">Mobile</a></li> -->
+                          <!--  <li class="rss"><a href="http://blakemasters.tumblr.com/rss">RSS</a></li> -->
+                        </ul>
+                    </div><!-- #pages -->
+                    <div id="search">
+                        <form action="http://blakemasters.tumblr.com/search" method="get">
+                            <input type="text" name="q" value="">
+                            <input type="submit" value="Search" class="search-button">
+                        </form>
+                    </div><!-- #search -->
+                </div><!-- .menu -->
+            </div><!-- #access -->
+            <div id="branding">
+                <h1>
+                    
+                    <a href="http://blakemasters.tumblr.com/">Blake Masters</a>
+                </h1>
+<h2>"Your mind is software. Program it. Your body is a shell. Change it. Death is a disease. Cure it. Extinction is approaching. Fight it."</h2>
+            </div><!-- #branding -->
+        </div><!-- #header -->
+        <div id="main">
+            <div id="container">
+                <div id="content">
+                
+                    <div id="post-24578683805" class="post post-type-text">
+                        <div class="post-meta">
+                            <div class="type">
+                                <!-- <a href="http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay">Text</a> -->
+                            </div><!-- .type -->
+                        
+                            <div class="date">
+                                June 06, 2012
+                            </div><!-- .date -->
+                        
+                        
+                        
+                            <div class="note-count">
+                                <a href="http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay#notes">60 notes</a>
+                            </div><!-- .note-count -->
+                        
+                        </div><!-- .post-meta -->
+                        <div class="post-content">
+                        
+                            <h3><a href="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/Peter Thiel’s CS183  Startup - Class 18 Notes Essay.html">Peter Thiel’s CS183: Startup - Class 18 Notes Essay</a></h3>
+                            <p></p><p class="MsoNormal">Here is an essay version of my class notes. Errors and omissions are mine. Credit for good stuff is Peter’s. Thanks to <a href="http://www.joelcazares.com/" title="Joel Cazares" target="_blank">Joel Cazares</a> for helping proof this.</p>
+<p align="center" class="MsoNormal"><u><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m582rmnKkP1qbb0b4.png"></span></u></p>
+<p class="MsoNormal"><strong><span>I. Traits of the Founder</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>Founders are important. People recognize this. Founders are often discussed. Many companies end up looking like founder’s cults. Let’s talk a bit about the anthropology and psychology of founders. Who are they, and why do they do what they do?</span></p>
+<p class="MsoNormal"><strong><span>A. The PayPal Origin</span></strong></p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m582r8DccU1qbb0b4.png"></p>
+<p class="MsoNormal">PayPal’s founding team was six people. Four of them were born outside of the United States. Five of them were 23 or younger. Four of them built bombs when they were in high school. (Your lecturer was not among them.) Two of these bombmakers did so in communist countries: Max in the Soviet Union, Yu Pan in China. This was not what people normally did in those countries at that time.</p>
+<p class="MsoNormal">The eccentricity didn’t stop there. Russ grew up in a trailer park and managed to escape to the one math and science magnet school in Illinois. Luke and Max had started crazy ventures at Illinois Urbana-Champaign. Max liked to talk about his crazy attributes (he claimed/claims to have 3 kidneys), perhaps even a little too much. His came to the U.S. as sort of a refugee weeks after the Soviet Union collapsed but before other countries were formed. So he liked to say that he was a citizen of no country. It made for incredibly complicated travel issues. Everybody decided that he couldn’t leave the country, since it wasn’t clear that he could get back in if he did.</p>
+<p class="MsoNormal"><span>Ken was somewhat more on the rational side of things. But then again, he took a 66% pay cut to come do PayPal instead of going into investment banking after graduating from Stanford. So there’s that.</span>&nbsp;</p>
+<p class="MsoNormal"><span>One could go on and on with this. The main question is whether there is a connection—and if so what kind—between being a founder and having extreme traits.</span></p>
+<p class="MsoNormal"><strong><span>B. Distributions</span></strong></p>
+<p class="MsoNormal"><span>Many traits are normally distributed throughout the population. Suppose that all traits are aggregated on a normal distribution chart. On the left tail you’d have a list of negatively perceived traits, such as weakness, disagreeability, and poverty. On the right tail, you’d have traditionally positive traits such as strength, charisma, and wealth.</span>&nbsp;</p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/717cf777b062596c61ca.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m582ujiPO61qbb0b4.png"></a></p>
+<p class="MsoNormal">Where do founders fall? Certainly they seem to be a bit less average and a bit more extreme than normal. So maybe the founder distribution is a fat-tailed one:</p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/8877513c340108453a85.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m582uys3lk1qbb0b4.png"></a></p>
+<p class="MsoNormal">But that radically understates things. We can push it further. Perhaps the founder distribution is, however strangely, an inverted normal distribution. Both tails are extremely fat. Perhaps founders are complex combinations of, e.g., extreme insiders <em>and</em> extreme outsiders at the same time. Our ideological narratives tend to isolate and reinforce just one side. But maybe those narratives don’t work for founders. Maybe the truth about founders comes from both sides.&nbsp;</p>
+<p class="MsoNormal"><strong><a href="https://blakemasters.box.com/shared/static/6fd3a118a9ecaa3dec40.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m582v99LFd1qbb0b4.png"></a></strong></p>
+<p class="MsoNormal"><strong><!-- more -->C. Is Inverted Normal Distribution Possible?</strong></p>
+<p class="MsoNormal"><span>There are four basic explanations for such a strange, inverted distribution. The first two reflect the familiar nature vs. nurture debate:</span></p>
+<p class="MsoNormal"><span></span>&nbsp; &nbsp; &nbsp; 1. It is natural. Founders really are different. Max Levchin really has 3 kidneys.</p>
+<p class="MsoListParagraphCxSpLast"><span>&nbsp; &nbsp; &nbsp; 2. It is developed, or nurtured. Cultural feedback makes founders different.</span></p>
+<p class="MsoNormal">But the nature vs. nurture paradigm assumes that the distribution is real. It may, in fact, be mythology. To the extent that it’s fictional, there are two explanations:</p>
+<p class="MsoListParagraphCxSpFirst"><span>&nbsp; &nbsp; &nbsp; 3. It is self-created (exaggerated by the founders).</span></p>
+<p class="MsoListParagraphCxSpLast"><span>&nbsp; &nbsp; &nbsp; 4. It is other-created (exaggerated by everyone else).</span></p>
+<p class="MsoNormal"><span>Thinking about founders involves thinking about which of these explanations fit and which do not. The complicated answer is that generally all four apply to some extent. It is very hard to disaggregate them. In practice, they tend to all feed into each other in important but complicated ways.</span>&nbsp;</p>
+<p class="MsoNormal"><span>The dynamic might work like this. People start out being different. They are nurtured to develop their already somewhat extreme traits. Those traits become more important, and they learn to exaggerate them. Others perceive that inflated importance and exaggerate in turn. The founders thus end up being even more different than they were before. And we cycle and repeat.</span></p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5832qCFik1qbb0b4.png"></p>
+<p class="MsoNormal">In practice, the arrows could be reversed. Or the interactions might not make a clean circle, and the feedback loop would be much more complicated. The point is that some interactive combination, and not just one static piece, is driving the process.</p>
+<p class="MsoNormal"><strong><span>D. Applied</span></strong></p>
+<p class="MsoNormal"><span>Anecdotally, we can apply this framework to any founder figure.</span></p>
+<p class="MsoNormal"><span>Take Sir Richard Branson, for instance. The big question is whether Branson should be king. He has been called:</span></p>
+<ul><li><a href="http://metronews.ca/news/vancouver/221422/richard-branson-has-stunts-in-store-for-vancouver/" target="_blank">The king of publicity</a>;</li>
+<li><a href="http://www.amazon.com/Richard-Branson-Virgin-King-Bransons/dp/0761513418" target="_blank">The Virgin king</a>;&nbsp;</li>
+<li><a href="http://www.patspapers.com/story_stack/item/richard_branson_king_of_the_desert_and_space/" target="_blank">King of the desert (and space)</a>;</li>
+<li><a href="http://www.guardian.co.uk/business/2002/jul/27/theairlineindustry.transportintheuk" target="_blank">The king of branding</a>;</li>
+<li><a href="http://www.jaunted.com/story/2012/5/2/83118/52912/travel/The+Ice+King%3A+Richard+Branson's+Face+to+Grace+Virgin+Atlantic+Ice+Cubes%20" target="_blank">The ice king</a>; and even</li>
+<li><a href="http://www.sfcrowsnest.com/articles/news/2007/Richard-Branson-King-of-the-Muppets-12027.php" target="_blank">King of the Muppets</a>&nbsp; &nbsp;</li>
+</ul><p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5833qNfRU1qbb0b4.png"></p>
+<p class="MsoNormal">Let’s start with the haircut. He sort of looks like a lion. In fact, in the picture above he is actually dressed up as a lion. It seems kind of redundant. Anyway, one suspects that Branson wasn’t actually born with that exact hairstyle. There is probably some degree to which he cultivated and nurtured his traits over time.&nbsp; Reconstructing the truth is tricky. It is very hard to actually know the precise dynamic—nature, nurture, or some kind of fiction—because stories about heroic founder figures get told in very exaggerated, morphed forms.&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m586bvDy4S1qbb0b4.png"></p>
+<p class="MsoNormal"><span>Jack Dorsey is another figure we can pick on. He’s hit all of the extremes and very little of the average. At the outset he donned a nose ring and unkempt hair. He got a nerdy tattoo. Then he transformed to the other extreme side of the inverse distribution. Now he wears Prada suits and fashionable shirts. His branding went from extreme outsider to extreme insider. And this is all going off nothing but totally superficial appearances.</span></p>
+<p class="MsoNormal"><span><a href="http://puu.sh/zgXV"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5834tafvV1qbb0b4.png"></a></span></p>
+<p class="MsoNormal"><span>Sean Parker might be the paradigmatic example of the extreme founder figure. There was a rise, fall, rise, fall, and then a rise again. His experience in founding multiple things has been a pastiche of extremes. He didn’t go to college. Maybe he didn’t even finish high school. He was involved in various underground hacking circles in ‘90s. He did Napster as teenager. That had a crazy up-down arc to it. Criminal, of course, is the ultimate outsider category. There were all sorts of questions on whether Napster was really a criminal undertaking. Per the Digital Millennium Copyright Act, companies had to list a phone number for people to call for support inquires. At Napster, that number was Sean’s cell phone. He spent a lot of time in the early 2000s assuring concerned Midwestern mothers that their children weren’t going to get locked up for having downloaded a Metallica album.</span>&nbsp;</p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/91f875635099e452b824.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m58353F2Gd1qbb0b4.png"></a></p>
+<p class="MsoNormal"><span>And then there are the wacky drug allegations and the crazy celebrity part. Sean made the cover of the Forbes 400 issue; he found a way to be distinctive even amongst the set of the richest people in the world. Justin Timberlake, of course, played Sean in the Facebook movie. There is a person at Clarium who looks pretty similar to these guys. When he travels outside of Silicon Valley, people ask him if he’s Justin Timberlake. But in Silicon Valley, people ask him if he’s Sean Parker.</span></p>
+<p class="MsoNormal"><span>Sean seems as exciting to people as he does dangerous. One random anecdote involves the Founders Fund surfing trip to Nicaragua over New Year’s 2007. We took the jet down to Managua. We were probably the only people in the country with a private jet. We drove to a remote town on the coast. Everything started off great. We threw a terrific New Year’s party. Except it kept getting crazier and crazier. Our professional security guard had to displace some people when various drug dealers and other sketchy types started showing up. In Sean’s mind at least, things got weirder from there. 36 hours later, by the morning of Jan 2<sup>nd</sup>, Sean was all but convinced that our security guard was plotting against him and he was about to be kidnapped. He went from extreme insider to extreme outsider very quickly. He and his girlfriend ditched their luggage and fled to Managua international airport in a cab. The rest of us thought that this was exaggerated paranoia, so we stayed as planned. Sure enough, the security guard became visibly distressed when he noticed Sean was no longer there. We nervously told him that Sean had mentioned that he’d be leaving <em>tomorrow</em>—that way he’d already be gone when they tried to nab him at the airport. Ultimately there was a happy ending and no one got kidnapped. But there will probably not be any more Founders Fund trips to Nicaragua.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5835fjISA1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>This segues to the pure celebrity version, best epitomized by Lady Gaga. <em>Born This Way </em>is her recent hit album and song. On one level, the whole thing is obviously completely fictional. It’s probably safe to say that she was not, in fact, born like this. The big piece must be nurture. But on another level, maybe it <em>is</em> nature. What sort of people would actually do this to themselves? Maybe one actually does have to be born that way in order to do these things. Who really knows for sure? Is Gaga self-created myth? A myth created by other people? Everything all pulled together at once?</span></p>
+<p class="MsoNormal"><strong><span>II. Mythology</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>Oddly enough, classical mythology overlaps with the inverted bell curve distribution. There are monsters and there are gods. And very often they are one and the same.</span></p>
+<p class="MsoNormal"><span>In what sense are founders like mythical heroes? Myths about the founding of things are very common. Are mythical heroes actually any different? Did they have extreme traits? Develop them? Did they exaggerate themselves? Did others exaggerate their stories?</span></p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/a1a3be3275968e3257de.png"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583660dMh1qbb0b4.png"></span></a></p>
+<p class="MsoNormal"><span>Consider Oedipus.&nbsp; He was both an extreme insider and an extreme outsider. He was the king. He was so brilliant that he was able solve the riddle of the sphinx. But he was abandoned to die on a hill as an infant. He was a foreigner from a different place. And then he had the incest accusations and ensuing downfall.</span></p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/4b3c16a185841d21768b.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5835vwcps1qbb0b4.png"></a></p>
+<p class="MsoNormal"><span>Achilles is another mythological hero who was active at the extremes. He was incredibly strong and perfect, except where he was weak and flawed.</span>&nbsp;</p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/65bb0dff8a8881156ba5.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5836jPbSh1qbb0b4.png"></a></p>
+<p class="MsoNormal"><span>Perhaps the most classic founding of all is the founding of Rome. Romulus and Remus were disadvantaged, common orphans who were raised by wolves. They were outsiders. But then they became founders and lawmakers. Romulus killed his brother and became a lawbreaker and king. If there is a hierarchy to it—if killing your brother is worse than killing a random person and killing your twin brother is even worse than that—then Romulus was an unusually bad criminal.&nbsp; </span></p>
+<p class="MsoNormal"><span>Legend has it that what prompted the murder is Remus’ leaping over the imaginary boundary line that Romulus had established as the edge of Rome. The rule was codified with blood: anyone who jumps over the walls of Rome will be destroyed. Does this make Romulus a criminal outlaw? Or does it make him the king who defined Rome? It depends. Maybe he was both.</span></p>
+<p class="MsoNormal"><span><a href="https://blakemasters.box.com/shared/static/cef54ed7d6d33ae717fe.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5836vAyBK1qbb0b4.png"></a></span></p>
+<p class="MsoNormal"><span>Remus obviously had a bad ending. Romulus’ ending is more ambiguous. In Livy’s account, there was a huge storm that terrified the people. When the storm cleared up, Romulus had disappeared. It was announced that he had become a god. But Livy also notes an alternate account; a group of conspiratorial senators caught up with Romulus and used the chaos of the storm as cover to kill him and dispose of the body.</span></p>
+<p class="MsoNormal"><span>One other mythical element was the 12 eagles that Romulus saw from Palatine Hill. They stood for the 12 centuries that Rome would endure, after which point the debt of the founding crime would have to be repaid. Approximately 12 centuries later, Attila the Hun apparently thought it would be a good idea to copy Romulus, and killed <em>his </em>brother Bleda. Incidentally, fratricide is probably no longer best practice for founding things.</span></p>
+<p class="MsoNormal"><strong><span>III. &nbsp;Archaic Cultures</span></strong></p>
+<p class="MsoNormal"><strong><span>A. The Sacrificial Cycle</span></strong></p>
+<p class="MsoNormal">The founder/extremeness/infamous dynamic, or something very much like it, was an incredibly important part of ancient cultures. The fundamental problem in these cultures was that there were all sorts of conflicts everywhere. People didn’t know what to do. There were no rules—a striking parallel to the tech startup context. Amidst all the chaos there was war of all against all.</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5837h8nLK1qbb0b4.png"></p>
+<p class="MsoNormal">Various enlightenment theorists have insisted that, to escape this warring state of nature, people got together, had a good chat, and drew up a social contract. But nothing of the sort ever happened. Where warring civilizations didn’t just collapse entirely, the most common resolution involved polarizing and channeling all the hostility into one particular person. Depending on the culture, witches were burned or people had their hearts cut out. The details differed. But the dynamic—a crazed community rallying around the sacrificial scapegoat—was the same.&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5837qNwBU1qbb0b4.png"></p>
+<p class="MsoNormal"><span>In cultures that had some degree of permanence, this became a cyclical process. Absent strong institutions, peace never lasted. Things would go wrong. Maybe disease struck. Or maybe there was some other kind of internal (and less often, external) conflict that led to complete chaos. And then people would gang up, unite against a scapegoat, and perform the sacrifice. Peace was restored. And the cycle repeated ad infinitum.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m58384OQYq1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>It’s clear that the scapegoat is extremely powerful. Scapegoats can turn conflict into peace. This makes the scapegoat omnimalevolent; if peace follows his killing, he must have been very bad indeed. Or maybe it’s omnibenevolent, since it trades its life so that others may live in peace. Probably the right answer is that it’s some of both.</span></p>
+<p class="MsoNormal"><span>We can speculate that in many cultures, this process became ritualized. People realized the power of the scapegoat and abstracted it away from localized contexts. Instead of waiting for random uncontrolled chaos, sacrifice became planned. Of course, there were probably cultures that never figured this out. They couldn’t systematize the isolation of the scapegoat. So everyone just killed everyone and the culture blew up. One suspects that the cultures that managed to ritualize and repeat the cycle were the ones who lasted for awhile.</span>&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5838x5tor1qbb0b4.png"></p>
+<p class="MsoNormal"><strong><span>B. Finding the Victim</span></strong></p>
+<p class="MsoNormal"><span>There are all sorts of questions on how to go about finding the scapegoat. Sometimes the processes are random. In Gaelic Scotland, people would bake a cake over the fires of Beltane and cut it into pieces. One piece would be marked with charcoal. Men would choose a piece from a bonnet. Whoever got the black piece was the <em>devoted</em>, and was sacrificed to Baal. Residual forms of this persisted up through the 18<sup>th</sup> century, where the devoted would have to just jump <em>through</em> the fire instead of perish in it.</span></p>
+<p class="MsoNormal"><span>The ancient Gauls took a more objective approach. Someone would have to be sacrificed on the eve of battle to win the gods’ favor. But which person would that be? Rather than complicate things, the Gauls just held a footrace to the battlefield. Naturally, the slowest person was the one who got sacrificed.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m58399aQze1qbb0b4.png"></span></p>
+<p class="MsoNormal"><strong><span>C. Anatomy of the Scapegoat</span></strong></p>
+<p class="MsoNormal"><span>The perfect scapegoat is someone at both extremes. He must be both an extreme outsider and an extreme insider. It can’t be a completely random person drawn from a homogeneous lot. It must be some sort of outsider, lest the people in the crowd get introspective and realize that the sacrificed was essentially just like them (and, next time, may well <em>be </em>them). But neither can the scapegoat be entirely different from the crowd; he must be an insider, since the pretext behind the ritual is that he is responsible for the internal community strife.</span>&nbsp;</p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/33db3d0e167ffdfdb518.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m5839kF6nQ1qbb0b4.png"></a></p>
+<p class="MsoNormal"><strong><span>D. The Roots of Monarchy</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>Not all scapegoats were hated all the time. Very often, they would be worshipped before they were sacrificed. People would give the scapegoat a certain amount of power before tearing him apart. That scapegoats were either worshipped or demonized follows from their being all-powerful.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583ax2OE41qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>One working theory is that monarchy originated this way. The Aztecs, for instance, would basically crown someone a quasi-god king for a period of time, after which point he would be sacrificed. Kings became scapegoats who had not yet been killed. Every king was a living god. Every god was a murdered king.</span>&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583b9vLNo1qbb0b4.png"></p>
+<p class="MsoNormal"><span>Arguably Egyptian pharaohs started off as scapegoats. Perhaps the first pyramids were the piles of stones that entombed people who were stoned to death. Later, when Pharaohs became powerful kings and it was unthinkable to kill them during their lifetimes, people kept putting increasingly large piles stones on top of them after they died.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583bxpZbd1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Given this dynamic, we can imagine how monarchy came into being. The scapegoat simply figured out how to maintain his power and indefinitely delay his execution.</span>&nbsp;</p>
+<p class="MsoNormal"><span>The Zulu Kingdom was a warlike African monarchy in the 19<sup>th</sup> century. The Zulu king had to be strong and powerful. He could have hundreds of wives and do pretty much whatever else that we wanted. But once he started to get white hair and wrinkles, his power faded. He would be deemed unfit to be king, deposed, and killed. It’s hardly a surprise, then, that upon first contact with the British, the Zulu kings were more interested in hair coloring lotion than in anything else. Whether phenomena like this continue to exist in our society today is a question well worth asking.</span>&nbsp;</p>
+<p class="MsoNormal"><strong><span>E. The Politics of Sacrifice</span></strong></p>
+<p class="MsoNormal"><span>According to Aristotle, tragedy functioned so as to reduce common peoples’ anger toward successful people. The lesson in all tragedy is that even the greatest people have tragic flaws. Everybody falls. It was thus cathartic for ordinary people to see terrible things happen to extraordinary people, if only on stage. Tragedies were political tools that transformed envy and anger into pity. Commoners would retreat contentedly to their small houses instead of plotting against the upper class.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583c9jGRJ1qbb0b4.png"></span></p>
+<p class="MsoNormal">Julius Caesar was a classic insider/outsider. Eventually, of course, he was assassinated. Every subsequent Roman emperor pretty much had to be a Caesar. And the sacrificial cycle repeated an infinitum for centuries thereafter.&nbsp;</p>
+<p class="MsoNormal"><span>Being an extreme insider is great, until it all goes very wrong. Marie Antoinette was such an insider. But people turned on her. She was an Austrian, i.e. a foreigner. She faced accusations strikingly similar to those from the Oedipus mythology. It’s not clear whether the “let them eat cake” line was fictitious or not. But all great revolutions could be described as the rapid shift from insider to outsider. During the French Revolution, there was an interesting legal debate on whether the king should get a trial. Robespierre and the revolutionaries vehemently argued against a trial. The king, they should, should be slaughtered like a wild beast. Having a trial meant that the king might be innocent, which, in turn, meant that the people might be guilty. But it was unthinkable that the people might be guilty. So the solution was to just kill the king.</span>&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583e5iVL61qbb0b4.png"></p>
+<p class="MsoNormal"><strong><span>IV. Sacrifice Endures</span></strong>&nbsp;</p>
+<p class="MsoNormal"><strong><span>A. In Culture</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>A modern version of this is the 12-person jury in the criminal context. The unlucky 13<sup>th</sup> person is the criminal who gets punished or killed. It is the classic scapegoating-type mechanism. The 13<sup>th</sup> person is assumed to be—and probably is—different. It’s never really a jury of your peers. If you’re a murderer, you aren’t judged by 12 murderers. If you’re rich, they don’t find 12 rich people to decide your fate. It is very much unclear whether a jury trial works well for its stated goals at all. It seems to work in contexts where people perceive things as they are. But other contexts, it is just scapegoating gone crazy.</span>&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583g6dwHf1qbb0b4.png"></p>
+<p class="MsoNormal"><span>Another modern version has to do with celebrities, and resurrects the monarchical dynamic that people assume has long since died. We literally anoint our stars as kings. Elvis was the King of Rock. Michael Jackson was the King of Pop. Brittney Spears was the Princess of Pop—I guess Madonna was the Queen. You start to run out of titles pretty quickly.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583haaDkc1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Then, at some point, things go wrong. The anointed are put on pedestals only to be torn down. Elvis self-destructed in the ‘70s. Michael Jackson obviously went downhill. The picture below depicts Brittney Spears at height of the paparazzi insanity. A few years ago, the paparazzi industry was a $400 million/year industry. Brittney Spears drove $100 million of that. There were between 1,000 and 2,000 people who made their living doing nothing but chasing her around and taking pictures of her. What went wrong? Was Brittney naturally crazy? Did she become crazy after having been isolated as a child superstar? Maybe the crowd got to her. Or maybe she intentionally acted in weird ways for the publicity. </span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583htg6uo1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Regardless, these kind of stars all enjoy a very strange afterlife. In life, they are torn down from pedestals. But after they die, they are resurrected as god-kings. Things come full circle.</span>&nbsp;</p>
+<p class="MsoNormal"><span>Another example of this is the Forever 27 club, whose members include Janice Joplin, Jimi Hendrix, Jim Morrison, Kurt Cobain, Amy Winehouse, etc. This is the set of famous musicians who all died at age 27. “</span><span>They&nbsp;</span><span>tried to make me go to rehab</span><span>, I said, ‘No, no, no.’” There are all sorts of questions one could ask. But there is a sense in which these people will live on as iconic cultural figures.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583i67PWv1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>The “from destructive to immortalized” dynamic goes way back to mythology. Alexander the Great was 32 when he died. He would frequently engage in hardcore quasi-religious drinking marathons. Apparently the game was to consume alcohol until someone died, and Alexander felt that he had to prove that that someone would not be him. It was a strategic error. But he will forever be known as a great conqueror.</span></p>
+<p class="MsoNormal"><strong><span>B. In Politics</span></strong>&nbsp;</p>
+<p class="MsoNormal"><span>The political version involves certain ideological distortions. People on the left and the right tend to focus and even obsess on people from the other side. Everybody from the other column becomes the crazy person and the legitimate scapegoat. In reality, the truth is that it tends to involve some strange combination of both.</span>&nbsp;</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583itiIst1qbb0b4.png"></p>
+<p class="MsoNormal"><span>Two of our greatest presidents had this sort of strange heroic arc to their story. Abraham Lincoln was an extreme outsider turned insider. He was born in an isolated log cabin. He was probably our poorest President. He was very smart and also very ugly. And he, probably intentionally, uglified himself even further with his strange beard. Lincoln was always on both extremes. His end involves a very strange return to the Cesar question. John Wilkes Booth, believing that he was reenacting Cesar assassination, shouted “Sic semper tyrannis” as he shot Lincoln—which is, of course, what Brutus is reputed to have said as he stabbed Caesar.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583j2HwTE1qbb0b4.png"></span></p>
+<p class="MsoNormal">A strange counterpoint point to this comes from one of Lincoln’s first public speeches ever. The future president delivered what is now called the <a href="https://en.wikisource.org/wiki/The_Lyceum_Address" title="Lyceum Address" target="_blank">Lyceum Address</a> to a small crowd in Springfield Illinois in 1837, when he was 28 years old. It is worth reading in its entirety. It opens:</p>
+<blockquote>As a subject for the remarks of the evening, “The perpetuation of our political institutions” is selected.</blockquote>
+<p class="MsoNormal"><span>Lincoln spoke about how there could not be any more founding moments in the United States. The founding had been done, in the 18<sup>th</sup> century. It was over. At this point all that one could do was preserve and maintain things. There was nothing truly new that anyone could ever hope to do in our government.</span></p>
+<p class="MsoNormal"><span>About halfway through the speech, things get really interesting. Lincoln asks whether ambitious people would ever try to be founders anyways, or whether they would be fully satisfied with existing institutions. He answers yes and no, respectively:</span></p>
+<blockquote>The question then is, Can that gratification be found in supporting and maintaining an edifice that has been erected by others? Most certainly it cannot. Many great and good men, sufficiently qualified for any task they should undertake, may ever be found whose ambition would aspire to nothing beyond a seat in<span class="apple-converted-space">&nbsp;</span>Congress, a gubernatorial<span class="apple-converted-space">&nbsp;</span>or a<span class="apple-converted-space">&nbsp;</span>presidential chair; but such belong not to the<span class="apple-converted-space">&nbsp;</span>family of the lion<span class="apple-converted-space">&nbsp;</span>or the tribe of the eagle. What! think you these places would satisfy an<span class="apple-converted-space">&nbsp;</span>Alexander, a<span> Caesar<span>, or a<span class="apple-converted-space">&nbsp;</span>Napoleon? Never! Towering genius disdains a beaten path. It seeks regions hitherto unexplored. It sees no distinction in adding story to story upon the monuments of fame erected to the memory of others. It denies that it is glory enough to serve under any chief. It scorns to tread in the footsteps of any predecessor, however illustrious. It thirsts and burns for distinction; and if possible, it will have it, whether at the expense of emancipating slaves or enslaving freemen. Is it unreasonable, then, to expect that some man possessed of the loftiest genius, coupled with ambition sufficient to push it to its utmost stretch, will at some time spring up among us?</span></span></blockquote>
+<p class="MsoNormal"><span>The takeaway is that we have to be really careful because such people might exist.</span></p>
+<p class="MsoNormal"><span>Kennedy’s story was different but the underlying dynamic was the same. He was one of richest people—worth about $1 billion in today’s money—to become president. His father was criminal bootlegger. He was on amphetamines most of the time. He stopped being a rich insider when he found himself an outsider to whatever plot or conspiracy it was that led to his assassination.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>C. In Tech Companies</span></strong></p>
+<p class="MsoNormal"><span>This dynamic recurs over and over again in the tech company founder context. Let’s focus on 3 instances: Bill Gates, Howard Hughes, and Steve Jobs.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583jyfgdJ1qbb0b4.png"></p>
+<p class="MsoNormal">Those old enough to remember will remember the “Bill Gates is god” phase in the ‘90s. The president of the U.S. always has a quasi-divine status. So when you get compared to the sitting president, it’s pretty extreme. All the same questions apply to Gates. Was it nature or nurture? He was a Harvard insider but a dropout outsider. He wore big glasses. Did he become a nerd unwillingly? Did he prosper by accentuating his nerdiness? It’s hard to tell.</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583kuDkIe1qbb0b4.png"></p>
+<p class="MsoNormal">What is clear, however, is that the good times didn’t last:</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583luz5RK1qbb0b4.png"></p>
+<p class="MsoNormal"><span>One (admittedly unconventional) theory is that Bill Gates is still being tortured and punished for his fall. He has to go to all sorts of boring charity events, pretend that the people there are saying interesting things, and then give them his money to boot. And adding insult to injury is the fact that these are the same people who ganged up on him in the late ‘90s.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583mbRFg51qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Howard Hughes was one of the greatest founders in the 20<sup>th</sup> century. His life had a very extraordinary arc to it from about 1930 to 1945. He started off as reasonably successful. He went on to have incredible parallel careers in movies and aviation, which, in retrospect, were the two booming tech sectors of the 1930s. He became the wealthiest person in the U.S. by age 45. If Hughes had died in the plane crash that he had in 1946, he would have gone down as greatest entrepreneur of 20<sup>th</sup> century.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583mnlF2N1qbb0b4.png"></span></p>
+<p class="MsoNormal">One of Hughes’ favorite tricks was to pretend to be crazy on the theory that no one would take the time and energy to try to stop or compete with a crazy person. A large part of his mythology was fictionally constructed; he claimed, for instance, to have been born on December 25<sup>th</sup>, 1905. One has to wonder if he was <em>really</em> born on the same day of the year as Christ, or whether that was an intentional ploy.</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583n4sCD01qbb0b4.png"></p>
+<p class="MsoNormal">Hughes’ fall from grace began after the’46 crash, when he became addicted to painkillers. He more or less holed up in various penthouse lofts for 30 years, hooked up to IV machines and refusing to eat. Looking back the story has a pretty crazy color to it. The craziness continued even after Hughes died; as there was no authoritative will, all sorts of distant descendants and questionable figures began a long and vicious fight to inherit the estate.</p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583ncbrsE1qbb0b4.png"></p>
+<p class="MsoNormal"><span>And then there’s the Steve Jobs version. You could probably tell a few different versions of the Jobs version. Let’s focus on the one from the ‘70s and ‘80s. He had all the classic extreme outsider and extreme insider traits. He dropped out of college. He was eccentric and had all these crazy diets. He started out phreaking phones with Steve Wozniak. He took LSD. </span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583o3kUv01qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Ultimately he was kicked out of apple and was replaced John Sculley, who was seen as the much more normal, adult-type person that should be in charge.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583ofBEhC1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Circling back to the bit about archaic cultures. Isn’t this dynamic roughly the same now as it was then? We tend to think of monarchy as a dead and defunct institution. But is it really? Time magazine put Marc Andreessen on the cover in February 1996—<em>sitting on a throne-like chair</em>! He was later vilified quite a bit when things went bad at Netscape. Now he seems to have recovered quite nicely.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583ozm46L1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>Mary Meeker had a similar rise and fall and then rise again. Dubbed the “</span>Queen of the Net,”&nbsp;Meeker was an influential stock market analyst who was probably the most bullish person on net in the ‘90s. If she wrote about your company, your stock would go up. She received a much more negative reassessment from the public after the ‘90s tech bubble exploded. She was torn down from the pedestal. But she stuck through it at Morgan Stanley and has come back to being very successful, now as a venture capitalist.</p>
+<p class="MsoNormal"><strong><span>D. Can It Be Escaped?</span></strong><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>How much of this can be avoided? How do you avoid becoming a sacrificial victim? The simple answer, of course, is that if you really don’t want to get killed, you shouldn’t sit on the throne. But this seems suboptimal. Wearing the crown is obviously an attractive thing. The question is whether you can decouple it with getting executed.</span></p>
+<p class="MsoNormal"><span>That is the danger with being an extreme insider. Push too hard and the poles reverse; you end up as an extreme outsider and it all goes to pot. There have been 44 American presidents. Four of them—9% of presidents—were assassinated while in office. Four more were almost killed. Your odds of not dying a violent death are dramatically lower if you’re not the president. That’s at least worth thinking about if being president is your goal.</span></p>
+<p class="MsoNormal"><span>This is not to say that people can or should escape by abdicating the throne. Sometimes the risk is worth it. And maybe you can reduce the risk. There have to be CEOs and founders. Those people are expected to wear the crown. That necessarily involves a certain amount of playing with fire. The tricky part is that, while mistakes get made, they are incredibly hard to spot at the time. They are more easily analyzed in retrospect. Bill Gates was incredible through the 1990s, until Larry Ellison and Scott McNealy and a bunch of CEOs from other tech companies effectively started a “We Hate Gates” club, stirred up attention at the DOJ, etc. From Gates’ perspective, he was on perpetual winning arc of never-ending progress. Everything was perfect, and the haters were just envious and pathetic. But once it turns it can turn pretty quickly. The falls are so big that it’s hard to fully recover.</span></p>
+<p class="MsoNormal"><strong><span>V. Extending the Founding</span></strong><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>A. Forms and Theory</span></strong></p>
+<p class="MsoNormal"><span>One strategy to avoiding becoming a scapegoat is to extend the founding moment. With the big caveat that there is probably no single silver bullet solution—the founder turned god turned victim dynamic is probably inescapable to some extent—let’s work through some ideas on how to negotiate this dangerous ground.</span></p>
+<p class="MsoNormal"><span>You can plot out the various forms of government on 1-dimentional axis:</span></p>
+<p class="MsoNormal"><a href="https://blakemasters.box.com/shared/static/3f2d049d977a32035a27.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583qocmn91qbb0b4.png"></a></p>
+<p class="MsoNormal"><span>A startup is basically structured as a monarchy. We don’t call it that, of course. That would seem weirdly outdated, and anything that’s not democracy makes people uncomfortable. But look at the org chart:</span></p>
+<p class="MsoNormal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583r4Katv1qbb0b4.png"></p>
+<p class="MsoNormal"><span>It is certainly not representative governance. People don’t vote on things. Once a startup becomes a mature company, it may gravitate toward being more of a constitutional republic. There is a board that theoretically votes on behalf of all the shareholders. But in practice, even in those cases it ends up somewhere between constitutional republic and monarchy. Early on, it’s straight monarchy. Importantly, it isn’t an absolute dictatorship. No founder or CEO has absolute power. It’s more like the archaic feudal structure. People vest the top person with all sorts of power and ability, and then blame them if and when things go wrong.</span></p>
+<p class="MsoNormal"><span>We are biased toward the democratic/republican side of the spectrum. That’s what we’re used to from civics classes. But the truth is that startups and founders lean toward the dictatorial side because that structure works better for startups. It is more tyrant than mob because it should be. In some sense, startups can’t be democracies because none are. None are because it doesn’t work. If you try to submit everything to voting processes when you’re trying to do something new, you end up with bad, lowest common denominator type results.</span></p>
+<p class="MsoNormal"><span><a href="https://blakemasters.box.com/shared/static/01fe9c4d978746e09de5.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583s4mwOW1qbb0b4.png"></a></span></p>
+<p class="MsoNormal"><span>But pure dictatorship is unideal because you can’t attract anyone to come work for you. Other people want some power and control too. So the best arrangement is a quasi-mythological structure where you have a king-like founder who can do more than in a democratic ruler but who remains far from all-powerful.</span></p>
+<p class="MsoNormal"><span><a href="https://blakemasters.box.com/shared/static/2791c29cb90b9eb0324c.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583tnWK5Y1qbb0b4.png"></a></span></p>
+<p class="MsoNormal"><strong><span>B. Occupy</span></strong></p>
+<p class="MsoNormal"><span>We can reimagine our old 0 to 1 (technology) and 1 to <em>n </em>(globalization) paradigm by putting a monarchy/democracy overlay on it. Monarchy involves going from 0 to 1. Democracy involves going from 1 to 99.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583skY4Ts1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>The 99% vs. the 1% is the modern articulation of this classic scapegoating mechanism. It is all minus one versus the one. And it has to just be the one. 99.99 people or percent is too granular. Scapegoating 0.1 doesn’t really work. You need a whole person to play the victim. Similarly, 98-2 doesn’t quite have the same ring to it either.&nbsp;</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span><a href="https://blakemasters.box.com/shared/static/a7554024d34f66b9d256.png"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583sueCl91qbb0b4.png"></a></span></p>
+<p class="MsoNormal"><strong><span>C. Extending the Moment, Escaping the Trial</span></strong></p>
+<p class="MsoNormal"><span>The normal company arc involves an initial monarchical founding period and then a normal period where founders are gone and more conventional people come in and run things. In the U.S., there were the founding fathers. And then there have been everybody else. Perhaps some figures like Lincoln or FDR were exceptions to this. But the two phases are generally clear and distinct.</span></p>
+<p class="MsoNormal"><span>If you want to be a founder and stay a founder, can you extend the founding period? In tech companies, foundings last as long as technological innovation continues. The question is thus how long it takes for the substantive technology focus to yield to process. Once you shift toward ossified, process-based normality, much less gets done. Every founder would thus to do well to never stop wondering whether there are strategies to extend the founding in one form or another.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>This probably requires a healthy amount of paranoia. You might conceive of every board meeting as a trial. At best, the board is jury (though probably not of your peers). At worst, it is a mob and is looking to make you the sacrificial victim. Your job as founder is to survive the trial. You must make sure that you do not get executed. The boardroom is not the only place where things can go wrong, of course. But it is typically where things go wrong internally, and most fatal wounds come from internal, not external conflict.</span></p>
+<p class="MsoNormal"><span>Even something as seemingly innocuous as holding the title of CEO may actually be quite dangerous. Maybe you can figure out ways to minimize it. Augustus never said he was king. It was dangerous to be a king after Brutus killed Caesar.&nbsp; So Augustus was just the “first among equals.” Whether that equality was anything more than pure fiction, of course, is very questionable. </span></p>
+<p class="MsoNormal"><span>In October of 2000, things were pretty crazy at PayPal. The burn rate was $10 million/month. There were about 4.5 months of runway left. When I returned as CEO, it wasn’t all of a sudden. I was the Chairman and came back as the interim CEO. We went through a 6-7 month process of trying to find a permanent one. The one decent candidate that we found sort of didn’t work out. Things were going well, so the board agreed to have me be CEO. But the company was about to go public, so the board insisted that there be a Chief Operating Officer (COO) too. COO, of course, is code for the #1 replacement candidate for CEO—it’s like the Vice President in U.S. politics, only more adversarial. I was able to convince the board to make David Sacks COO, which was probably a good, safe move since David was perceived to be crazier than I was. Thinking carefully about these things can lead to powerful insurance policies against getting deposed or executed at trials board meetings.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>The dual founder thing is worth mentioning. Co-founders seem to get in a lot less trouble than more unbalanced single founders. Think Hewlett and Packard, Moore and Noyce, and Page and Brin. There are all sorts of theoretical benefits to having multiple founders such as more brainstorming power, collaboration, etc.&nbsp; But the really decisive difference between one founder and more is that with multiple founders, it’s much harder to isolate a scapegoat. Is it Larry Page? Or is it Sergey Brin? It is very hard for a mob-like board to unite against multiple people—and remember, the scapegoat must be singular. The more singular and isolated the founder, the more dangerous the scapegoating phenomenon. For the skeptic who is inclined to spot fiction masquerading as truth, this raises some interesting questions. Are Page and Brin, for instance, really as equal as advertised? Or was it a strategy for safety? We’ll leave those questions unanswered and hardly asked.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583u2k8ig1qbb0b4.png"></span></p>
+<p class="MsoNormal"><strong><span>D. Return of the King</span></strong></p>
+<p class="MsoNormal"><span>The return of the founder is not to be underestimated. Apple is the paradigmatic example. There were 12 crazy years from 1985 to ’97. There were very conventional CEOs. They couldn’t figure out anything new to build. Obviously there was something very powerful in bringing the founder back; from 1997-2011 Apple changed course entirely and had an incredibly powerful arc.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>The options backdating scandal has been relegated to a minor footnote in the Apple mythology. Apple stock kept going up, and the board kept backdating options grants, giving Steve Jobs a fairly big windfall.&nbsp;</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583umxxl21qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>It probably wasn’t just building great products or being a good insider that saved Steve Jobs. His being terminally ill part was probably a very important variable. There is much less power in scapegoating someone who’s power—indeed, whose life—is waning anyways.</span></p>
+<p class="MsoNormal"><span>I met Steve Jobs once, at Marc Andreessen’s wedding in 2006. He was already very frail then. At 9&nbsp;pm, he got up from the table and announced that he had to get back to the office to work. One couldn’t help but wonder: Was this real? Was Jobs really working this hard? Or was it an excuse? Maybe he was just bored talking to me.</span></p>
+<p class="MsoNormal"><span>Resurrections are possible. But you can only be resurrected after you die. Founders should think carefully about how to preserve the original founding moment for as long as possible. The key is to encourage and achieve perpetual innovation. It is very important to avoid, or at least delay, the shift to a horrible bureaucracy where no one can do anything and everyone is circumscribed.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tumblr_m583w92SKz1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>The usual narrative is that society should be organized to cater to and reward the people who play by the rules. Things should be as easy as possible for them. But perhaps we should focus more on the people who <em>don’t</em> play by the rules. Maybe they are, in some key way, the most important. Maybe we should let them off the hook.&nbsp;</span></p><p></p>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tags">
+                                <p>Tags: <a href="http://blakemasters.tumblr.com/tagged/cs183" class="single-tag">cs183</a> </p>
+                            </div>
+                        
+                        </div><!-- post-content -->
+                    </div><!-- .post -->
+                    
+                    <div id="post-notes">
+<ol class="notes">
+
+    <!-- START NOTES -->
+                            
+                                                        
+        
+        <li class="note like tumblelog_approova without_commentary">
+
+                                                                                <a rel="nofollow" href="http://approova.tumblr.com/" title="Untitled "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://approova.tumblr.com/" title="Untitled">approova</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_bloodonthemotorway without_commentary">
+
+                                                                                <a rel="nofollow" href="http://bloodonthemotorway.tumblr.com/" title="Nemo vir est qui mundum non reddat meliorem "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_44071f7ebdf2_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://bloodonthemotorway.tumblr.com/" title="Nemo vir est qui mundum non reddat meliorem">bloodonthemotorway</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_thmsmxwll without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://thmsmxwll.com/" title="Thomas Maxwell"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_acf2c6eb0f6a_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://thmsmxwll.com/" class="tumblelog" title="Thomas Maxwell">thmsmxwll</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_abiekatz without_commentary">
+
+                                                                                <a rel="nofollow" href="http://abiekatz.tumblr.com/" title="Abie Katz&#39;s Tumblr "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_f201ebde8620_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://abiekatz.tumblr.com/" title="Abie Katz&#39;s Tumblr">abiekatz</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_mdiabi without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://mdiabi.tumblr.com/" title="Mohamed Diabi"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_c858ce00faf0_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://mdiabi.tumblr.com/" class="tumblelog" title="Mohamed Diabi">mdiabi</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_dangoldin without_commentary">
+
+                                                                                <a rel="nofollow" href="http://dangoldin.tumblr.com/" title="Dan&#39;s Blog "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_7a72424b9cab_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://dangoldin.tumblr.com/" title="Dan&#39;s Blog">dangoldin</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_mixedrealities without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://mixedrealities.tumblr.com/" title="MixedRealities"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_f62b7d9bb61d_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://mixedrealities.tumblr.com/" class="tumblelog" title="MixedRealities">mixedrealities</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_kaannedio without_commentary">
+
+                                                                                <a rel="nofollow" href="http://kayabali.com/" title="Kaan Ne Dio? "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_9ee2b19ff3d2_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://kayabali.com/" title="Kaan Ne Dio?">kaannedio</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_namitc without_commentary">
+
+                                                                                <a rel="nofollow" href="http://namitc.tumblr.com/" title="Namit&#39;s Blog "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://namitc.tumblr.com/" title="Namit&#39;s Blog">namitc</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_adamjball without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://adamball.me/" title="Adam J Ball"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_d4a0d2371dca_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://adamball.me/" class="tumblelog" title="Adam J Ball">adamjball</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_incorporealworld without_commentary">
+
+                                                                                <a rel="nofollow" href="http://incorporealworld.tumblr.com/" title="Incorporeal "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_e3ef362b0c69_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://incorporealworld.tumblr.com/" title="Incorporeal">incorporealworld</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_incorporealworld without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://incorporealworld.tumblr.com/" title="Incorporeal"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_e3ef362b0c69_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://incorporealworld.tumblr.com/" class="tumblelog" title="Incorporeal">incorporealworld</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_sdparadigm without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sdparadigm.tumblr.com/" title="John Muller "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_890bb565bbaf_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sdparadigm.tumblr.com/" title="John Muller">sdparadigm</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_imrayzar without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://imrayzar.tumblr.com/" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; }"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_57d35446147f_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://imrayzar.tumblr.com/" class="tumblelog" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; }">imrayzar</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_imrayzar without_commentary">
+
+                                                                                <a rel="nofollow" href="http://imrayzar.tumblr.com/" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; } "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_57d35446147f_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://imrayzar.tumblr.com/" title="Rayzar = { name: &quot;Irvine Ndwiga&quot; }">imrayzar</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_aahn223 without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://aahn223.tumblr.com/" title="Redshirt Burned"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_92d91df96fcf_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://aahn223.tumblr.com/" class="tumblelog" title="Redshirt Burned">aahn223</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_brahmasta without_commentary">
+
+                                                                                <a rel="nofollow" href="http://brahmasta.tumblr.com/" title="Living and Loving "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_6baeb2a20280_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://brahmasta.tumblr.com/" title="Living and Loving">brahmasta</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_brahmasta without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://brahmasta.tumblr.com/" title="Living and Loving"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_6baeb2a20280_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://brahmasta.tumblr.com/" class="tumblelog" title="Living and Loving">brahmasta</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_nukirk without_commentary">
+
+                                                                                <a rel="nofollow" href="http://thefilesof.nukirk.com/" title="the files of nukirk "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_1a367aaf6075_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://thefilesof.nukirk.com/" title="the files of nukirk">nukirk</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_technista without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://technista.tumblr.com/" title="Technista"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_103a3a891b6c_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://technista.tumblr.com/" class="tumblelog" title="Technista">technista</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_nightvisionz without_commentary">
+
+                                                                                <a rel="nofollow" href="http://nightvisionz.tumblr.com/" title="++NVZ++ "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_e816f70d6a3e_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://nightvisionz.tumblr.com/" title="++NVZ++">nightvisionz</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_cristinacordova without_commentary">
+
+                                                                                <a rel="nofollow" href="http://cristinajcordova.com/" title="Cristina Cordova "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_808b64cafed3_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://cristinajcordova.com/" title="Cristina Cordova">cristinacordova</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_adewumi with_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://davidadewumi.com/" title="Wumi"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_549282db0fad_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://davidadewumi.com/" class="tumblelog" title="Wumi">adewumi</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a> and added:                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                            <blockquote>
+                            <a rel="nofollow" href="http://davidadewumi.com/post/24615815083" title="View post">
+                                Blake Masters: Peter Thiel’s CS183: Startup - Class 18 Notes Essay                            </a>
+                        </blockquote>
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_alexpenny without_commentary">
+
+                                                                                <a rel="nofollow" href="http://alexpenny.com/" title="Alex Penny "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_4dd2c3a88042_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://alexpenny.com/" title="Alex Penny">alexpenny</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_ellisliang without_commentary">
+
+                                                                                <a rel="nofollow" href="http://ellisliang.tumblr.com/" title="Ellis Liang&#39;s Blog "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_93deb0464076_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://ellisliang.tumblr.com/" title="Ellis Liang&#39;s Blog">ellisliang</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_ponathan without_commentary">
+
+                                                                                <a rel="nofollow" href="http://ponathan.tumblr.com/" title="ponathan "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_378e41570465_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://ponathan.tumblr.com/" title="ponathan">ponathan</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_papadimitriou without_commentary">
+
+                                                                                <a rel="nofollow" href="http://papadimitriou.tumblr.com/" title="#paul "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_277a1141ddd9_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://papadimitriou.tumblr.com/" title="#paul">papadimitriou</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_charliecurran without_commentary">
+
+                                                                                <a rel="nofollow" href="http://charliecurran.tumblr.com/" title="Charlie Curran "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_3d9ef805e2cb_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://charliecurran.tumblr.com/" title="Charlie Curran">charliecurran</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_amfisher2 without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://amfisher2.tumblr.com/" title="Untitled"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://amfisher2.tumblr.com/" class="tumblelog" title="Untitled">amfisher2</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_yahsurvivor without_commentary">
+
+                                                                                <a rel="nofollow" href="http://yahsurvivor.tumblr.com/" title="Mori Yasir Lazarus "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_f64e803db1ad_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://yahsurvivor.tumblr.com/" title="Mori Yasir Lazarus">yahsurvivor</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_freefrancisco without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://freefrancisco.tumblr.com/" title="Francisco The Free"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_d4c8d358a858_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://freefrancisco.tumblr.com/" class="tumblelog" title="Francisco The Free">freefrancisco</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_iamanauthorityonnothing without_commentary">
+
+                                                                                <a rel="nofollow" href="http://iamanauthorityonnothing.tumblr.com/" title="I don&#39;t know what I&#39;m doing "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_aa382cac3a4d_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://iamanauthorityonnothing.tumblr.com/" title="I don&#39;t know what I&#39;m doing">iamanauthorityonnothing</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_m-x without_commentary">
+
+                                                                                <a rel="nofollow" href="http://m-x.tumblr.com/" title="marci-x "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_1cc236b97359_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://m-x.tumblr.com/" title="marci-x">m-x</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_run-hide without_commentary">
+
+                                                                                <a rel="nofollow" href="http://run-hide.tumblr.com/" title="RUN, HIDE "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_89a1dae8827a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://run-hide.tumblr.com/" title="RUN, HIDE">run-hide</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_titocosta without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://blog.titocosta.com/" title="Tito&#39;s Blog"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_fb5a7edf773a_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://blog.titocosta.com/" class="tumblelog" title="Tito&#39;s Blog">titocosta</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_chbennett without_commentary">
+
+                                                                                <a rel="nofollow" href="http://iamchristopher.com/" title="IAM CHRISTOPHER "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_dcd2aca2514e_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://iamchristopher.com/" title="IAM CHRISTOPHER">chbennett</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_erwolution without_commentary">
+
+                                                                                <a rel="nofollow" href="http://erwolution.com/" title="don&#39;t stop &#39;til you get enough "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_99eca3ad2142_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://erwolution.com/" title="don&#39;t stop &#39;til you get enough">erwolution</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_themichaelchan without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://themichaelchan.com/" title="Michael Chan"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_a155fad9a6b8_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://themichaelchan.com/" class="tumblelog" title="Michael Chan">themichaelchan</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_themichaelchan without_commentary">
+
+                                                                                <a rel="nofollow" href="http://themichaelchan.com/" title="Michael Chan "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_a155fad9a6b8_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://themichaelchan.com/" title="Michael Chan">themichaelchan</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_naveedl without_commentary">
+
+                                                                                <a rel="nofollow" href="http://naveedl.tumblr.com/" title="Naveed Lalani "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_4f7df17148d6_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://naveedl.tumblr.com/" title="Naveed Lalani">naveedl</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_naveedl without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://naveedl.tumblr.com/" title="Naveed Lalani"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_4f7df17148d6_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://naveedl.tumblr.com/" class="tumblelog" title="Naveed Lalani">naveedl</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_thebeeobee without_commentary">
+
+                                                                                <a rel="nofollow" href="http://thebeeobee.com/" title="thebeeobee "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_740a6836226d_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://thebeeobee.com/" title="thebeeobee">thebeeobee</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reply tumblelog_daryn without_commentary">
+
+                        
+                                                        <a rel="nofollow" href="http://blog.daryn.net/" title="Daryn Nakhuda"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_c44c5eea1f97_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                                                        <a rel="nofollow" href="http://blog.daryn.net/" title="Daryn Nakhuda">daryn</a> said:                                            
+                                                <span class="answer_content">
+                                excellent notes, sounds like a great lecture. Thanks!                            </span>
+                                    </span>
+
+                <div class="clear"></div>
+
+                            
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_daryn without_commentary">
+
+                                                                                <a rel="nofollow" href="http://blog.daryn.net/" title="Daryn Nakhuda "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_c44c5eea1f97_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://blog.daryn.net/" title="Daryn Nakhuda">daryn</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_kristygraves without_commentary">
+
+                                                                                <a rel="nofollow" href="http://kristygraves.me/" title="kristygraves.me "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_b570df397c60_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://kristygraves.me/" title="kristygraves.me">kristygraves</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_adewumi without_commentary">
+
+                                                                                <a rel="nofollow" href="http://davidadewumi.com/" title="Wumi "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_549282db0fad_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://davidadewumi.com/" title="Wumi">adewumi</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note reblog tumblelog_ilikeworld without_commentary">
+
+                        
+                
+                                                                                        <a rel="nofollow" href="http://ilikeworld.tumblr.com/" title="I Like World!"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_fc5c8f841084_16.png" class="avatar " alt=""></a>
+                    
+                    <span class="action">
+                                                    
+                                                                                                                                                                                    <a rel="nofollow" href="http://ilikeworld.tumblr.com/" class="tumblelog" title="I Like World!">ilikeworld</a> reblogged this from <a rel="nofollow" href="http://blakemasters.tumblr.com/" class="source_tumblelog" title="Blake Masters">blakemasters</a>                                                                                                                                                                                    </span>
+                    <div class="clear"></div>
+
+                                    
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_pagalsardar without_commentary">
+
+                                                                                <a rel="nofollow" href="http://pagalsardar.tumblr.com/" title="बुद्धि खत्म "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_489a15fea517_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://pagalsardar.tumblr.com/" title="बुद्धि खत्म">pagalsardar</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_joelinsf without_commentary">
+
+                                                                                <a rel="nofollow" href="http://joelinsf.tumblr.com/" title="JOEL IN SF "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://joelinsf.tumblr.com/" title="JOEL IN SF">joelinsf</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_davidhclark without_commentary">
+
+                                                                                <a rel="nofollow" href="http://davidhclark.tumblr.com/" title="IT&#39;S BETTER TO BE A PIRATE THAN JOIN THE NAVY. "><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/avatar_2d66ead5d7a4_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://davidhclark.tumblr.com/" title="IT&#39;S BETTER TO BE A PIRATE THAN JOIN THE NAVY.">davidhclark</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+    
+            <li class="note more_notes_link_container" style="text-align:center;" id="more_notes_24578683805">
+            <a class="more_notes_link" rel="nofollow" href="http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay#" onclick="this.style.display=&#39;none&#39;;document.getElementById(&#39;notes_loading_24578683805&#39;).style.display = &#39;inline&#39;;if(window.ActiveXObject)var tumblrReq=new ActiveXObject(&#39;Microsoft.XMLHTTP&#39;);else if(window.XMLHttpRequest)var tumblrReq=new XMLHttpRequest();else return false;tumblrReq.onreadystatechange=function(){if(tumblrReq.readyState==4){var notes_html=tumblrReq.responseText.split(&#39;&lt;!-- START &#39;+&#39;NOTES --&gt;&#39;)[1].split(&#39;&lt;!-- END &#39;+&#39;NOTES --&gt;&#39;)[0];
+if(window.tumblrNotesLoaded)if(tumblrNotesLoaded(notes_html)==false)return;var more_notes_link=document.getElementById(&#39;more_notes_24578683805&#39;);var notes=more_notes_link.parentNode;notes.removeChild(more_notes_link);notes.innerHTML+=notes_html;if(window.tumblrNotesInserted)tumblrNotesInserted(notes_html);}};tumblrReq.open(&#39;GET&#39;,&#39;/notes/24578683805/qtqyttpU1?from_c=1339043287&#39;,true);tumblrReq.send();return false;">Show more notes</a><span id="notes_loading_24578683805" style="display:none;">Loading...</span>
+        </li>
+    
+    <!-- END NOTES -->
+</ol></div>
+                
+                
+                </div><!-- #content -->
+            </div><!-- #container -->
+            <div id="sidebar">
+<h3><center> view by tag </center></h3>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+<a href="http://blakemasters.tumblr.com/tagged/crossfit" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/19b15830093e36e0b8cc.jpg" title="Posts tagged CrossFit" style="border:5px solid #fff;"></a> </div>
+
+
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://blakemasters.tumblr.com/tagged/family" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/25930fdc3c75cbc7facf.jpg" title="Posts tagged family" style="border:5px solid #fff;"></a>
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://blakemasters.tumblr.com/tagged/work" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/0fee9fba06c7c3eed101.jpg" title="Posts tagged work" style="border:5px solid #fff;"></a>
+</div>
+
+
+
+<div class="separator" style="clear: both; text-align: center;"> 
+<a href="http://blakemasters.tumblr.com/peter-thiels-cs183-startup" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/645d833868857327bc7b.jpg" target="”_blank”" title="Posts tagged cs183" style="border:5px solid #fff;"></a> </div>
+
+
+<div class="separator" style="clear: both; text-align: center;"> 
+<a href="http://blakemasters.tumblr.com/tagged/misc" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/b30d13dd203d9bc56917.jpg" target="”_blank”" title="Posts tagged misc" style="border:5px solid #fff;"></a> </div><p></p>
+
+
+
+
+
+            
+			 
+
+
+
+
+            
+
+ 
+            
+            </div><!-- #sidebar -->
+        </div><!-- #main -->
+        <div id="footer">
+            <div id="colophon"><p>Powered by <a href="http://www.tumblr.com/">Tumblr</a>. <a href="http://www.tumblr.com/theme/10375">Minimal Theme</a> designed by <a href="http://arturkim.com/">Artur Kim</a>.</p></div>
+        </div><!-- #footer -->
+    </div><!-- #wrapper -->
+
+<script type="text/javascript" src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/tweets.js"></script>
+
+
+
+<!-- BEGIN TUMBLR CODE --><iframe src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/iframe.html" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="./Peter Thiel’s CS183  Startup - Class 18 Notes Essay_files/quant.js"></script><noscript>&lt;img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/&gt;</noscript><!-- END TUMBLR CODE -->
+
+<div style="display: none; " id="hiddenlpsubmitdiv"></div><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body><link rel="stylesheet" type="text/css" href="data:text/css,"></html>

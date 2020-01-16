@@ -1,0 +1,40 @@
+.sb,.sbi,.sb *,.sbi *{position:relative;z-index:1;}
+* html .sb,* html .sbi{height:1%;}
+.sbi{display:inline-block;}
+.sb-inner{background:#ddd;}
+.sb-shadow{background:#000;}
+.sb-border{background:#bbb;}
+#clickstreamcloud{color:#fff;opacity:.8;position:fixed;bottom:10px;right:10px;min-width:300px;max-width:50%;z-index:10000;font-family:Tahoma;font-size:12px;padding-bottom:15px;}
+#clickstreamcloud span{color:white!important;}
+#clickstreamcloud .sb,#clickstreamcloud .sb{overflow:hidden;}
+#clickstreamcloud .sb-inner{background-color:#00294A!important;}
+#clickstreamcloud .sb-border{background-color:white!important;}
+#clickstreamcloud .ccl-header{padding-top:5px;padding-left:12px;padding-right:16px;background-color:transparent;font-size:14px;color:#aaa;width:auto;}
+#clickstreamcloud .ccl-header .ccl-title{float:left;font-size:11px;border-bottom:dotted 1px #D3E1F1;color:#D3E1F1;width:100%;}
+#clickstreamcloud .ccl-header-close{padding-bottom:14px;}
+#clickstreamcloud .ccl-header .ccl-close{float:right;text-decoration:none;font-size:13px;color:white;}
+#clickstreamcloud .ccl-header .ccl-edit{float:right;text-decoration:none;font-size:13px;color:white;padding-right:10px;}
+#clickstreamcloud .ccl-header .ccl-load{float:right;text-decoration:none;font-size:13px;color:white;padding-right:10px;}
+#clickstreamcloud .ccl-links{display:block;clear:both;margin-right:18px;padding-top:4px;padding-bottom:16px;}
+#clickstreamcloud .ccl-links a{float:right;color:white!important;font-size:12px;margin-left:10px;}
+#clickstreamcloud .ccl-sectioncontent{margin:25px 5px 5px 5px;padding-left:20px;padding-right:20px;text-align:center;color:white;}
+#clickstreamcloud .ccl-sectioncontent .ccl-data{padding-left:4px;font-size:10pt!important;text-align:left;display:block;}
+#clickstreamcloud .ccl-sectioncontent .ccl-data-light{padding-left:14px;font-size:10pt!important;text-align:left;}
+#clickstreamcloud .ccl-sectioncontent .ccl-data a,#clickstreamcloud .ccl-sectioncontent .ccl-data-light a{font-size:10pt!important;color:white!important;}
+#clickstreamcloud .ccl-input{font-size:10pt!important;}
+#clickstreamcloud .ccl-spacer{padding-bottom:20px;}
+#clickstreamcloud .ccl-sectioncontent .ccl-data a .ccl-invalid,#clickstreamcloud .ccl-sectioncontent .ccl-data-light a .ccl-invalid{font-size:10pt!important;background:url("/libs/cq/personalization/components/clickstreamcloud/invalid.gif") no-repeat left bottom;padding-left:18px;text-decoration:none;color:red;}
+#clickstreamcloud .cloud{margin:25px 5px 5px 5px;padding-left:20px;padding-right:20px;text-align:center;}
+#clickstreamcloud .cloud .tag{padding-left:10px;}
+#clickstreamcloud .tag10{font-size:18pt!important;}
+#clickstreamcloud .tag9{font-size:17pt!important;}
+#clickstreamcloud .tag8{font-size:16pt!important;}
+#clickstreamcloud .tag7{font-size:15pt!important;}
+#clickstreamcloud .tag6{font-size:14pt!important;}
+#clickstreamcloud .tag5{font-size:13pt!important;}
+#clickstreamcloud .tag4{font-size:12pt!important;}
+#clickstreamcloud .tag3{font-size:11pt!important;}
+#clickstreamcloud .tag2,#clickstreamcloud .tag1,#clickstreamcloud .tag0{font-size:10pt!important;}
+#clickstreamcloud .new,#clickstreamcloud .new .count{color:#ffc!important;font-weight:bold;}
+#clickstreamcloud .count{display:none;color:white;}
+#clickstreamcloud .show-count .count{display:inline;}

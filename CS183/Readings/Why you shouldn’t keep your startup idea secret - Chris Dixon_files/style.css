@@ -1,0 +1,472 @@
+/*  
+
+Theme Name: Theophilus
+Theme URI: http://www.iamtimothylong.com/theophilus/
+Description: Minimal Wordpress Theme
+Version: 1.0
+Author: Timothy Long
+Author URI: http://www.iamtimothylong.com/
+Tags: white, grid, whitespace, minimal, clean, widgets
+
+*/
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	//background:#fcfcfc url(images/bg.jpg) repeat;
+	border-top:20px solid #1c1c1b;
+	color:#333;
+	font-size:62.5%;
+	font-family:arial,verdana,sans-serif;
+	text-align:center;
+}
+h1 {
+	font-size:2em;
+}
+h2 {
+	font-size:1.6em;
+}
+h3 {
+	font-size:1.4em;
+}
+h4 {
+	font-size:1.2em;
+}
+
+
+a {
+	color:#666;
+	font-weight:bold;
+	outline:none;
+	border: 0;
+	text-decoration:none;
+}
+a:hover {
+	color: #999;
+}
+img {
+	border: 0;
+}
+/* -------------- Mashup -------------- */
+#wrapper {
+	font-size:1.2em;
+	line-height:1.4em;
+}
+.post h2 {
+	line-height:1.2em;
+}
+.entry a,.secondary-column a,#comments-container h3 a,.comment-list .comment-author a {
+	color:#008CD4;
+}
+.entry a:hover,.secondary-column a:hover,#comments-container h3 a:hover,.comment-list .comment-author a:hover,.comment-list .comment-meta a:hover {
+	color:#666;
+}
+.secondary-column a {
+	font-weight:normal;
+}
+.entry ul,.entry ol,.entry blockquote {
+	color:#444;
+        border-left:4px solid #eee;
+}
+.entry blockquote {
+	
+}
+.secondary-column h3,#comments-container h3 {
+	font-size:1.2em;
+}
+#cancel-comment-reply-link {
+	color:#666;
+	font-size:0.8em;
+}
+.comment-list .comment-meta a {
+	color:#777;
+}
+.comment-list .comment-author cite {
+	font-style:normal;
+	font-weight:bold;
+}
+.comment-list .comment-meta {
+	font-size:0.8em;
+}
+#commentform p span input,#commentform span textarea {
+	color:#333;
+	font-family:arial,verdana,sans-serif;
+	font-size:1em;
+}
+#paginate-index {
+	font-size:0.9em;
+	text-transform:uppercase;
+}
+#footer {
+	clear: both;
+}
+/* -------------- Main Structure -------------- */
+#wrapper {
+	margin:20px auto 0;
+	text-align:left;
+	width:950px;
+	padding:0 5px;
+}
+#masthead {
+	padding:50px 0;
+}
+#filler {
+}
+#main-column {
+	float:left;
+	margin:28px 0 0 0;
+	width:700px;
+}
+.secondary-column {
+	float:left;
+	margin:28px 0 0 30px;
+	overflow:hidden;
+	width: 220px;
+}
+/* -------------- Header -------------- */
+#masthead h1 {
+	float:left;
+	font-size:40px;
+	margin:0;
+	font-family:'Open Sans',sans-serif;
+	position: relative;
+    	right: 20px;
+    	top: -22px;
+}
+#masthead h1 a {
+	width:400px;
+	font-weight:300;
+	color:#000;
+}
+
+#masthead h1 a.tophead1 {
+	position: relative;
+    	top: -17px;
+}
+/* -------------- Post Meta -------------- */
+.post-meta {
+	margin-right:40px;
+	width:150px;
+	float:left;
+}
+.post-meta ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.post-meta ul li {
+	margin:0 0 5px;
+	padding:0;
+	font-size:11px;
+	color:#999;
+}
+.post-meta ul li a {
+	text-decoration:none;
+	font-weight:bold;
+}
+.post-meta ul li.perma {
+	padding:10px 0;
+	margin:10px 0;
+	border-top:1px solid #e6e3e3;
+}
+.post-meta ul li.perma a {
+	margin:0;
+	padding:0;
+	line-height: normal;
+}
+/* -------------- General Post -------------- */
+.post {
+	margin:0 0 50px 0;
+	width:500px;
+	float:left;
+}
+.post-page {
+	margin:0 0 21px 0;
+	width:700px;
+	float:left;
+}
+.post h2 {
+	margin-bottom:10px;
+	padding:0 3px;
+	font-family:'Open Sans', sans-serif;
+}
+.post h2 a {
+	display: block;
+	font-weight:400;
+}
+/* -------------- Post Body -------------- */
+.entry {
+	padding:0 3px;
+	overflow:hidden;
+}
+.entry p {
+	line-height:1.6em;
+	margin:10px 0;
+}
+.entry img a {
+	border: 0;
+}
+.entry ul,.entry ol,.entry blockquote {
+	margin:0 10px;
+}
+.entry ol {
+	list-style:decimal;
+}
+.entry ul li,.entry ol li {
+	margin:0 0 7px 18px;
+}
+.entry ul li {
+	list-style:circle;
+}
+.entry blockquote {
+	font-size:1.1;
+	line-height:1.4;
+	padding: 0 10px;
+	margin: 20px;
+}
+
+#wrapper .contentsPage {
+	width: 320px; 
+	float: left; 
+	margin-right: 25px;
+}
+
+
+#wrapper .contentsPage h2{
+	font-family: 'Open Sans',sans-serif;
+	font-weight:400;
+	line-height: 1.2em;
+}
+/* -------------- Sidebar (widget-friendly) -------------- */
+.secondary-column h3 {
+	margin:0 0 10px 0;
+	padding:7px 0;
+	color:#666;
+}
+.secondary-column ul {
+	list-style-type:none;
+	border-top:1px solid #e6e3e3;
+	margin:0;
+	padding:0;
+}
+.secondary-column ul li {
+	padding:5px 0;
+	font-size:11px;
+	margin:0;
+	border-bottom:1px solid #e6e3e3;
+}
+.secondary-column ul li a {
+	font-size:11px;
+	font-weight:normal;
+	color:#666;
+	padding:0;
+	margin:0;
+	text-decoration:none;
+}
+.secondary-column ul li a:hover {
+	color:#999;
+}
+.widgetContainer {
+	margin:0 0 20px 0;
+}
+.widgetContainer .textwidget {
+	margin:0 3px;
+	line-height:1.5em;
+}
+.widgetContainer #wp-calendar {
+	border-collapse:collapse;
+	width:100%;
+}
+#wp-calendar caption {
+	font-weight:bold;
+	margin-bottom:7px;
+}
+#wp-calendar thead {
+}
+#wp-calendar thead th {
+	padding:4px 0 4px 3px;
+	border:1px solid #ccc;
+	border-width:1px 0;
+}
+#wp-calendar td {
+	padding:3px 0 4px 3px;
+	color:#777;
+}
+#wp-calendar td a {
+	font-weight: bold;
+}
+/* -------------- Archives -------------- */
+.archive-entry ul {
+	padding:0;
+	margin:0 0 30px;
+}
+.archive-index {
+	font-size:10px;
+	text-transform:uppercase;
+	letter-spacing:4px;
+	color:#ccc;
+}
+.year_archive {
+	font-size:32px;
+	margin:0 0 10px;
+	color:#666;
+}
+.month_archive {
+	list-style:none;
+}
+.month_archive li {
+	margin:0;
+	padding:5px 0;
+}
+.month_archive li span.the_day {
+	font-size:10px;
+	text-transform:uppercase;
+	color: #999;
+}
+/* -------------- Comments -------------- */
+#comments-container {
+	margin-bottom:30px;
+}
+#comments-container span.hook {
+	position:relative;
+	display:block;
+}
+#comments-container h3 {
+	display:block;
+	margin:10px 0;
+	padding:7px 0 0;
+}
+.cancel-comment-reply {
+	position:absolute;
+	top:-1px;
+	right:4px;
+}
+.comment-list {
+	list-style:none;
+	margin:0 0 20px;
+}
+.comment-list .comment-author {
+	border-top:1px solid #e6e3e3;
+	padding:20px 0 5px;
+	margin:20px 0 0;
+	overflow:hidden;
+}
+.comment-list .comment-author img.avatar {
+	display:block;
+	float:right;
+	display:none;
+	height:16px;
+	width:16px;
+	margin:0;
+}
+.comment-list .comment-meta,.comment-list .comment-meta a {
+	margin:0;
+	text-transform:uppercase;
+}
+.comment-list li .reply {
+	text-align:right;
+	padding-bottom:10px;
+}
+.comment-list li .reply a {
+	display:inline;
+}
+.comment-list li p {
+	margin:1em 0;
+	line-height:1.6em;
+	padding:0;
+}
+.comment-list li ul,.comment-list li ol,.comment-list li blockquote {
+	margin:0 20px;
+}
+.comment-list .children {
+	margin:0;
+	padding-left:20px;
+	border-left:10px solid #e6e3e3;
+}
+.comment-list .children li {
+	list-style:none;
+}
+#commentform .contain {
+	margin:0 0 10px 0 !important;
+}
+#commentform #author,#commentform #email,#commentform #url,#commentform textarea {
+	padding:4px 3px;
+	border:1px solid #ccc;
+	border-left-color:#bbb;
+	border-bottom-color:#bbb;
+	background:#fff;
+	margin-right:4px;
+}
+#commentform #author,#commentform #email,#commentform #url,#commentform textarea {
+	border:1px solid #bbb;
+	outline:none;
+	padding:4px 3px;
+	width:160px;
+}
+#commentform p label {
+	margin:4px 0 0 0;
+}
+#commentform textarea {
+	float:none;
+	width:98%;
+	overflow: auto;
+}
+/* -------------- Footer -------------- */
+#footer {
+	background:#1c1c1b url(images/footer-bg.png) top left repeat-x;
+	color:#666;
+	margin:20px 0 0 0;
+	padding:20px 0;
+	font-size:11px;
+}
+#footer-container {
+	width:950px;
+	margin:0 auto;
+}
+#footer a,#footer a:link,#footer a:visited {
+	color:#666;
+	font-weight:bold;
+	text-decoration:none;
+}
+#footer a:hover {
+	color: #999;
+}
+#footer-pad {
+	padding: 0 20px;
+}
+/* -------------- Floats / Clearing -------------- */
+.floatleft,.alignleft {
+	float:left;
+	margin:3px 7px 0 0;
+}
+.floatright,.alignright {
+	float:right;
+	margin:3px 0 0 7px;
+}
+.right {
+	float:right;
+}
+.left {
+	float:left;
+}
+.clear {
+	clear:both;
+}
+.fix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.fix {
+	display:inline-block;
+}
+* html .fix {
+	height:1%;
+}
+.fix {
+	display: block;
+}

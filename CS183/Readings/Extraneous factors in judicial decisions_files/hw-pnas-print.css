@@ -1,0 +1,129 @@
+
+
+/***********************************
+	Hidden elements 
+*********************************** */
+div.pagetype-content .prev-next,
+div.pagetype-content .gca-buttons 
+{
+	display: none;
+}
+
+/***********************************
+	Displayed content
+*********************************** */
+div.pagetype-content ol.hideaffil  {
+	position: static;
+	left: inherit;
+}
+
+
+/***********************************
+	Resized elements
+*********************************** */
+div.pagetype-content .issue-col-left {
+	height: auto;
+}
+
+/***********************************
+	Recolored  elements 
+*********************************** */
+
+div.pagetype-content #toc-header h1,
+div.pagetype-content #toc-header cite,
+div.pagetype-content  #toc-header .issue-col-right .toc-links li a,
+div.pagetype-content div.issue-col-right *,
+div.pagetype-content #toc-header a,
+div.pagetype-content .toc-level a.toc-section-return,
+
+div.pagetype-content #pap-header h1,
+div.pagetype-content #pap-header p.pap-last-modified,
+
+#pageid-authindex  .aindex-jump-list li a,
+
+.cit a,
+.cit a:visited,
+li.cit,
+.cit.openaccess,
+.cit.fromcover,
+.cit.inaugural,
+.cit.cozzarelli,
+.cit .open-access-indicator
+{
+	color: black;
+	background-color: white;
+}
+/***********************************
+	Re-bordered elements
+*********************************** */
+
+/*  Change border on headings to black  */
+div.pagetype-content .toc-level {
+	border-top:1px solid black;
+}	
+/*  Reassert directive that there's no borders  on level2 elements */
+div.pagetype-content  .toc-level .level2 {
+	border-top: none;
+}
+
+/*  Remove underlining from toc headings */
+div.pagetype-content .toc-level a.toc-section-return,
+div.pagetype-content .cit .cit-views li a,
+.issue-col-right .toc-links li
+ {
+	padding-left: 0;
+	text-decoration: none;
+	background-image: none;
+}
+
+/***********************************
+	Other tweaks for print display
+*********************************** */
+/*  Change background chevron to regular old list marker.
+	This doesn't work, and I haven't figured out why yet.  */
+div.pagetype-content .cit .cit-views li,
+div.pagetype-content .cit .related-articles li,
+div.pagetype-content .toc-level ul.cit-views,
+div.pagetype-content .toc-level ol.cit-views
+{
+	background-image: none;
+	list-style: disc inside none;
+}
+
+/*  Remove indenting from related article text  */
+div.pagetype-content .cit .related-articles {
+	padding-left: 2em;
+}
+
+
+/*  Search highlighting  */
+.criteria-value,
+.search-result-highlight 
+{
+	font-weight: bold;
+	color: black;
+	text-decoration: underline;
+}
+
+
+#pageid-home .formbox,
+#pageid-home #home-left-col
+ {
+	display: none;
+}
+
+#pageid-home #footer {
+	display: inherit;
+}
+
+#pageid-home #home-right-col {
+	border-left: none;
+	left:0px;
+	padding-left:0px;
+	position:static;
+	text-align:left;
+	top:0px;
+	width:470px;
+}
+
+

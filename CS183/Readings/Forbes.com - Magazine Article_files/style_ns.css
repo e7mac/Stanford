@@ -1,0 +1,1559 @@
+BODY, TD, P {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+A {
+	text-decoration : none
+}
+A:Link {
+	text-decoration : none
+}
+A:Hover {
+	text-decoration : underline
+}
+A:Active {
+	text-decoration : underline
+}
+A:Visited {
+	text-decoration : none
+}
+ul { margin: 3; padding: 0;}
+ul li { list-style-type: square; list-style-position:inside;}
+H1 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 25px;
+}
+
+H2 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 20px;
+}
+
+H3 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+}
+H4 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+/* news styles */
+.date { 
+	color: #666666; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	padding-top: 7px;
+	}
+.news { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px;
+	padding-top: 5px;
+	}
+.src { 
+	color: #666666; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	}
+.tablesrc { 
+	color: #666666; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10px;
+	font-style : italic;
+	}
+/* default link for site */
+.mainlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+.mainartlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+}
+.mainscanlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+/* white text header for search box */
+.mainfindertitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #FFFFFF;
+	font-weight : bold;
+	text-decoration: none;
+}
+.tagline {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #ccddee;
+	font-weight : bold;
+	text-decoration: none;
+}
+/* international homepage current version indicator */
+.intlhomepageon {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+	font-weight : bold;
+	text-decoration: none;
+}
+/* international homepage link to other versions */
+.intlhomepagelink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #FFFFFF;
+	font-weight : bold;
+	text-decoration: none;
+}
+.intlhomepagelink:visited {
+	color : #FFFFFF;
+}
+.advfindertitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #FFFFFF;
+	text-decoration: none;
+}
+/* search forbesfinder web toggle  */
+.finderweb {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #FFFFFF;
+}
+
+/* special advertising section label  */
+.adsection {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+/* home page date */
+.maindate {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	color : #666666;
+	font-weight : bold;
+}
+/* navigation links and disclaimer text styles */
+.mainglobalnav {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #FFFFFF;
+	text-decoration : none;
+	font-weight : bold;
+}
+.mainglobalnavon {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #000000;
+	font-weight : bold;
+	text-decoration : none;
+}
+.mainbottomnav {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #FFFFFF;
+	font-weight : bold;
+	text-decoration : none;
+}
+.maincopynav {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #FFFFFF;
+	text-decoration : none;
+}
+/*  featured article page styles */
+.hpfeatarttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 25px;
+	font-weight : bold;
+}
+.mainfeatarttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+	font-weight : bold;
+}
+.mainfeatartauthor {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.mainfeatarttxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+.mainfeatartlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+/*  article page styles */
+.mainarttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 24px;
+	color : #333333;
+	font-weight : bold;
+}
+h1.mainarttitle	{margin:0px;}
+.mainartsectiontitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.artsectiontitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 17px;
+	color : #999999;
+}
+h2.artsectiontitle	{
+	margin: 0px;
+	font-weight: normal;
+}
+.artsubsectiontitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 17px;
+	color : #999999;
+}
+.mainartauthor {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #003399;
+}
+.mainarttxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight: normal;
+}
+.mainarttblhed{
+        font-family : Arial, Helvetica, sans-serif;
+        font-size : 13px;
+        font-weight : bold;
+}
+.mainarttblsrc{
+        font-family : Arial, Helvetica, sans-serif;
+        font-size : 10px;
+        font-style : italic;
+}
+.ontitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #999999;
+}
+.printarttxt {
+	font-family : times, Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+.mainartsrc {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #003399;
+}
+.mainartdate {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.mainartphototxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #000000;
+}
+.mainartphotoedtxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #000000;
+}
+.mainartphotocredit {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #000000;
+	font-style : italic;
+}
+.mainartquote {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+	font-weight : bold;
+	font-style : italic;
+	padding-left: 75px;
+	padding-left: 50px;
+}
+.mainartdek {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+	font-weight : bold;
+	font-style : italic;
+}
+.mainpagecount {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+.mainnextbut {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #003399;
+
+}
+.mainpreviousbut {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #003399;
+
+}
+.printartsectiontitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 17px;
+	color : #000000;
+}
+.mainartsectiondate {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.maincontinued {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+	font-weight : bold;
+}
+.maincontinuedlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #003399;
+}
+.maintkrlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	text-decoration : underline;
+}
+/* slideshow styles */
+.slideshowitem { 
+	color: #cc9933; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	font-size: large; 
+}
+.slideshowcontrols { 
+	color: #ffffff; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	font-size: 13px; 
+}
+.slideshowtitle { 
+	color: #dedede; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 15px; 
+}
+.slideshowtitlebig { 
+	color: #cc0000; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 20px; 
+}
+/* subindex of articles styles */
+.mainsubindextitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 15px;
+	color : #000000;
+	font-weight : bold;
+}
+.mainsubindextime {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #666666;
+}
+.mainsubindexartauthor {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.mainsubindexartaddlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.mainsubindexarttxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+.mainsubindexsubtitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+	font-weight : bold;
+}
+.mainsubindexartdate {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.mainarchive {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #000000;
+}
+/* sponsors styles  */
+.mainsponsorlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #003399;
+}
+.mainsponsor {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #000000;
+}
+/* breadcrumb */
+.mainbreadlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #003399;
+}
+.mainbread {
+
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+/* list page styles */
+.highYellow {
+	background-color: #ffff00;
+}
+
+.top10 {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+	color: #666666;
+}
+
+.listrow1 {
+background-color: #cee5ee;
+}
+.listrow2 {
+background-color: #e8f5ff;
+}
+
+
+/* small link for archived columns page */
+.mainsmalllink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #003399;
+}
+.mainarttxtgray {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #999999;
+}
+.resultnumber {	
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #000000;
+}
+.mainartcredit {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #000000;
+}
+/* story quote change values */
+.indicesminus {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #cc0000;
+}
+.indicesplus {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #66cc00;
+}
+/* lists global styles */
+.listsDropdown {
+	width : 208px;
+	background-color : #99eeff;
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 13px;
+
+}
+.sublisttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 17px;
+	color : #000000;
+	font-weight : bold;
+}
+.noresults {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 17px;
+	color : #ffffff;
+	background-color: #cc0000;
+	padding : 2px;
+	font-weight : bold;
+}
+.subsmalllisttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+	font-weight : bold;
+}
+.listyearbtn {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 17px;
+	color : #000000;
+	font-weight : bold;
+}
+.mainlisttxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+.mainlistbyline {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+	font-weight : bold;
+}
+.biglisttxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+	color : #000000;
+}
+.footnotetxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #000000;
+}
+.smalllisttxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #000000;
+}
+.smalltext {
+    font-family : Arial, Helvetica, sans-serif;
+    font-size : 10px;
+    color : #000000;
+}
+.smalltxt {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10px;
+	line-height: 14px;
+}
+.smalllink {
+    font-family : Arial, Helvetica, sans-serif;
+    font-size : 10px;
+}
+.listbox {
+	width : 260px;
+}
+.listselect {
+	width : 230px;
+}
+/*LIFESTYLE STYLES */
+/* bold */
+B {
+	font-weight : bold
+}
+.graytxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #666666;
+}
+.headline {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+	color : #003399;
+}
+.marketlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #660000;
+}
+.marketlink:Hover {
+	color: #660000;
+	font-weight : bold;	 
+}
+.msn {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #64649c;
+	text-decoration : none;
+}			
+.redtext {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #660000;
+	text-decoration : none;
+}	
+.smalltxt2 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #333333;
+}
+.smalltxtlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #003399;
+
+}
+.smalltxtlink:Hover {
+	color: #999999;
+}
+.title {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+	color : #000000;
+	font-weight : bold;		
+}
+.whitetxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #ffffff;
+}
+.white {
+	color : #ffffff;
+}
+.bluetxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000066;
+}
+.mainsearchbox {
+	width : 129px;
+}
+/* new for 6.0 */
+.mainsubindexstorytype {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#666666;
+	text-transform : uppercase;
+}
+.artstorytype {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 11 px;
+	color:#666666;
+	text-transform : uppercase;
+}
+.hpscanhed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13 px;
+}
+.lnspace {
+	padding-top : 6px;
+}
+.hpspace {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 4px;
+	line-height : 12px;
+}
+.centermorelink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13 px;
+	line-height : 12px;
+}
+/* magazine tagline */
+.hpmagtagline {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#666666;
+	text-transform : uppercase;
+}
+.footergrey {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color:#666666;
+}
+/* lifestyle lead hp headline */
+.hplifestyle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+	line-height : 20px;
+}
+/* lifestyle sub hp headline */
+.hplifestylesub {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+/* left nav styles */
+.lnav {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13 px;
+	color : #666666;
+	line-height : 25px;
+	padding-left: 5px;
+}
+.lnavon {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13 px;
+	color : #666666;
+	line-height : 25px;
+}
+.hpspace {
+	padding-top : 6px;
+}
+.sectionspace {
+	padding-top : 4 px;
+}
+.listsspace {
+	padding-top : 40 px;
+}
+.lnavpoint {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13 px;
+	font-weight : bold;
+	color : #999999;
+	padding-left: 5px;
+	line-height: 25px;
+}
+.lnavsection {
+	font-family : Arial, Helvetica, sans-serif;
+	color : #666666;
+	padding-bottom: 7px;
+	padding-top : 13px;
+}
+/* default link for site */
+.forbeslink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13 px;
+}
+/* link with leading for use in lists of links */
+.linkset {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size :13 px;
+	line-height: 20px;
+}
+/* channel lead story */
+.chanfeatarttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+	font-weight : bold;
+}	
+/* article link for channel pages */
+.chanartlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+}
+
+
+/* quotes and people search boxes */
+.peopleboxtxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #ffffff;
+}
+.peopleboxtitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #ffffff;
+	font-weight : bold;	
+}
+.smalltextbox {
+	width: 150px;
+}
+.smalltickerbox {
+	width: 120px;
+}
+.quotedropdown {
+	width:120px
+}
+
+.activeTab {
+ 	font-family : arial,helvetica,sans-serif;
+ 	font-size : 12px;
+ 	font-weight : bold;
+ 	color : #ffffff;
+}
+.tablink {
+	color : #ffffff;
+	text-decoration : none;
+}
+.tablink:hover {
+	text-decoration : underline;
+}
+.tablink:visited {
+	color : #ffffff;
+	text-decoration : none;
+}
+.ieQuoteBox {
+	position : absolute;
+	visibility : hidden;
+}
+.mainquotebox {
+	background-color : #cceeff;
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 13px;
+}
+.mainquotesel {
+	background-color : #cceeff;
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 12px;
+}
+.mainquotebut {
+	width : 25px;
+	padding : 1px;
+	background-color : #cceeff;
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 12px;
+}
+.mainquotetxt {
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 13px;
+}
+.adquotetxt {
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 13px;
+ 	font-weight : bold;
+ 	width : 147px;
+ 	line-height : 1.3;
+}
+.ieChartBox {
+	position : absolute;
+	visibility : hidden;
+}
+.newieChartBox {
+	position : absolute;
+	visibility : hidden;
+}
+.rightcolbox {
+	width : 334px;
+	border : solid #000000 1px;
+}
+/* for small quote box */
+.ieQuoteBoxSm {
+	position : absolute;
+	visibility : hidden;
+}
+.smmainquotebox {
+	width : 129px;
+}
+.smmainquotesel {
+	width : 129px;
+}
+.smmainquotebut {
+	width : 25px;
+	padding : 1px;
+	background-color : #cceeff;
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 12px;
+}
+.smadquotetxt {
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 12px;
+ 	font-weight : bold;
+ 	width : 147px;
+ 	line-height : 1.3;
+}
+
+/* styles for Channel page Indices */
+.tickerlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+
+/* SUBSCRIPTION FORM STYLES */
+.subsofftxt
+{
+    font-size: 18px;
+    color: #993333;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: Bold;
+}
+.subsofftxtblk
+{
+    font-size: 18px;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: Bold;
+}
+
+
+.termstxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	color : #000000;
+}
+
+
+.termstitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : large;
+	color : #000000;
+	font-weight : bold;
+}
+
+.forPrint {
+	font-family : Times New Roman;
+	font-size : 12pt;
+	color : #000000;
+}
+/*  Prospero active content: Recent Discussions */	
+.llheader1 {
+	color : #ffffff;
+	font-weight : bold;		
+	background-color: #225588; 
+}
+.llheader2 {
+	font-weight : bold;		
+	background-color: #ffffff; 
+}
+.llbullet {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size :13 px;
+}
+.llitem {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size :13 px;
+	padding-bottom: 5px;
+}
+
+/* Prospero active content: Poll */	
+.acpolltable { 
+}		
+.acpollquestion { 
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight : bold;		
+}		
+.acpolltext { 
+	color: #000000;					
+	font-family: Arial;
+	font-size: 12px;
+}
+.acpollradio { 
+	}
+.acpollbutton {	
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;				
+	font-weight: bold;
+	background-color: #225588; 
+}
+.acpolllink { 
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color: #003399;					
+}
+
+/* 7.0 and video settings */
+
+.dirsec {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 15px;
+	font-weight: bold }
+.dirsubsec { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px }
+.inside { 
+	color: #666666; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+	font-weight: bold 
+	}
+.smallgreytxt {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#666666; 
+	}
+.partnerdesc {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#666666; 
+	}
+.selecthed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#ffffff;
+	font-weight: bold; 
+	}
+.selectitem {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#ffffff;
+	font-weight: bold; 
+	}
+.playersettingdetail {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#ffffff; 
+	}
+.savesettings {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#336699;
+	font-weight: bold;
+	background-color: #ffffff;
+	border-width : 1px; 
+	}
+.vidhed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold; 
+	}
+.viditem {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold; 
+	}
+.vidsettings {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	}
+.partnernwshed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	line-height: .65;
+ 	padding-left : 5px;
+}
+.dirseched {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+}
+.dirseclink { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+}
+.lnspace2 {
+	padding-bottom : 3px;
+}
+.chandatahed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	padding-top : 3px;
+}
+.brknewshed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+}
+.reutershed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+}
+.mktsfeatarttitle {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size :  large;
+	font-weight : bold;
+}	
+.smalldatahed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+}
+.rgtColBox {
+	border : solid #000000 1px;
+}
+.calDropdown {
+	border : solid #000000 1px;
+	width : 150px;
+	background-color : #cccccc;
+	font-family : arial,helvetica,sans-serif;
+ 	font-size : 12px;
+}
+.crosshed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	background-color: #ffffff; 
+	border : solid #333333 1px;
+}	
+.crosshed1 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	background-color : #efefef;
+	border : solid #333333 1px;
+}	
+.crosshed2 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : bold;
+	background-color : #cfe2eb;
+	border : solid #333333 1px;
+}	
+.crossrate {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	background-color: #ffffff; 
+	border : solid #333333 1px;
+}	
+.crossrate3 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	background-color: #efefef; 
+	border : solid #333333 1px;
+}	
+.crossrate2 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	background-color: #aab9c0; 
+	border : solid #333333 1px;
+}	
+.crossrate1 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	background-color: #cfe2eb; 
+	border : solid #333333 1px;
+}	
+.bowhed {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 15px;
+	font-weight : bold;
+}	
+.calcIEonly {
+	visibility : hidden;
+	position : absolute;
+}
+.converter {
+	width : 168px;
+}
+.curconvsubbut {
+    width : 0px;
+    height : 0px;
+}
+/* registration step style */
+.regstep {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 15px;
+	color : 336699;
+}	
+.bestDrop {
+  width: 336 px;
+  background-color: #c9dbed;
+}
+.alertsignup {
+	border-width : 1px;
+	background-color : #336699;
+	font-family : Arial, Helvetica, sans-serif;
+	color : #ffffff;
+	font-weight : bold;
+}
+.richlinkstyle {
+	font-family : Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background-color: #ddeeff;
+	color: #000000;
+}
+.richlinkstyle:hover {
+	font-family : Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background-color: #ff6600;
+	color: #ffffff;
+}
+.rlterm {
+	font-family : Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background-color: #ff6600;
+	color: #ffffff;
+	font-weight: bold;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-size: 13px;
+}
+.rlheader {
+	font-family : Arial, Helvetica, sans-serif;
+	background-color: #336699;
+	width: 480px;
+	color: #ddeeff;
+	font-size: large;
+	font-weight: bold;
+}
+.rlbottom {
+	position: absolute;
+	top: 250px;
+	left: 0px;
+}
+a.rlgraytxt {
+	font-family : Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-size: 13px;
+}
+a:visited.rlgraytxt {
+	font-family : Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-size: 13px;
+}
+a:active.rlgraytxt {
+	font-family : Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-size: 13px;
+}
+a:hover.rlgraytxt {
+	font-family : Arial, Helvetica, sans-serif;
+	color: #ff6633;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+a.rlbottomLink {
+	font-family : Arial, Helvetica, sans-serif;
+    color: #999999;
+    line-height:21px;
+    font-size: 13px;
+}
+a:visited.rlbottomLink {
+	font-family : Arial, Helvetica, sans-serif;
+    color: #999999;
+    line-height:21px;
+    font-size: 13px;
+}
+a:active.rlbottomLink {
+	font-family : Arial, Helvetica, sans-serif;
+    color: #999999;
+    line-height:21px;
+    font-size: 13px;
+}
+a:hover.rlbottomLink {
+	font-family : Arial, Helvetica, sans-serif;
+    color: #cc9966;
+    text-decoration: none;
+	font-size: 13px;
+}
+.pt12txt {
+	font-family : Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 13px;
+}
+
+.px11 {
+	font-size: 11px;
+	}
+.brknewsdate { 
+	color: #666666; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10px;
+	line-height: 14px;
+	}
+	
+.smallblack { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10px;
+	line-height: 14px;
+	}
+	
+.smallred {
+	color: #cc0000; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10px;
+	line-height: 14px;
+	}
+.smallgreen {
+	color: #009900; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10px;
+	line-height: 14px;
+	}	
+.blueback {
+	background-image:URL(http://images.forbes.com/media/assets/blueback.gif);
+	background-repeat:no-repeat;
+ }	
+.blkbox {border: 1px solid #000000;}
+.tools {
+	font-size: 11px;
+	text-align: right;
+}
+.insight {
+	color: #336699;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+/*.cadillacquotes {
+	width : 336px;
+	background-image: URL(http://images.forbes.com/media/ads/cadillac/sts_forbes_research_top.jpg);
+	background-repeat: no-repeat;
+}*/
+
+.boxborder {
+	border:1px solid #003399;
+}
+.boxtext {
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.mainbody {
+	padding: 10px;
+	width: 760 px;
+}
+/* Lithium thread Styles */
+.lithium-threads { width: 336px; }
+.lithium-threadsSubject { width: 336px;padding-bottom:5px; }
+/* default link for site */
+.11pxlink {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11pt;
+}
+
+
+
+.footop {
+	position: relative;
+	left: 10px;
+	width: 750px;
+	font-size: 11px;
+	text-align: center;
+	padding-top: 40x;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 1px;
+	font-weight: bold;
+	border-bottom: solid 1px #336699;
+	text-transform: uppercase;
+}
+.footlogo {
+	position: relative;
+	left: 15px;
+	width: 760px;
+}
+.footcopy {
+	width: 790px;
+	font-size: 11px;
+	color: #333333;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	letter-spacing: 0.1em;
+	line-height: 16px;
+}
+.footbot {
+	width: 500px;
+	position: relative;
+	left: 145px;
+	padding-bottom: 10px;
+	font-size: 10px;
+	color: #7799aa;
+	text-align: center;
+	line-height: 11px;
+}
+.greylink {
+	color: #446677;
+	font-size: 11px;
+	font-weight:normal;
+}
+.greylink:hover {
+	color: #446677;
+}
+.greylink:visited {
+	color: #446677;
+}
+.greylink:visited:hover {
+	color: #446677;
+}
+.footlink {
+	color: #5588bb;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: solid 1px #ffffff;
+	border-left: solid 1px #ffffff;
+	font-size: 11px;
+}
+.footlink:hover {
+	background-color: #336699;
+	color: #ffffff;
+	text-decoration: none;
+}
+.footlink:visited {
+	color: #5588bb;
+	background-color: #ffffff;
+}
+.footlink:visited:hover {
+	background-color: #336699;
+	color: #ffffff;
+}
+.footsponsor {
+	font-size: 10px;
+	color: #7799aa;
+	font-weight:normal;
+}
+.footsponsor a{
+	font-size: 10px;
+	color: #003399;
+	font-weight:normal;
+}
+.ctlheds	{
+	border-bottom:1px dotted #cccccc;
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #990000; 
+	font-size: 12px;
+	font-weight: bold;
+}
+/* Bottom of stories */
+.artcntrlheds	{
+	border-bottom:1px dotted #cccccc;
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #990000; 
+	font-size: 12px;
+	font-weight: bold;
+}
+.artcntrltxt	{
+	padding:3px 0px 0px 5px;
+	font-size: 11px;
+}
+.byline {font-family : Arial, Helvetica, sans-serif; font-size : 13px; color : #666666;}
+.grey {color : #666666;}
+.newshed {font-size : 14px; line-height: 1.5em; font-weight : bold;}
+/* list styles for lists page */
+#listsli ul  { margin: 3px 3px 3px 10px;padding-left:20}
+#listsli li {
+	list-style-type: square;
+	list-style-position: outside;
+}
+.buy	{
+	font-size: 12px;
+	padding-top: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	}
+
+.curname {font-size:11px;}
+
+.curdata {font-size:11px;}
+
+.curdata2 {font-size:10px}
+
+table.table {
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 1px 1px;
+	border-style: solid solid solid solid;
+	border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204);
+	border-collapse: collapse;
+	}
+table.table th {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: solid solid solid solid;
+	border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204);
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+table.table td {
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: solid solid solid solid;
+	border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204);
+	-moz-border-radius: 0px 0px 0px 0px;
+	padding-top:2px;
+	padding-bottom:2px;
+}   
+
+.oplogo {position: relative; top: -40px;}
+.iconsphere 
+{
+    background: url(http://www.sphere.com/images/sphereicon.gif) top left no-repeat;
+    padding: 4px 0 4px 20px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+table.dailynumberrow1	{ 
+	border: 1px solid #000; 
+	margin: 0px 0px 20px 20px; 
+	width: 170px; 
+	float: right;
+}
+table.dailynumberrow1 td.boxtext	{ 
+	font-size:30px;
+	font-family:Trebuchet MS,Verdana,sans-serif;
+	color:#fc0;
+	background-color:#000;
+	text-align:center;
+	padding:10px 0px;
+}
+table#bottomStory tr td img {
+	/*
+width:65px;
+	height:65px;
+*/
+	border:none;
+	margin-bottom:5px;
+}
+div.artcntrlheds {
+	/*border-bottom:1px dotted #ccc;*/
+	color:#990000;
+	font-size:12px;
+	font-weight:bold;
+}
+div.artcntrltxt {
+font-size:11px;
+padding:3px 0 0 5px;
+}
+div.artcntrltxt img.tfdc {
+	/*
+width:85px;
+	height:85px;
+*/
+	border:none;
+	float:left;
+	margin: 3px 12px 3px 4px;
+}
+.artcntrltxt .newshed {
+font-size:14px;
+font-weight:bold;
+line-height:1.5em;
+}
+.artcntrltxt .byline {
+color:#666666;
+font-family:Arial,Helvetica,sans-serif;
+font-size:13px;
+}
+.artcntrltxt ul {
+margin:0 0 0 15px;
+padding:0px;
+float:left;
+}
+.artcntrltxt ul li	{
+list-style-position:outside;
+list-style-type:square;
+margin:0px;
+padding:0px;
+line-height:12px;
+}
+div#miniHP	{
+	clear:both;
+	padding-top:20px;
+}
+table#bottomStory	{
+	margin:10px 0 20px 3px;
+	clear:both;
+	width:388px;
+	border:none;
+	border-spacing:0px;
+	border-spacing: expression(cellSpacing=0)
+}
+table#bottomStory tr { vertical-align: top; }
+table#bottomStory tr td {
+	font-size:11px;
+	line-height:14px;
+	text-align:center;
+	width:97px;
+}
+table tr td.smalltxt {
+	font-size:11px;
+	/*line-height:14px;*/
+	/*text-align:center;*/
+	width:85px!important;
+}
+table tr td.smalltxt img {
+	/*
+width:85px;
+	height:85px;
+*/
+	border:none;
+	margin-bottom:5px;
+}
+div#miniHP table  {
+	border:none;
+	border-spacing:0px;
+	border-spacing: expression(cellSpacing=0)
+	/*width:0px;*/
+}
+table#bottomStory tr td img {
+	/*
+width:65px;
+	height:65px;
+*/
+	border:none;
+	margin-bottom:5px;
+}

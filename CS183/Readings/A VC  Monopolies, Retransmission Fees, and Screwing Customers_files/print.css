@@ -1,0 +1,430 @@
+/* RESET
+/*============================================================================= */
+
+/* Global reset */
+/* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
+*, html, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td { margin:0; padding:0 }
+table { border-collapse:collapse; border-spacing:0 }
+fieldset, img { border:0 }
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal }
+caption, th { text-align:left }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal }
+q:before, q:after { content:''}
+a {outline: none;}
+/* remember to define focus styles! */
+:focus {outline: 0;}
+a img { border:none } /* Gets rid of IE's blue borders */
+
+/* SPECIAL PRINT STUFF ============================================================================= */
+
+img#wpstats, .phone-only, #nav-container, #footer-container, .edit-entry-button, .pagination, #site-title, #banner, 
+#sidebar, #footer, .entry-footer, .entry-footer-info, .comments, .pager-bottom, .zemanta-pixie
+{
+	display: none;
+}
+
+h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
+     page-break-inside:avoid }
+a {  page-break-inside:avoid; }
+img { page-break-inside:avoid; }
+blockquote, table, pre { page-break-inside:avoid }
+
+
+
+/* Content Blocks
+============================================================================= */
+
+body
+{
+	font-family: "Cambria", "Palatino", "Palatino Linotype", "Georgia", "Times New Roman", "Times", serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	background: #fff;
+	width: 100%;
+}
+
+#print-logo
+{
+	width: 100%;
+	display: block;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.page-template-archives-php div.float-left
+{
+	float: left;
+	width: 30%;
+	margin-right: 3.3%;
+}
+
+.page-template-archives-php h3
+{
+	font-size: 24px;
+	margin-bottom: 12px;
+}
+
+.page-template-archives-php #content li
+{
+	margin: 5px 0 5px 15px;
+	font-size: 16px;
+}
+
+#comments
+{
+	display: none;
+}
+
+#complete_blog_archive td
+{
+	font-size: 14px;
+	line-height: 120%;
+	padding: 8px 0;
+	border-left: none;
+	border-right: none;
+}
+
+#content #complete_blog_archive a
+{
+	border: none;
+}
+
+#content #complete_blog_archive a:hover
+{
+	border-bottom: 1px solid;
+}
+
+.entry-body
+{
+	margin-bottom: 28px;
+	border-bottom: 1px solid #ddd;
+	padding-top: .5px;
+}
+
+.single .hentry
+{
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+/* Content Elements
+============================================================================= */
+
+h1, h2
+{
+	font-size: 36px;
+	line-height: 112%;
+	font-weight: 600;
+	margin-bottom: -8px;
+}
+
+.entry-content h2
+{
+	font-size: 24px;
+	line-height: 114%;
+	font-weight: 600;
+	margin: 24px 0;
+}
+
+h3, .entry-content h4
+{
+	font-weight: 600;
+	margin: 24px 0;
+}
+
+p, li
+{
+	margin: 24px 0;
+}
+
+blockquote
+{
+	border-left: 1px dotted #ccc;
+	display: block;
+	margin: 0;
+	padding-left: 2em;
+}
+
+blockquote li
+{
+	margin-left: 15px;
+}
+
+
+blockquote > *:first-child
+{
+	margin-top: 13px;
+}
+
+blockquote > *:last-child
+{
+	margin-bottom: 13px;
+}
+
+table
+{
+	margin-bottom: 24px;
+}
+
+caption
+{
+	font-weight: #600;
+}
+
+td, th
+{
+	border: 1px solid #ddd;
+	padding: 3px 12px;
+}
+
+th
+{
+	font-weight: 700;
+}
+
+hr
+{
+	height: 1px;
+	overflow: hidden;
+	margin: 26.5px 0;
+	border: none;
+	border-top: 1px dotted #ccc;
+	display: none;
+}
+
+/* Links
+============================================================================= */
+
+a
+{
+	color: #000;
+	text-decoration: none;
+}
+
+/* Inline Elements
+============================================================================= */
+
+abbr, acronym
+{
+	border-bottom: 1px dotted #999;
+	cursor: help;
+}
+
+code, kbd, samp, tt
+{
+	font-family: "Menlo", "Andale Mono", "Consolas", monospace;
+	color: #666;
+}
+
+em, cite, dfn
+{
+	font-style: italic;
+}
+
+strong, dfn
+{
+	font-weight: bold;
+}
+
+sup, sub
+{
+	font-size: .8em;
+	line-height: .1em;
+	position: relative;
+}
+
+sub
+{
+	top: .01em;
+}
+
+sup
+{
+	top: -.005em;
+}
+
+a img
+{
+	text-decoration: none;
+	border: none;
+}
+
+/* Reusable Classes
+============================================================================= */
+.float_right, .float-right
+{
+	float: right;
+}
+
+.float_left, .float-left
+{
+	float: left;
+}
+
+.clear_both, .clear
+{
+	clear: both;
+}
+
+span.clear
+{
+	display: block;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.align-right
+{
+	text-align: right;
+}
+
+.align-left
+{
+	text-align: left;
+}
+
+.gray
+{
+	color: #777;
+}
+
+.small
+{
+	font-size: .87em;
+	line-height: 160%;
+}
+
+.large
+{
+	font-size: 1.11em;
+	line-height: 145%;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.nowrap
+{
+	white-space: nowrap;
+}
+
+.noborder
+{
+	border: none;
+}
+
+ul.box-bullet
+{
+	list-style-image: url(../images/box-bullet.png) !important;
+}
+
+.normal-text
+{
+	font-weight: normal;
+	text-decoration: normal;
+	font-style: normal;
+}
+
+img.border
+{
+	border: 1px solid #ccc;
+}
+
+img.float_right, img.alignright, #content p.float_right
+{
+	float: right;
+	display: block;
+	margin: 0 0 .5em 1.5em;
+}
+
+img.float_left, img.alignleft, #content p.float_left
+{
+	float: left;
+	display: block;
+	margin: 0 1.5em .5em 0;
+}
+
+img.aligncenter, #content div.aligncenter {
+	text-align: center;
+}
+
+table.noborder, table.noborder td, table.noborder th, th.noborder, td.noborder
+{
+	border: none;
+}
+
+.special_note
+{
+	background: #ffd;
+	border: 1px solid #fd9;
+	border-color: #fd9 #dc3 #db2 #fd7;
+	padding: .5em 1em;
+	margin: 1em 0;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div.special_note
+{
+	padding: .75em 1.5em;
+}
+
+div.special_note p
+{
+	margin: .5em 0;
+}
+
+div.small, div.footnotes
+{
+	font-size: 14px;
+	line-height: 150%;
+	border-top: 1px dotted #ccc;
+	padding-top: 24px;
+	margin: 24px 0;
+}
+
+div.small li, div.footnotes li, div.small p, div.footnotes p
+{
+	margin: 14px 0 0 0;
+}
+
+.date-stamp
+{
+	float: none;
+	position: static;
+	margin: 10px 0;
+	text-align: left;
+	width: auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #ccc !important;
+}
+
+.datestamp br
+{
+	display: none;
+}
+
+.pad-only
+{
+	display: block;
+}
+
+#content a.more-link
+{
+	display: block;
+	margin: 24px 0;
+}
+
+/* These rather presentational classes are generated by WordPress, so it's useful to have some styles for them. Edit as you see fit. More info: http://codex.wordpress.org/CSS */
+.aligncenter { display:block; margin:0 auto }
+.alignleft { float:left }
+.alignright { float:right }
+.wp-caption { border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
+/* ph=1 */

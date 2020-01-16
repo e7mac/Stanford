@@ -1,0 +1,37 @@
+/***
+ * Wired Blogs Print Styles
+ */
+
+/*Hide Template Containers*/
+#global_header, #sidebar, #footer, .advertisement, embed, object, #registration_modules, #commenting_tool, #social_bookmarking_module, #outerWrapper{
+    display: none;
+}
+body{
+    font-size: 12pt;
+}
+.post{
+    border-bottom: 10pt solid #F2F2F2;
+}
+.blogInfo{
+    display: block;
+    font-size: 10pt;
+}
+/*Disable Floating*/
+div, p, span, a, img{
+    float: none !important;
+    width: auto !important;
+}
+.entryDescription ul, .entryExtra ul, ul.commentlist{
+    margin: 0;
+    padding: 0;
+}
+.entryDescription li, .entryExtra li{
+    display: inline;
+}
+.entryDescription li, .entryExtra li, .commentlist li{
+    list-style-type: none;
+}
+.comment{
+    border-bottom: 2pt solid #333;
+    margin-bottom: 10pt;
+}

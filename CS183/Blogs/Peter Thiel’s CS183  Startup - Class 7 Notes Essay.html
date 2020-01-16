@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)http://blakemasters.tumblr.com/post/21869934240/peter-thiels-cs183-startup-class-7-notes-essay -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/ga.js"></script><script>!function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { d.addEventListener('keypress', a, false)}, 0); }();</script>
+<!-- Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 -->
+
+
+    
+    <title>Peter Thiel’s CS183: Startup - Class 7 Notes Essay</title>
+    <meta name="description" content="Peter Thiel’s CS183: Startup - Class 7 Notes Essay Here is an essay version of my class notes from Class 7 of CS183: Startup. Errors and omissions are mine. Roelof Botha, partner at Sequoia Capital...">
+    <link rel="shortcut icon" href="http://25.media.tumblr.com/avatar_591383af1d7d_16.png">
+    <link rel="apple-touch-icon" href="http://25.media.tumblr.com/avatar_591383af1d7d_128.png">
+    <link rel="alternate" type="application/rss+xml" href="http://blakemasters.tumblr.com/rss">
+
+    <!-- DEFAULT VARIABLES -->
+    <meta name="color:Post Type Text" content="#555555">
+    <meta name="color:Post Type Photo" content="#555555">
+    <meta name="color:Post Type Photoset" content="#555555">
+    <meta name="color:Post Type Quote" content="#555555">
+    <meta name="color:Post Type Link" content="#555555">
+    <meta name="color:Post Type Chat" content="#555555">
+    <meta name="color:Post Type Video" content="#555555">
+    <meta name="color:Post Type Audio" content="#555555">
+    <meta name="image:Header" content="">
+    <meta name="if:Show About Widget" content="1">
+    <meta name="if:Show Stuff I Like Widget" content="1">
+    <meta name="if:Show Latest Tweets Widget" content="0">
+    <meta name="if:Show People I Follow Widget" content="1">
+    <meta name="text:Number of Tweets" content="3">
+    <meta name="text:Google Analytics ID" content="">
+    <meta name="text:Disqus Shortname" content="">
+
+    <style type="text/css" media="screen">
+    /* Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 */
+
+    /* RESET */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
+    }
+    body { line-height: 1; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+    :focus { outline: 0; }
+    del { text-decoration: line-through; }
+    table { border-collapse: collapse; border-spacing: 0; }
+
+    /* GLOBAL ELEMENTS */
+    body { background: #fff; }
+    body, input, textarea { color: #000; font: 14px/20px "helvetica neue",helvetica,arial,sans-serif; }
+    p, ul, ol, dd, pre { margin-bottom: 20px; }
+    pre, code { font: 12px Monaco,monospace; line-height: 20px; }
+    blockquote { border-left: 5px solid #ddd; color: #555; font-style: italic; margin-bottom: 20px; padding-left: 10px; }
+    table { border: 1px solid #ccc; border-width: 1px 1px 0 1px; font-size: 14px; line-height: 20px; margin: 0 0 22px 0; text-align: left; }
+    caption { text-align: left; }
+    tr { border-bottom: 1px solid #ccc; }
+    th, td { padding: .7em 1.25em; }
+    hr { background-color: black; border: 0; color: black; height: 1px; margin-bottom: 20px; }
+    a:link, a:visited { color: #555; }
+    a:focus, a:hover, a:active { color: #3EA99F; }
+    h1, h2, h3, h4, h5, h6 {  font-weight:normal; clear:both; }
+    img { background: #eee; }
+    a img:focus, a img:hover, a img:active { background: #3EA99F; }
+
+    /* DEFAULT CSS */
+    #header .menu {
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 3px;
+        overflow: hidden;
+        padding: 20px 0 10px;
+        width: 900px;
+    }
+        #header #pages {
+            float: left;
+            width: 580px;
+        }
+            #header #pages ul {
+                float: left;
+                margin-bottom: 0;
+            }
+                #header #pages li {
+                    float: left;
+                    margin-right: 10px;
+                    padding: 4px 10px 3px 0;
+                }
+                    #header #pages a, #header #pages a:visited {
+                        color: #555;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+                    #header #pages a:focus, #header #pages a:hover, #header #pages a:active {
+                        color: #3EA99F;
+                    }
+        #header #search {
+            float: right;
+        }
+            #header #search input {
+                border: 1px solid #ccc;
+                line-height: 20px;
+                padding: 4px;
+            }
+            #header #search input.search-button {
+                background: #eee;
+                color: #555;
+                padding: 3px;
+                width: 60px;
+            }
+    #header #branding {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 3px;
+        padding: 30px 0;
+        width: 900px;
+    }
+        #header h1 a {
+            color: #111;
+            font: 70px Georgia,serif;
+            font-weight: normal;
+            line-height: 100px;
+            text-decoration: none;
+        }
+        #header h1 a:focus, #header h1 a:hover, #header h1 a:active {
+            color: #3EA99F;
+
+#header h3 a {
+            color: #111;
+            font: 16px Georgia,serif;
+            font-weight: normal;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        }
+        #header img {
+            max-width: 900px;
+        }
+    #main {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        clear: both;
+        margin: 0 auto 3px;
+        overflow: hidden;
+        width: 900px;
+    }
+        #container {
+            border-right: 1px solid #ccc;
+            float: left;
+            min-height: 400px;
+            width: 580px;
+        }
+            .post-meta {
+                border-bottom: 1px solid #ccc;
+                color: #555;
+                overflow: hidden;
+                padding: 9px 0;
+            }
+                .post-meta .type {
+                    float: left;
+                }
+                    .post-meta .type a {
+                        border-bottom: 1px solid #ccc;
+                        font-weight: bold;
+                        padding: 0 10px 10px;
+                        text-decoration: none;
+                    }
+                    .post-type-text .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-photo .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-photoset .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-quote .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-link .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-chat .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-video .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-type-audio .post-meta .type a {
+                        border-bottom: 1px solid #555555;
+                        color: #555555;
+                    }
+                    .post-meta .type a:focus, .post-meta .type a:hover, .post-meta .type a:active {
+                        margin-left: 5px;
+                    }
+                .post-meta .date, .post-meta .comments, .post-meta .note-count {
+                    float: left;
+                    padding: 0 10px;
+                }
+            .post-content {
+                padding: 30px 30px 60px;
+            }
+            .post-content div:last-child, .post-content div:last-child p,
+            .post-content div:last-child ul, .post-content div:last-child ol,
+            .post-content div:last-child blockquote {
+                margin-bottom: 0;
+            }
+                .post-content h3 {
+                    font: 20px Georgia,serif;
+                    margin-bottom: 20px;
+                }
+                    .post-content h3 a, .post-content h3 a:visited {
+                        color: #111;
+                        text-decoration: none;
+                    }
+                    .post-content h3 a:focus, .post-content h3 a:hover, .post-content h3:active {
+                        color: #dd3333;
+                    }
+                .post-content img {
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+
+                    padding: 0px;
+                }
+                .post-type-text .post-content ul {
+                    padding-left: 30px;
+                }
+                    .post-type-text .post-content ul ul {
+                        margin-bottom: 0;
+                    }
+                    .post-type-text .post-content ul li {
+                        list-style-type: disc;
+                    }
+                        .post-type-text .post-content ul ul li {
+                            list-style-type: circle;
+                        }
+                .post-type-text .post-content ol {
+                    padding-left: 30px;
+                }
+                    .post-type-text .post-content ol ol {
+                        margin-bottom: 0;
+                    }
+                    .post-type-text .post-content ol li {
+                        list-style-type: decimal;
+                    }
+                        .post-type-text .post-content ol ol li {
+                            list-style-type: decimal;
+                        }
+                .post-type-photoset .post-content .html_photoset {
+                    background: #eee;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+                .post-type-link .post-content .link-wrap {
+                    margin-bottom: 20px;
+                }
+                .post-type-chat .post-content .label {
+                    color: #333;
+                    font-weight: bold;
+                }
+                .post-type-video .post-content .video-wrap {
+                    background: #f0f0f0;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+                .post-type-audio .post-content .caption {
+                    margin-top: 10px;
+                }
+                .tags {
+                    font-size: 13px;
+                }
+                .tags a {
+                    text-decoration: none;
+                }
+                .tags a:after {
+                    content: ",";
+                }
+                .tags a:last-child:after {
+                    content: "";
+                }
+            #disqus_thread {
+                border-top: 1px solid #ccc;
+                padding: 10px 30px 0;
+            }
+                #disqus_thread h3 {
+                    color: #111;
+                    font: 18px Georgia,serif;
+                    margin: 20px 0 10px;
+                }
+                #dsq-content .dsq-subscribe-menu {
+                    font-size: 12px;
+                }
+            #post-notes {
+                border-top: 1px solid #ccc;
+                padding: 30px;
+            }
+                #post-notes ol li {
+                    border-bottom: 1px dotted #ccc;
+                    padding: 10px 0;
+                }
+                    #post-notes ol li img {
+                        background: none;
+                        padding-right: 3px;
+                        vertical-align: middle;
+                    }
+            .pagination {
+                border-top: 1px solid #ccc;
+                overflow: hidden;
+                padding: 20px 0;
+            }
+                .pagination .previous-page {
+                    float: left;
+                }
+                .pagination .next-page {
+                    float: right;
+                    margin-right: 30px;
+                }
+                    .pagination a {
+                        font: 20px Georgia,serif;
+                        text-decoration: none;
+                    }
+      
+#facebook {
+                padding: 9px 20px;
+                margin: 0 0 10px;
+float: center;
+align: center;
+}
+
+  #sidebar {
+            float: left;
+            padding-bottom: 30px;
+            width: 319px;
+        }
+        
+         #sidebar img {
+           padding: 3px;
+
+           color: #3EA99F;
+          
+        }
+
+#sidebar hr {color: #ccc; background-color: #fff; border: 1px dotted #ccc; border-style: none none dotted; }
+    
+  #sidebar h4 {
+                border-top: 1px dotted #ccc;
+               
+ border-bottom: 1px dotted #ccc;
+                color: #999;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                padding: 9px 20px;
+                text-transform: uppercase;
+            }
+                #sidebar h4 a, #sidebar h3 a:visited {
+                    color: #999;
+                    text-decoration: none;
+                }
+                #sidebar h4 a:focus, #sidebar h3 a:hover, #sidebar h3 a:active {
+                    color: #3EA99F;
+                }
+
+
+
+ #sidebar h3 {
+                border-bottom: 1px dotted #ccc;
+                color: #999;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                padding: 9px 20px;
+                text-transform: uppercase;
+            }
+                #sidebar h3 a, #sidebar h3 a:visited {
+                    color: #999;
+                    text-decoration: none;
+                }
+                #sidebar h3 a:focus, #sidebar h3 a:hover, #sidebar h3 a:active {
+                    color: #3EA99F;
+                }
+
+            #sidebar ul {
+                margin-bottom: 0;
+            }
+            .widget {
+                border-bottom: 1px solid #ccc;
+                color: #333;
+                font-size: 13px;
+                padding: 0 20px 20px 20px;
+            }
+                .widget h3 {
+                    font: 20px Georgia,serif;
+                    margin-bottom: 20px;
+                }
+                    .widget h3 a, .widget h3 a:visited {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                    .widget h3 a:focus, .widget h3 a:hover, .widget h3 a:active {
+                        color: #3EA99F;
+                    }
+                .widget img {
+                    padding: 5px;
+                    max-width: 250px;
+                }
+                .widget p:last-child, .widget ul:last-child, .widget ol:last-child, .widget blockquote:last-child {
+                    margin-bottom: 0;
+                }
+            #about {
+                overflow: hidden;
+            }
+                #about img {
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    float: left;
+                    margin: 0 10px 0 0;
+                    padding: 3px;
+                }
+            .like_post {
+                border-bottom: 1px dotted #ccc;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+            .like_post:last-child {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+                .like_post ul {
+                    padding-left: 20px;
+                }
+                    .like_post ul ul {
+                        margin-bottom: 0;
+                    }
+                    .like_post ul li {
+                        list-style-type: disc;
+                    }
+                        .like_post ul ul li {
+                            list-style-type: circle;
+                        }
+                .like_post ol {
+                    padding-left: 20px;
+                }
+                    .like_post ol ol {
+                        margin-bottom: 0;
+                    }
+                    .like_post ol li {
+                        list-style-type: decimal;
+                    }
+                        .like_post ol ol li {
+                            list-style-type: decimal;
+                        }
+                .like_post p:last-child, .like_post ul:last-child, .like_post ol:last-child, .like_post blockquote:last-child {
+                    margin-bottom: 0;
+                }
+            #tweets {
+                margin-bottom: 10px;
+            }
+                #tweets .content {
+                    margin-bottom: 10px;
+                }
+                    #tweets a {
+                        text-decoration: none;
+                    }
+            #following_container {
+                overflow: hidden;
+                padding-bottom: 20px;
+            }
+                #following_container li {
+                    display: inline;
+                    padding: 0;
+                    margin: 0;
+                }
+    #footer {
+        border-top: 1px solid #ccc;
+        clear: both;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 900px;
+    }
+        #colophon {
+            color: #555;
+            float: right;
+            font-size: 12px;
+            padding: 10px 0 20px;
+        }
+            #footer a {
+                border-bottom: 1px dotted #555;
+                text-decoration: none;
+            }
+    
+    
+    blockquote p { margin-bottom: 0px; }
+    .sup{font-size:xx-small; vertical-align:top;}
+
+
+    </style>
+    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30558224-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+<!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+<!-- Read more: http://ogp.me/ -->
+<meta property="fb:app_id" content="48119224995">
+<meta property="og:title" content="Peter Thiel’s CS183: Startup - Class 7 Notes Essay">
+<meta property="og:url" content="http://blakemasters.tumblr.com/post/21869934240/peter-thiels-cs183-startup-class-7-notes-essay">
+<meta property="og:description" content="Here is an essay version of my class notes from Class 7 of CS183: Startup. Errors and omissions are mine.
+Roelof Botha, partner at Sequoia Capital and former CFO of PayPal, and Paul Graham, partner...">
+<meta property="og:type" content="tumblr-feed:entry">
+<!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS -->
+<meta charset="utf-8">
+<meta name="twitter:url" value="http://blakemasters.tumblr.com/post/21869934240/peter-thiels-cs183-startup-class-7-notes-essay">
+<meta name="twitter:site" value="tumblr">
+<meta name="twitter:creator" value="bgmasters">
+
+
+<meta http-equiv="x-dns-prefetch-control" content="off"></head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="access">
+                <div class="menu">
+                    <div id="pages">
+                        <ul>
+                            <li><a href="http://blakemasters.tumblr.com/">Home</a></li>
+                            <li><a href="http://blakemasters.tumblr.com/about">About</a></li><li><a href="http://blakemasters.tumblr.com/numbers">#s</a></li>
+                            
+                            
+<!-- ><li><a href="http://thefivetribe.com/?page_id=2405">Links</a></li>  -->                         
+ <li class="archive"><a href="http://blakemasters.tumblr.com/archive">Archive</a></li>
+                           <!-- <li class="mobile"><a href="/mobile">Mobile</a></li> -->
+                          <!--  <li class="rss"><a href="http://blakemasters.tumblr.com/rss">RSS</a></li> -->
+                        </ul>
+                    </div><!-- #pages -->
+                    <div id="search">
+                        <form action="http://blakemasters.tumblr.com/search" method="get">
+                            <input type="text" name="q" value="">
+                            <input type="submit" value="Search" class="search-button">
+                        </form>
+                    </div><!-- #search -->
+                </div><!-- .menu -->
+            </div><!-- #access -->
+            <div id="branding">
+                <h1>
+                    
+                    <a href="http://blakemasters.tumblr.com/">Blake Masters</a>
+                </h1>
+<h2>"Your mind is software. Program it. Your body is a shell. Change it. Death is a disease. Cure it. Extinction is approaching. Fight it."</h2>
+            </div><!-- #branding -->
+        </div><!-- #header -->
+        <div id="main">
+            <div id="container">
+                <div id="content">
+                
+                    <div id="post-21869934240" class="post post-type-text">
+                        <div class="post-meta">
+                            <div class="type">
+                                <!-- <a href="http://blakemasters.tumblr.com/post/21869934240/peter-thiels-cs183-startup-class-7-notes-essay">Text</a> -->
+                            </div><!-- .type -->
+                        
+                            <div class="date">
+                                April 26, 2012
+                            </div><!-- .date -->
+                        
+                        
+                        
+                            <div class="note-count">
+                                <a href="http://blakemasters.tumblr.com/post/21869934240/peter-thiels-cs183-startup-class-7-notes-essay#notes">316 notes</a>
+                            </div><!-- .note-count -->
+                        
+                        </div><!-- .post-meta -->
+                        <div class="post-content">
+                        
+                            <h3><a href="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/Peter Thiel’s CS183  Startup - Class 7 Notes Essay.html">Peter Thiel’s CS183: Startup - Class 7 Notes Essay</a></h3>
+                            <p class="MsoNormal"><span>Here is an essay version of my class notes from Class 7 of CS183: Startup. Errors and omissions are mine.</span></p>
+<p class="MsoNormal"><span>Roelof Botha</span><span>, partner at Sequoia Capital and former CFO of PayPal, and </span><span>Paul Graham, partner and co-founder of Y Combinator,&nbsp;</span><span>joined this class as guest speakers. Credit for good stuff goes to them and Peter. I have tried to be accurate. But note that this is not a transcript of the conversation.</span></p>
+<p align="center" class="MsoNormal"><u><span>Class 7 Notes Essay—Follow the Money</span></u></p>
+<p class="MsoNormal"><u><span>I.&nbsp; Venture Capital and You</span></u></p>
+<p class="MsoNormal"><span>Many people who start businesses never deal with venture capitalists. Founders who do interact with VCs don’t necessarily do that early on. First you get your founders together and get working. Then maybe you get friends, family, or angels to invest. If you do end up needing to raise a larger amount of capital, you need to know how VC works. Understanding how VCs think about money—or, in some cases, how they don’t think about it and thus lose it—is important.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>VC started in late 1940s. Before that, wealthy individuals and families were investing in new ventures quite frequently. But the idea of pooling funds that professionals would invest in early stage companies was a product of the ‘40s. The Sand Hill road, Silicon Valley version came in the late 1960s, with Sequoia, Kleiner Perkins, and Mayfield leading the field.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>Venture basically works like this:&nbsp; you pool a bunch of money that you get from people called limited partners. Then you take money from that pool and invest it in portfolio companies that you think are promising. Hopefully those companies become more valuable over time and everybody makes money. So VCs have the dual role of encouraging LPs to give them money and then finding (hopefully) successful companies to back.</span></p>
+<p class="MsoNormal"><span>Most of the profits go back to LPs as returns on their investment. VCs, of course, take a cut. The typical model is called 2-and-20, which means that the VC firm charges an annual management fee of 2% of the fund and then gets 20% of the gains beyond the original investment. The 2% management fee is theoretically just enough to allow the VC firm to continue to operate. In practice, it can end up being a lot more than that; a $200m fund would earn $4m in management fees under a 2-and-20 structure. But it’s certainly true that the real payout that VCs look for come with the 20% cut of the gains, which is called the carry.</span></p>
+<p class="MsoNormal"><span>VC funds last for several years, because it usually takes years for the companies you invest in to grow in value. Many of the investments in a given fund either don’t make money or go to zero. But the idea is that the companies that do well get you all your money back and then some; you end up with more money in the fund at the end than LPs put in to begin with.</span></p>
+<p class="MsoNormal"><span>There are many dimensions to being a good VC. You have to be skilled at coming up with reasonable valuations, identifying great entrepreneurs, etc. But there’s one dimension that is particularly important, yet surprisingly poorly understood. It is far and away the most important structural element of venture capital: exponential power. This may seem odd because it’s just basic math. But just as 3<sup>rd</sup> grade arithmetic—knowing not just how many shares you get, but dividing that by the shares outstanding—was crucial to understand equity, 7<sup>th</sup> grade math—understanding exponents—is necessary to understand VC.</span></p>
+<p class="MsoNormal"><span><!-- more -->The standard Einstein line on this is that the most powerful force in universe is compound interest. We see the power of compounding when companies grow virally. Successful businesses tend to have an exponential arc to them. Maybe they grow at 50% a year and it compounds for a number of years. It could be more or less dramatic than that. But that model—some substantial period of exponential growth—is the core of any successful tech company. And during that exponential period, valuations tend to go up exponentially.</span></p>
+<p class="MsoNormal"><span>So consider a prototypical successful venture fund. A number of investments go to zero over a period of time. Those tend to happen earlier rather than later. The investments that succeed do so on some sort of exponential curve. Sum it over the life of a portfolio and you get a J curve. Early investments fail. You have to pay management fees. But then the exponential growth takes place, at least in theory. Since you start out underwater, the big question is when you make it above the water line. A lot of funds never get there.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>To answer that big question you have to ask another: what does the distribution of returns in venture fund look like? The naïve response is just to rank companies from best to worst according to their return in multiple of dollars invested. People tend to group investments into three buckets. The bad companies go to zero. The mediocre ones do maybe 1x, so you don’t lose much or gain much. And then the great companies do maybe 3-10x.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>But that model misses the key insight that actual returns are <em>incredibly skewed</em>. The more a VC understands this skew pattern, the better the VC. Bad VCs tend to think the dashed line is flat, i.e. that all companies are created equal, and some just fail, spin wheels, or grow. In reality you get a power law distribution.</span></p>
+<p class="MsoNormal"><span><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/tumblr_m34ireYrLP1qbb0b4.png"></span></p>
+<p class="MsoNormal"><span>An example will help clarify. If you look at Founders Fund’s 2005 fund, the best investment ended up being worth about as much as all the rest combined. And the investment in the second best company was about as valuable as number three through the rest. This same dynamic generally held true throughout the fund. This is the power law distribution in practice. <em>To a first approximation, a VC portfolio will only make money if your best company investment ends up being worth more than your whole fund</em>. In practice, it’s quite hard to be profitable as a VC if you don’t get to those numbers.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>PayPal sold to eBay for $1.5bn. PayPal’s early stage investors had a large enough stake such that their investment was ultimately worth about the size of their fund. The rest of the fund’s portfolio didn’t do so well, so they more or less broke even riding on PayPal. But PayPal’s series B investors, despite doing quite well with the PayPal investment, didn’t break even on their fund. Like many other VC funds in the early 2000’s, theirs lost money.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>That investment returns take a power law distribution leads to a few important conclusions. First, you need to remember that, management fees aside, you only get paid if you return all the money invested plus more. You have to at least hit the 100% of fund size mark. So given power law distribution, you have to ask the question: “Is there a reasonable scenario where our stake in this company will be worth more than the whole fund?”</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>Second is that, given a big power law distribution, you want to be fairly concentrated. If you invest in 100 companies to try and cover your bases through volume, there’s probably sloppy thinking somewhere. There just aren’t that many businesses that you can have the requisite high degree of conviction about. A better model is to invest in maybe 7 or 8 promising companies from which you think you can get a 10x return. It’s true that in theory, the math works out the same if try investing in 100 different companies that you think will bring 100x returns. But in practice that starts looking less like investing and more like buying lottery tickets.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>Despite being rooted in middle school math, exponential thinking is hard. We live in a world where we normally don’t experience anything exponentially. Our general life experience is pretty linear. We vastly underestimate exponential things. If you backtest Founders Fund’s portfolios, one heuristic that’s worked shockingly well is that you should always exercise your pro rata participation rights whenever a smart VC was leading a portfolio company’s up round. Conversely, the test showed that you should never increase your investment on a flat or down round.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>Why might there be such a pricing inefficiency? One intuition is that people do not believe in a power law distribution. They intuitively don’t believe that returns could be that uneven. So when you have an up round with a big increase in valuation, many or even most VCs tend to believe that the step up is too big and they will thus underprice it. The practical analogue would be to picture yourself working in a startup. You have an office. You haven’t hit the exponential growth phase yet. Then the exponential growth comes. But you might discount that change and underestimate the massive shift that has occurred simply because you’re still in the same office, and many things look the same.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>Flat rounds, by contrast, should be avoided because they mean that the VCs involved believe things can’t have gotten that much worse. Flat rounds are driven by people who think they might get, say, a 2x return from an investment. But in reality, often something has gone very badly wrong—hence the flat round’s not being an up round. One shouldn’t be mechanical about this heuristic, or treat it as some immutable investment strategy. But it actually checks out pretty well, so at the very least it compels you to think about power law distribution.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>Understanding exponents and power law distributions isn’t just about understanding VC. There are important personal applications too. Many things, such as key life decisions or starting businesses, also result in similar distributions. We tend to think about these things too moderately. There is a perception that some things are sort of better than other things, sometimes. But the reality is probably more extreme than that.</span></p>
+<p class="MsoNormal"><span>Not always, of course. Sometimes the straighter, perceived curve actually reflects reality quite closely. If you were to think about going to work for the Postal Service, for example, the perceived curve is probably right. What you see is what you get. And there are plenty of things like that. But it’s also true that we are, for some reason or other, basically trained to think like that. So we tend to miscalculate in places where the perceived curve does not, in fact, accurately reflect reality. The tech startup context is one of those places. The skew of distributions for tech startups is really vast.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><span>This means that when you focus on the percentage of equity you get in a company, you need to need to add a modifier: given something like a power law distribution, where your company is on that curve can matter just as much or more than your individual equity stake.</span></p>
+<p class="MsoNormal"><span>All else equal, having 1% of a company is better than having 0.5%. But the 100<sup>th</sup> employee at Google did much better than the average venture-backed CEO did in the last decade.&nbsp; The distribution is worth thinking hard about. You could spin this into argument against joining startups. But it needn’t go that far. The power law distribution simply means you have to think hard about a given company is going to fall on the curve.</span></p>
+<p class="MsoNormal"><span>The pushback to this is that the standard perception is reasonable—or at least is not unreasonable—because the actual distribution curve turns out to be random. The thesis is that you are just a lottery ticket. That is wrong. We will talk about why that is wrong later. For now, it’s enough to point out that the actual curve is a power law distribution. You don’t have to understand every detail and implication of what that means. But it’s important to get some handle on it. Even a tiny bit of understanding of this dimension is incredibly valuable.</span></p>
+<p class="MsoNormal"><span></span><span>&nbsp;</span></p>
+<p class="MsoNormal"><u><span>II.&nbsp; The View from Sand Hill Road</span></u></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> One thing we should talk about is what secrets VCs use to make money. Well, actually most don’t make money. So let’s talk about that.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> The unprofitability of venture capital is pretty well documented. Average returns have been pretty low for a number of years now. One theory is that when venture was doing very well in the 1990s, it became a big deal to more or less blindly follow advice to put more money in venture. So the industry may be overinvested, and it’s hard for most firms to make money.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Paul, what can entrepreneurs do to avoid getting taken advantage of by VCs?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> There’s nothing inherently predatory about VC. Y-Combinator is a minor league farm club. We send people on <em>up</em> to VCs. VCs aren’t evil or corrupt or anything. But in terms of getting a good deal and not a bad one, it’s the same with any deal; the best way to get a good price is to have competition. VCs have to be competing to invest in you.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> We’ve discussed in this class how competition can be a scary thing. Maybe it’s less bad when you make VCs compete against each other. In practice, you never really land just one investor. Chances are you have at least two people who are interested or you have zero. The cynical explanation of this is that most VCs have little or no confidence in their ability to make decisions. They just wait to ape others’ decisions.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> But investors also have an interest to wait, if they can. Waiting means that you’re able to get more data about a given company. So waiting is only bad for you if founders raise the price while you wait. VCs are looking for startups that are the next Google, or not. They are cool with 2x returns. But more than that they don’t want to lose a Google.</span></p>
+<p class="MsoNormal"><span><br></span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> How do you avoid being a VC that loses money?</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> Since the distribution of startup investment outcomes follows a power law, you cannot simply expect to make money by simply cutting checks. That is, you cannot simply offer a commodity. You have to be able to help portfolio companies in a differentiated way, such as leveraging your network on their behalf or advising them well.&nbsp; Sequoia has been around for more than 40 years. You cannot get the returns that we have if you are just providing capital.</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> The top VC funds have to be able to make up their own minds. They cannot follow everybody else because it’s everyone that follows them! Look at Sequoia. Sequoia is very disciplined. This is not a bunch of B-school frat boys who are screening founders for guys who look like Larry and Sergey. Sequoia prepares careful research documents on prospective investments…</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> But <em>succinct</em> research. If you make or believe you need a 100-page document, you miss the forest for trees. You must be able to condense it into 3-5 pages. If there can be no succinct description, there’s probably nothing there.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Even within an individual business, there is probably a sort of power law as to what’s going to drive it. It’s troubling if a startup insists that it’s going to make money in many different ways. The power law distribution on revenues says that one source of revenue will dominate everything else. Maybe you don’t know what that particular source is yet. But it’s certainly worth thinking about. Making money with A is key. Making money with A through E is terrifying, from an investor’s perspective.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> LinkedIn is exception that proves the rule there. It had 3 revenue streams that are pretty equal. No one else really has that. At least it’s very unusual.</span></p>
+<p class="MsoNormal"><span><br></span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Do Y-Combinator companies follow a power law distribution?</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Yes. They’re very power law.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Incubators can be tricky. Max Levchin started one. It had a really long cycle—maybe even a year-long cycle. That made for some crazy intercompany dynamics. All these people start in similar boats but, because of the power law dynamic, end up in very different ships. The perceptions are quite jarring. What happens with different people as they reach these different stages can be very complicated.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> People don’t always appreciate or understand rapid increases in value when businesses take off. They underestimate the massive asymmetry of returns. They hear that a company has joined the billion-dollar club and are perplexed because only 6 months ago, it was worth $200m. The alternative to understanding the exponential growth is believing that Silicon Valley VCs have gone crazy.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> PayPal’s most successful up round resulted in a 5x increase in valuation. But it was pitched in a forward-looking context. It wasn’t about taking <em>x </em>and multiplying by 5. The narrative was that the valuation made sense because of the promising future ahead. The real value is always in the future. Absent a very specific future you can point to, people anchor to a very specific past. And that is where you get the pushback of: “How can it possibly be worth 5x what it was 3 months ago?”</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> You could even say that the whole world is increasingly taking power law shape. People are broken into so many different camps now. If everyone were forced to work for 1 of 10 GM-like companies—maybe like Japan—it would straighten the power law curve and make it taught. Distributions would be clustered together because everyone is bound together. But when you have lots of slack and people break apart, extremes form. And you can bet on this trend continuing in the future.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> One thing that people struggle with is the notion that these massive companies can be built very quickly, often seemingly overnight. In the early PayPal days, there were perhaps 300 million internet users. Now there are 2 billion. We have more mobile phones. We have cloud computing. There are so many ways to grow. Consequently there is a qualitative difference in one’s ability to have such a huge impact as an entrepreneur.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience</span></strong><span>: Do up, flat, and down rounds reflect power law distributions, or specifically where a company will fall on the distribution?</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> First, it’s important to note that when you join or start a startup, you’re investing in it. All your eggs are in that basket. But because of the power law distribution, your investors aren’t in a radically different place than you are. In a sense, VCs’ eggs are in your basket too. They have a few more baskets than you do, but again, because of the power law, not many. VC isn’t private equity where you shoot for consistent 2x or 3x returns.</span></p>
+<p class="MsoNormal"><span>One way to rephrase the question would be: is there a market inefficiency here? My backtesting claim is that one should do a full pro rata investment whenever one of your companies does an up rounds led by a smart VC.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> I don’t have the data you’re looking at, but my intuition is that’s true. But only for the best VCs. Where the VC leading the round isn’t as smart or as trusted, the reverse can happen. Companies can end up with too much cash. They might have a 15-month runway. They get complacent and there’s not enough critical thinking. Things go bump at 9 months and it turns into a crisis. And then no one wants to invest more.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Even factoring in dilution, you tend to do quite well if every round is an up round. But even a single down round tends to be disastrous, mainly because it destroys relationships among all the relevant players. If you’re going to go with a not-so-intelligent investor who gives you a really huge valuation, you should take it only if it’s the last money you’re going to take.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; Does the shape of the distribution curve change or depend on the time or stage of the investment?</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> The curve is fairly fractal-esque all the way up. Founders Fund tries to invest in 7 to 10 companies per fund. The goal is to get to 10x return. How hard is it to get to 10x? It’s about as hard to get from $10m to $100m as it is from $100m to $1bn or $1bn to 10bn. Taking $100bn to a trillion is harder because the world isn’t that big. Apple’s market cap is $500bn. Microsoft’s is $250bn. There’s a pretty incredible power law all the way up.</span></p>
+<p class="MsoNormal"><span>The same is probably true on angel level. The angel investment landscape is sort of saturated for angel piece, especially now with the JOBS Act. But some would say that angel investors are less aware of power law dynamics than other people are, and so they tend to overestimate a given company as a result.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> There is a 50% mortality rate for venture-funded businesses. Think about that curve. Half of it goes to zero. There are some growth investments—later stage investments—which makes things less drastic. Some people try for 3-5x returns with a very low mortality rate. But even that VC model is still subject to power law. The curve is just not as steep.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; What if your business is just worth $50m and you can’t grow it any more?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> That assumption is nonsense. Grow it, if you want to. There’s no such thing as an immutable company size. Companies are not intrinsically or inherently limited like that. Look at Microsoft or Apple. They started out making some small thing. Then they scaled and branched out as they succeeded.</span></p>
+<p class="MsoNormal"><span>To be clear, it’s totally cool to have low aspirations. If you just want to make a $50m company, that’s great. Just don’t take venture capital, or at least don’t tell VCs about your plans!</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> It would raise a big red flag if you were to put a slide at the end of your deck that says you’re looking to sell the company for $20m in 18 months.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; What happens when you take out a bunch of rounds and things don’t go well and your current investors don’t want to put in more?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> In that scenario you are essentially wasting one of your investors’ board seats. Their opportunity cost of having you going sideways is very high. People can only stand being on a dozen or so boards. Any more than that and they go crazy. So they’ll try to get you sold.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Such unequal outcomes produces another cost of ending up on multiple boards. There are big reputational costs to just switching boards. So there is a big disconnect between public branding—narratives about how VCs pay loving attention to all their companies and treat them all equally—and the reality of the power law.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> And it can be even worse than that; the problem companies can actually take up <em>more</em> of your time than the successful ones.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> That is a perverse misallocation. There are differing perspectives on what to do in these situations. At one extreme, you just write checks and check out. At the other, you help whoever needs it as much as they need it. The unspoken truth is that the best way to make money might be to promise everyone help but then actually help the ones who are going to provide the best returns.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span> Bill Gates took no funding and he ended up with a large piece of Microsoft. If a startup can bootstrap instead of take venture capital, what should it do?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> VC lets you borrow against future growth. You could wait until your revenues are high enough to fund <em>x</em>. But, if you’re good enough, someone will give you money to do <em>x </em>now. If there’s competition, you may need to do <em>x</em> quickly. So if you don’t screw things up, VC can often help you a great deal.</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> We would not be in the business if it were just writing checks. The entrepreneurs make it happen; they are the ones building the companies. But the board and VCs can roll up their sleeves, offer counsel, and assist as needed. They can be there for the entrepreneurs. We shouldn’t overstate the importance of that, but neither should we dismiss it.</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Just being backed by a big VC firm will help you open lots of doors. It will help considerably with your hiring.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> If you’re doing something where you don’t need to move as quickly as possible, you might want to rethink taking venture funding. But if there’s any sort of winner-take-all dynamic—if there is a power law distribution at play, then you want VC. Giving up 25% of your business is worth it if it enables you to take over your industry.</span></p>
+<p class="MsoNormal"><span></span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span> Do Sequoia or other top-tier VC firms offer tougher term sheets to account for the extra value they provide? Is all the stuff about non-monetary value-add just overplayed?</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> It’s not overplayed. It really is personal. Who are you getting in business with? Can you trust them? I wouldn’t send my brother to most VC firms. But some are great. You really have to get to know the people you might be working with. You’re essentially entering a long-term relationship.</span></p>
+<p class="MsoNormal"><span>Just look at you. There’s information contained in your Stanford degree. The signaling helps you quite a bit. The same is true if you’re backed by certain VCs. There’s a lot of value in the name, independent of things like making important introductions. And strategic direction is hard to pinpoint, but it can accumulate in many interesting and beneficial ways. Even if we don’t have the answers, we have probably seen similar problems before and we can help entrepreneurs think through the questions.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; Right now, entrepreneurs are trying to flip companies for $40m in 2 years or less. The incentive is to flip easy stuff instead of create hard technical stuff. What’s the cause and what’s the effect? Entrepreneur greed? VCs who don’t value technical innovation?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> I disagree with the premise that there’s a lack of innovation. $50m companies innovate. Mine did. We basically invented the web app. We were doing complex stuff in LISP when everyone else was doing CGI scripts. And, quite frankly, $50m is no small thing. We can’t <em>all </em>get bought for $1.5bn, after all…&nbsp; [looks at Peter].</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Let me rephrase the question: are VCs looking for quicker profits? Are we getting thinner companies that we should be?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> I don’t think investors have too much effect on what companies actually do. They don’t push back and say no, do this cool thing <em>x </em>instead of that dumb thing <em>y</em>. Of course, tons of people just try and imitate what they see and think is easy. Y-Combinator is probably going to be filtering out thousands of Instagram-like applications next cycle.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> If someone came to me and I got the sense that he was trying to just flip a company quickly, I’d run. But most founders aren’t B-school finance mechanics who calculate exactly what space would be most profitable to enter. Most good founders are people solving problems that frustrate them. Google grew out of a research project stemming from frustration with AltaVista.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> One strange corollary to the power curve dynamic is that the people who build the really great companies are usually hesitant to sell them. Almost necessarily that’s the case. And it’s not for lack of offers. Paradoxically, people who are heavily motivated by money are never the ones who make the most money in the power law world.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span> If the most money comes from people who aren’t trying to make the most money, how do you handle that paradox as a VC?</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> Consider a simple 2 x 2 matrix: on one axis you have easy to get along with founder, and not.&nbsp; On the other, you have exceptional founder, and not. It’s easy to figure out which quadrant VCs make money backing.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; If the power law distribution is so extreme, how can Y-Combinator succeed?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> There is a very steep drop-off. Y Combinator essentially gets the first pick of a very good national and even international applicant pool.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> I won’t come out as pro- or anti- Y Combinator. They do some things well and maybe some other things less well. But I will something anti-<em>not</em>-Y Combinator. If you go to incubator that’s not Y Combinator, that is perceived as negative credential. It’s like getting a degree at Berkeley. Okay. It’s not Stanford. You can a complicated story about how you had to do it because your parents had a big mortgage or something. But it’s a hard negative signal to get past. </span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; Do you back founders or ideas?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Founders. Ideas are just indicative of how the founders can think. We look for relentlessly resourceful people. That combination is key. Relentlessness alone is useful. You can relentlessly just bang your head against the wall. It’s better to be relentless in your search for a door, and then resourcefully walk through it. </span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> It is so rare to find people who can clearly and concisely identify a problem and formulate coherent approach to solve it.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Which is why it’s very important to drill down on the founding team.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> You can discover a lot about founders by asking them about their choices. What are the key decisions you faced in your life and what did you decide? What were the alternatives? Why did you go to this school? Why did you move to this city?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Another corollary to the power law is that it’s OK to be lame in a lot of ways, so long as you’re not lame in some really important ways. The Apple guys were crazy and really bad dressers. But they got importance of microprocessors. Larry and Sergey got that search was important.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Isaiah Berlin wrote an essay called “The Hedgehog and the Fox.” It revolved around a line from an ancient Greek poet: foxes know many little things, but hedgehogs know one big thing. People tend to think that foxes are best because they are nimble and have broad knowledge. But in business, it’s better to be a hedgehog if you have to choose between the two. But you should still try and know lots of little things too.</span></p>
+<p class="MsoNormal"><span><br></span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; You mentioned “smart VCs” in your backtesting example. Who are the smart VCs?</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> The usual suspects. Next question.</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; What keeps you guys up at night? What do you fear most?</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> I fear that something will come along that causes me personally to have to do a lot more work. What’s your greatest fear, Roelof? Andreessen Horowitz?</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> &nbsp;Suffice it to say that you’re only as good as your next investment.</span></p>
+<p class="MsoNormal"><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; Can entrepreneurs raise venture capital if they’ve raised and failed before?</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Yes.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> Max fell twice before PayPal, right? Here, it’s a myth that failure is stigmatized. In some places, such as France, that is true. Failure is looked down upon. But much less so in the U.S., and in Silicon Valley in particular.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> One still shouldn’t take failure lightly, though. There is still a reasonably high cost of failure.</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> It largely depends on <em>why </em>one failed, though. Dalton Caldwell got killed by the music business. Everyone knows that wasn’t his fault. It’s like getting shot by the mafia. You can’t be blamed for it.</span></p>
+<p class="MsoNormal"><strong><span>Roelof Botha:</span></strong><span> Sometimes having experience with failed startups can make an entrepreneur even better. If they learn from it, maybe they get inspiration or insight for their next company. There are plenty of examples. But you should not fail for sake of failure, of course.</span></p>
+<p class="MsoNormal"><span></span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Question from audience:</span></strong><span>&nbsp; Do you fund teams of 1?</span><span>&nbsp;</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Yes. Drew Houston was a team of one. We suggested that he find a co-founder. He did. It worked well.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> A core founding team of two people with equal shares tends to work very well. Or sometimes it makes sense to have one brilliant founder that’s far and away above anyone else.</span></p>
+<p class="MsoNormal"><strong><span>Paul Graham:</span></strong><span> Four is too many.</span></p>
+<p class="MsoNormal"><strong><span>Peter Thiel:</span></strong><span> Think about co-founders from a power law perspective. Having one means giving up half the company. Having two means giving up 2/3. But if you pick the right people, it’s likely that the outcome will be more than 2x or 3x what it would’ve been without them. So co-founders work pretty well in power law world.</span></p>
+<p><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license"><img align="right" alt="Creative Commons License" src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/88x31.png"></a></p>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tags">
+                                <p>Tags: <a href="http://blakemasters.tumblr.com/tagged/cs183" class="single-tag">cs183</a> </p>
+                            </div>
+                        
+                        </div><!-- post-content -->
+                    </div><!-- .post -->
+                    
+                    <div id="post-notes">
+<ol class="notes">
+
+    <!-- START NOTES -->
+                            
+                                                        
+        
+        <li class="note like tumblelog_sell-toronto-real-estate without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sell-toronto-real-estate.tumblr.com/" title="Sell Toronto Real Estate "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_8486e580092e_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sell-toronto-real-estate.tumblr.com/" title="Sell Toronto Real Estate">sell-toronto-real-estate</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_explainer-video without_commentary">
+
+                                                                                <a rel="nofollow" href="http://explainer-video.tumblr.com/" title="whiteboard animation "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_e15bcc9f20bf_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://explainer-video.tumblr.com/" title="whiteboard animation">explainer-video</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_develop-apps-for-android without_commentary">
+
+                                                                                <a rel="nofollow" href="http://develop-apps-for-android.tumblr.com/" title="develop apps for android "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_5b11e8570f1a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://develop-apps-for-android.tumblr.com/" title="develop apps for android">develop-apps-for-android</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_beta-carotene without_commentary">
+
+                                                                                <a rel="nofollow" href="http://beta-carotene.tumblr.com/" title="beta carotene "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_5b5882e7bbcd_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://beta-carotene.tumblr.com/" title="beta carotene">beta-carotene</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_wordpress-website without_commentary">
+
+                                                                                <a rel="nofollow" href="http://wordpress-website.tumblr.com/" title="wordpress website "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_ee1ca11ebb55_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://wordpress-website.tumblr.com/" title="wordpress website">wordpress-website</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_melbourne-wedding-photographer without_commentary">
+
+                                                                                <a rel="nofollow" href="http://melbourne-wedding-photographer.tumblr.com/" title="Melbourne wedding photographer "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_12edcb3ae79b_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://melbourne-wedding-photographer.tumblr.com/" title="Melbourne wedding photographer">melbourne-wedding-photographer</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_photography--photographys without_commentary">
+
+                                                                                <a rel="nofollow" href="http://photography--photographys.tumblr.com/" title="Untitled "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/default_avatar_16.gif" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://photography--photographys.tumblr.com/" title="Untitled">photography--photographys</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_american-walnut-furniture without_commentary">
+
+                                                                                <a rel="nofollow" href="http://american-walnut-furniture.tumblr.com/" title="american walnut furniture "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_7ab88803aaa0_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://american-walnut-furniture.tumblr.com/" title="american walnut furniture">american-walnut-furniture</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_anything-special4your without_commentary">
+
+                                                                                <a rel="nofollow" href="http://anything-special4your.tumblr.com/" title="Buy Sell Cottage Homes "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_9462ee1c8cf5_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://anything-special4your.tumblr.com/" title="Buy Sell Cottage Homes">anything-special4your</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_flatfee-mls without_commentary">
+
+                                                                                <a rel="nofollow" href="http://flatfee-mls.promoproducts2012.info/" title="Flat Fee MLS "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_ca2642f3fae8_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://flatfee-mls.promoproducts2012.info/" title="Flat Fee MLS">flatfee-mls</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_edmonton-seo--services without_commentary">
+
+                                                                                <a rel="nofollow" href="http://edmontonseo.org/" title="Edmonton SEO services "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_adce3be14133_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://edmontonseo.org/" title="Edmonton SEO services">edmonton-seo--services</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_sexy---lingerie without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sexy-lingerie.promoproducts2012.info/" title="lingerie "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_bf764940493c_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sexy-lingerie.promoproducts2012.info/" title="lingerie">sexy---lingerie</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_myhotelbucketlist without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.myhotelbucketlist.com/" title="Bucket list "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_4de86f701b99_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.myhotelbucketlist.com/" title="Bucket list">myhotelbucketlist</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_excel-programming without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.microsoftexcelsolutions.com/" title="excel programming "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_3b1afa36825c_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.microsoftexcelsolutions.com/" title="excel programming">excel-programming</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_work---from---home without_commentary">
+
+                                                                                <a rel="nofollow" href="http://work-from-home.promoproducts2012.info/" title="work from home "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_b50baada7602_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://work-from-home.promoproducts2012.info/" title="work from home">work---from---home</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_badcredit-car-loans without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.approvalgenie.ca/" title="BAD CREDIT CAR LOANS "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_13c094900ae6_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.approvalgenie.ca/" title="BAD CREDIT CAR LOANS">badcredit-car-loans</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_my-lead--system-pro without_commentary">
+
+                                                                                <a rel="nofollow" href="http://my-lead-system-pro.promoproducts2012.info/" title="my lead system pro "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_17bbba325890_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://my-lead-system-pro.promoproducts2012.info/" title="my lead system pro">my-lead--system-pro</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_faro-weather without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.farosweather.com/" title="faro weather "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_ecca88889e6a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.farosweather.com/" title="faro weather">faro-weather</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_facebook-like without_commentary">
+
+                                                                                <a rel="nofollow" href="http://facebook-like.promoproducts2012.info/" title="Facebook like "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_fda391bae3e5_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://facebook-like.promoproducts2012.info/" title="Facebook like">facebook-like</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_royalty7 without_commentary">
+
+                                                                                <a rel="nofollow" href="http://royalty7.promoproducts2012.info/" title="Royalty7 "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_7c6a8b469809_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://royalty7.promoproducts2012.info/" title="Royalty7">royalty7</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_resumebuilderonline without_commentary">
+
+                                                                                <a rel="nofollow" href="http://resumebuilderonline.tumblr.com/" title="Resume Builder Online "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_57878815f776_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://resumebuilderonline.tumblr.com/" title="Resume Builder Online">resumebuilderonline</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_buy-facebookfans-cheap without_commentary">
+
+                                                                                <a rel="nofollow" href="http://buy-facebookfans-cheap.promoproducts2012.info/" title="buy facebook fans cheap "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_260641eb5a33_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://buy-facebookfans-cheap.promoproducts2012.info/" title="buy facebook fans cheap">buy-facebookfans-cheap</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_bleongcw without_commentary">
+
+                                                                                <a rel="nofollow" href="http://bleongcw.tumblr.com/" title="Bernard Leong "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_4590d2815425_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://bleongcw.tumblr.com/" title="Bernard Leong">bleongcw</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_fax--to--email without_commentary">
+
+                                                                                <a rel="nofollow" href="http://faxblaster.net/" title="fax to email "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_1191875d1244_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://faxblaster.net/" title="fax to email">fax--to--email</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_i-am-in-debt without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.iamindebt.net/" title="I am in debt "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_2c0600e2caf5_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.iamindebt.net/" title="I am in debt">i-am-in-debt</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_fort-lauderdale-real-estate without_commentary">
+
+                                                                                <a rel="nofollow" href="http://fortlauderdale-realestate.net/" title="Fort Lauderdale Real Estate "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_963eb3fdac33_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://fortlauderdale-realestate.net/" title="Fort Lauderdale Real Estate">fort-lauderdale-real-estate</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_forgive-my-loans without_commentary">
+
+                                                                                <a rel="nofollow" href="http://forgive-my-loans.promoproducts2012.info/" title="forgive my loans "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_fc84ad609214_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://forgive-my-loans.promoproducts2012.info/" title="forgive my loans">forgive-my-loans</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_dispenser-de-agua without_commentary">
+
+                                                                                <a rel="nofollow" href="http://dispenser-deagua.promoproducts2012.info/" title="Dispenser de Agua "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_dbb38f8e5d67_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://dispenser-deagua.promoproducts2012.info/" title="Dispenser de Agua">dispenser-de-agua</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_review-business-credit-cards without_commentary">
+
+                                                                                <a rel="nofollow" href="http://review-business-credit-cards.promoproducts2012.info/" title="Review Business Credit Cards "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_bf59e53b7d85_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://review-business-credit-cards.promoproducts2012.info/" title="Review Business Credit Cards">review-business-credit-cards</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_creditcard-reviews without_commentary">
+
+                                                                                <a rel="nofollow" href="http://creditcard-reviews.promoproducts2012.info/" title="Best Credit Card "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_2b177ecc27a4_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://creditcard-reviews.promoproducts2012.info/" title="Best Credit Card">creditcard-reviews</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_secured-canadian-credit-card without_commentary">
+
+                                                                                <a rel="nofollow" href="http://secured-canadian-credit-card.promoproducts2012.info/" title="Secured Canadian Credit Card "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_822088cf0e93_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://secured-canadian-credit-card.promoproducts2012.info/" title="Secured Canadian Credit Card">secured-canadian-credit-card</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_bioskinexfol without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.bioskinexfol.com/" title="microdermabrasion at home "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_c484cc2f75c3_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.bioskinexfol.com/" title="microdermabrasion at home">bioskinexfol</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_flat-fee-mls without_commentary">
+
+                                                                                <a rel="nofollow" href="http://flat-fee-mls.promoproducts2012.info/" title="Flat Fee MLS "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_f39dec918fd6_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://flat-fee-mls.promoproducts2012.info/" title="Flat Fee MLS">flat-fee-mls</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_cupon-hostgator without_commentary">
+
+                                                                                <a rel="nofollow" href="http://cupones-hostgator.promoproducts2012.info/" title="cupones hostgator "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_d99be09b540a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://cupones-hostgator.promoproducts2012.info/" title="cupones hostgator">cupon-hostgator</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_24option-review without_commentary">
+
+                                                                                <a rel="nofollow" href="http://24option-review.promoproducts2012.info/" title="24option review "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_a75e8f6d1827_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://24option-review.promoproducts2012.info/" title="24option review">24option-review</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_remarkableship without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.remarkableship.org/" title="Untitled "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_886fb5a01b06_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.remarkableship.org/" title="Untitled">remarkableship</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_ropa-de-ciclismo without_commentary">
+
+                                                                                <a rel="nofollow" href="http://ropa-de-ciclismo.promoproducts2012.info/" title="ropa ciclismo "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_2961a70064c0_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://ropa-de-ciclismo.promoproducts2012.info/" title="ropa ciclismo">ropa-de-ciclismo</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_obraz-galeria-prestiz without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.galeria-prestiz.pl/" title="obraz "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_f4734ed84d43_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.galeria-prestiz.pl/" title="obraz">obraz-galeria-prestiz</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_zaklady-bukmacherskiess without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.betmotion.pl/" title="zaklady bukmacherskie "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_abcef34972be_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.betmotion.pl/" title="zaklady bukmacherskie">zaklady-bukmacherskiess</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_pitney-bowes-postage-meters without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.postagespecials.com/" title="pitney bowes postage meters "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_e0a67bf1beab_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.postagespecials.com/" title="pitney bowes postage meters">pitney-bowes-postage-meters</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_answering-service-san-diego-ca without_commentary">
+
+                                                                                <a rel="nofollow" href="http://answering-service-san-diego-ca.promoproducts2012.info/" title="Answering Service San Diego CA "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_7f3864cdecb3_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://answering-service-san-diego-ca.promoproducts2012.info/" title="Answering Service San Diego CA">answering-service-san-diego-ca</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_millionaires-made-online without_commentary">
+
+                                                                                <a rel="nofollow" href="http://millionairesmadeonline.net/" title="millionairesmadeonline "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_984c322ea33b_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://millionairesmadeonline.net/" title="millionairesmadeonline">millionaires-made-online</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_pathe-balexert without_commentary">
+
+                                                                                <a rel="nofollow" href="http://pathe-balexert.promoproducts2012.info/" title="Pathé Balexert "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_bba1f7d504a2_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://pathe-balexert.promoproducts2012.info/" title="Pathé Balexert">pathe-balexert</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_howto-read-music without_commentary">
+
+                                                                                <a rel="nofollow" href="http://how-to-read-music.promoproducts2012.info/" title="How to Read Music "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_769a0476a5ea_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://how-to-read-music.promoproducts2012.info/" title="How to Read Music">howto-read-music</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_jtx-reviews without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.vibrationplatereviews.net/" title="jtx reviews "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_90e90895c8b2_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.vibrationplatereviews.net/" title="jtx reviews">jtx-reviews</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_dieta-para-adelgazar without_commentary">
+
+                                                                                <a rel="nofollow" href="http://www.dietaparadelgazar.net/" title="dieta para adelgazar "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_7381c634f41a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://www.dietaparadelgazar.net/" title="dieta para adelgazar">dieta-para-adelgazar</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_sound-editor-windows-7 without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sound-editor-windows-7.promoproducts2012.info/" title="sound editor windows 7 "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_ea316bd50b6f_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sound-editor-windows-7.promoproducts2012.info/" title="sound editor windows 7">sound-editor-windows-7</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_sound-recorder-software without_commentary">
+
+                                                                                <a rel="nofollow" href="http://sound-recorder-software.promoproducts2012.info/" title="sound recorder software "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_8b24ae7b14b1_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://sound-recorder-software.promoproducts2012.info/" title="sound recorder software">sound-recorder-software</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_austin-webdesign without_commentary">
+
+                                                                                <a rel="nofollow" href="http://lakewaywebdesign.com/" title="Austin Web Design "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_75b0b1b0c16a_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://lakewaywebdesign.com/" title="Austin Web Design">austin-webdesign</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+                            
+                                                        
+        
+        <li class="note like tumblelog_yahsurvivor without_commentary">
+
+                                                                                <a rel="nofollow" href="http://yahsurvivor.tumblr.com/" title="Mori Yasir Lazarus "><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/avatar_f64e803db1ad_16.png" class="avatar " alt=""></a>
+                
+                <span class="action">
+                    
+                                            <a rel="nofollow" href="http://yahsurvivor.tumblr.com/" title="Mori Yasir Lazarus">yahsurvivor</a> liked this                                    </span>
+
+                <div class="clear"></div>
+
+                        
+            
+                    </li>
+    
+            <li class="note more_notes_link_container" style="text-align:center;" id="more_notes_21869934240">
+            <a class="more_notes_link" rel="nofollow" href="http://blakemasters.tumblr.com/post/21869934240/peter-thiels-cs183-startup-class-7-notes-essay#" onclick="this.style.display=&#39;none&#39;;document.getElementById(&#39;notes_loading_21869934240&#39;).style.display = &#39;inline&#39;;if(window.ActiveXObject)var tumblrReq=new ActiveXObject(&#39;Microsoft.XMLHTTP&#39;);else if(window.XMLHttpRequest)var tumblrReq=new XMLHttpRequest();else return false;tumblrReq.onreadystatechange=function(){if(tumblrReq.readyState==4){var notes_html=tumblrReq.responseText.split(&#39;&lt;!-- START &#39;+&#39;NOTES --&gt;&#39;)[1].split(&#39;&lt;!-- END &#39;+&#39;NOTES --&gt;&#39;)[0];
+if(window.tumblrNotesLoaded)if(tumblrNotesLoaded(notes_html)==false)return;var more_notes_link=document.getElementById(&#39;more_notes_21869934240&#39;);var notes=more_notes_link.parentNode;notes.removeChild(more_notes_link);notes.innerHTML+=notes_html;if(window.tumblrNotesInserted)tumblrNotesInserted(notes_html);}};tumblrReq.open(&#39;GET&#39;,&#39;/notes/21869934240/qtqyttpU1?from_c=1338750746&#39;,true);tumblrReq.send();return false;">Show more notes</a><span id="notes_loading_21869934240" style="display:none;">Loading...</span>
+        </li>
+    
+    <!-- END NOTES -->
+</ol></div>
+                
+                
+                </div><!-- #content -->
+            </div><!-- #container -->
+            <div id="sidebar">
+<h3><center> view by tag </center></h3>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+<a href="http://blakemasters.tumblr.com/tagged/crossfit" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/19b15830093e36e0b8cc.jpg" title="Posts tagged CrossFit" style="border:5px solid #fff;"></a> </div>
+
+
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://blakemasters.tumblr.com/tagged/family" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/25930fdc3c75cbc7facf.jpg" title="Posts tagged family" style="border:5px solid #fff;"></a>
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://blakemasters.tumblr.com/tagged/work" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/0fee9fba06c7c3eed101.jpg" title="Posts tagged work" style="border:5px solid #fff;"></a>
+</div>
+
+
+
+<div class="separator" style="clear: both; text-align: center;"> 
+<a href="http://blakemasters.tumblr.com/peter-thiels-cs183-startup" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/645d833868857327bc7b.jpg" target="”_blank”" title="Posts tagged cs183" style="border:5px solid #fff;"></a> </div>
+
+
+<div class="separator" style="clear: both; text-align: center;"> 
+<a href="http://blakemasters.tumblr.com/tagged/misc" target="_blank"><img src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/b30d13dd203d9bc56917.jpg" target="”_blank”" title="Posts tagged misc" style="border:5px solid #fff;"></a> </div><p></p>
+
+
+
+
+
+            
+			 
+
+
+
+
+            
+
+ 
+            
+            </div><!-- #sidebar -->
+        </div><!-- #main -->
+        <div id="footer">
+            <div id="colophon"><p>Powered by <a href="http://www.tumblr.com/">Tumblr</a>. <a href="http://www.tumblr.com/theme/10375">Minimal Theme</a> designed by <a href="http://arturkim.com/">Artur Kim</a>.</p></div>
+        </div><!-- #footer -->
+    </div><!-- #wrapper -->
+
+<script type="text/javascript" src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/tweets.js"></script>
+
+
+
+<!-- BEGIN TUMBLR CODE --><iframe src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/iframe.html" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script><script type="text/javascript" src="./Peter Thiel’s CS183  Startup - Class 7 Notes Essay_files/quant.js"></script><noscript>&lt;img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/&gt;</noscript><!-- END TUMBLR CODE -->
+
+<div style="display: none; " id="hiddenlpsubmitdiv"></div><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body><link rel="stylesheet" type="text/css" href="data:text/css,"></html>

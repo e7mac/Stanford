@@ -1,0 +1,87 @@
+/*
+    ecom.css
+*/
+
+/* ECOM placement: AMS_WIR_BLOGS_RIGHTRAIL_A*/
+#blogs_rightRail_A {
+    background-color: #FFF;
+    margin-bottom: 20px;
+}
+
+#blogs_rightRail_A h4 {
+    background-color: #000;
+    background-image: none;
+    color: #FFF;
+    display: block;
+    font-family: 'purista-web-1','purista-web-2',Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 5px;
+    text-transform: uppercase;
+    width: 298px;
+}
+
+    #blogs_rightRail_A .sub_unit {
+        margin-top: 10px;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 11px;
+        line-height: 12px;
+    }
+
+    #blogs_rightRail_A .cover_img {
+        float: left;
+        width: 145px;
+        margin-left: 10px;
+    }
+
+    #blogs_rightRail_A .text_side {
+        width: 145px;
+        float: left;
+        padding: 0;
+    }
+
+    #blogs_rightRail_A .text_side p {
+        background: url("/images/xrail_bullet.gif") no-repeat scroll 0 0.2em transparent;
+        margin: 0 13px 4px;
+}
+
+/* ECOM Placement: */
+#blogs_rightRail_subServices {
+    margin-bottom: 20px;
+}
+
+    #blogs_rightRail_subServices h4 {
+        background-color: #000;
+        background-image: none;
+        color: #FFF;
+        display: block;
+        font-family: 'purista-web-1','purista-web-2',Helvetica,Arial,sans-serif;
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+        text-indent: 5px;
+        text-transform: uppercase;
+        width: 298px;
+        margin-bottom: 5px;
+    }
+
+    #blogs_rightRail_subServices ul {
+        margin-bottom: 10px;
+        list-style-type: none;
+    }
+
+    #blogs_rightRail_subServices li {
+        margin: 5px;
+    }
+
+    #blogs_rightRail_subServices dt,
+    #blogs_rightRail_subServices dd {
+        display: inline;
+        font-size: 11px;
+    }
+
+    #blogs_rightRail_subServices dt {
+        font-weight: bold;
+        margin-right: 5px;
+    }

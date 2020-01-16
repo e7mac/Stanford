@@ -1,0 +1,901 @@
+/*****************************************************************
+ * HW-Shared CSS Stylesheet for content pages.
+ *****************************************************************/
+@import url("hw-content-figures.css");
+@import url("hw-content-tables.css");
+
+/* markers for search engines to use, don't remove for anybody */
+.highwire-marker-journal-article-start .highwire-marker-journal-article-end {
+	display: none;
+}
+ 
+div.contributors div.affiliation-list {
+	margin-top:.5em;
+}
+.hideaffil {
+	position: absolute;
+	left: -9999px;
+	width: 5000px;
+}
+#content-block div.contributors div.affiliation-list address,
+#content-block div.contributors div.affiliation-list p {
+	font-style: normal;
+	padding: 0;
+	margin: 0;
+}
+.hidenotes {
+	position: absolute;
+	left: -9999px;
+	width: 5000px;
+}
+/*
+#content-block div.contributors div.author-notes address,
+#content-block div.contributors div.author-notes p {
+	font-style: normal;
+	padding: 0;
+	margin: 0;
+}
+*/
+#hovering-ref {
+	background-color: #CCC;
+	color: #222;
+	position: absolute;
+	left: -9999px;
+	font-size: 69.44%;
+	padding: .5em;
+	border: 1px solid #AAA;
+	border-bottom: 2px solid #999;
+	border-right: 2px solid #999;
+}
+#hovering-ref .cit-auth-list {
+	font-weight: bolder;
+	list-style: none;
+	padding: 0; 
+	display:inline;
+	margin: 0;
+}
+#hovering-ref .cit-ed-list {
+	list-style: none;
+	padding: 0; margin: 0;
+}
+#hovering-ref .cit-auth-list li,
+#hovering-ref .cit-ed-list li {
+	display: inline;
+	padding: 0; margin: 0;
+}
+#hovering-ref .duplicate {
+	display: none;
+}
+#hovering-ref .cit-title {
+	display: block;
+	padding: 0; margin: 0;
+}
+#hovering-ref cite {
+	font-style: normal;
+}
+#hovering-ref cite abbr.cit-jnl-abbrev,
+#hovering-ref cite .ie6-abbr-wrap {
+	margin-right: .1em;
+	font-style: italic;
+}
+#hovering-ref .cit-vol {
+	font-weight: bolder;
+}
+
+div#pageid-content .article {
+	text-align: justify;
+}
+div#pageid-content .article p q {
+	display: block;
+	margin: .5em 1em;
+	padding: .5em;
+}
+div#pageid-content .article blockquote {
+	display: block;
+	font-size: 1.4em;
+	font-weight: bolder;
+	text-align: center;
+	color: blue;
+	margin: .5em 1em;
+	padding: .5em 1em;
+	border: 1px solid #ddd;
+}
+/* bypass the muppet font */
+div#pageid-content .article blockquote.speech {
+    /* IE 7 and below don't respect the inherit directive. This is styling for them */
+    display: block;
+    font-size: 1.0em;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+div#pageid-content .article blockquote.speech {
+    /* 
+                This CSS will win for FF, Safari and all browser that support "inherit" as a valid property.
+                */
+    display: inherit;
+	font-size: inherit;
+	margin: inherit;
+	padding: inherit;
+	border: inherit;
+    font-weight: inherit;
+	text-align: inherit;
+	color: inherit;
+}
+
+div#pageid-content .article blockquote.speech cite {
+    font-weight: bold;
+    margin-right: 0.2em;
+}
+
+div#pageid-content .figonly-view p {
+	text-align: left;
+}
+div#pageid-content ol.figonly-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+div#pageid-content li.figonly-item {
+	margin-left: 0;
+	padding-left: 0;
+}
+div#pageid-content li.figonly-item div.fig {
+	margin:1em 5px 1em 10px;
+}
+
+div#pageid-content .article .ref-list {
+	text-align: left;
+}
+div.major-section, div.sub-section {
+	font-weight:bold;
+	font-size:.833em;
+	line-height:normal;
+	margin:0;
+	padding:0;
+}
+
+h1 {
+	margin:10px 0 0 0;
+	padding:0;
+}
+h1.expansion-article-title,
+h1.data-supp-article-title {
+	margin: 10px 0;
+}
+
+div.nav-placeholder,
+div.section-nav a {
+	display: block;
+	color: #a00;
+	text-decoration:none;
+	width: 9px;
+	height: 15px;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+div.section-nav a.prev-section-link {
+	background-image: url("../img/content/up.gif");
+}
+div.section-nav a.next-section-link {
+	background-image: url("../img/content/down.gif");
+}
+div.section-nav a span {
+	position: absolute;
+	left: -9999px;
+}
+
+div.contributors {
+	text-align: left;
+}
+div.contributors ol.contributor-list {
+	list-style: none;
+	margin:15px 0 0 0;
+	padding:0;
+	font-weight: bold;
+	text-align: left;
+	white-space: normal;
+}
+
+div.contributors ol.contributor-list li {
+	display: inline;
+	padding:0;
+	margin:0;
+	text-align: left;
+	line-height: 1.7;
+	white-space: normal;
+}
+div.contributors ol li a,
+div.extract-view div.contributors ol li span.xref-corresp,
+div.extract-view div.contributors ol li span.xref-aff,
+div.extract-view div.contributors ol li span.xref-fn   {
+	font-weight: normal;
+	text-decoration: none;
+	vertical-align: .2em;
+}
+div.contributors ol.corresp-list {
+	list-style: none;
+	padding: 0; margin: 0;
+}
+div.contributors ol.corresp-list li {
+	margin-left: 0;
+}
+
+div.contributors ol.corresp-list li.fn a,
+div.contributors .em-link a,
+div.contributors li.corresp a {
+	font-weight: normal;
+	text-decoration: none;
+	vertical-align: 0em;
+}
+div.contributors ol.contributor-list li .name a {
+	font-weight: bold;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #333333;
+	vertical-align: 0;
+}
+div.contributors ol.contributor-list li .name a:hover {
+	border-bottom: 1px dotted #333;
+}
+div.contributors .xref-sep {
+/*	font-size: .8em; */
+	vertical-align: .33em;
+}
+div.contributors ol.affiliation-list li {
+	display: list-item;
+	padding-left: 0;
+	margin-left: 0;
+}
+div.contributors ol.affiliation-list {
+	list-style:none;
+	font-weight:normal;
+}
+
+div.contributors ol.affiliation-list li address, div.contributors ol.corresp-list li address {
+	display:inline;
+	font-style: normal;
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+div.contributors ol.fn-track {
+	list-style: none;
+	margin:0;
+	padding:0;
+	text-align: left;
+	font-size: .833em;
+}
+div.contributors ol.fn-track li {
+	padding:0;
+	margin: 5px 0 0;
+	text-align: left;
+}
+
+div.article-edited-by {
+	margin-top:1em;
+}
+
+#extract-disclaimer {
+	border: 1px solid #c8c8c8;
+	padding: 0 1em;
+	font-style: italic;
+	margin: .5em 0;
+}
+#extract-disclaimer p {
+	margin: .5em 0; padding: 0;
+}
+#footnotes p {
+	text-align:left;
+}
+.article div.section {
+	padding:0;
+	margin:0;
+	border:0;
+	clear:both;
+}
+.article div.section h2,
+.article div#intro-header h2 {
+	border:0;
+	font-size:125%;
+	margin:10px 0 10px 0;
+	border-bottom:2px dotted #999;
+}
+.article div.section h3,
+.article div.section h4,
+.article div.section h5 {
+	padding:0;
+	margin:0;
+	margin-right: 5px;
+	display:inline;
+	font-size:1em;
+}
+.article div.section h4,
+.article div.section h5 {
+	font-style: italic;
+}
+.article div.section h4 em,
+.article div.section h5 em {
+	font-style: normal;
+}
+
+ul.kwd-group {
+	text-align: center;
+	font-size:.833em;
+	padding:.5em;
+	margin: 0; /*-1em 0;*/
+	font-weight:bold;
+	border-top:1px dotted #999;
+	border-bottom:1px dotted #999;
+	line-height: 2;
+}
+ul.kwd-group li.kwd {
+	display:inline;
+	padding: .25em;
+	margin: 0 .7em;
+	background-color: #d8d8d8;
+	line-height: 2;
+	white-space: normal;
+}
+ul.kwd-group li.kwd span {
+	white-space: nowrap;
+}
+
+a.xref-bibr, a.xref-fig, a.xref-table {
+	text-decoration:none;
+}
+a.xref-bibr:hover, a.xref-fig:hover, a.xref-table:hover {
+	color:blue;
+}
+
+/* table expansions, which may be wide */
+div#pageid-content div.table-expansion {
+	overflow: auto;
+}
+
+/* Statements/proofs */
+
+span.statement-label {
+   font-size: 120%;
+   line-height: 1.5;
+   padding-right: 0.5em;
+}
+
+#content-block p.p-lead {
+   display: inline;
+}
+
+div.proposition span.statement-label {
+   font-weight: bold;
+}
+
+div.proof span.statement-label {
+	font-style: italic;
+}
+
+/* moved to global-elements
+.sc {
+text-transform:uppercase;
+font-size:.85em;
+}
+*/
+
+/**
+ * references
+ **/
+ol.cit-list {
+	list-style: decimal outside;
+	margin-left: 2.5em;
+}
+ol.ref-use-labels {
+	list-style: none;
+	margin-left: .5em;
+}
+ol.cit-list li {
+	padding: .3em 0;
+  display: list-item;
+}
+
+
+
+div.ref-cit  .cit-metadata li {
+  display: inline;
+}
+/* need to override for cit-pub-id spans which *should* be displayed! */
+div.ref-cit .cit-metadata .duplicate,
+div.ref-cit .cit-metadata span.cit-pub-id-sep,
+div.ref-cit .cit-metadata span.cit-pub-id {
+	display: none;
+}
+/* don't display metadata items when they duplicate a display block */
+div.ref-cit .cit-metadata div.duplicate {
+	display: none;
+}
+div.ref-list a.rev-xref-ref { 
+	font-size: .694em; /* 2 sizes smaller */
+	font-weight: bolder;
+	background-color: #CCC;
+	padding: 2px;
+}
+div.ref-list .rev-xref-ref,
+div.ref-list .rev-xref-ref:link {
+	text-decoration: none;
+}
+/* put this back in to make citation sprinkles appear on their own line */
+/*
+div.ref-list div.cit-extra {
+	display: block;
+}
+*/
+div.ref-cit div.cit-extra a,
+span.inline-cit.ref-journal .cit-extra a
+ {
+	font-size: 88%;
+	margin-left: .3em;
+	padding-left: 9px;
+	background-image: url(../../shared/img/misc/rightchevron.gif);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+span.inline-cit.ref-journal .cit-extra a {
+    display: inline;
+	white-space: normal;
+}
+
+span.inline-cit.ref-journal .cit-extra span span {
+    font-size: 1em;  
+}
+
+
+div.ref-cit div.cit-extra a:hover,
+span.inline-cit.ref-journal .cit-extra a:hover {
+	border-bottom: 0px none;
+}
+
+div.ref-cit div.cit-extra a.cit-ref-sprinkles-open-url-has-image,
+span.inline-cit.ref-journal .cit-extra a.cit-ref-sprinkles-open-url-has-image {
+   background-image: none;
+   padding-left: 0.1em;
+}
+
+div.ref-cit div.cit-extra a.cit-ref-sprinkles-open-url-has-image span,
+span.inline-cit.ref-journal .cit-extra a.cit-ref-sprinkles-open-url-has-image span
+ {
+   display:none;
+}
+
+div.ref-cit div.cit-extra a.cit-ref-sprinkles-open-url-has-image img,
+span.inline-cit.ref-journal .cit-extra a.cit-ref-sprinkles-open-url-has-image img{
+   vertical-align: text-bottom;
+}
+
+
+div.ref-cit cite {
+	font-style: normal;
+}
+div.ref-cit cite span.cit-source,
+div.ref-cit cite abbr.cit-jnl-abbrev,
+div.ref-cit cite span.cit-conf-name,
+div.ref-cit cite .ie6-abbr-wrap {
+	margin-right: .1em;
+	font-style: italic;
+}
+div.ref-cit .cit-vol {
+	font-weight: bolder;
+}
+
+div.ref-cit,
+.ref-cit div,
+.ref-cit cite,
+.ref-cit ol,
+.ref-cit li {
+	margin-left:0;
+	margin-right:0;
+	padding-left:0;
+	padding-right:0;
+	display: inline;
+}
+
+/* Fix for IE rendering bug */
+
+div.ref-cit.no-rev-xref,
+span.inline-cit.ref-journal.no-rev-xref
+ {
+    display: block;
+    padding-top: 1px;
+    margin-top: 0;
+}
+
+.ref-use-labels div.ref-cit.no-rev-xref {
+    display: inline;
+}
+
+div.section .section-nav,
+div#intro-header .section-nav {
+	float:right;
+	background-color:white;
+	padding:0 .5em 0 1em;
+}
+
+/* *** */
+.view-more-img {
+	margin: 0 .5em 0 .25em;
+}
+
+
+/* *** */
+.article-options {
+	float:right;
+}
+.article-options img {
+	margin:0 .25em .5em .25em;
+}
+
+/* *** */
+.hw-related-articles {
+}
+
+/* footnote area */
+div.fn-group ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+}
+div.fn-group ul li {
+	margin: 0; padding: .5em 0;
+	text-align: left;
+	border-bottom: 1px solid #C8C8C8;
+	width: 95%;
+}
+div.fn-group ul li ul {
+	margin: 0; padding: 0;
+}
+div.fn-group ul li ul li {
+	padding: 0;
+	border-bottom: none;
+	width: 100%;
+}
+#content-block div.fn-group ul li p {
+	margin: .5em 0;
+	padding: 0;
+}
+div.fn-group li.corresp a.rev-xref { 
+	font-size: .694em; /* 2 sizes smaller */
+	font-weight: bolder;
+	background-color: #CCC;
+	padding: 2px;
+	margin-right: 5px;
+}
+div.fn-group li.corresp a.rev-xref,
+div.fn-group li.corresp a.rev-xref:link {
+	text-decoration: none;
+}
+/* abbreviations */
+li.glossary dl {
+	margin: 0;
+	padding: .5em 0;
+}
+li.glossary dt {
+	float: left;
+	clear: left;
+	padding: .2em 1em;
+	font-weight: bolder;
+}
+li.glossary dd {
+	text-align: left;
+	padding: .2em 1em;
+}
+
+/* inline ads */
+a.inline-ad-match {
+	text-decoration: underline;
+	border-bottom: 1px solid;
+	padding-bottom: 1px;
+	color: #686868;
+}
+
+/* search term highlighting */
+.search-term-highlight {
+	color: #CC0000;
+	font-weight:bold;
+}
+
+
+/* entrez links */
+div#cb-entrez-links-placeholder {
+	margin: 0; padding: 0;
+}
+div#cb-entrez-links-placeholder ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+div#cb-entrez-links-placeholder ul li {
+	margin: 5px 0 0 0;
+}
+div#cb-entrez-links-placeholder ul ul {
+	list-style: square;
+	list-style-position: outside;
+}
+div#cb-entrez-links-placeholder ul ul li {
+	margin: 0 0 0 15px;
+}
+
+/* social bookmarkings for content page */
+#content-block div.social-bookmarking{
+clear:both;
+}
+
+ul.social-bookmark-links {
+	margin: 0;
+	margin-top: 2em;
+	list-style: none;
+	border-top: 1px solid #aaa;
+	padding-top: .5em;
+	margin-top: 1em;
+}
+ul.social-bookmark-links li {
+	padding: 0;
+	margin: 0;
+	margin-right: 10px;
+	display: inline;
+	font-size: .833em;
+}
+ul.social-bookmark-links li a,
+ul.social-bookmark-links li a:hover {
+	text-decoration: none;
+}
+ul.social-bookmark-links a span:hover {
+	border-bottom: 1px dotted;
+}
+
+ul.social-bookmark-links li span.soc-bm-link-text {
+	margin-left: 4px;
+}
+#content-block ul.social-bookmark-links li {
+	white-space: normal;
+}
+
+#content-block ul.social-bookmark-links li a{
+	white-space: nowrap;
+}
+#content-block p.social-bookmarking-help {
+	line-height:1; 
+	margin: 5px 0 10px 0;
+}
+
+p.social-bookmarking-help a {
+	text-decoration: none;
+	font-size: 88%;
+}
+
+p.social-bookmarking-help  a:hover {
+	border-bottom: 1px dotted;
+}
+
+/* *****************************************
+		Related, Cited-by Links
+    ***************************************** */
+div#related-urls h2,
+div#cited-by h2,
+div#related h2,
+div#rel-related-article h2 {
+	padding-left: 0;
+	margin-left: 0;
+	border-top: 1px solid #aaa;
+	padding-top: .5em;
+	margin-top: 1em;
+}
+div#rel-related-article ul.related-list,
+div#related-urls ul.related-url-results {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+div#related-urls ul.related-url-results a,
+div#cited-by ul.cited-by-list,
+div#related ul.related-list {
+	padding-left: 0;
+	margin-left: 0;
+}
+div#cited-by ul.cited-by-list li.cit,
+div#related ul.related-list li.cit,
+div#rel-related-article ul.related-list li.cit {
+	border:1px solid #BBBBBB;
+	border-collapse:collapse;
+}	
+h1 a.xref-fn  {
+	text-decoration: none;
+	font-size: 50%;
+	vertical-align:super;
+}	
+
+li.copyright-statement {
+list-style-type:none;
+margin-left:0;
+}
+
+/*div#before_resource_rev_errata p,*/
+div#before_resource_rev_errata p a {
+	color: #A70716;
+}
+/* in-text highlighting */
+span.hltext {
+	background-color: #FFD800;
+	font-weight: bolder;
+}
+
+.underline {
+text-decoration:underline;
+}
+
+.list-romanlower{
+list-style-type:lower-roman;
+}
+
+.list-alphalower {
+list-style-type:lower-alpha;
+}
+
+.list-alphaupper {
+list-style-type:upper-alpha;
+}
+
+span.inline-l4-heading {
+	font-weight: bolder;
+	font-style: italic;
+	margin-right: .2em;
+}
+
+#content-block div.contributors.intlv ol.contributor-list li {
+display:block;
+}
+
+#pageid-content .ref-cit a {
+word-wrap:break-word;
+white-space:normal;
+}
+
+#content-block ul.history-list {
+list-style-type:none;
+margin:5px 0;
+padding:0 0 0;
+clear:both;
+}
+
+ul.copyright-statement {
+list-style-type:none;
+}
+
+/*prevent huge group names from breaking display */
+.cit .cit-auth-list li span.cit-collab {
+white-space:normal;
+}
+
+.rev-xref-ref, .rev-xref {
+font-family:"Lucida Sans Unicode",Arial,"Lucida Grande",Tahoma,Verdana,Helvetica,sans-serif;
+}
+
+ul.author-notes {list-style-type:none;}
+
+/* "pdf-extract" img support */
+#content-block img.pdf-extract-img {
+        width: 500px;
+}
+div.hide-cols #content-block img.pdf-extract-img {
+	width: auto;
+}
+
+.corresp-list .corresp-label {font-size:0.85em;line-height:0;vertical-align:super;}
+
+.disp-formula-label {float:right;}
+
+#content-block .hw-popup-error {
+    border: 2px solid black;
+    margin: 1em;
+    padding: 1em;
+}
+
+#content-block .hw-popup-error  p {
+    margin: 0;
+    padding: 0 0 0.5em 0;
+}
+
+#content-block div.section p.h-lead {
+    display: inline;
+}
+
+//MathJax classes, hide by default
+.mathjax.mml-math {
+       display: none;
+}
+
+.disp-formula .MathJax_MathML {
+       font-size: 150%;
+}
+
+.inline-formula .MathJax_MathML {
+       font-size: 100%;
+}
+
+/* "ratings */
+#rating-count {display:block;clear:both;padding-top:3px;}
+#rateStatus{width:100%;}
+#rateMe{width:100%; height:auto; padding:0px; margin:0px;}
+#rateMe li{list-style:none;}
+#rateMe a:hover{background:url(/shared/img/content/1000-hover.png) no-repeat;}
+#rateMe .on{background:url(/shared/img/content/1000.png) no-repeat;}
+#rateMe a{float:left;background:url(/shared/img/content/0.png) no-repeat;width:16px; height:15px;}
+#ratingSaved{display:none;}
+#quality {float:none;margin-top:0.5em;}
+.saved{color:red; }
+
+
+
+div.rateit{
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    
+}
+
+div.rateit div.rateit-range{
+    position: relative;
+    display: inline-block;
+    background: url(/shared/img/content/star.gif);
+    height: 16px;
+}
+
+
+div.rateit div.rateit-hover, div.rateit div.rateit-selected{
+    position: absolute;
+}
+
+div.rateit div.rateit-hover{
+    background: url(/shared/img/content/star.gif) left -32px;
+}
+
+div.rateit div.rateit-hover-rtl{
+    background-position: right -32px;
+}
+
+div.rateit div.rateit-selected{
+    background: url(/shared/img/content/star.gif) left -16px;
+}
+
+div.rateit div.rateit-selected-rtl{
+    background-position: right -16px;
+}
+
+
+div.rateit div.rateit-reset{
+    background: url(/shared/img/content/delete.gif) 0 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+}
+
+div.rateit div.rateit-reset:hover{
+    background-position: 0 -16px;
+}
+
+.table-center {text-align:center;}
+.table-left {text-align:left;}
+.table-right {text-align:right;}
+
+.highwire-journal-article-marker-end {clear:both;}

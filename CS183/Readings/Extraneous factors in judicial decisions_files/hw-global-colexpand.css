@@ -1,0 +1,151 @@
+div.hide-cols {
+	max-width: 970px;
+}
+div#content-option-box {
+	float: right;
+	padding: 5px;
+	margin: 10px 0 0;
+	background-color: none;
+}
+div#content-option-box ul,
+div#content-option-box li {
+	margin: 0;
+	padding: 0;
+}
+
+div#content-block div.option-box-docked {
+	padding: 2px 2px 2px 1px;
+	background-color: white;
+	position: fixed;
+	top: -10px;
+}
+div#content-option-box ul {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+div.hide-cols div#content-block {
+	width: auto;
+}
+div#content-block li#content-toggle a {
+	display: block;
+	width: 24px;
+	border: none;
+	margin: 0; padding: 0;
+	height: 13px;
+	background: url(../img/misc/col-expand.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+}
+div#content-block li#content-toggle a.expanded {
+	background: url(../img/misc/col-contract.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+div#content-block li#content-toggle a span {
+	display: none;
+}
+div.hide-cols div#cols-min {
+	position: relative;
+	/*float: right;*/
+	clear: both;
+}
+.hide-cols div#col-2-min,
+.hide-cols div#col-3-min {
+	/*float: left;*/
+	width: 100px;
+	height: 15px;
+	float: right;
+}
+.hide-cols div#col-2-min {
+	border-bottom: 1px dashed #B8B890;/*#D5DABA;*/
+	border-left: 1px solid #808000;
+	background-color: #E2E5D0;
+}
+.hide-cols div#col-3-min {
+	border-bottom: 1px dashed #B8B890;/*#C2D0A4;*/
+	border-left: 1px solid #808000;
+	border-right: 1px solid #808000;
+	background-color: #D5DABA;
+}
+.hide-cols div#col-2-min .view-more,
+.hide-cols div#col-3-min .view-more {
+	color: black;
+	border: none;
+	margin: 0 2px;
+	padding: 1px;
+	float: right;
+	width: 13px; height: 13px;
+	background-color: inherit;
+	background-image: url(../img/misc/pulldown.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.hide-cols div#col-2-min .view-more:hover,
+.hide-cols div#col-3-min .view-more:hover {
+	color: white;
+	background-color: #404040;
+}
+
+
+div.hide-cols div#col-2,
+div.hide-cols div#col-3 {
+	display: none;
+}
+div.hide-cols div#col-2.palette,
+div.hide-cols div#col-3.palette {
+	display: block;
+	position: absolute;
+	height: auto;
+	border: 1px solid gray;
+	right: 0px;
+}
+div.hide-cols#pageid-content div.table-expansion,
+div.hide-cols#pageid-data-supp div#content-block .ds-img-wrap,
+div.hide-cols#pageid-data-supp div#content-block .table-wrapper
+{
+	width: 98%;
+	overflow: visible;
+}
+div.hide-cols div#content-block {
+	width: auto;
+	overflow: visible;
+	clear: both;
+}
+
+div.hide-cols#pageid-data-supp div#content-block .table-wrapper {
+	width: auto;
+	overflow: visible;
+}
+div.hide-cols#pageid-data-supp div#content-block .table-wrapper table {
+	border-collapse: collapse;
+	/*white-space: nowrap;*/
+}
+div.hide-cols#pageid-data-supp .table-wrapper table th,
+div.hide-cols#pageid-data-supp .table-wrapper table td {
+	font-family: monospace;
+	padding: 3px;
+	border: 1px solid gray;
+}
+
+div#col-hover-close {
+	position: absolute;
+	left: 2px; top: 2px;
+	line-height: 10px;
+	height: 10px;
+	margin: 0;
+	padding: 1px 2px 2px;
+	text-align: left;
+	background-color: white;
+	border: 1px solid gray;
+}
+div#col-hover-close a span {
+	font-weight: bold;
+}
+div#col-hover-close a, div#col-hover-close a:link,
+div#col-hover-close a:hover, div#col-hover-close a:active {
+	text-decoration: none;
+	color: black;
+	font-size: 80%;
+}
