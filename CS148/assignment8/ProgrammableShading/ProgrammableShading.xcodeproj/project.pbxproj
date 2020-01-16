@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		A8F32DCC1664C4C600DB8923 /* default.vert in Sources */ = {isa = PBXBuildFile; fileRef = A8F32DC81664C4C600DB8923 /* default.vert */; };
+		A8F32DCD1664C4C600DB8923 /* displacement.vert in Sources */ = {isa = PBXBuildFile; fileRef = A8F32DC91664C4C600DB8923 /* displacement.vert */; };
+		A8F32DCE1664C4C600DB8923 /* lightprobe.frag in Sources */ = {isa = PBXBuildFile; fileRef = A8F32DCA1664C4C600DB8923 /* lightprobe.frag */; };
+		A8F32DCF1664C4C600DB8923 /* phong.frag in Sources */ = {isa = PBXBuildFile; fileRef = A8F32DCB1664C4C600DB8923 /* phong.frag */; };
+		E019EAE00F436BD800EE6385 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E019EADE0F436BD800EE6385 /* GLUT.framework */; };
+		E019EAE10F436BD800EE6385 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E019EADF0F436BD800EE6385 /* OpenGL.framework */; };
+		E019EB070F436BE700EE6385 /* libst.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E019EADC0F436B9700EE6385 /* libst.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E019EADB0F436B9700EE6385 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E019EAD40F436B9700EE6385 /* libst.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = libst;
+		};
+		E019EB500F43BCF700EE6385 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E019EAD40F436B9700EE6385 /* libst.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = libst;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* ProgrammableShading */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProgrammableShading; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8F32DC51664C4C600DB8923 /* lightprobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightprobe.jpg; sourceTree = "<group>"; };
+		A8F32DC61664C4C600DB8923 /* normalmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalmap.png; sourceTree = "<group>"; };
+		A8F32DC81664C4C600DB8923 /* default.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.vert; sourceTree = "<group>"; };
+		A8F32DC91664C4C600DB8923 /* displacement.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = displacement.vert; sourceTree = "<group>"; };
+		A8F32DCA1664C4C600DB8923 /* lightprobe.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = lightprobe.frag; sourceTree = "<group>"; };
+		A8F32DCB1664C4C600DB8923 /* phong.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = phong.frag; sourceTree = "<group>"; };
+		E019EAD40F436B9700EE6385 /* libst.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libst.xcodeproj; path = ../libst/xcode/libst.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E019EADE0F436BD800EE6385 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		E019EADF0F436BD800EE6385 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E019EB2E0F43BC0300EE6385 /* stglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stglew.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E019EB070F436BE700EE6385 /* libst.a in Frameworks */,
+				E019EAE00F436BD800EE6385 /* GLUT.framework in Frameworks */,
+				E019EAE10F436BD800EE6385 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				A8F32DC41664C4C600DB8923 /* images */,
+				A8F32DC71664C4C600DB8923 /* kernels */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				E019EADE0F436BD800EE6385 /* GLUT.framework */,
+				E019EADF0F436BD800EE6385 /* OpenGL.framework */,
+				E019EAD40F436B9700EE6385 /* libst.xcodeproj */,
+			);
+			name = ImageProcessor;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E019EB2E0F43BC0300EE6385 /* stglew.h */,
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* ProgrammableShading */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8F32DC41664C4C600DB8923 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A8F32DC51664C4C600DB8923 /* lightprobe.jpg */,
+				A8F32DC61664C4C600DB8923 /* normalmap.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		A8F32DC71664C4C600DB8923 /* kernels */ = {
+			isa = PBXGroup;
+			children = (
+				A8F32DC81664C4C600DB8923 /* default.vert */,
+				A8F32DC91664C4C600DB8923 /* displacement.vert */,
+				A8F32DCA1664C4C600DB8923 /* lightprobe.frag */,
+				A8F32DCB1664C4C600DB8923 /* phong.frag */,
+			);
+			path = kernels;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		E019EAD50F436B9700EE6385 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E019EADC0F436B9700EE6385 /* libst.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* ProgrammableShading */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "ProgrammableShading" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E019EB510F43BCF700EE6385 /* PBXTargetDependency */,
+			);
+			name = ProgrammableShading;
+			productInstallPath = "$(HOME)/bin";
+			productName = ImageProcessor;
+			productReference = 8DD76F6C0486A84900D96B5E /* ProgrammableShading */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "ProgrammableShading" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* ImageProcessor */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E019EAD50F436B9700EE6385 /* Products */;
+					ProjectRef = E019EAD40F436B9700EE6385 /* libst.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* ProgrammableShading */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E019EADC0F436B9700EE6385 /* libst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libst.a;
+			remoteRef = E019EADB0F436B9700EE6385 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
+				A8F32DCC1664C4C600DB8923 /* default.vert in Sources */,
+				A8F32DCD1664C4C600DB8923 /* displacement.vert in Sources */,
+				A8F32DCE1664C4C600DB8923 /* lightprobe.frag in Sources */,
+				A8F32DCF1664C4C600DB8923 /* phong.frag in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E019EB510F43BCF700EE6385 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libst;
+			targetProxy = E019EB500F43BCF700EE6385 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				PRODUCT_NAME = ProgrammableShading;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				PRODUCT_NAME = ProgrammableShading;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					/opt/local/lib,
+					/sw/lib/freetype2/lib,
+					/sw/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-ljpeg",
+					"-lpng",
+					"-lz",
+					"-lfreetype",
+				);
+				USER_HEADER_SEARCH_PATHS = ../libst/include;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					/opt/local/lib,
+					/sw/lib/freetype2/lib,
+					/sw/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-ljpeg",
+					"-lpng",
+					"-lz",
+					"-lfreetype",
+				);
+				USER_HEADER_SEARCH_PATHS = ../libst/include;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "ProgrammableShading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "ProgrammableShading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

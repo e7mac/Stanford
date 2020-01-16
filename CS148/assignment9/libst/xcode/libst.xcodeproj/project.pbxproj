@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9E561F4147DD7D200451363 /* STTransform4.h in Headers */ = {isa = PBXBuildFile; fileRef = C9E561F3147DD7D200451363 /* STTransform4.h */; };
+		C9E561F6147DD7DD00451363 /* STTransform4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9E561F5147DD7DD00451363 /* STTransform4.cpp */; };
+		E09A31A30F1F309F00F11EC8 /* STVector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A318F0F1F309F00F11EC8 /* STVector3.cpp */; };
+		E09A31A40F1F309F00F11EC8 /* STColor3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31900F1F309F00F11EC8 /* STColor3f.cpp */; };
+		E09A31A50F1F309F00F11EC8 /* STColor4f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31910F1F309F00F11EC8 /* STColor4f.cpp */; };
+		E09A31A60F1F309F00F11EC8 /* STColor4ub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31920F1F309F00F11EC8 /* STColor4ub.cpp */; };
+		E09A31A70F1F309F00F11EC8 /* STFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31930F1F309F00F11EC8 /* STFont.cpp */; };
+		E09A31A80F1F309F00F11EC8 /* STImage_jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31940F1F309F00F11EC8 /* STImage_jpeg.cpp */; };
+		E09A31A90F1F309F00F11EC8 /* STImage_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31950F1F309F00F11EC8 /* STImage_png.cpp */; };
+		E09A31AA0F1F309F00F11EC8 /* STImage_ppm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31960F1F309F00F11EC8 /* STImage_ppm.cpp */; };
+		E09A31AB0F1F309F00F11EC8 /* STImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31970F1F309F00F11EC8 /* STImage.cpp */; };
+		E09A31AC0F1F309F00F11EC8 /* STJoystick_darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31980F1F309F00F11EC8 /* STJoystick_darwin.cpp */; };
+		E09A31AF0F1F309F00F11EC8 /* STJoystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A319B0F1F309F00F11EC8 /* STJoystick.cpp */; };
+		E09A31B00F1F309F00F11EC8 /* STPoint2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A319C0F1F309F00F11EC8 /* STPoint2.cpp */; };
+		E09A31B10F1F309F00F11EC8 /* STPoint3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A319D0F1F309F00F11EC8 /* STPoint3.cpp */; };
+		E09A31B20F1F309F00F11EC8 /* STShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A319E0F1F309F00F11EC8 /* STShaderProgram.cpp */; };
+		E09A31B30F1F309F00F11EC8 /* STShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A319F0F1F309F00F11EC8 /* STShape.cpp */; };
+		E09A31B40F1F309F00F11EC8 /* STTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31A00F1F309F00F11EC8 /* STTexture.cpp */; };
+		E09A31B50F1F309F00F11EC8 /* STTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31A10F1F309F00F11EC8 /* STTimer.cpp */; };
+		E09A31B60F1F309F00F11EC8 /* STVector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E09A31A20F1F309F00F11EC8 /* STVector2.cpp */; };
+		E09A31D80F1F312000F11EC8 /* st.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C10F1F312000F11EC8 /* st.h */; };
+		E09A31D90F1F312000F11EC8 /* STColor3f.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C20F1F312000F11EC8 /* STColor3f.h */; };
+		E09A31DA0F1F312000F11EC8 /* STColor4f.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C30F1F312000F11EC8 /* STColor4f.h */; };
+		E09A31DB0F1F312000F11EC8 /* STColor4ub.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C40F1F312000F11EC8 /* STColor4ub.h */; };
+		E09A31DC0F1F312000F11EC8 /* STFont.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C50F1F312000F11EC8 /* STFont.h */; };
+		E09A31DD0F1F312000F11EC8 /* stForward.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C60F1F312000F11EC8 /* stForward.h */; };
+		E09A31DE0F1F312000F11EC8 /* stglut.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C70F1F312000F11EC8 /* stglut.h */; };
+		E09A31DF0F1F312000F11EC8 /* STImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C80F1F312000F11EC8 /* STImage.h */; };
+		E09A31E00F1F312000F11EC8 /* STJoystick.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31C90F1F312000F11EC8 /* STJoystick.h */; };
+		E09A31E10F1F312000F11EC8 /* STPoint2.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31CA0F1F312000F11EC8 /* STPoint2.h */; };
+		E09A31E20F1F312000F11EC8 /* STPoint3.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31CC0F1F312000F11EC8 /* STPoint3.h */; };
+		E09A31E30F1F312000F11EC8 /* STShaderProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31CE0F1F312000F11EC8 /* STShaderProgram.h */; };
+		E09A31E40F1F312000F11EC8 /* STShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31CF0F1F312000F11EC8 /* STShape.h */; };
+		E09A31E50F1F312000F11EC8 /* STTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31D00F1F312000F11EC8 /* STTexture.h */; };
+		E09A31E60F1F312000F11EC8 /* STTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31D10F1F312000F11EC8 /* STTimer.h */; };
+		E09A31E70F1F312000F11EC8 /* STUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31D20F1F312000F11EC8 /* STUtil.h */; };
+		E09A31E80F1F312000F11EC8 /* STVector2.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31D30F1F312000F11EC8 /* STVector2.h */; };
+		E09A31E90F1F312000F11EC8 /* STVector3.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31D50F1F312000F11EC8 /* STVector3.h */; };
+		E09A31EA0F1F312000F11EC8 /* stgl.h in Headers */ = {isa = PBXBuildFile; fileRef = E09A31D70F1F312000F11EC8 /* stgl.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9E561F3147DD7D200451363 /* STTransform4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTransform4.h; path = ../include/STTransform4.h; sourceTree = SOURCE_ROOT; };
+		C9E561F5147DD7DD00451363 /* STTransform4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STTransform4.cpp; path = ../STTransform4.cpp; sourceTree = SOURCE_ROOT; };
+		D2AAC046055464E500DB518D /* libst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libst.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E034E63C0F1F3AD70005E446 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		E09A318F0F1F309F00F11EC8 /* STVector3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STVector3.cpp; path = ../STVector3.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31900F1F309F00F11EC8 /* STColor3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STColor3f.cpp; path = ../STColor3f.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31910F1F309F00F11EC8 /* STColor4f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STColor4f.cpp; path = ../STColor4f.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31920F1F309F00F11EC8 /* STColor4ub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STColor4ub.cpp; path = ../STColor4ub.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31930F1F309F00F11EC8 /* STFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STFont.cpp; path = ../STFont.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31940F1F309F00F11EC8 /* STImage_jpeg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STImage_jpeg.cpp; path = ../STImage_jpeg.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31950F1F309F00F11EC8 /* STImage_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STImage_png.cpp; path = ../STImage_png.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31960F1F309F00F11EC8 /* STImage_ppm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STImage_ppm.cpp; path = ../STImage_ppm.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31970F1F309F00F11EC8 /* STImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STImage.cpp; path = ../STImage.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31980F1F309F00F11EC8 /* STJoystick_darwin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STJoystick_darwin.cpp; path = ../STJoystick_darwin.cpp; sourceTree = SOURCE_ROOT; };
+		E09A319B0F1F309F00F11EC8 /* STJoystick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STJoystick.cpp; path = ../STJoystick.cpp; sourceTree = SOURCE_ROOT; };
+		E09A319C0F1F309F00F11EC8 /* STPoint2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STPoint2.cpp; path = ../STPoint2.cpp; sourceTree = SOURCE_ROOT; };
+		E09A319D0F1F309F00F11EC8 /* STPoint3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STPoint3.cpp; path = ../STPoint3.cpp; sourceTree = SOURCE_ROOT; };
+		E09A319E0F1F309F00F11EC8 /* STShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STShaderProgram.cpp; path = ../STShaderProgram.cpp; sourceTree = SOURCE_ROOT; };
+		E09A319F0F1F309F00F11EC8 /* STShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STShape.cpp; path = ../STShape.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31A00F1F309F00F11EC8 /* STTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STTexture.cpp; path = ../STTexture.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31A10F1F309F00F11EC8 /* STTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STTimer.cpp; path = ../STTimer.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31A20F1F309F00F11EC8 /* STVector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STVector2.cpp; path = ../STVector2.cpp; sourceTree = SOURCE_ROOT; };
+		E09A31C10F1F312000F11EC8 /* st.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = st.h; path = ../include/st.h; sourceTree = SOURCE_ROOT; };
+		E09A31C20F1F312000F11EC8 /* STColor3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STColor3f.h; path = ../include/STColor3f.h; sourceTree = SOURCE_ROOT; };
+		E09A31C30F1F312000F11EC8 /* STColor4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STColor4f.h; path = ../include/STColor4f.h; sourceTree = SOURCE_ROOT; };
+		E09A31C40F1F312000F11EC8 /* STColor4ub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STColor4ub.h; path = ../include/STColor4ub.h; sourceTree = SOURCE_ROOT; };
+		E09A31C50F1F312000F11EC8 /* STFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STFont.h; path = ../include/STFont.h; sourceTree = SOURCE_ROOT; };
+		E09A31C60F1F312000F11EC8 /* stForward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stForward.h; path = ../include/stForward.h; sourceTree = SOURCE_ROOT; };
+		E09A31C70F1F312000F11EC8 /* stglut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stglut.h; path = ../include/stglut.h; sourceTree = SOURCE_ROOT; };
+		E09A31C80F1F312000F11EC8 /* STImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STImage.h; path = ../include/STImage.h; sourceTree = SOURCE_ROOT; };
+		E09A31C90F1F312000F11EC8 /* STJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STJoystick.h; path = ../include/STJoystick.h; sourceTree = SOURCE_ROOT; };
+		E09A31CA0F1F312000F11EC8 /* STPoint2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPoint2.h; path = ../include/STPoint2.h; sourceTree = SOURCE_ROOT; };
+		E09A31CB0F1F312000F11EC8 /* STPoint2.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = STPoint2.inl; path = ../include/STPoint2.inl; sourceTree = SOURCE_ROOT; };
+		E09A31CC0F1F312000F11EC8 /* STPoint3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPoint3.h; path = ../include/STPoint3.h; sourceTree = SOURCE_ROOT; };
+		E09A31CD0F1F312000F11EC8 /* STPoint3.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = STPoint3.inl; path = ../include/STPoint3.inl; sourceTree = SOURCE_ROOT; };
+		E09A31CE0F1F312000F11EC8 /* STShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STShaderProgram.h; path = ../include/STShaderProgram.h; sourceTree = SOURCE_ROOT; };
+		E09A31CF0F1F312000F11EC8 /* STShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STShape.h; path = ../include/STShape.h; sourceTree = SOURCE_ROOT; };
+		E09A31D00F1F312000F11EC8 /* STTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTexture.h; path = ../include/STTexture.h; sourceTree = SOURCE_ROOT; };
+		E09A31D10F1F312000F11EC8 /* STTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTimer.h; path = ../include/STTimer.h; sourceTree = SOURCE_ROOT; };
+		E09A31D20F1F312000F11EC8 /* STUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STUtil.h; path = ../include/STUtil.h; sourceTree = SOURCE_ROOT; };
+		E09A31D30F1F312000F11EC8 /* STVector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STVector2.h; path = ../include/STVector2.h; sourceTree = SOURCE_ROOT; };
+		E09A31D40F1F312000F11EC8 /* STVector2.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = STVector2.inl; path = ../include/STVector2.inl; sourceTree = SOURCE_ROOT; };
+		E09A31D50F1F312000F11EC8 /* STVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STVector3.h; path = ../include/STVector3.h; sourceTree = SOURCE_ROOT; };
+		E09A31D60F1F312000F11EC8 /* STVector3.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = STVector3.inl; path = ../include/STVector3.inl; sourceTree = SOURCE_ROOT; };
+		E09A31D70F1F312000F11EC8 /* stgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stgl.h; path = ../include/stgl.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* libst */ = {
+			isa = PBXGroup;
+			children = (
+				E09A31B90F1F310F00F11EC8 /* Headers */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				E034E63C0F1F3AD70005E446 /* readme.txt */,
+			);
+			name = libst;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C9E561F5147DD7DD00451363 /* STTransform4.cpp */,
+				E09A318F0F1F309F00F11EC8 /* STVector3.cpp */,
+				E09A31900F1F309F00F11EC8 /* STColor3f.cpp */,
+				E09A31910F1F309F00F11EC8 /* STColor4f.cpp */,
+				E09A31920F1F309F00F11EC8 /* STColor4ub.cpp */,
+				E09A31930F1F309F00F11EC8 /* STFont.cpp */,
+				E09A31940F1F309F00F11EC8 /* STImage_jpeg.cpp */,
+				E09A31950F1F309F00F11EC8 /* STImage_png.cpp */,
+				E09A31960F1F309F00F11EC8 /* STImage_ppm.cpp */,
+				E09A31970F1F309F00F11EC8 /* STImage.cpp */,
+				E09A31980F1F309F00F11EC8 /* STJoystick_darwin.cpp */,
+				E09A319B0F1F309F00F11EC8 /* STJoystick.cpp */,
+				E09A319C0F1F309F00F11EC8 /* STPoint2.cpp */,
+				E09A319D0F1F309F00F11EC8 /* STPoint3.cpp */,
+				E09A319E0F1F309F00F11EC8 /* STShaderProgram.cpp */,
+				E09A319F0F1F309F00F11EC8 /* STShape.cpp */,
+				E09A31A00F1F309F00F11EC8 /* STTexture.cpp */,
+				E09A31A10F1F309F00F11EC8 /* STTimer.cpp */,
+				E09A31A20F1F309F00F11EC8 /* STVector2.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libst.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		E09A31B90F1F310F00F11EC8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C9E561F3147DD7D200451363 /* STTransform4.h */,
+				E09A31C10F1F312000F11EC8 /* st.h */,
+				E09A31C20F1F312000F11EC8 /* STColor3f.h */,
+				E09A31C30F1F312000F11EC8 /* STColor4f.h */,
+				E09A31C40F1F312000F11EC8 /* STColor4ub.h */,
+				E09A31C50F1F312000F11EC8 /* STFont.h */,
+				E09A31C60F1F312000F11EC8 /* stForward.h */,
+				E09A31C70F1F312000F11EC8 /* stglut.h */,
+				E09A31C80F1F312000F11EC8 /* STImage.h */,
+				E09A31C90F1F312000F11EC8 /* STJoystick.h */,
+				E09A31CA0F1F312000F11EC8 /* STPoint2.h */,
+				E09A31CB0F1F312000F11EC8 /* STPoint2.inl */,
+				E09A31CC0F1F312000F11EC8 /* STPoint3.h */,
+				E09A31CD0F1F312000F11EC8 /* STPoint3.inl */,
+				E09A31CE0F1F312000F11EC8 /* STShaderProgram.h */,
+				E09A31CF0F1F312000F11EC8 /* STShape.h */,
+				E09A31D00F1F312000F11EC8 /* STTexture.h */,
+				E09A31D10F1F312000F11EC8 /* STTimer.h */,
+				E09A31D20F1F312000F11EC8 /* STUtil.h */,
+				E09A31D30F1F312000F11EC8 /* STVector2.h */,
+				E09A31D40F1F312000F11EC8 /* STVector2.inl */,
+				E09A31D50F1F312000F11EC8 /* STVector3.h */,
+				E09A31D60F1F312000F11EC8 /* STVector3.inl */,
+				E09A31D70F1F312000F11EC8 /* stgl.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09A31D80F1F312000F11EC8 /* st.h in Headers */,
+				E09A31D90F1F312000F11EC8 /* STColor3f.h in Headers */,
+				E09A31DA0F1F312000F11EC8 /* STColor4f.h in Headers */,
+				E09A31DB0F1F312000F11EC8 /* STColor4ub.h in Headers */,
+				E09A31DC0F1F312000F11EC8 /* STFont.h in Headers */,
+				E09A31DD0F1F312000F11EC8 /* stForward.h in Headers */,
+				E09A31DE0F1F312000F11EC8 /* stglut.h in Headers */,
+				E09A31DF0F1F312000F11EC8 /* STImage.h in Headers */,
+				E09A31E00F1F312000F11EC8 /* STJoystick.h in Headers */,
+				E09A31E10F1F312000F11EC8 /* STPoint2.h in Headers */,
+				E09A31E20F1F312000F11EC8 /* STPoint3.h in Headers */,
+				E09A31E30F1F312000F11EC8 /* STShaderProgram.h in Headers */,
+				E09A31E40F1F312000F11EC8 /* STShape.h in Headers */,
+				E09A31E50F1F312000F11EC8 /* STTexture.h in Headers */,
+				E09A31E60F1F312000F11EC8 /* STTimer.h in Headers */,
+				E09A31E70F1F312000F11EC8 /* STUtil.h in Headers */,
+				E09A31E80F1F312000F11EC8 /* STVector2.h in Headers */,
+				E09A31E90F1F312000F11EC8 /* STVector3.h in Headers */,
+				E09A31EA0F1F312000F11EC8 /* stgl.h in Headers */,
+				C9E561F4147DD7D200451363 /* STTransform4.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* libst */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libst" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libst;
+			productName = libst;
+			productReference = D2AAC046055464E500DB518D /* libst.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libst" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* libst */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* libst */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09A31A30F1F309F00F11EC8 /* STVector3.cpp in Sources */,
+				E09A31A40F1F309F00F11EC8 /* STColor3f.cpp in Sources */,
+				E09A31A50F1F309F00F11EC8 /* STColor4f.cpp in Sources */,
+				E09A31A60F1F309F00F11EC8 /* STColor4ub.cpp in Sources */,
+				E09A31A70F1F309F00F11EC8 /* STFont.cpp in Sources */,
+				E09A31A80F1F309F00F11EC8 /* STImage_jpeg.cpp in Sources */,
+				E09A31A90F1F309F00F11EC8 /* STImage_png.cpp in Sources */,
+				E09A31AA0F1F309F00F11EC8 /* STImage_ppm.cpp in Sources */,
+				E09A31AB0F1F309F00F11EC8 /* STImage.cpp in Sources */,
+				E09A31AC0F1F309F00F11EC8 /* STJoystick_darwin.cpp in Sources */,
+				E09A31AF0F1F309F00F11EC8 /* STJoystick.cpp in Sources */,
+				E09A31B00F1F309F00F11EC8 /* STPoint2.cpp in Sources */,
+				E09A31B10F1F309F00F11EC8 /* STPoint3.cpp in Sources */,
+				E09A31B20F1F309F00F11EC8 /* STShaderProgram.cpp in Sources */,
+				E09A31B30F1F309F00F11EC8 /* STShape.cpp in Sources */,
+				E09A31B40F1F309F00F11EC8 /* STTexture.cpp in Sources */,
+				E09A31B50F1F309F00F11EC8 /* STTimer.cpp in Sources */,
+				E09A31B60F1F309F00F11EC8 /* STVector2.cpp in Sources */,
+				C9E561F6147DD7DD00451363 /* STTransform4.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					"/opt/local/include/freetype2/**",
+					/sw/include,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = st;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					"/opt/local/include/freetype2/**",
+					/sw/include,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = st;
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/opt/local/include/**",
+					"/sw/lib/freetype2/include/**",
+					/sw/include,
+				);
+				PREBINDING = NO;
+				USER_HEADER_SEARCH_PATHS = ../ext/glew/include;
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/opt/local/include/**",
+					"/sw/lib/freetype2/include/**",
+					/sw/include,
+				);
+				PREBINDING = NO;
+				USER_HEADER_SEARCH_PATHS = ../ext/glew/include;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "libst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

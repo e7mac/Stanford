@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD037CD-7D78-4096-A827-0A7E6642FF74}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;../ext/libpng/include;../ext/libjpeg/include;../ext/zlib/include/;../ext/freetype/include;../ext/glew/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(Configuration)/libst.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../include;../ext/libpng/include;../ext/libjpeg/include;../ext/zlib/include/;../ext/freetype/include;../ext/glew/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(Configuration)/libst.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\STColor3f.cpp" />
+    <ClCompile Include="..\STColor4f.cpp" />
+    <ClCompile Include="..\STColor4ub.cpp" />
+    <ClCompile Include="..\STFont.cpp" />
+    <ClCompile Include="..\STImage.cpp" />
+    <ClCompile Include="..\STImage_jpeg.cpp" />
+    <ClCompile Include="..\STImage_png.cpp" />
+    <ClCompile Include="..\STImage_ppm.cpp" />
+    <ClCompile Include="..\STJoystick.cpp" />
+    <ClCompile Include="..\STJoystick_win32.cpp" />
+    <ClCompile Include="..\STPoint2.cpp" />
+    <ClCompile Include="..\STPoint3.cpp" />
+    <ClCompile Include="..\STShaderProgram.cpp" />
+    <ClCompile Include="..\STShape.cpp" />
+    <ClCompile Include="..\STTexture.cpp" />
+    <ClCompile Include="..\STTimer.cpp" />
+    <ClCompile Include="..\STTransform4.cpp" />
+    <ClCompile Include="..\STVector2.cpp" />
+    <ClCompile Include="..\STVector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\st.h" />
+    <ClInclude Include="..\include\STColor3f.h" />
+    <ClInclude Include="..\include\STColor4f.h" />
+    <ClInclude Include="..\include\STColor4ub.h" />
+    <ClInclude Include="..\include\STFont.h" />
+    <ClInclude Include="..\include\stForward.h" />
+    <ClInclude Include="..\include\stgl.h" />
+    <ClInclude Include="..\include\stglut.h" />
+    <ClInclude Include="..\include\STImage.h" />
+    <ClInclude Include="..\include\STJoystick.h" />
+    <ClInclude Include="..\include\STPoint2.h" />
+    <ClInclude Include="..\include\STPoint3.h" />
+    <ClInclude Include="..\include\STShaderProgram.h" />
+    <ClInclude Include="..\include\STShape.h" />
+    <ClInclude Include="..\include\STTexture.h" />
+    <ClInclude Include="..\include\STTimer.h" />
+    <ClInclude Include="..\include\STTransform4.h" />
+    <ClInclude Include="..\include\STUtil.h" />
+    <ClInclude Include="..\include\STVector2.h" />
+    <ClInclude Include="..\include\STVector3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\STPoint2.inl" />
+    <None Include="..\include\STPoint3.inl" />
+    <None Include="..\include\STVector2.inl" />
+    <None Include="..\include\STVector3.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
