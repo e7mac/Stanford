@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdr", "hdr.vcproj", "{2D5821CC-F6EF-4C55-84B5-1F9432D0C738}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7FD037CD-7D78-4096-A827-0A7E6642FF74} = {7FD037CD-7D78-4096-A827-0A7E6642FF74}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libst", "..\libst\vc2008\libst.vcproj", "{7FD037CD-7D78-4096-A827-0A7E6642FF74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D5821CC-F6EF-4C55-84B5-1F9432D0C738}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2D5821CC-F6EF-4C55-84B5-1F9432D0C738}.Debug|Win32.Build.0 = Debug|Win32
+		{2D5821CC-F6EF-4C55-84B5-1F9432D0C738}.Release|Win32.ActiveCfg = Release|Win32
+		{2D5821CC-F6EF-4C55-84B5-1F9432D0C738}.Release|Win32.Build.0 = Release|Win32
+		{7FD037CD-7D78-4096-A827-0A7E6642FF74}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FD037CD-7D78-4096-A827-0A7E6642FF74}.Debug|Win32.Build.0 = Debug|Win32
+		{7FD037CD-7D78-4096-A827-0A7E6642FF74}.Release|Win32.ActiveCfg = Release|Win32
+		{7FD037CD-7D78-4096-A827-0A7E6642FF74}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
