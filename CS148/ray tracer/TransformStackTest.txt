@@ -1,0 +1,33 @@
+Camera   0 1.5 0   0 1 0   0 0 -5.5  55   1
+Output   512   512   TransformStackTest.png
+BounceDepth   1
+ShadowBias 0.0001
+
+
+PushMatrix
+Translate 0 -0.5 0
+
+# The floor
+Material   1 1 1   0.4 0.4 0.4   0 0 0   0.9 0.9 0.9   0
+Triangle   -1000 0 -1000   -1000 0 1000   1000 0 1000
+Triangle   1000 0 1000   1000 0 -1000   -1000 0 -1000
+
+PopMatrix
+
+
+
+PushMatrix
+Translate 0 0.5 -5
+
+AmbientLight   0.05 0.05 0.05
+PointLight   -2 3.5 2   0.8 0.8 0.8
+
+# Reflective ball
+Material   1 0.75 0.75   1 0.75 0.75   1 1 1   0.75 0.75 0.75   50
+Sphere   1 0 -1   1
+
+# Diffuse ball
+Material   0.75 0.75 1   0.75 0.75 1   0 0 0   0 0 0   0
+Sphere   -1 0 0   1
+
+PopMatrix

@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng" type="xml"?>
+<?oxygen SCHSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <?dbhtml filename="Tutorial 08.html" ?>
+    <title>Getting Oriented</title>
+    <para>In this tutorial, we will investigate specific problems with regard to orienting
+        objects.</para>
+    <section>
+        <?dbhtml filename="Tut08 Gimbal Lock.html"?>
+        <title>Gimbal Lock</title>
+        <para>Remember a few tutorials back, when we said that a rotation matrix is not a rotation
+            matrix at all, that it is an orientation matrix? We also said that forgetting this can
+            come back to bite you. Well, here's likely the most common way.</para>
+        <para>Normally, when dealing with orienting an object like a plane or spaceship in 3D space,
+            you want to orient it based on 3 rotations about the 3 main axes. The obvious way to do
+            this is with a series of 3 rotations. This means that the program stores 3 angles, and
+            you generate a rotation matrix by creating 3 rotation matrices based on these angles and
+            concatenating them. Indeed, the 3 angles often have special names, based on common
+            flight terminology: yaw, pitch, and roll.</para>
+        <para>Pitch is the rotation that raises or lowers the front of the object. Yaw is the
+            rotation that turns the object left and right. Roll is the rotation that spins it around
+            the direction of motion. These terms neatly duck the question of what the axes
+            technically are; they are defined in terms of semantic axes (front, left, direction of
+            motion, etc), rather than a specific model space. So in one model space, roll might be a
+            rotation about the X axis, but in another, it might be a rotation about the Z
+            axis.</para>
+        <para>One of the first problems you will note is that the order you apply these rotations
+            matter. As previously stated, a rotation matrix is an <emphasis>orientation</emphasis>
+            transform. Each transform defines a new coordinate system, and the next transform is
+            based on an object in the <emphasis>new</emphasis> space. For example, if we apply the
+            roll first, we have now changed what the axis for the subsequent yaw is.</para>
+        <para>You can use any order that you like, so long as you understand what these angles mean.
+            If you apply the roll first, your yaw and pitch must be in terms of the new roll
+            coordinate system, and not the original coordinate system. That is, a change that is
+            intended to only affect the roll of the final space may need yaw or pitch changes to
+            allow it to have the same apparent orientation (except for the new roll, of
+            course).</para>
+        <para>But there is a far more insidious problem lurking in here. And this problem happens
+            anytime you compute a final rotation from a series of 3 rotations about axes
+            perpendicular to each other.</para>
+        <para>The tutorial project <phrase role="propername">Gimbal Lock</phrase> illustrates this
+            problem. Because the problem was first diagnosed with a physical device called a <link
+                xlink:href="http://en.wikipedia.org/wiki/Gimbal">gimbal</link>, the problem has
+            become known as <glossterm>gimbal lock.</glossterm></para>
+        <para>A gimbal is a pivoted support that provides the ability to rotate in one axis. A
+            gimbal can be mounted within another gimbal. The Gimbal Lock project has a set of 3
+            square gimbals, each with a pivot axis that is perpendicular to the other two. This
+            effectively mimics the common yaw/pitch/roll angle setup.</para>
+        <figure>
+            <title>Gimbal Lock Project</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="Three%20Gimbal%20Array.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>You can control the orientation of each gimbal separately. The <keycap>W</keycap> and
+                <keycap>S</keycap> keys control the outer gimbal, the <keycap>A</keycap> and
+                <keycap>D</keycap> keys control the middle gimbal, and the <keycap>Q</keycap> and
+                <keycap>E</keycap> keys control the inner gimbal. If you just want to see (and
+            affect) the orientation of the ship, press the <keycap>SpaceBar</keycap> to toggle
+            drawing the gimbal rings.</para>
+        <para>The first thing you discover when attempting to use the gimbals to orient the ship is
+            that the yaw, pitch, and roll controls of the gimbal change each time you move one of
+            them. That is, when the gimbal arrangement is in the original position, the outer gimbal
+            controls the pitch. But if you move the middle gimbal, it no longer controls
+                <emphasis>only</emphasis> the pitch. Orienting the ship is very unintuitive.</para>
+        <para>The bigger is what happens when two of the gimbals are parallel with one
+            another:</para>
+        <figure>
+            <title>Parallel Gimbals</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="In%20Gimbal%20Lock.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>Recall that the purpose of the three gimbals is to be able to adjust one of the three
+            angles and orient the object in a particular direction. In a flight-simulation game, the
+            player would have controls that would change their yaw, pitch, and roll. However, look
+            at this picture.</para>
+        <para>Given the controls of these gimbals, can you cause the object to pitch up and down?
+            That is, move its nose up and down from where it is currently? Only slightly; you can
+            use the middle gimbal, which has a bit of pitch rotation. But that is not much.</para>
+        <para>The reason we do not have as much freedom to orient the object is because the outer
+            and inner gimbals are now rotating about the same axis. This means you really only have
+            two gimbals to manipulate in order to orient the red gimbal. And 3D orientation cannot
+            be fully controlled with only 2 axial rotations, with only 2 gimbals.</para>
+        <para>When gimbals are in such a position, you have what is known as <glossterm>gimbal
+                lock</glossterm>; you have locked one of the gimbals to another, and now both cause
+            the same effect.</para>
+        <section>
+            <title>Rendering</title>
+            <para>Before we find a solution to the problem, let's review the code. Most of it is
+                nothing you have not seen elsewhere, so this will be quick.</para>
+            <para>There is no explicit camera matrix set up for this example; it is too simple for
+                that. The three gimbals are loaded from mesh files as we saw in our last tutorial.
+                They are built to fit into the above array. The ship is also from a mesh
+                file.</para>
+            <para>The rendering function looks like this:</para>
+            <example>
+                <title>Gimbal Lock Display Code</title>
+                <programlisting language="cpp">void display()
+{
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearDepth(1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    glutil::MatrixStack currMatrix;
+    currMatrix.Translate(glm::vec3(0.0f, 0.0f, -200.0f));
+    currMatrix.RotateX(g_angles.fAngleX);
+    DrawGimbal(currMatrix, GIMBAL_X_AXIS, glm::vec4(0.4f, 0.4f, 1.0f, 1.0f));
+    currMatrix.RotateY(g_angles.fAngleY);
+    DrawGimbal(currMatrix, GIMBAL_Y_AXIS, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
+    currMatrix.RotateZ(g_angles.fAngleZ);
+    DrawGimbal(currMatrix, GIMBAL_Z_AXIS, glm::vec4(1.0f, 0.3f, 0.3f, 1.0f));
+    
+    glUseProgram(theProgram);
+    currMatrix.Scale(3.0, 3.0, 3.0);
+    currMatrix.RotateX(-90);
+    //Set the base color for this object.
+    glUniform4f(baseColorUnif, 1.0, 1.0, 1.0, 1.0);
+    glUniformMatrix4fv(modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(currMatrix.Top()));
+    
+    g_pObject->Render("tint");
+    
+    glUseProgram(0);
+    
+    glutSwapBuffers();
+}</programlisting>
+            </example>
+            <para>The translation done first acts as our camera matrix: positioning the objects far
+                enough away to be comfortably visible. From there, the three gimbals are drawn, with
+                their appropriate rotations. Since each rotation applies to the previous one, the
+                final orientation is given to the last gimbal.</para>
+            <para>The <function>DrawGimbal</function> function does some rotations of its own, but
+                this is just to position the gimbals properly in the array. The gimbals are given a
+                color programmatically, which is the 3rd parameter to
+                    <function>DrawGimbal.</function></para>
+            <para>After building up the rotation matrix, we draw the ship. We use a scale to make it
+                reasonably large, and then rotate it so that it points in the correct direction
+                relative to the final gimbal. In model space, the ship faces the +Z axis, but the
+                gimbal faces the +Y axis. So we needed a change of coordinate system.</para>
+        </section>
+    </section>
+    <section>
+        <?dbhtml filename="Tut08 Quaternions.html"?>
+        <title>Quaternions</title>
+        <para>So gimbals, 3 accumulated axial rotations, do not really work very well for orienting
+            an object. Gimbals can be locked, and it is very unintuitive to control them. How do we
+            fix these problems?</para>
+        <para>Part of the problem is that we are trying to store an orientation as a series of 3
+            accumulated axial rotations. Orientations are <emphasis>orientations,</emphasis> not
+            rotations. And orientations are certainly not a series of rotations. So we need to treat
+            the orientation of the ship as an orientation, as a specific quantity.</para>
+        <para>The first thought towards this end would be to keep the orientation as a matrix. When
+            the time comes to modify the orientation, we simply apply a transformation to this
+            matrix, storing the result as the new current orientation.</para>
+        <para>This means that every yaw, pitch, and roll applied to the current orientation will be
+            relative to that current orientation. Which is precisely what we need. If the user
+            applies a positive yaw, you want that yaw to rotate them relative to where they are
+            current pointing, not relative to some fixed coordinate system.</para>
+        <para>There are a few downsides to this approach. First, a 4x4 matrix is rather larger than
+            3 floating-point angles. But a much more difficult issue is that successive
+            floating-point math can lead to errors. If you keep accumulating successive
+            transformations of an object, once every 1/30th of a second for a period of several
+            minutes or hours, these floating-point errors start accumulating. Eventually, the
+            orientation stops being a pure rotation and starts incorporating scale and skewing
+            characteristics.</para>
+        <para>The solution here is to re-orthonormalize the matrix after applying each transform. A
+            coordinate system (which a matrix defines) is said to be
+                <glossterm>orthonormal</glossterm> if the basis vectors are of unit length (no
+            scale) and each axis is perpendicular to all of the others.</para>
+        <para>Unfortunately, re-orthonormalizing a matrix is not a simple operation. You could try
+            to normalize each of the axis vectors with typical vector normalization, but that
+            would not ensure that the matrix was orthonormal. It would remove scaling, but the axes
+            would not be guaranteed to be perpendicular.</para>
+        <para>Orthonormalization is certainly possible. But there are better solutions. Such as using
+            something called a <glossterm>quaternion.</glossterm></para>
+        <para>A quaternion is (for the purposes of this conversation) a 4-dimensional vector that is
+            treated in a special way. Any pure orientation change from one coordinate system to
+            another can be represented by a rotation about some axis by some angle. A quaternion is
+            a way of encoding this angle/axis rotation:</para>
+        <equation>
+            <title>Angle/Axis to Quaternion</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="AngleAxisToQuaternion.svg" />
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <para>Assuming the axis itself is a unit vector, this will produce a <glossterm>unit
+                quaternion.</glossterm> That is, a quaternion with a length of 1.</para>
+        <para>Quaternions can be considered to be two parts: a vector part and a scalar part. The
+            vector part are the first three components, when displayed in the order above. The
+            scalar part is the last part.</para>
+        <section>
+            <title>Quaternion Math</title>
+            <para>Quaternions are equivalent to orientation matrices. You can compose two
+                orientation quaternions using a special operation called <glossterm>quaternion
+                    multiplication</glossterm>. Given the quaternions <literal>a</literal> and
+                    <literal>b</literal>, the product of them is:</para>
+            <equation>
+                <title>Quaternion Multiplication</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="QuaternionMultiplication.svg" />
+                    </imageobject>
+                </mediaobject>
+            </equation>
+            <para>If the two quaternions being multiplied represent orientations, then the product
+                of them is a composite orientation. This works like matrix multiplication, except
+                only for orientations. Like matrix multiplication, quaternion multiplication is
+                associative (<inlineequation>
+                    <mathphrase>(a*b) * c = a * (b*c)</mathphrase>
+                </inlineequation>), but not commutative (<inlineequation>
+                    <mathphrase>a*b != b*a</mathphrase>
+                </inlineequation>).</para>
+            <para>The main difference between matrices and quaternions that matters for our needs is
+                that it is easy to keep a quaternion normalized. Simply perform a vector
+                normalization on it after every few multiplications. This enables us to add numerous
+                small rotations together without numerical precision problems showing up.</para>
+            <para>There is one more thing we need to be able to do: convert a quaternion into a
+                rotation matrix. While we could convert a unit quaternion back into angle/axis
+                rotations, it's much preferable to do it directly:</para>
+            <equation>
+                <title>Quaternion to Matrix</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="QuaternionToMatrix.svg" />
+                    </imageobject>
+                </mediaobject>
+            </equation>
+            <para>This does look suspiciously similar to the formula for generating a matrix from an
+                angle/axis rotation.</para>
+        </section>
+        <section>
+            <title>Composition Type</title>
+            <para>So our goal is to compose successive rotations into a final orientation. When we
+                want to increase the pitch, for example, we will take the current orientation and
+                multiply into it a quaternion that represents a pitch rotation of a few degrees. The
+                result becomes the new orientation.</para>
+            <para>But which side do we do the multiplication on? Quaternion multiplication is not
+                commutative, so this will have an affect on the output. Well, it works exactly like
+                matrix math.</para>
+            <para>Our positions (p) are in model space. We are transforming them into world space.
+                The current transformation matrix is represented by the orientation O. Thus, to
+                transform points, we use <inlineequation>
+                    <mathphrase>O*p</mathphrase>
+                </inlineequation></para>
+            <para>Now, we want to adjust the orientation O by applying some small pitch change.
+                Well, the pitch of the model is defined by model space. Therefore, the pitch change
+                (R) is a transformation that takes coordinates in model space and transforms them to
+                the pitch space. So our total transformation is <inlineequation>
+                    <mathphrase>O*R*p</mathphrase>
+                </inlineequation>; the new orientation is <inlineequation>
+                    <mathphrase>O*R</mathphrase>
+                </inlineequation>.</para>
+        </section>
+        <section>
+            <title>Yaw Pitch Roll</title>
+            <para>We implement this in the <phrase role="propername">Quaternion YPR</phrase>
+                tutorial. This tutorial does not show gimbals, but the same controls exist for yaw,
+                pitch, and roll transformations. Here, pressing the <keycap>SpaceBar</keycap> will
+                switch between right-multiplying the YPR values to the current orientation and
+                left-multiplying them. Post-multiplication will apply the YPR transforms from
+                world-space.</para>
+            <figure>
+                <title>Quaternion YPR Project</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="Quaternion%20YPR.png"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para>The rendering code is pretty straightforward.</para>
+            <example>
+                <title>Quaternion YPR Display</title>
+                <programlisting language="cpp">void display()
+{
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearDepth(1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    glutil::MatrixStack currMatrix;
+    currMatrix.Translate(glm::vec3(0.0f, 0.0f, -200.0f));
+    currMatrix.ApplyMatrix(glm::mat4_cast(g_orientation));
+    
+    glUseProgram(theProgram);
+    currMatrix.Scale(3.0, 3.0, 3.0);
+    currMatrix.RotateX(-90);
+    //Set the base color for this object.
+    glUniform4f(baseColorUnif, 1.0, 1.0, 1.0, 1.0);
+    glUniformMatrix4fv(modelToCameraMatrixUnif, 1, GL_FALSE, glm::value_ptr(currMatrix.Top()));
+    
+    g_pShip->Render("tint");
+    
+    glUseProgram(0);
+    
+    glutSwapBuffers();
+}</programlisting>
+            </example>
+            <para>Though GLSL does not have quaternion types or quaternion arithmetic, the GLM math
+                library provides both. The <varname>g_orientation</varname> variable is of the type
+                    <classname>glm::fquat</classname>, which is a floating-point quaternion. The
+                    <function>glm::mat4_cast</function> function converts a quaternion into a 4x4
+                rotation matrix. This stands in place of the series of 3 rotations used in the last
+                tutorial.</para>
+            <para>In response to keypresses, <varname>g_orientation</varname> is modified, applying
+                a transform to it. This is done with the <function>OffsetOrientation</function>
+                function.</para>
+            <example>
+                <title>OffsetOrientation Function</title>
+                <programlisting language="cpp">void OffsetOrientation(const glm::vec3 &amp;_axis, float fAngDeg)
+{
+    float fAngRad = Framework::DegToRad(fAngDeg);
+    
+    glm::vec3 axis = glm::normalize(_axis);
+    
+    axis = axis * sinf(fAngRad / 2.0f);
+    float scalar = cosf(fAngRad / 2.0f);
+    
+    glm::fquat offset(scalar, axis.x, axis.y, axis.z);
+    
+    if(g_bRightMultiply)
+        g_orientation = g_orientation * offset;
+    else
+        g_orientation = offset * g_orientation;
+    
+    g_orientation = glm::normalize(g_orientation);
+}</programlisting>
+            </example>
+            <para>This generates the offset quaternion from an angle and axis. Since the axis is
+                normalized, there is no need to normalize the resulting <varname>offset</varname>
+                quaternion. Then the offset is multiplied into the orientation, and the result is
+                normalized.</para>
+            <para>In particular, pay attention to the difference between right multiplication and
+                left multiplication. When you right-multiply, the offset orientation is in model
+                space. When you left-multiply, the offset is in <emphasis>world</emphasis> space.
+                Both of these can be useful for different purposes.</para>
+        </section>
+    </section>
+    <section>
+        <?dbhtml filename="Tut08 Camera Relative Orientation.html"?>
+        <title>Camera-Relative Orientation</title>
+        <para>As useful as model and world space offsetting is, there is one more space that it
+            might be useful to orient from. Camera-space.</para>
+        <para>This is primarily useful in modelling applications, but it can have other applications
+            as well. In such programs, as the user spins the camera around to different angles, the
+            user may want to transform the object relative to the direction of the view.</para>
+        <para>In order to understand the solution to doing this, let's frame the problem explicitly.
+            We have positions (p) in model space. These positions will be transformed by a current
+            model-to-world orientation (O), and then by a final camera matrix (C). Thus, our
+            transform equation is <inlineequation>
+                <mathphrase>C*O*p</mathphrase>
+            </inlineequation>.</para>
+        <para>We want to apply an orientation offset (R), which takes points in camera-space. If we
+            wanted to apply this to the camera matrix, it would simply be multiplied by the camera
+            matrix: <inlineequation>
+                <mathphrase>R*C*O*p</mathphrase>
+            </inlineequation>. That's nice and all, but we want to apply a transform to O, not to
+            C.</para>
+        <para>Therefore, we need to use our transforms to generate a new orientation offset (N),
+            which will produce the same effect:</para>
+        <para><informalequation>
+                <mathphrase>C*N*O = R*C*O</mathphrase>
+            </informalequation></para>
+        <section>
+            <title>Inversion</title>
+            <para>In order to solve this, we need to introduce a new concept. Given a matrix M,
+                there may be a matrix N such that <inlineequation>
+                    <mathphrase>MN = I</mathphrase>
+                </inlineequation>, where I is the identity matrix. If there is such a matrix, the
+                matrix N is called the <glossterm>inverse matrix</glossterm> of M. The notation for
+                the inverse matrix of M is M<superscript>-1</superscript>. The symbol
+                        <quote><superscript>-1</superscript></quote> does not mean to raise the
+                matrix to the -1 power; it means to invert it.</para>
+            <para>The matrix inverse can be analogized to the scalar multiplicative inverse (ie:
+                reciprocal). The scalar multiplicative inverse of X is the number Y such that <inlineequation>
+                    <mathphrase>XY = 1</mathphrase>
+                </inlineequation>.</para>
+            <para>In the case of the scalar inverse, this is very easy to solve for: <inlineequation>
+                    <mathphrase>Y = 1/X</mathphrase>
+                </inlineequation>. Easy though this may be, there are values of X for which there is
+                no multiplicative inverse. OK, there's <emphasis>one</emphasis> such real value of
+                X: 0.</para>
+            <para>The case of the inverse matrix is much more complicated. Just as with the scalar
+                inverse, there are matrices that have no inverse. Unlike the scalar case, there are
+                a <emphasis>lot</emphasis> of matrices with no inverse. Also, computing the inverse
+                matrix is a <emphasis>lot</emphasis> more complicated than simply taking the
+                reciprocal of a value.</para>
+            <para>Most common transformation matrices do have an inverse. And for the basic
+                transformation matrices, the inverse matrix is very easy to compute. For a pure
+                rotation matrix, simply compute a new rotation matrix by negating the angle that the
+                old one was generated with. For a translation matrix, negate the origin value in the
+                matrix. For a scale matrix, take the reciprocal of the scale along each axis.</para>
+            <para>To take the inverse of a sequence of matrices, you can take the inverse of each of
+                the component matrices. But you have to do the matrix multiplication in
+                    <emphasis>reverse</emphasis> order. So if we have <inlineequation>
+                    <mathphrase>M = TRS</mathphrase>
+                </inlineequation>, then <inlineequation>
+                    <mathphrase>M<superscript>-1</superscript> =
+                            S<superscript>-1</superscript>R<superscript>-1</superscript>T<superscript>-1</superscript></mathphrase>
+                </inlineequation>.</para>
+            <para>Quaternions, like matrices, have a multiplicative inverse. The inverse of a pure
+                rotation matrix, which quaternions represent, is a rotation about the same axis with
+                the negative of the angle. For any angle θ, it is the case that <inlineequation>
+                    <mathphrase>sin(-θ) = -sin(θ)</mathphrase>
+                </inlineequation>. It is also the case that <inlineequation>
+                    <mathphrase>cos(-θ) = cos(θ)</mathphrase>
+                </inlineequation>. Since the vector part of a quaternion is built by multiplying the
+                axis by the sine of the half-angle, and the scalar part is the cosine of the
+                half-angle, the inverse of any quaternion is just the negation of the vector
+                part.</para>
+            <para>You can also infer this to mean that, if you negate the axis of rotation, you are
+                effectively rotating about the old axis but negating the angle. Which is true, since
+                the direction of the axis of rotation defines what direction the rotation angle
+                moves the points in. Negate the axis's direction, and you're rotating in the
+                opposite direction.</para>
+            <para>In quaternion lingo, the inverse quaternion is more correctly called the
+                    <glossterm>conjugate quaternion.</glossterm> We use the same inverse notation,
+                        <quote><superscript>-1</superscript>,</quote> to denote conjugate
+                quaternions.</para>
+            <para>Incidentally, the identity quaternion is a quaternion who's rotation angle is
+                zero. The cosine of 0 is one, and the sine of 0 is zero, so the vector part of the
+                identity quaternion is zero and the scalar part is one.</para>
+        </section>
+        <section>
+            <title>Solution</title>
+            <para>Given our new knowledge of inverse matrices, we can solve our problem.</para>
+            <para><informalequation>
+                    <mathphrase>C*N*O = R*C*O</mathphrase>
+                </informalequation></para>
+            <para>We can right-multiply both sides of this equation by the inverse transform of
+                O.</para>
+            <informalequation>
+                <mathphrase>(C*N*O)*O<superscript>-1</superscript> =
+                        (R*C*O)*O<superscript>-1</superscript></mathphrase>
+            </informalequation>
+            <informalequation>
+                <mathphrase>C*N*I = R*C*I</mathphrase>
+            </informalequation>
+            <para>The I is the identity transform. From here, we can left-multiply both sides by the
+                inverse transform of C:</para>
+            <informalequation>
+                <mathphrase>C<superscript>-1</superscript> *(C*N) =
+                    C<superscript>-1</superscript>*(R*C)</mathphrase>
+            </informalequation>
+            <informalequation>
+                <mathphrase>N = C<superscript>-1</superscript>*(R*C)</mathphrase>
+            </informalequation>
+            <para>Therefore, given an offset that is in camera space, we can generate the
+                world-space equivalent by multiplying it between the camera and inverse camera
+                transforms.</para>
+        </section>
+        <section>
+            <title>Transformation Spaces</title>
+            <para>It turns out that this is a generalized operation. It can be used for much more
+                than just orientation changes.</para>
+            <para>Consider a scale operation. Scales apply along the main axes of their space. But
+                if you want to scale something along a different axis, how do you do that?</para>
+            <para>You rotate the object into a coordinate system where the axis you want to scale
+                    <emphasis>is</emphasis> one of the basis axes, perform your scale, then rotate
+                it back with the inverse of the previous rotation.</para>
+            <para>Effectively, what we are doing is transforming, not positions, but other
+                transformation matrices into different spaces. A transformation matrix has some
+                input space and defines an output space. If we want to apply that transformation in
+                a different space, we perform this operation.</para>
+            <para>The general form of this sequence is as follows. Suppose you have a transformation
+                matrix T, which operates on points in a space called F. We have some positions in
+                the space P. What we want is to create a matrix that applies T's transformation
+                operation, except that it needs to operate on points in the space of P. Given a
+                matrix M that transforms from P space to F space, that matrix is <inlineequation>
+                    <mathphrase>M<superscript>-1</superscript>*T*M</mathphrase>
+                </inlineequation>.</para>
+        </section>
+        <section>
+            <title>Final Orientation</title>
+            <para>Let's look at how this all works out in code, with the <phrase role="propername"
+                    >Camera Relative</phrase> tutorial. This works very similarly to the last
+                tutorial, but with a few differences.</para>
+            <para>Since we are doing camera-relative rotation, we need to have an actual camera that
+                can move independently of the world. So we incorporate our camera code from our
+                world space into this one. As before, the <keycap>I</keycap> and <keycap>K</keycap>
+                keys will move the camera up and down, relative to a center point. The
+                    <keycap>J</keycap> and <keycap>K</keycap> keys will move the camera left and
+                right around the center point. Holding <keycap>Shift</keycap> with these keys will
+                move the camera in smaller increments.</para>
+            <para>The <keycap>SpaceBar</keycap> will toggle between three transforms: model-relative
+                (yaw/pitch/roll-style), world-relative, and camera-relative.</para>
+            <para>Our scene also includes a ground plane as a reference.</para>
+            <figure>
+                <title>Camera Relative Project</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="Camera%20Relative.png"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para>The <function>display</function> function only changed where needed to deal with
+                drawing the ground plane and to handle the camera. Either way, it's nothing that
+                has not been seen elsewhere.</para>
+            <para>The substantive changes were in the <function>OffsetOrientation</function>
+                function:</para>
+            <example>
+                <title>Camera Relative OffsetOrientation</title>
+                <programlisting language="cpp">void OffsetOrientation(const glm::vec3 &amp;_axis, float fAngDeg)
+{
+    float fAngRad = Framework::DegToRad(fAngDeg);
+    
+    glm::vec3 axis = glm::normalize(_axis);
+    
+    axis = axis * sinf(fAngRad / 2.0f);
+    float scalar = cosf(fAngRad / 2.0f);
+    
+    glm::fquat offset(scalar, axis.x, axis.y, axis.z);
+    
+    switch(g_iOffset)
+    {
+    case MODEL_RELATIVE:
+        g_orientation = g_orientation * offset;
+        break;
+    case WORLD_RELATIVE:
+        g_orientation = offset * g_orientation;
+        break;
+    case CAMERA_RELATIVE:
+        {
+            const glm::vec3 &amp;camPos = ResolveCamPosition();
+            const glm::mat4 &amp;camMat = CalcLookAtMatrix(camPos, g_camTarget, glm::vec3(0.0f, 1.0f, 0.0f));
+            
+            glm::fquat viewQuat = glm::quat_cast(camMat);
+            glm::fquat invViewQuat = glm::conjugate(viewQuat);
+            
+            const glm::fquat &amp;worldQuat = (invViewQuat * offset * viewQuat);
+            g_orientation = worldQuat * g_orientation;
+        }
+        break;
+    }
+    
+    g_orientation = glm::normalize(g_orientation);
+}</programlisting>
+            </example>
+            <para>The change here is the addition of the camera-relative condition. To do this in
+                quaternion math, we must first convert the world-to-camera matrix into a quaternion
+                representing that orientation. This is done here using
+                    <function>glm::quat_cast</function>.</para>
+            <para>The conjugate quaternion is computed with GLM. Then, we simply multiply them with
+                the offset to compute the world-space offset orientation. This gets left-multiplied
+                into the current orientation, and we're done.</para>
+        </section>
+    </section>
+    <section>
+        <?dbhtml filename="Tut08 Interpolation.html"?>
+        <title>Interpolation</title>
+        <para>A quaternion represents an orientation; it defines a coordinate system relative to
+            another. If we have two orientations, we can consider the orientation of the same object
+            represented in both coordinate systems.</para>
+        <para>What if we want to generate an orientation that is halfway between them, for some
+            definition of <quote>halfway</quote>? Or even better, consider an arbitrary
+            interpolation between two orientations, so that we can watch an object move from one
+            orientation to another. This would allow us to see an object smoothly moving from one
+            orientation to another.</para>
+        <para>This is one more trick we can play with quaternions that we cannot with matrices.
+            Linearly-interpolating the components of matrices does not create anything that
+            resembles an inbetween transformation. However, linearly interpolating a pair of
+            quaternions does. As long as you normalize the results.</para>
+        <para>The <phrase role="propername">Interpolation</phrase> tutorial demonstrates this. The
+                <keycap>Q</keycap>, <keycap>W</keycap>, <keycap>E</keycap>, <keycap>R</keycap>,
+                <keycap>T</keycap>, <keycap>Y</keycap>, and <keycap>U</keycap> keys cause the ship
+            to interpolate to a new orientation. Each key corresponds to a particular orientation,
+            and the <keycap>Q</keycap> key is the initial orientation.</para>
+        <para>We can see that there are some pretty reasonable looking transitions. The transition
+            from <keycap>Q</keycap> to <keycap>W</keycap>, for example. However, there are some
+            other transitions that do not look so good; the <keycap>Q</keycap> to <keycap>E</keycap>
+            transition. What exactly is going on?</para>
+        <section>
+            <title>The Long Path</title>
+            <para>Unit quaternions represent orientations, but they are also vector directions.
+                Specifically, directions in a four-dimensional space. Being unit vectors, they
+                represent points on a 4D sphere of radius one. Therefore, the path between two
+                orientations can be considered to be simply moving from one direction to another on
+                the surface of the 4D sphere.</para>
+            <para>While unit quaternions do represent orientations, a quaternion is not a
+                    <emphasis>unique</emphasis> representation of an orientation. That is, there are
+                multiple quaternions that represent the same orientation. Well, there are
+                two.</para>
+            <para>The conjugate of a quaternion, its inverse orientation, is the negation of the
+                vector part of the quaternion. If you negate all four components however, you get
+                something quite different: the same orientation as before. Negating a quaternion
+                does not affect its orientation.</para>
+            <para>While the two quaternions represent the same orientation, they are not the same as
+                far as interpolation is concerned. Consider a two-dimensional case:</para>
+            <figure>
+                <title>Interpolation Directions</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="InterpolateDirection.svg" />
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para>If the angle between the two quaternions is greater than 90°, then the
+                interpolation between them will take the <quote>long path</quote> between the two
+                orientations. Which is what we see in the <keycap>Q</keycap> to <keycap>E</keycap>
+                transition. The orientation <keycap>R</keycap> is the negation of
+                <keycap>E</keycap>; if you try to interpolate between them, nothing changes. The
+                    <keycap>Q</keycap> to <keycap>R</keycap> transition looks much better
+                behaved.</para>
+            <para>This can be detected easily enough. If the 4-vector dot product between the two
+                quaternions is less than zero, then the long path will be taken. If you want to
+                prevent the long path from being used, simply negate one of the quaternions before
+                interpolating if you detect this. Similarly, if you want to force the long path,
+                then ensure that the angle is greater than 90° by negating a quaternion if the dot
+                product is greater than zero.</para>
+        </section>
+        <section>
+            <title>Interpolation Speed</title>
+            <para>There is another problem. Notice how fast the <keycap>Q</keycap> to
+                    <keycap>E</keycap> interpolation is. It starts off slow, then rapidly spins
+                around, then slows down towards the end. Why does this happen?</para>
+            <para>The linear interpolation code looks like this:</para>
+            <example>
+                <title>Quaternion Linear Interpolation</title>
+                <programlisting language="cpp">glm::fquat Lerp(const glm::fquat &amp;v0, const glm::fquat &amp;v1, float alpha)
+{
+    glm::vec4 start = Vectorize(v0);
+    glm::vec4 end = Vectorize(v1);
+    glm::vec4 interp = glm::mix(start, end, alpha);
+    interp = glm::normalize(interp);
+    return glm::fquat(interp.w, interp.x, interp.y, interp.z);
+}</programlisting>
+            </example>
+            <note>
+                <para>GLM's quaternion support does something unusual. The W component is given
+                    first to the <type>fquat</type> constructor. Be aware of that when looking
+                    through the code.</para>
+            </note>
+            <para>The <function>Vectorize</function> function simply takes a quaternion and returns
+                a <type>vec4</type>; this is necessary because GLM <type>fquat</type> do not support
+                many of the operations that GLM <type>vec4</type>'s do. In this case, the
+                    <type>glm::mix</type> function, which performs component-wise linear
+                interpolation.</para>
+            <para>Each component of the vector is interpolated separately from the rest. The
+                quaternion for <keycap>Q</keycap> is (0.7071f, 0.7071f, 0.0f, 0.0f), while the
+                quaternion for <keycap>E</keycap> is (-0.4895f, -0.7892f, -0.3700f, -0.02514f). In
+                order for the first componet of Q to get to E's first component, it will have to go
+                through zero.</para>
+            <para>When the alpha is around 0.5, half-way through the movement, the resultant vector
+                before normalization is very small. But the vector itself is not what provides the
+                orientation; the <emphasis>direction</emphasis> of the 4D vector is. Which is why it
+                moves very fast in the middle: the direction is changing rapidly.</para>
+            <para>In order to get smooth interpolation, we need to interpolate based on the
+                direction of the vectors. That is, we interpolate along the angle between the two
+                vectors. This kind of interpolation is called <glossterm>spherical linear
+                    interpolation</glossterm> or <glossterm>slerp</glossterm>.</para>
+            <para>To see the difference this makes, press the <keycap>SpaceBar</keycap>; this
+                toggles between regular linear interpolation and slerp. The slerp version is much
+                smoother.</para>
+            <para>The code for slerp is rather complex:</para>
+            <example>
+                <title>Spherical Linear Interpolation</title>
+                <programlisting language="cpp">glm::fquat Slerp(const glm::fquat &amp;v0, const glm::fquat &amp;v1, float alpha)
+{
+    float dot = glm::dot(v0, v1);
+    
+    const float DOT_THRESHOLD = 0.9995f;
+    if (dot > DOT_THRESHOLD)
+        return Lerp(v0, v1, alpha);
+    
+    glm::clamp(dot, -1.0f, 1.0f);
+    float theta_0 = acosf(dot);
+    float theta = theta_0*alpha;
+    
+    glm::fquat v2 = v1 - v0*dot;
+    v2 = glm::normalize(v2);
+    
+    return v0*cos(theta) + v2*sin(theta);
+}</programlisting>
+            </example>
+            <sidebar>
+                <title>Slerp and Performance</title>
+                <para>It's important to know what kind of problems slerp is intended to solve and
+                    what kind it is not. Slerp becomes increasingly more important the more
+                    disparate the two quaternions being interpolated are. If you know that two
+                    quaternions are always quite close to one another, then slerp is not worth the
+                    expense.</para>
+                <para>The <function>acos</function> call in the slerp code alone is pretty
+                    substantial in terms of performance. Whereas lerp is typically just a
+                    vector/scalar multiply followed by a vector/vector addition. Even on the CPU,
+                    the performance difference is important, particularly if you're doing thousands
+                    of these per frame. As you might be in an animation system.</para>
+            </sidebar>
+        </section>
+    </section>
+    <section>
+        <?dbhtml filename="Tut08 In Review.html" ?>
+        <title>In Review</title>
+        <para>In this tutorial, you have learned the following:</para>
+        <itemizedlist>
+            <listitem>
+                <para>A fixed sequence of successive rotations can prevent other rotations from
+                    contributing to the object's orientation. It also makes it difficult to
+                    correctly orient the object in an intuitive way, since previous rotations have
+                    effects on later ones.</para>
+            </listitem>
+            <listitem>
+                <para>Quaternions are 4-dimensional vectors that can encode an orientation. They can
+                    be used for successively applying small rotations to an orientation. Matrices
+                    fail at this because of the difficulty of orthonormalizing them to avoid
+                    floating-point error accumulation.</para>
+            </listitem>
+            <listitem>
+                <para>Quaternions work almost identically to matrices, in so far as they specify
+                    orientations. They can be constructed directly from an angle/axis rotation, and
+                    they can be composed with one another via quaternion multiplication.</para>
+            </listitem>
+            <listitem>
+                <para>One can transform a matrix, or a quaternion with another matrix or quaternion,
+                    such that the resulting transform is specified in a different space. This is
+                    useful for applying rotations to an object's orientation that are in
+                    camera-space,, while the object's orientation remains a model-to-world
+                    transform.</para>
+            </listitem>
+            <listitem>
+                <para>Quaternions can be interpolated, either with component-wise linear
+                    interpolation or with spherical linear interpolation. If the angle between two
+                    quaternion vectors is greater than 90°, then the interpolation between them will
+                    move indirectly between the two.</para>
+            </listitem>
+        </itemizedlist>
+        <section>
+            <title>Further Study</title>
+            <para>Try doing the following with the orientation tutorials.</para>
+            <itemizedlist>
+                <listitem>
+                    <para>Modify the Interpolation tutorial to allow multiple animations to be
+                        active simultaneously. The <classname>Orientation</classname> class is
+                        already close to being able to allow this. Instead of storing a single
+                            <classname>Orientation::Animation</classname> object, it should store a
+                            <classname>std::deque</classname> of them. When the external code adds a
+                        new one, it gets pushed onto the end of the deque. During update, the
+                        front-most entries can end and be popped off, recording its destination
+                        index as the new current one in the <classname>Orientation</classname>
+                        class. To get the orientation, just call each animation's orientation
+                        function, feeding the previous result into the next one.</para>
+                </listitem>
+                <listitem>
+                    <para>Change the Interpolation tutorial to allow one to specify whether the long
+                        path or short path between two orientations should be taken. This can work
+                        for both linear and spherical interpolation.</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section>
+            <title>Further Research</title>
+            <para>This discussion has focused on the utility of quaternions in orienting objects,
+                and it has deftly avoided answering the question of exactly what a quaternion
+                    <emphasis>is.</emphasis> After all, saying that a quaternion is a
+                four-dimensional complex number does not explain why they are useful in graphics.
+                They are a quite fascinating subject for those who like oddball math
+                concepts.</para>
+            <para>This discussion has also glossed over a few uses of quaternions in graphics, such
+                as how to directly rotate a position or direction by a quaternion. Such information
+                is readily available online.</para>
+        </section>
+    </section>
+    <section>
+        <?dbhtml filename="Tut08 Glossary.html" ?>
+        <title>Glossary</title>
+        <glosslist>
+            <glossentry>
+                <glossterm>gimbal lock</glossterm>
+                <glossdef>
+                    <para>When applying 3 or more successive rotations about axes that are
+                        orthogonal to each other, gimbal lock occurs when a degree of rotational
+                        freedom is lost due to two or more axes that cause the same effective
+                        rotation.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>orthonormal</glossterm>
+                <glossdef>
+                    <para>A transform has the property of being orthonormal if the three basis axes
+                        are all orthogonal and the three axes are normal (have a length of
+                        1).</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>quaternion</glossterm>
+                <glossdef>
+                    <para>A four-dimensional vector that represents an orientation. The first three
+                        components of the quaternion, the X, Y and Z, are considered the vector part
+                        of the quaternion. The fourth component is the scalar part.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>inverse matrix</glossterm>
+                <glossdef>
+                    <para>The inverse matrix of the matrix M is the matrix N for which the following
+                        equation is true: <inlineequation>
+                            <mathphrase>MN = I</mathphrase>
+                        </inlineequation>, where I is the identity matrix. The inverse of M is
+                        usually denoted as M<superscript>-1</superscript>.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>conjugate quaternion</glossterm>
+                <glossdef>
+                    <para>Analogous to the inverse matrix. It is computed by negating the vector
+                        part of the quatenrion.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>spherical linear interpolation, slerp</glossterm>
+                <glossdef>
+                    <para>Interpolation between two unit vectors that is linear based on the angle
+                        between them, rather than the vectors themselves.</para>
+                </glossdef>
+            </glossentry>
+        </glosslist>
+    </section>
+</chapter>

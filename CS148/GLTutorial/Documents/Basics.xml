@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng" type="xml"?>
+<?oxygen SCHSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng"?>
+<part xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <?dbhtml filename="Basics.html" dir="Basics"?>
+    <info>
+        <title>The Basics</title>
+    </info>
+    <partintro>
+        <para>Graphics programming can be a daunting task when starting out. The rendering pipeline
+            involves a large number of steps, each dealing with a variety of math operations. It has
+            stages that run actual programs to compute results for the next. Mastering this
+            pipeline, being able to use it as a tool to achieve a visual effect, is the essence of
+            being a graphics programmer.</para>
+        <para>This section of the book will introduce the basic math necessary for 3D graphics. It
+            will introduce the rendering pipeline as defined by OpenGL. And it will demonstrate how
+            data flows through the graphics pipeline.</para>
+    </partintro>
+    <xi:include href="Basics/tutorial 00.xml"/>
+    <xi:include href="Basics/tutorial 01.xml"/>
+    <xi:include href="Basics/tutorial 02.xml"/>
+</part>

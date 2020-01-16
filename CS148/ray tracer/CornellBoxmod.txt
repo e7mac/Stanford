@@ -1,0 +1,48 @@
+Camera   0 0 40   0 -1 0   0 0 9.9  36.5   1
+Output   512   512   CornellBox.png
+BounceDepth   1
+ShadowBias 0.005
+
+## Lights ##
+AmbientLight   0.5 0.5 0.5
+PointLight   0 9 0   1 1 1
+
+
+
+## The Box ##
+
+Material   1 1 1   0.8 0.8 0.8   0 0 0   0 0 0   0
+
+# Floor
+Triangle   -10 -10 10   10 -10 -10   -10 -10 -10
+Triangle   10 -10 10   10 -10 -10   -10 -10 10
+
+# Ceiling
+Triangle   -10 10 10   10 10 -10   -10 10 -10
+Triangle   10 10 10   10 10 -10   -10 10 10
+
+# Front wall
+Triangle   -10 -10 -10   10 10 -10   -10 10 -10
+Triangle   10 -10 -10   10 10 -10   -10 -10 -10
+
+# Red wall
+Material   1 0 0   1 0 0   0 0 0   0 0 0   0
+Triangle   -10 10 10   -10 -10 -10   -10 10 -10
+Triangle   -10 -10 10   -10 -10 -10   -10 10 10
+
+# Blue wall
+Material   0 0 1   0 0 1   0 0 0   0 0 0   0
+Triangle   10 -10 10   10 10 -10   10 -10 -10
+Triangle   10 10 10   10 10 -10   10 -10 10
+
+
+
+## Stuff in the box ##
+
+# Diffuse Sphere
+Material   1 1 1   0.8 0.8 0.8   0 0 0   0 0 0   0
+Sphere   5 -6 1   4
+
+# Mirror Sphere
+Material   1 1 1   0 0 0   0 0 0   0.9 0.9 0.9   0
+Sphere   -5 -6 -5   4

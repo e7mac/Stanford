@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng" type="xml"?>
+<?oxygen SCHSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng"?>
+<preface xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <?dbhtml filename="About this Book.html" ?>
+    <title>About this Book</title>
+    <para>Three dimensional graphics hardware is fast becoming, not merely a staple of computer
+        systems, but an indispensable component. Many operating systems directly use and even
+        require some degree of 3D rendering hardware. Even in the increasingly important mobile
+        computing space, 3D graphics hardware is a standard feature of all but the lowest power
+        devices.</para>
+    <para>Understanding how to make the most of that hardware is a difficult challenge, particularly
+        for someone new to graphics and rendering.</para>
+    <section>
+        <title>Why Read This Book?</title>
+        <para>There are many physical books for teaching graphics. There are many more online
+            repositories of knowledge, in the form of wikis, blogs, tutorials, and forums. So what
+            does this book offer that others do not?</para>
+        <para>Programmability. Virtually all of the aforementioned sources instruct beginners using
+            something called <quote>fixed functionality.</quote> This represents configurations in
+            older graphics processors that define how a particular rendering operation will proceed.
+            It is generally considered easiest to teach neophyte graphics programmers using the
+            fixed function pipeline.</para>
+        <para>This is considered true because it is easy to get something to happen with fixed
+            functionality. It's simpler to make pictures that look like something real. The fixed
+            function pipeline is like training wheels for a bicycle.</para>
+        <para>There are downsides to this approach. First, much of what is learned with this
+            approach must be inevitably abandoned when the user encounters a graphics problem that
+            must be solved with programmability. Programmability wipes out almost all of the fixed
+            function pipeline, so the knowledge does not easily transfer.</para>
+        <para>A more insidious problem is that the fixed function pipeline can give the
+                <emphasis>illusion</emphasis> of knowledge. A user can think they understand what
+            they are doing, but they're really just copy-and-pasting code around. Programming thus
+            becomes akin to magical rituals: you put certain bits of code before other bits, and
+            everything seems to work.</para>
+        <para>This makes debugging nightmarish. Because the user never really understood what the
+            code does, the user is unable to diagnose what a particular problem could possibly mean.
+            And without that ability, debugging becomes a series of random guesses as to what the
+            problem is.</para>
+        <para>By contrast, you cannot use a programmable system successfully without first
+            understanding it. Confronting programmable graphics hardware means confronting issues
+            that fixed function materials often gloss over. This may mean a slower start overall,
+            but when you finally get to the end, you truly <emphasis>know</emphasis> how everything
+            works.</para>
+        <para>Another problem is that, even if you truly understand the fixed function pipeline, it
+            limits how you think about solving problems. Because of its inflexibility, it focuses
+            your mind along certain problem solving possibilities and away from others. It
+            encourages you to think of textures as pictures; vertex data as texture coordinates,
+            colors, or positions; and the like. By its very nature, it limits creativity and problem
+            solving.</para>
+        <para>Lastly, even on mobile systems, fixed functionality is generally not available in the
+            graphics hardware. Programmability is the order of the day for most graphics hardware,
+            and this will only become more true in the future.</para>
+        <para>What this book offers is beginner-level instruction on what many consider to be an
+            advanced concept. It teaches programmable rendering for beginning graphics programmers,
+            from the ground up.</para>
+        <para>This book also covers some important material that is often neglected or otherwise
+            relegated to <quote>advanced</quote> concepts. These concepts are not truly advanced,
+            but they are often ignored by most introductory material because they do not work with
+            the fixed function pipeline.</para>
+        <para>This book is first and foremost about learning how to be a graphics programmer.
+            Therefore, whenever it is possible and practical, this book will present material in a
+            way that encourages the reader to examine what graphics hardware can do in new and
+            interesting ways. A good graphics programmer sees the graphics hardware as a set of
+            tools to fulfill their needs, and this book tries to encourage this kind of
+            thinking.</para>
+        <para>One thing this book is not, however, is a book on graphics APIs. While it does use
+            OpenGL and out of necessity teach rendering concepts in terms of OpenGL, it is not truly
+            a book that is <emphasis>about</emphasis> OpenGL. It is not the purpose of this book to
+            teach you all of the ins and outs of the OpenGL API.There will be parts of OpenGL
+            functionality that are not dealt with because they are not relevant to any of the
+            lessons that this book teaches. If you already know graphics and are in need of a book
+            that teaches modern OpenGL programming, this is not it. It may be useful to you in that
+            capacity, but that is not this book's main thrust.</para>
+        <para>This book is intended to teach you how to be a graphics programmer. It is not aimed at
+            any particular graphics field; it is designed to cover most of the basics of 3D
+            rendering. So if you want to be a game developer, a CAD program designer, do some
+            computer visualization, or any number of things, this book can still be an asset for
+            you.</para>
+        <para>This does not mean that it covers everything there is about 3D graphics. Hardly. It
+            tries to provide a sound foundation for your further exploration in whatever field of 3D
+            graphics you are interested in.</para>
+        <para>One topic this book does not cover in depth is optimization. The reason for this is
+            simply that serious optimization is an advanced topic. Optimizations can often be
+            platform-specific, different for different kinds of hardware. They can also be
+            API-specific, as some APIs have different optimization needs. Optimizations may be
+            mentioned here and there, but it is simply too complex of a subject for a beginning
+            graphics programmer. There is a chapter in the appendix covering optimization
+            opportunities, but it only provides a fairly high-level look.</para>
+    </section>
+    <section>
+        <?dbhtml filename="About Need.html" ?>
+        <title>What You Need</title>
+        <para>This is a book for beginning graphics programmers; it can also serve as a book for
+            those familiar with fixed functionality who want to understand programmable rendering
+            better. But this is not a book for beginning programmers.</para>
+        <para>You are expected to be able to read C and reasonable C++ code. If <quote>Hello,
+                world!</quote> is the extent of your C/C++ knowledge, then perhaps you should write
+            some more substantial code before proceeding with trying to render images. 3D graphics
+            rendering is simply not a beginner programming task; this is just as true for
+            traditional graphics learning as for modern graphics learning.</para>
+        <para>These tutorials should be transferable to other languages as well. If you can read
+            C/C++, that is enough to understand what the code is doing. The text descriptions that
+            explain what the code does are also sufficient to get information out of these
+            tutorials.</para>
+        <para>Any substantial discussion of 3D rendering requires a discussion of mathematics, which
+            are at the foundation of all 3D graphics. This book expects you to know basic geometry
+            and algebra.</para>
+        <para>The tutorials will present the more advanced math needed for graphics as it becomes
+            necessary, but you should have at least a working knowledge of geometry and algebra.
+            Linear algebra is not required, though it would be helpful.</para>
+        <para>The code tutorials in this book use OpenGL as their rendering API. You do not need to
+            know OpenGL, but to execute the code, you must have a programming environment that
+            allows OpenGL. Specifically, you will need hardware capable of running OpenGL version
+            3.3. This means any GeForce 8xxx or better, or any Radeon HD-class card. These are also
+            called <quote>Direct3D 10</quote> cards, but you do not need Windows Vista or 7 to use
+            their advanced features through OpenGL.</para>
+    </section>
+    <section>
+        <?dbhtml filename="About Organization.html" ?>
+        <title>Organization of This Book</title>
+        <para>This book is broken down into a number of general subjects. Each subject contains
+            several numbered chapters called tutorials. Each tutorial describes several related
+            concepts. In virtually every case, each concept is demonstrated by a companion set of
+            code.</para>
+        <para>Each tutorial begins with an overview of the concepts that will be discussed and
+            demonstrated. At the end of each tutorial is a review section and a glossary of all
+            terms introduced in that tutorial. The review section will explain the concepts
+            presented in the tutorial. It will also contain suggestions for playing with the source
+            code itself; these are intended to further your understanding of these concepts. If the
+            tutorial introduced new OpenGL functions or functions for the OpenGL shading language,
+            they will be reviewed here as well.</para>
+        <para>This is a book for beginning graphics programmers. Graphics is a huge topic, and this
+            book will not cover every possible effect, feature, or technique. This book will also
+            not cover every technique in full detail. Sometimes techniques will be revisited in
+            later materials, but there simply isn't enough space to say everything about everything.
+            Therefore, when certain techniques are introduced, there will be a section at the end
+            providing some cursory examination of more advanced techniques. This will help you
+            further your own research into graphics programming, as you will know what to search for
+            online or in other books.</para>
+        <para>Each tutorial ends with a glossary of all of the terms defined in that
+            tutorial.</para>
+        <note condition="web">
+            <title>Browser Note</title>
+            <para>This website and these tutorials make extensive use of SVG images. Basic SVG
+                support is in all major browsers except all Internet Explorer versions before
+                version 9. If you are content with these versions of Internet Explorer (or unable to
+                upgrade), consider installing the Google Chrome Frame add-on for IE8. This will
+                allow you to see the images correctly.</para>
+        </note>
+    </section>
+    <section>
+        <?dbhtml filename="About Conventions.html" ?>
+        <title>Conventions used in This Book</title>
+        <para>Text in this book is styled along certain conventions. The text styling denotes what
+            the marked-up text represents.</para>
+        <itemizedlist>
+            <listitem>
+                <para><glossterm>defined term</glossterm>: This term will have a definition in the
+                    glossary at the end of each tutorial.</para>
+            </listitem>
+            <listitem>
+                <para><function>FunctionNames</function>: These can be in C, C++, or the OpenGL
+                    Shading Language.</para>
+            </listitem>
+            <listitem>
+                <para><varname>nameOfVariable</varname>: These can be in C, C++, or the OpenGL
+                    Shading Language.</para>
+            </listitem>
+            <listitem>
+                <para><literal>GL_ENUMERATORS</literal></para>
+            </listitem>
+            <listitem>
+                <para><filename>Names/Of/Paths/And/Files</filename></para>
+            </listitem>
+            <listitem>
+                <para><keycap>K</keycap>: The keyboard key <quote>K,</quote> which is not the same
+                    as the capital letter <quote>K</quote>. The latter is what you get by pressing <keycombo>
+                        <keycap>Shift</keycap>
+                        <keycap>K</keycap>
+                    </keycombo>.</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+</preface>

@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng" type="xml"?>
+<?oxygen SCHSchema="http://docbook.org/xml/5.0/rng/docbookxi.rng"?>
+<article xml:id="tut_00" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0">
+    <?dbhtml filename="Introduction.html"?>
+    <title>Introduction</title>
+    <para>Unlike most sections of this text, there is no source code or project associated with this
+        section. Here, we will be discussing vector math, graphical rendering theory, and OpenGL.
+        This serves as a primer to the rest of the book.</para>
+    <section>
+        <title>Vector Math</title>
+        <para>This book assumes that you are familiar with algebra and geometry, but not necessarily
+            with vector math. Later material will bring you up to speed on more complex subjects,
+            but this will introduce the basics of vector math.</para>
+        <para>A <glossterm>vector</glossterm> can have many meanings, depending on whether we are
+            talking geometrically or numerically. In either case, vectors have dimensionality; this
+            represents the number of dimensions that the vector has. A two-dimensional vector is
+            restricted to a single plane, while a three-dimensional vector can point in any physical
+            space. Vectors can have higher dimensions, but generally we only deal with dimensions
+            between 2 and 4.</para>
+        <para>Technically, a vector can have only one dimension. Such a vector is called a
+                <glossterm>scalar.</glossterm></para>
+        <para>In terms of geometry, a vector can represent one of two concepts: a position or a
+            direction within a particular space. A vector <glossterm>position</glossterm> represents
+            a specific location in space. For example, on this graph, we have a vector position
+            A:</para>
+        <figure>
+            <title>Position Vectors</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorPosition.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>A vector can also represent a <glossterm>direction</glossterm>. Direction vectors do
+            not have an origin; they simply specify a direction in space. These are all direction
+            vectors, but the vectors B and D are the same, even though they are drawn in different
+            locations:</para>
+        <figure>
+            <title>Direction Vectors</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorDirections.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>That's all well and good for geometry, but vectors can also be described numerically.
+            A vector in this case is a sequence of numbers, one for each dimension. So a
+            two-dimensional vector has two numbers; a three-dimensional vector has three. And so
+            forth. Scalars, numerically speaking, are just a single number.</para>
+        <para>Each of the numbers within a vector is called a <glossterm>component</glossterm>. Each
+            component usually has a name. For our purposes, the first component of a vector is the X
+            component. The second component is the Y component, the third is the Z, and if there is
+            a fourth, it is called W.</para>
+        <para>When writing vectors in text, they are written with parenthesis. So a 3D vector could
+            be (0, 2, 4); the X component is 0, the Y component is 2, and the Z component is 4. When
+            writing them as part of an equation, they are written as follows:</para>
+        <informalequation>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="ColumnVector.svg"/>
+                </imageobject>
+            </mediaobject>
+        </informalequation>
+        <para>In math equations, vector variables are either in boldface or written with an arrow
+            over them.</para>
+        <para>When drawing vectors graphically, one makes a distinction between position vectors and
+            direction vectors. However, numerically there is <emphasis>no</emphasis> difference
+            between the two. The only difference is in how you use them, not how you represent them
+            with numbers. So you could consider a position a direction and then apply some vector
+            operation to them, and then consider the result a position again.</para>
+        <para>Though vectors have individual numerical components, a vector as a whole can have a
+            number of mathematical operations applied to them. We will show a few of them, with both
+            their geometric and numerical representations.</para>
+        <formalpara>
+            <title>Vector Addition</title>
+            <para>You can take two vectors and add them together. Graphically, this works as
+            follows:</para>
+            </formalpara>
+        <figure>
+            <title>Vector Addition</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorAddition.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+            <para>Remember that vector directions can be shifted around without changing their
+                values. So if you put two vectors head to tail, the vector sum is simply the
+                direction from the tail of the first vector to the head of the last.</para>
+        <figure>
+            <title>Vector Addition Head-to-Tail</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorAdditionHeads.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+            <para>Numerically, the sum of two vectors is just the sum of the corresponding
+                components:</para>
+        <equation>
+            <title>Vector Addition with Numbers</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorAdditionNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+            <para>Any operation where you perform an operation on each component of a vector is
+                called a <glossterm>component-wise operation</glossterm>. Vector addition is
+                component-wise. Any component-wise operation on two vectors requires that the two
+                vectors have the same dimensionality.</para>
+        <formalpara>
+            <title>Vector Negation and Subtraction</title>
+            <para>You can negate a vector. This reverses its direction:</para>
+        </formalpara>
+        <figure>
+            <title>Vector Negation</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorNegation.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+            <para>Numerically, this means negating each component of the vector.</para>
+        <equation>
+            <title>Vector Negation</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorNegationNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+            <para>Just as with scalar math, vector subtraction is the same as addition with the
+            negation of the second vector.</para>
+        <figure>
+            <title>Vector Subtraction</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorSubtraction.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <formalpara>
+            <title>Vector Multiplication</title>
+            <para>Vector multiplication is one of the few vector operations that has no real
+                geometric equivalent. To multiply a direction by another, or multiplying a position
+                by another position, does not really make sense. That does not mean that the numerical
+                equivalent is not useful, though.</para>
+        </formalpara>
+        <para>Multiplying two vectors numerically is simply component-wise multiplication, much like
+            vector addition.</para>
+        <equation>
+            <title>Vector Multiplication</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorMultiplicationNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <formalpara>
+            <title>Vector/Scalar Operations</title>
+            <para>Vectors can be operated on by scalar values. Recall that scalars are just single
+                numbers. Vectors can be multiplied by scalars. This magnifies or shrinks the length
+                of the vector, depending on the scalar value.</para>
+        </formalpara>
+        <figure>
+            <title>Vector Scaling</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorScalarMult.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>Numerically, this is a component-wise multiplication, where each component of the
+            vector is multiplied with each component of the scalar.</para>
+        <equation>
+            <title>Vector-Scalar Multiplication</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorScalarMultNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <para>Scalars can also be added to vectors. This, like vector-to-vector multiplication, has
+            no geometric representation. It is a component-wise addition of the scalar with each
+            component of the vector.</para>
+        <equation>
+            <title>Vector-Scalar Addition</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorScalarAddNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <formalpara>
+            <title>Vector Algebra</title>
+            <para>It is useful to know a bit about the relationships between these kinds of vector
+                operations.</para>
+        </formalpara>
+        <para>Vector addition and multiplication follow many of the same rules for scalar addition
+            and multiplication. They are commutative, associative, and distributive.</para>
+        <equation>
+            <title>Vector Algebra</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorMathProperties.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <para>Vector/scalar operations have similar properties.</para>
+        <formalpara>
+            <title>Length</title>
+            <para>Vectors have a length. The length of a vector direction is the distance from the
+                starting point to the ending point.</para>
+        </formalpara>
+        <para>Numerically, computing the distance requires this equation:</para>
+        <equation>
+            <title>Vector Length</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorLengthNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <para>This uses the Pythagorean theorem to compute the length of the vector. This works for
+            vectors of arbitrary dimensions, not just two or three.</para>
+        <formalpara>
+            <title>Unit Vectors and Normalization</title>
+            <para>A vector that has a length of exactly one is called a <glossterm>unit
+                    vector.</glossterm> This represents a pure direction with a standard, unit
+                length. A unit vector variable in math equations is written with a ^ over the
+                variable name.</para>
+        </formalpara>
+        <para>A vector can be converted into a unit vector by <glossterm>normalizing</glossterm> it.
+            This is done by dividing the vector by its length. Or rather, multiplication by the
+            reciprocal of the length.</para>
+        <equation>
+            <title>Vector Normalization</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="VectorNormalizationNum.svg"/>
+                </imageobject>
+            </mediaobject>
+        </equation>
+        <para>This is not all of the vector math that we will use in these tutorials. New vector
+            math operations will be introduced and explained as needed when they are first used. And
+            unlike the math operations introduced here, most of them are not component-wise
+            operations.</para>
+        <formalpara>
+            <title>Range Notation</title>
+            <para>This book will frequently use standard notation to specify that a value must be
+                within a certain range.</para>
+        </formalpara>
+        <para>If a value is constrained between 0 and 1, and it may actually have the values 0 and
+            1, then it is said to be <quote>on the range</quote> [0, 1]. The square brackets mean
+            that the range includes the value next to it.</para>
+        <para>If a value is constrained between 0 and 1, but it may not actually have a value of 0,
+            then it is said to be on the range (0, 1]. The parenthesis means that the range does not
+            include that value.</para>
+        <para>If a value is constrained to 0 or any number greater than zero, then the infinity
+            notation will be used. This range is represented by [0, ∞). Note that infinity can never
+            be reached, so it is always exclusive. A constraint to any number less than zero, but
+            not including zero would be on the range (-∞, 0).</para>
+    </section>
+    <section>
+        <?dbhtml filename="Intro Graphics and Rendering.html"?>
+        <title>Graphics and Rendering</title>
+        <para>This is an overview of the process of rendering. Do not worry if you do not understand
+            everything right away; every step will be covered in lavish detail in later
+            tutorials.</para>
+        <para>Everything you see on your computer's screen, even the text you are reading right now
+            (assuming you are reading this on an electronic display device, rather than a printout)
+            is simply a two-dimensional array of pixels. If you take a screenshot of something on
+            your screen, and blow it up, it will look very blocky.</para>
+        <figure>
+            <title>An Image</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="PixelImage.svg"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>Each of these blocks is a <glossterm>pixel</glossterm>. The word <quote>pixel</quote>
+            is derived from the term <quote><acronym>Pic</acronym>ture
+                <acronym>El</acronym>ement</quote>. Every pixel on your screen has a particular
+            color. A two-dimensional array of pixels is called an
+            <glossterm>image</glossterm>.</para>
+        <para>The purpose of graphics of any kind is therefore to determine what color to put in
+            what pixels. This determination is what makes text look like text, windows look like
+            windows, and so forth.</para>
+        <para>Since all graphics are just a two-dimensional array of pixels, how does 3D work? 3D
+            graphics is thus a system of producing colors for pixels that convince you that the
+            scene you are looking at is a 3D world rather than a 2D image. The process of converting
+            a 3D world into a 2D image of that world is called
+            <glossterm>rendering.</glossterm></para>
+        <para>There are several methods for rendering a 3D world. The process used by real-time
+            graphics hardware, such as that found in your computer, involves a very great deal of
+            fakery. This process is called <glossterm>rasterization,</glossterm> and a rendering
+            system that uses rasterization is called a <glossterm>rasterizer.</glossterm></para>
+        <para>In rasterizers, all objects that you see are empty shells. There are techniques that
+            are used to allow you to cut open these empty shells, but this simply replaces part of
+            the shell with another shell that shows what the inside looks like. Everything is a
+            shell.</para>
+        <para>All of these shells are made of triangles. Even surfaces that appear to be round are
+            merely triangles if you look closely enough. There are techniques that generate more
+            triangles for objects that appear closer or larger, so that the viewer can almost never
+            see the faceted silhouette of the object. But they are always made of triangles.</para>
+        <note>
+            <para>Some rasterizers use planar quadrilaterals: four-sided objects, where all of the
+                points lie in the same plane. One of the reasons that hardware-based rasterizers
+                always use triangles is that all of the lines of a triangle are guaranteed to be in
+                the same plane. Knowing this makes the rasterization process less
+                complicated.</para>
+        </note>
+        <para>An object is made out of a series of adjacent triangles that define the outer surface
+            of the object. Such series of triangles are often called
+            <glossterm>geometry</glossterm>, a <glossterm>model</glossterm> or a
+                <glossterm>mesh</glossterm>. These terms are used interchangeably.</para>
+        <para>The process of rasterization has several phases. These phases are ordered into a
+            pipeline, where triangles enter from the top and a 2D image is filled in at the bottom.
+            This is one of the reasons why rasterization is so amenable to hardware acceleration: it
+            operates on each triangle one at a time, in a specific order. Triangles can be fed into
+            the top of the pipeline while triangles that were sent earlier can still be in some
+            phase of rasterization.</para>
+        <para>The order in which triangles and the various meshes are submitted to the rasterizer
+            can affect its output. Always remember that, no matter how you submit the triangular
+            mesh data, the rasterizer will process each triangle in a specific order, drawing the
+            next one only when the previous triangle has finished being drawn.</para>
+        <para>OpenGL is an API for accessing a hardware-based rasterizer. As such, it conforms to
+            the model for rasterization-based 3D renderers. A rasterizer receives a sequence of
+            triangles from the user, performs operations on them, and writes pixels based on this
+            triangle data. This is a simplification of how rasterization works in OpenGL, but it is
+            useful for our purposes.</para>
+        <formalpara>
+            <title>Triangles and Vertices</title>
+            <para>Triangles consist of 3 vertices. A <glossterm>vertex</glossterm> is a
+                collection of arbitrary data. For the sake of simplicity (we will expand upon this
+                later), let us say that this data must contain a point in three dimensional space.
+                It may contain other data, but it must have at least this. Any 3 points that are not
+                on the same line create a triangle, so the smallest information for a triangle
+                consists of 3 three-dimensional points.</para>
+        </formalpara>
+        <para>A point in 3D space is defined by 3 numbers or coordinates. An X coordinate, a Y
+            coordinate, and a Z coordinate. These are commonly written with parenthesis, as in (X,
+            Y, Z).</para>
+        <section>
+            <title>Rasterization Overview</title>
+            <para>The rasterization pipeline, particularly for modern hardware, is very complex.
+                This is a very simplified overview of this pipeline. It is necessary to have a
+                simple understanding of the pipeline before we look at the details of rendering
+                things with OpenGL. Those details can be overwhelming without a high level
+                overview.</para>
+            <formalpara>
+                <title>Clip Space Transformation</title>
+                <para>The first phase of rasterization is to transform the vertices of each triangle
+                    into a certain region of space. Everything within this volume will be rendered
+                    to the output image, and everything that falls outside of this region will not
+                    be. This region corresponds to the view of the world that the user wants to
+                    render.</para>
+            </formalpara>
+            <para>The volume that the triangle is transformed into is called, in OpenGL parlance,
+                    <glossterm>clip space</glossterm>. The positions of the triangle's vertices in
+                clip space are called <glossterm>clip coordinates.</glossterm></para>
+            <para>Clip coordinates are a little different from regular positions. A position in 3D
+                space has 3 coordinates. A position in clip space has <emphasis>four</emphasis>
+                coordinates. The first three are the usual X, Y, Z positions; the fourth is called
+                W. This last coordinate actually defines what the extents of clip space are for this
+                vertex.</para>
+            <para>Clip space can actually be different for different vertices within a triangle. It
+                is a region of 3D space on the range [-W, W] in each of the X, Y, and Z directions.
+                So vertices with a different W coordinate are in a different clip space cube from
+                other vertices. Since each vertex can have an independent W component, each vertex
+                of a triangle exists in its own clip space.</para>
+            <para>In clip space, the positive X direction is to the right, the positive Y direction
+                is up, and the positive Z direction is away from the viewer.</para>
+            <para>The process of transforming vertex positions into clip space is quite arbitrary.
+                OpenGL provides a lot of flexibility in this step. We will cover this step in detail
+                throughout the tutorials.</para>
+            <para>Because clip space is the visible transformed version of the world, any triangles
+                that fall outside of this region are discarded. Any triangles that are partially
+                outside of this region undergo a process called <glossterm>clipping.</glossterm>
+                This breaks the triangle apart into a number of smaller triangles, such that the
+                smaller triangles are all entirely within clip space. Hence the name <quote>clip
+                    space.</quote></para>
+            <formalpara>
+                <title>Normalized Coordinates</title>
+                <para>Clip space is interesting, but inconvenient. The extent of this space is
+                    different for each vertex, which makes visualizing a triangle rather difficult.
+                    Therefore, clip space is transformed into a more reasonable coordinate space:
+                        <glossterm>normalized device coordinates</glossterm>.</para>
+            </formalpara>
+            <para>This process is very simple. The X, Y, and Z of each vertex's position is divided
+                by W to get normalized device coordinates. That is all.</para>
+            <para>The space of normalized device coordinates is essentially just clip space, except
+                that the range of X, Y and Z are [-1, 1]. The directions are all the same. The
+                division by W is an important part of projecting 3D triangles onto 2D images; we
+                will cover that in a future tutorial.</para>
+            <figure>
+                <title>Normalized Device Coordinate Space</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="NormDeviceCoord.svg" contentwidth="4in"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para>The cube indicates the boundaries of normalized device coordinate space.</para>
+            <formalpara xml:id="tut00_window_space">
+                <title>Window Transformation</title>
+                <para>The next phase of rasterization is to transform the vertices of each triangle
+                    again. This time, they are converted from normalized device coordinates to
+                        <glossterm>window coordinates</glossterm>. As the name suggests, window
+                    coordinates are relative to the window that OpenGL is running within.</para>
+            </formalpara>
+            <para>Even though they refer to the window, they are still three dimensional
+                coordinates. The X goes to the right, Y goes up, and Z goes away, just as for clip
+                space. The only difference is that the bounds for these coordinates depends on the
+                viewable window. It should also be noted that while these are in window coordinates,
+                none of the precision is lost. These are not integer coordinates; they are still
+                floating-point values, and thus they have precision beyond that of a single
+                pixel.</para>
+            <para>The bounds for Z are [0, 1], with 0 being the closest and 1 being the farthest.
+                Vertex positions outside of this range are not visible.</para>
+            <para>Note that window coordinates have the bottom-left position as the (0, 0) origin
+                point. This is counter to what users are used to in window coordinates, which is
+                having the top-left position be the origin. There are transform tricks you can play
+                to allow you to work in a top-left coordinate space if you need to.</para>
+            <para>The full details of this process will be discussed at length as the tutorials
+                progress.</para>
+            <formalpara>
+                <title>Scan Conversion</title>
+                <para>After converting the coordinates of a triangle to window coordinates, the
+                    triangle undergoes a process called <glossterm>scan conversion.</glossterm> This
+                    process takes the triangle and breaks it up based on the arrangement of window
+                    pixels over the output image that the triangle covers.</para>
+            </formalpara>
+            <figure>
+                <title>Scan Converted Triangle</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="TriangleScanConvert.svg" contentwidth="6in"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para>The center image shows the digital grid of output pixels; the circles represent
+                the center of each pixel. The center of each pixel represents a
+                    <glossterm>sample</glossterm>: a discrete location within the area of a pixel.
+                During scan conversion, a triangle will produce a <glossterm>fragment</glossterm>
+                for every pixel sample that is within the 2D area of the triangle.</para>
+            <para>The image on the right shows the fragments generated by the scan conversion of the
+                triangle. This creates a rough approximation of the triangle's general shape.</para>
+            <para>It is very often the case that triangles are rendered that share edges. OpenGL
+                offers a guarantee that, so long as the shared edge vertex positions are
+                    <emphasis>identical</emphasis>, there will be no sample gaps during scan
+                conversion.</para>
+            <figure>
+                <title>Shared Edge Scan Conversion</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="SharedEdgeScanConvert.svg" contentwidth="6in"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para>To make it easier to use this, OpenGL also offers the guarantee that if you pass
+                the same input vertex data through the same vertex processor, you will get identical
+                output; this is called the <glossterm>invariance guarantee</glossterm>. So the onus
+                is on the user to use the same input vertices in order to ensure gap-less scan
+                conversion.</para>
+            <para>Scan conversion is an inherently 2D operation. This process only uses the X and Y
+                position of the triangle in window coordinates to determine which fragments to
+                generate. The Z value is not forgotten, but it is not directly part of the actual
+                process of scan converting the triangle.</para>
+            <para>The result of scan converting a triangle is a sequence of fragments that cover the
+                shape of the triangle. Each fragment has certain data associated with it. This data
+                contains the 2D location of the fragment in window coordinates, as well as the Z
+                position of the fragment. This Z value is known as the depth of the fragment. There
+                may be other information that is part of a fragment, and we will expand on that in
+                later tutorials.</para>
+            <formalpara>
+                <title>Fragment Processing</title>
+                <para>This phase takes a fragment from a scan converted triangle and transforms it
+                    into one or more color values and a single depth value. The order that fragments
+                    from a single triangle are processed in is irrelevant; since a single triangle
+                    lies in a single plane, fragments generated from it cannot possibly overlap.
+                    However, the fragments from another triangle can possibly overlap. Since order
+                    is important in a rasterizer, the fragments from one triangle must all be
+                    processed before the fragments from another triangle.</para>
+            </formalpara>
+            <para>This phase is quite arbitrary. The user of OpenGL has a lot of options of how to
+                decide what color to assign a fragment. We will cover this step in detail throughout
+                the tutorials.</para>
+            <note>
+                <title>Direct3D Note</title>
+                <para>Direct3D prefers to call this stage <quote>pixel processing</quote> or
+                        <quote>pixel shading</quote>. This is a misnomer for several reasons. First,
+                    a pixel's final color can be composed of the results of multiple fragments
+                    generated by multiple <emphasis>samples</emphasis> within a single pixel. This
+                    is a common technique to remove jagged edges of triangles. Also, the fragment
+                    data has not been written to the image, so it is not a pixel yet. Indeed, the
+                    fragment processing step can conditionally prevent rendering of a fragment based
+                    on arbitrary computations. Thus a <quote>pixel</quote> in D3D parlance may never
+                    actually become a pixel at all.</para>
+            </note>
+            <formalpara>
+                <title>Fragment Writing</title>
+                <para>After generating one or more colors and a depth value, the fragment is written
+                    to the destination image. This step involves more than simply writing to the
+                    destination image. Combining the color and depth with the colors that are
+                    currently in the image can involve a number of computations. These will be
+                    covered in detail in various tutorials.</para>
+            </formalpara>
+        </section>
+        <section>
+            <title>Colors</title>
+            <para>Previously, a pixel was stated to be an element in a 2D image that has a
+                particular color. A color can be described in many ways.</para>
+            <para>In computer graphics, the usual description of a color is as a series of numbers
+                on the range [0, 1]. Each of the numbers corresponds to the intensity of a
+                particular reference color; thus the final color represented by the series of
+                numbers is a mix of these reference colors.</para>
+            <para>The set of reference colors is called a <glossterm>colorspace</glossterm>. The
+                most common color space for screens is RGB, where the reference colors are Red,
+                Green and Blue. Printed works tend to use CMYK (Cyan, Magenta, Yellow, Black). Since
+                we're dealing with rendering to a screen, and because OpenGL requires it, we will
+                use the RGB colorspace.</para>
+            <note>
+                <para>You can play some fancy games with programmatic shaders (see below) that allow
+                    you to work in different colorspaces. So technically, we only have to output to
+                    a linear RGB colorspace.</para>
+            </note>
+            <para>So a pixel in OpenGL is defined as 3 values on the range [0, 1] that represent a
+                color in a linear RGB colorspace. By combining different intensities of this 3
+                colors, we can generate millions of different color shades. This will get extended
+                slightly, as we deal with transparency later.</para>
+        </section>
+        <section>
+            <title>Shader</title>
+            <para>A <glossterm>shader</glossterm> is a program designed to be run on a renderer as
+                part of the rendering operation. Regardless of the kind of rendering system in use,
+                shaders can only be executed at certain points in that rendering process. These
+                    <glossterm>shader stages</glossterm> represent hooks where a user can add
+                arbitrary algorithms to create a specific visual effect.</para>
+            <para>In term of rasterization as outlined above, there are several shader stages where
+                arbitrary processing is both economical for performance and offers high utility to
+                the user. For example, the transformation of an incoming vertex to clip space is a
+                useful hook for user-defined code, as is the processing of a fragment into final
+                colors and depth.</para>
+            <para>Shaders for OpenGL are run on the actual rendering hardware. This can often free
+                up valuable CPU time for other tasks, or simply perform operations that would be
+                difficult if not impossible without the flexibility of executing arbitrary code. A
+                downside of this is that they must live within certain limits that CPU code would
+                not have to.</para>
+            <para>There are a number of shading languages available to various APIs. The one used in
+                this tutorial is the primary shading language of OpenGL. It is called,
+                unimaginatively, the OpenGL Shading Language, or <acronym>GLSL</acronym>. for short.
+                It looks deceptively like C, but it is very much <emphasis>not</emphasis> C.</para>
+        </section>
+    </section>
+    <section>
+        <?dbhtml filename="Intro What is OpenGL.html" ?>
+        <title>What is OpenGL</title>
+        <para>Before we can begin looking into writing an OpenGL application, we must first know
+            what it is that we are writing. What exactly is OpenGL?</para>
+        <section>
+            <title>OpenGL as an API</title>
+            <para><glossterm>OpenGL</glossterm> is usually thought of as an Application Programming
+                Interface (<acronym>API</acronym>). The OpenGL API has been exposed to a number of
+                languages. But the one that they all ultimately use at their lowest level is the C
+                API.</para>
+            <para>The API, in C, is defined by a number of typedefs, #defined enumerator values, and
+                functions. The typedefs define basic GL types like <type>GLint</type>,
+                    <type>GLfloat</type> and so forth. These are defined to have a specific bit
+                depth.</para>
+            <para xml:id="OpenGLObjects">Complex aggregates like structs are never directly exposed
+                in OpenGL. Any such constructs are hidden behind the API. This makes it easier to
+                expose the OpenGL API to non-C languages without having a complex conversion
+                layer.</para>
+            <para>In C++, if you wanted an object that contained an integer, a float, and a string,
+                you would create it and access it like this:</para>
+            <programlisting language="cpp">struct Object
+{
+    int count;
+    float opacity;
+    char *name;
+};
+
+//Create the storage for the object.
+Object newObject;
+
+//Put data into the object.
+newObject.count = 5;
+newObject.opacity = 0.4f;
+newObject.name = "Some String";
+</programlisting>
+            <para>In OpenGL, you would use an API that looks more like this:</para>
+            <programlisting language="cpp">//Create the storage for the object
+GLuint objectName;
+glGenObject(1, &amp;objectName);
+
+//Put data into the object.
+glBindObject(GL_MODIFY, objectName);
+glObjectParameteri(GL_MODIFY, GL_OBJECT_COUNT, 5);
+glObjectParameterf(GL_MODIFY, GL_OBJECT_OPACITY, 0.4f);
+glObjectParameters(GL_MODIFY, GL_OBJECT_NAME, "Some String");</programlisting>
+            <para>None of these are actual OpenGL commands, of course. This is simply an example of
+                what the interface to such an object would look like.</para>
+            <para>OpenGL owns the storage for all OpenGL objects. Because of this, the user can only
+                access an object by reference. Almost all OpenGL objects are referred to by an
+                unsigned integer (the <type>GLuint</type>). Objects are created by a function of the
+                form <function>glGen*</function>, where * is the type of the object. The first
+                parameter is the number of objects to create, and the second is a
+                    <type>GLuint*</type> array that receives the newly created object names.</para>
+            <para>To modify most objects, they must first be bound to the context. Many objects can
+                be bound to different locations in the context; this allows the same object to be
+                used in different ways. These different locations are called
+                    <glossterm>targets</glossterm>; all objects have a list of valid targets, and
+                some have only one. In the above example, the fictitious target
+                    <quote>GL_MODIFY</quote> is the location where <varname>objectName</varname> is
+                bound.</para>
+            <para>The enumerators <literal>GL_OBJECT_*</literal> all name fields in the object that
+                can be set. The <function>glObjectParameter</function> family of functions set
+                parameters within the object bound to the given target. Note that since OpenGL is a
+                C API, it has to name each of the differently typed variations differently. So there
+                is <function>glObjectParameteri</function> for integer parameters,
+                    <function>glObjectParameterf</function> for floating-point parameters, and so
+                forth.</para>
+            <para>Note that all OpenGL objects are not as simple as this example, and the functions
+                that change object state do not all follow these naming conventions. Also, exactly
+                what it means to bind an object to the context is explained below.</para>
+        </section>
+        <section>
+            <title>The Structure of OpenGL</title>
+            <para>The OpenGL API is defined as a state machine. Almost all of the OpenGL functions
+                set or retrieve some state in OpenGL. The only functions that do not change state
+                are functions that use the currently set state to cause rendering to happen.</para>
+            <para>You can think of the state machine as a very large struct with a great many
+                different fields. This struct is called the <glossterm>OpenGL context</glossterm>,
+                and each field in the context represents some information necessary for
+                rendering.</para>
+            <para>Objects in OpenGL are thus defined as a list of fields in this struct that can be
+                saved and restored. <glossterm>Binding</glossterm> an object to a target within the
+                context causes the data in this object to replace some of the context's state. Thus
+                after the binding, future function calls that read from or modify this context state
+                will read or modify the state within the object.</para>
+            <para>Objects are usually represented as <type>GLuint</type> integers; these are handles
+                to the actual OpenGL objects. The integer value 0 is special; it acts as the object
+                equivalent of a NULL pointer. Binding object 0 means to unbind the currently bound
+                object. This means that the original context state, the state that was in place
+                before the binding took place, now becomes the context state.</para>
+            <para>Let us say that this represents some part of an OpenGL context's state:</para>
+            <example>
+                <title>OpenGL Object State</title>
+                <programlisting language="cpp">struct Values
+{
+    int iValue1;
+    int iValue2;
+};
+
+struct OpenGL_Context
+{
+    ...
+    Values *pMainValues;
+    Values *pOtherValues;
+    ...
+};
+
+OpenGL_Context context;</programlisting>
+            </example>
+            <para>To create a <classname>Values</classname> object, you would call something like
+                    <function>glGenValues</function>. You could bind the
+                    <classname>Values</classname> object to one of two targets:
+                    <literal>GL_MAIN_VALUES</literal> which represents the pointer
+                    <varname>context.pMainValues</varname>, and <literal>GL_OTHER_VALUES</literal>
+                which represents the pointer <varname>context.pOtherValues</varname>. You would bind
+                the object with a call to <function>glBindValues</function>, passing one of the two
+                targets and the object. This would set that target's pointer to the object that you
+                created.</para>
+            <para>There would be a function to set values in a bound object. Say,
+                    <function>glValueParam</function>. It would take the target of the object, which
+                represents the pointer in the context. It would also take an enum representing which
+                value in the object to change. The value <literal>GL_VALUE_ONE</literal> would
+                represent <varname>iValue1</varname>, and <literal>GL_VALUE_TWO</literal> would
+                represent <varname>iValue2</varname>.</para>
+        </section>
+        <section>
+            <title>The OpenGL Specification</title>
+            <para>To be technical about it, OpenGL is not an API; it is a specification. A document.
+                The C API is merely one way to implement the spec. The specification defines the
+                initial OpenGL state, what each function does to change or retrieve that state, and
+                what is supposed to happen when you call a rendering function.</para>
+            <para>The specification is written by the OpenGL <glossterm>Architectural Review
+                    Board</glossterm> (<acronym>ARB</acronym>), a group of representatives from
+                companies like Apple, NVIDIA, and AMD (the ATI part), among others. The ARB is part
+                of the <link xlink:href="http://www.khronos.org/">Khronos Group</link>.</para>
+            <para>The specification is a very complicated and technical document. However, parts of
+                it are quite readable, though you will usually need at least some understanding of
+                what should be going on to understand it. If you try to read it, the most important
+                thing to understand about it is this: it describes <emphasis>results</emphasis>, not
+                implementation. Just because the spec says that X will happen does not mean that it
+                actually does. What it means is that the user should not be able to tell the
+                difference. If a piece of hardware can provide the same behavior in a different way,
+                then the specification allows this, so long as the user can never tell the
+                difference.</para>
+            <formalpara>
+                <title>OpenGL Implementations</title>
+                <para>While the OpenGL ARB does control the specification, it does not control
+                    OpenGL's code. OpenGL is not something you download from a centralized location.
+                    For any particular piece of hardware, it is up to the developers of that
+                    hardware to write an <glossterm>OpenGL Implementation</glossterm> for that
+                    hardware. Implementations, as the name suggests, implement the OpenGL
+                    specification, exposing the OpenGL API as defined in the spec.</para>
+            </formalpara>
+            <para>Who controls the OpenGL implementation is different for different operating
+                systems. On Windows, OpenGL implementations are controlled virtually entirely by the
+                hardware makers themselves. On Mac OSX, OpenGL implementations are controlled by
+                Apple; they decide what version of OpenGL is exposed and what additional
+                functionality can be provided to the user. Apple writes much of the OpenGL
+                implementation on Mac OSX, which the hardware developers writing to an Apple-created
+                internal driver API. On Linux, things are... complicated.</para>
+            <para>The long and short of this is that if you are writing a program and it seems to be
+                exhibiting off-spec behavior, that is the fault of the maker of your OpenGL
+                implementation (assuming it is not a bug in your code). On Windows, the various
+                graphics hardware makers put their OpenGL implementations in their regular drivers.
+                So if you suspect a bug in their implementation, the first thing you should do is
+                make sure your graphics drivers are up-to-date; the bug may have been corrected
+                since the last time you updated your drivers.</para>
+            <formalpara>
+                <title>OpenGL Versions</title>
+                <para>There are many versions of the OpenGL Specification. OpenGL versions are not
+                    like most Direct3D versions, which typically change most of the API. Code that
+                    works on one version of OpenGL will almost always work on later versions of
+                    OpenGL.</para>
+            </formalpara>
+            <para>The only exception to this deals with OpenGL 3.0 and above, relative to previous
+                versions. v3.0 deprecated a number of older functions, and v3.1 removed most of
+                those functions from the API<footnote>
+                    <para>Deprecation only means marking those functions as to be removed in later
+                        functions. They are still available for use in 3.0.</para>
+                </footnote>. This also divided the specification into 2 variations (called
+                profiles): core and compatibility. The compatibility profile retains all of the
+                functions removed in 3.1, while the core profile does not. Theoretically, OpenGL
+                implementations could implement just the core profile; this would leave software
+                that relies on the compatibility profile non-functional on that
+                implementation.</para>
+            <para>As a practical matter, none of this matters at all. No OpenGL driver developer is
+                going to ship drivers that only implement the core profile. So in effect, this means
+                nothing at all; all OpenGL versions are all effectively backwards compatible.</para>
+        </section>
+    </section>
+    <section xml:id="Intro_Glossary">
+        <?dbhtml filename="Intro Glossary.html" ?>
+        <title>Glossary</title>
+        <glosslist>
+            <glossentry>
+                <glossterm>vector</glossterm>
+                <glossdef>
+                    <para>A value composed of an ordered sequence of other values. The number of
+                        values stored in a vector is its dimensionality. Vectors can have math
+                        operations performed on them as a whole.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>scalar</glossterm>
+                <glossdef>
+                    <para>A single, non-vector value. A one-dimensional vector can be considered a
+                        scalar.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>vector position</glossterm>
+                <glossdef>
+                    <para>A vector that represents a position.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>vector direction</glossterm>
+                <glossdef>
+                    <para>A vector that represents a direction.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>vector component</glossterm>
+                <glossdef>
+                    <para>One of the values within a vector.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>component-wise operation</glossterm>
+                <glossdef>
+                    <para>An operation on a vector that applies something to each component of the
+                        vector. The results of a component-wise operation is a vector of the same
+                        dimension as the input(s) to the operation. Many vector operations are
+                        component-wise.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>unit vector</glossterm>
+                <glossdef>
+                    <para>A vector who's length is exactly one. These represent purely directional
+                        vectors.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>vector normalization</glossterm>
+                <glossdef>
+                    <para>The process of converting a vector into a unit vector that points in the
+                        same direction as the original vector.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>pixel</glossterm>
+                <glossdef>
+                    <para>The smallest division of a digital image. A pixel has a particular color in a
+                        particular colorspace.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>image</glossterm>
+                <glossdef>
+                    <para>A two-dimensional array of pixels.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>rendering</glossterm>
+                <glossdef>
+                    <para>The process of taking the source 3D world and converting it into a 2D image
+                        that represents a view of that world from a particular angle.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>rasterization</glossterm>
+                <glossdef>
+                    <para>A particular rendering method, used to convert a series of 3D triangles into a
+                        2D image.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>geometry, model, mesh</glossterm>
+                <glossdef>
+                    <para>A single object in 3D space made of triangles.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>vertex</glossterm>
+                <glossdef>
+                    <para>One of the 3 elements that make up a triangle. Vertices can contain arbitrary
+                        of data, but among that data is a 3-dimensional position representing the
+                        location of the vertex in 3D space.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>clip space, clip coordinates</glossterm>
+                <glossdef>
+                    <para>A region of three-dimensional space into which vertex positions are
+                        transformed. These vertex positions are 4 dimensional quantities. The fourth
+                        component (W) of clip coordinates represents the visible range of clip space for
+                        that vertex. So the X, Y, and Z component of clip coordinates must be between
+                        [-W, W] to be a visible part of the world.</para>
+                    <para>In clip space, positive X goes right, positive Y up, and positive Z
+                        away.</para>
+                    <para>Clip-space vertices are output by the vertex processing stage of the rendering
+                        pipeline.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>clipping</glossterm>
+                <glossdef>
+                    <para>The process of taking a triangle in clip coordinates and splitting it if
+                        one or more of its vertices is outside of clip space.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>normalized device coordinates</glossterm>
+                <glossdef>
+                    <para>These are clip coordinates that have been divided by their fourth component.
+                        This makes this range of space the same for all components. Vertices with
+                        positions on the range [-1, 1] are visible, and other vertices are not.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>window space, window coordinates</glossterm>
+                <glossdef>
+                    <para>A region of three-dimensional space that normalized device coordinates are
+                        mapped to. The X and Y positions of vertices in this space are relative to the
+                        destination image. The origin is in the bottom-left, with positive X going right
+                        and positive Y going up. The Z value is a number on the range [0, 1], where 0 is
+                        the closest value and 1 is the farthest. Vertex positions outside of this range
+                        are not visible.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>scan conversion</glossterm>
+                <glossdef>
+                    <para>The process of taking a triangle in window space and converting it into a
+                        number of fragments based on projecting it onto the pixels of the output
+                        image.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>sample</glossterm>
+                <glossdef>
+                    <para>A discrete location within the bounds of a pixel that determines whether to
+                        generate a fragment from scan converting the triangle. The area of a single
+                        pixel can have multiple samples, which can generate multiple fragments.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>fragment</glossterm>
+                <glossdef>
+                    <para>A single element of a scan converted triangle. A fragment can contain
+                        arbitrary data, but among that data is a 3-dimensional position, identifying the
+                        location on the triangle in window space where this fragment originates
+                        from.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>invariance guarantee</glossterm>
+                <glossdef>
+                    <para>A guarantee provided by OpenGL, such that if you provide binary-identical
+                        inputs to the vertex processing, while all other state remains exactly
+                        identical, then the exact same vertex in clip-space will be output.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>colorspace</glossterm>
+                <glossdef>
+                    <para>The set of reference colors that define a way of representing a color in
+                        computer graphics, and the function mapping between those reference colors
+                        and the actual colors. All colors are defined relative to a particular
+                        colorspace.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>shader</glossterm>
+                <glossdef>
+                    <para>A program designed to be executed by a renderer, in order to perform some
+                        user-defined operations.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>shader stage</glossterm>
+                <glossdef>
+                    <para>A particular place in a rendering pipeline where a shader can be executed
+                        to perform a computation. The results of this computation will be fed to the
+                        next stage in the rendering pipeline.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>OpenGL</glossterm>
+                <glossdef>
+                    <para>A specification that defines the effective behavior of a
+                        rasterization-based rendering system.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>OpenGL context</glossterm>
+                <glossdef>
+                    <para>A specific set of state used for rendering. The OpenGL context is like a
+                        large C-style struct that contains a large number of fields that can be
+                        accessed. If you were to create multiple windows for rendering, each one
+                        would have its own OpenGL context.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>object binding</glossterm>
+                <glossdef>
+                    <para>Objects can be bound to a particular location in the OpenGL context. When
+                        this happens, the state within the object takes the place of a certain set
+                        of state in the context. There are multiple binding points for objects, and
+                        each kind of object can be bound to certain binding points. Which bind point
+                        an object is bound to determines what state the object overrides.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>Architectural Review Board</glossterm>
+                <glossdef>
+                    <para>The body of the Khronos Group that governs the OpenGL
+                        specification.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry>
+                <glossterm>OpenGL Implementation</glossterm>
+                <glossdef>
+                    <para>The software that implements the OpenGL specification for a particular
+                        system.</para>
+                </glossdef>
+            </glossentry>
+        </glosslist>
+    </section>
+</article>

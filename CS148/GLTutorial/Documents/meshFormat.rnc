@@ -1,0 +1,134 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace msh = "http://www.arcsynthesis.com/gltut/mesh"
+
+##Structure and elements
+div
+{
+    start = mf.rootelements
+    
+    mf.rootelements =
+        mf.mesh
+        
+    mf.mesh =
+        ##The root element. Contains a number of attribute arrays and rendering commands.
+        element msh:mesh {mf.mesh.content}
+
+    mf.mesh.content =
+        mf.attribute+, mf.vao*, mf.rendering-commands+
+        
+    mf.attribute =
+        ##A single attribute array. It can contain any kind of attribute data.
+        element msh:attribute { mf.attribute.content }
+        
+    mf.attribute.content =
+        mf.attribute.attlist, text
+    
+    mf.vao =
+        ##These are named VAOs, which represent collections of attributes that can be used to render
+        ##the mesh.
+        element msh:vao { mf.vao.content }
+        
+    mf.vao.content =
+        mf.vao.attlist, mf.source+
+        
+    mf.source =
+        ##This represents one of the attributes used by the VAO.
+        element msh:source { mf.source.content }
+        
+    mf.source.content =
+        mf.source.attlist
+    
+    mf.rendering-commands =
+        ##These are the possible commands for rendering this mesh.
+        (mf.indices | mf.arrays)
+
+    mf.indices =
+        ##A single element array, which is rendered with a particular rendering command.
+        ##This cannot be combined with array rendering in the same mesh.
+        element msh:indices { mf.indices.content }
+        
+    mf.indices.content =
+        mf.indices.attlist, text
+        
+    mf.arrays =
+        ##A single array rendering, which is rendered with a particular rendering command.
+        ##Cannot be combined with element arrays in a single mesh.
+        element msh:arrays { mf.arrays.content }
+        
+    mf.arrays.content =
+        mf.arrays.attlist, text
+}
+
+##Attributes
+div
+{
+    mf.attribute.attlist =
+        mf.attribute.index.attribute, mf.attribute.integral.attribute?, mf.attribute.type.attribute, mf.attribute.size.attribute
+        
+    mf.vao.attlist =
+        mf.vao.name.attribute
+
+    mf.source.attlist =
+        mf.source.attrib.attribute
+
+    mf.indices.attlist =
+        mf.indices.type.attribute, mf.cmd.attribute, mf.indices.primrestart.attribute?
+        
+    mf.arrays.attlist =
+        mf.cmd.attribute, mf.arrays.start.attribute, mf.arrays.count.attribute
+        
+    mf.attribute.index.attribute =
+        ##The attribute index to be used for this vertex attribute.
+        attribute index { acc.attribute.type }
+        
+    mf.attribute.size.attribute =
+        ##The number of components in this vertex attribute. 1-4.
+        attribute size { xsd:positiveInteger { minInclusive = "1" maxInclusive = "4"} }
+    
+    mf.attribute.type.attribute =
+        ##The type of the vertex attribute's data. Float, integer, normalized-integer, etc.
+        attribute type { "float" | "half" | "int" | "uint" | "short" | "ushort" | "byte" | "ubyte" |
+            "norm-int" | "norm-uint" | "norm-short" | "norm-ushort" | "norm-byte" | "norm-ubyte"}
+            
+    mf.attribute.integral.attribute =
+        ##True if this attribute is to be passed as an integral attribute.
+        ##Defaults to false.
+        attribute integral {"true"|"false"}
+
+    mf.vao.name.attribute =
+        attribute name { text }
+    
+    mf.source.attrib.attribute =
+        attribute attrib { acc.attribute.type }
+
+    mf.cmd.attribute =
+        ##The primitive type used to render with this rendering command..
+        attribute cmd { "triangles" | "tri-strip" | "tri-fan" | "lines" | "line-strip" |
+        "line-loop" | "points" }
+        
+    mf.indices.type.attribute =
+        ##The data type that the index is to be stored as.
+        attribute type { "uint" | "ushort" | "ubyte" }
+    
+    mf.indices.primrestart.attribute =
+        ##Sets the primitive restart index. Don't set it if you don't want primitive restarting for
+        ## this rendering command.
+        attribute prim-restart { xsd:unsignedInt }
+        
+    mf.arrays.start.attribute =
+        ##Sets the initial index for array rendering.
+        attribute start { xsd:nonNegativeInteger }
+    
+    mf.arrays.count.attribute =
+        ##Sets the number of elements to be rendered with array rendering.
+        attribute count { xsd:positiveInteger }
+}
+
+## Accessories
+div
+{
+    acc.attribute.type =
+        xsd:nonNegativeInteger { minInclusive = "0" maxExclusive = "16"}
+}
+

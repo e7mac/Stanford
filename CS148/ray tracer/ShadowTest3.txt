@@ -1,0 +1,16 @@
+Camera   0 0 -7   0 1 0   0 0 -1   45   1
+Output   512   512   ShadowTest3.png
+BounceDepth   0
+ShadowBias 0.0001
+
+AmbientLight   0.1 0.1 0.1
+PointLight   4 0 0   1 1 1
+
+Material   0 0 1   0 0 1   1 1 1   0 0 0   40
+Sphere	-0.5 0 0   0.5
+
+Material   1 1 1   1 1 1   0 0 0   0 0 0   0
+Triangle   -2 -5 -5   -2 5 -5   -2 5 5
+Triangle   -2 -5 -5   -2 -5 5   -2 5 5
+
+Triangle  0.1 -0.5 -0.5    0.1 0.5 -0.5   0.1 0.5 0.5
