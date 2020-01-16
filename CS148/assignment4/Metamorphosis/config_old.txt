@@ -1,0 +1,4 @@
+background1=Stest.png
+background2=blank.png
+loadfile=simpleFeatures.txt
+savefile=simpleFeatures.txt

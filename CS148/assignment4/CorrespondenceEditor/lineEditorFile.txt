@@ -1,0 +1,4 @@
+background1=sully1.jpg
+line=273,216:313,288
+background2=sully2.jpg
+line=354,223:394,295

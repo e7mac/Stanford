@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FontEditor">
+</Property><Property Name="Solution File" Value="C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\FontEditor\FontEditor.sln">
+</Property><Property Name="Date" Value="Wednesday, October 24, 2012">
+</Property><Property Name="Time" Value="13:44 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FontEditor.sln" Description="File successfully backed up as C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\FontEditor\FontEditor.sln.old">
+</Event><Event ErrorLevel="0" Project="FontEditor" Source="FontEditor.vcproj" Description="Converting project file 'C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\FontEditor\FontEditor.vcproj'.">
+</Event><Event ErrorLevel="1" Project="FontEditor" Source="FontEditor.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="FontEditor" Source="FontEditor.vcproj" Description="Done converting to new project file 'C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\FontEditor\FontEditor.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="FontEditor" Source="FontEditor.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="libst" Source="..\libst\vc2008\libst.vcproj" Description="Converting project file 'C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\libst\vc2008\libst.vcproj'.">
+</Event><Event ErrorLevel="1" Project="libst" Source="..\libst\vc2008\libst.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="libst" Source="..\libst\vc2008\libst.vcproj" Description="MSB8012: $(TargetPath) ('C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\libst\vc2008\../lib\libst.lib') does not match the Librarian's OutputFile property value '../lib\Debug/libst.lib' ('C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\FontEditor\../lib\Debug/libst.lib') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).">
+</Event><Event ErrorLevel="1" Project="libst" Source="..\libst\vc2008\libst.vcproj" Description="MSB8012: $(TargetPath) ('C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\libst\vc2008\../lib\libst.lib') does not match the Librarian's OutputFile property value '../lib\Release/libst.lib' ('C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\FontEditor\../lib\Release/libst.lib') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).">
+</Event><Event ErrorLevel="0" Project="libst" Source="..\libst\vc2008\libst.vcproj" Description="Done converting to new project file 'C:\Users\boolzhu\Downloads\assignment5(1)\assignment5\libst\vc2008\libst.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="libst" Source="..\libst\vc2008\libst.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FontEditor.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FontEditor.sln" Description="Converted">
+</Event></UpgradeLog>

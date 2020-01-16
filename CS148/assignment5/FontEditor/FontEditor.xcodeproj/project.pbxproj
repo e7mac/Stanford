@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		E0213B270F29A0E1001B68DE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0213B250F29A0E1001B68DE /* GLUT.framework */; };
+		E0213B280F29A0E1001B68DE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0213B260F29A0E1001B68DE /* OpenGL.framework */; };
+		E0213B6A0F29A1B0001B68DE /* MyFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0213B5E0F29A1B0001B68DE /* MyFont.cpp */; };
+		E0213B6B0F29A1B0001B68DE /* TemplateLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0213B600F29A1B0001B68DE /* TemplateLayer.cpp */; };
+		E0213B6C0F29A1B0001B68DE /* TTDataStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0213B620F29A1B0001B68DE /* TTDataStream.cpp */; };
+		E0213B6D0F29A1B0001B68DE /* TTFontWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0213B640F29A1B0001B68DE /* TTFontWriter.cpp */; };
+		E0213B6E0F29A1B0001B68DE /* TTGlyph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0213B660F29A1B0001B68DE /* TTGlyph.cpp */; };
+		E0213B6F0F29A1B0001B68DE /* TTTables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0213B680F29A1B0001B68DE /* TTTables.cpp */; };
+		E0213B850F29A53E001B68DE /* libst.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0213B230F29A0CE001B68DE /* libst.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0213B220F29A0CE001B68DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0213B1B0F29A0CE001B68DE /* libst.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = libst;
+		};
+		E0213B5B0F29A188001B68DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0213B1B0F29A0CE001B68DE /* libst.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = libst;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* FontEditor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FontEditor; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0213B1B0F29A0CE001B68DE /* libst.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libst.xcodeproj; path = ../libst/xcode/libst.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E0213B250F29A0E1001B68DE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		E0213B260F29A0E1001B68DE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E0213B5E0F29A1B0001B68DE /* MyFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyFont.cpp; sourceTree = "<group>"; };
+		E0213B5F0F29A1B0001B68DE /* MyFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFont.h; sourceTree = "<group>"; };
+		E0213B600F29A1B0001B68DE /* TemplateLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TemplateLayer.cpp; sourceTree = "<group>"; };
+		E0213B610F29A1B0001B68DE /* TemplateLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateLayer.h; sourceTree = "<group>"; };
+		E0213B620F29A1B0001B68DE /* TTDataStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TTDataStream.cpp; sourceTree = "<group>"; };
+		E0213B630F29A1B0001B68DE /* TTDataStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDataStream.h; sourceTree = "<group>"; };
+		E0213B640F29A1B0001B68DE /* TTFontWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TTFontWriter.cpp; sourceTree = "<group>"; };
+		E0213B650F29A1B0001B68DE /* TTFontWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFontWriter.h; sourceTree = "<group>"; };
+		E0213B660F29A1B0001B68DE /* TTGlyph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TTGlyph.cpp; sourceTree = "<group>"; };
+		E0213B670F29A1B0001B68DE /* TTGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlyph.h; sourceTree = "<group>"; };
+		E0213B680F29A1B0001B68DE /* TTTables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TTTables.cpp; sourceTree = "<group>"; };
+		E0213B690F29A1B0001B68DE /* TTTables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTables.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0213B850F29A53E001B68DE /* libst.a in Frameworks */,
+				E0213B270F29A0E1001B68DE /* GLUT.framework in Frameworks */,
+				E0213B280F29A0E1001B68DE /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* FontEditor */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				E0213B250F29A0E1001B68DE /* GLUT.framework */,
+				E0213B260F29A0E1001B68DE /* OpenGL.framework */,
+				E0213B1B0F29A0CE001B68DE /* libst.xcodeproj */,
+			);
+			name = FontEditor;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+				E0213B5E0F29A1B0001B68DE /* MyFont.cpp */,
+				E0213B5F0F29A1B0001B68DE /* MyFont.h */,
+				E0213B600F29A1B0001B68DE /* TemplateLayer.cpp */,
+				E0213B610F29A1B0001B68DE /* TemplateLayer.h */,
+				E0213B620F29A1B0001B68DE /* TTDataStream.cpp */,
+				E0213B630F29A1B0001B68DE /* TTDataStream.h */,
+				E0213B640F29A1B0001B68DE /* TTFontWriter.cpp */,
+				E0213B650F29A1B0001B68DE /* TTFontWriter.h */,
+				E0213B660F29A1B0001B68DE /* TTGlyph.cpp */,
+				E0213B670F29A1B0001B68DE /* TTGlyph.h */,
+				E0213B680F29A1B0001B68DE /* TTTables.cpp */,
+				E0213B690F29A1B0001B68DE /* TTTables.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* FontEditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		E0213B1C0F29A0CE001B68DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0213B230F29A0CE001B68DE /* libst.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* FontEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "FontEditor" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0213B5C0F29A188001B68DE /* PBXTargetDependency */,
+			);
+			name = FontEditor;
+			productInstallPath = "$(HOME)/bin";
+			productName = FontEditor;
+			productReference = 8DD76F6C0486A84900D96B5E /* FontEditor */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "FontEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* FontEditor */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E0213B1C0F29A0CE001B68DE /* Products */;
+					ProjectRef = E0213B1B0F29A0CE001B68DE /* libst.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* FontEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E0213B230F29A0CE001B68DE /* libst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libst.a;
+			remoteRef = E0213B220F29A0CE001B68DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
+				E0213B6A0F29A1B0001B68DE /* MyFont.cpp in Sources */,
+				E0213B6B0F29A1B0001B68DE /* TemplateLayer.cpp in Sources */,
+				E0213B6C0F29A1B0001B68DE /* TTDataStream.cpp in Sources */,
+				E0213B6D0F29A1B0001B68DE /* TTFontWriter.cpp in Sources */,
+				E0213B6E0F29A1B0001B68DE /* TTGlyph.cpp in Sources */,
+				E0213B6F0F29A1B0001B68DE /* TTTables.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0213B5C0F29A188001B68DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libst;
+			targetProxy = E0213B5B0F29A188001B68DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FontEditor;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FontEditor;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = (
+					"-ljpeg",
+					"-lpng",
+					"-lz",
+					"-lfreetype",
+				);
+				USER_HEADER_SEARCH_PATHS = ../libst/include;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = (
+					"-ljpeg",
+					"-lpng",
+					"-lz",
+					"-lfreetype",
+				);
+				USER_HEADER_SEARCH_PATHS = ../libst/include;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "FontEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "FontEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

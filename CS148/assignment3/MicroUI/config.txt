@@ -1,0 +1,4 @@
+background1=sully1.jpg
+background2=sully2.jpg
+loadfile=lineEditorFile.txt
+savefile=lineEditorFile2.txt

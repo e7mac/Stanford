@@ -1,0 +1,4 @@
+background1=mynk.png
+background2=jpadial.jpg
+loadfile=finalLineEditorFile.txt
+savefile=finalLineEditorFile.txt

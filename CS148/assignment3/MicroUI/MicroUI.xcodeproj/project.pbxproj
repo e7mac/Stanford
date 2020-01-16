@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8165E3016276EF7008816DA /* UIDraggableBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8165E2E16276EF7008816DA /* UIDraggableBox.cpp */; };
+		A8E81D7B1627AF8F00B0FF46 /* UILine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8E81D791627AF8F00B0FF46 /* UILine.cpp */; };
+		C3E799081624DB49007DE1C0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E799071624DB49007DE1C0 /* GLUT.framework */; };
+		C3E7990A1624DB4E007DE1C0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E799091624DB4E007DE1C0 /* OpenGL.framework */; };
+		E0CAAA10125AED8000D60E3F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CAAA04125AED8000D60E3F /* main.cpp */; };
+		E0CAAA11125AED8000D60E3F /* parseConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CAAA05125AED8000D60E3F /* parseConfig.cpp */; };
+		E0CAAA12125AED8000D60E3F /* UIBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CAAA07125AED8000D60E3F /* UIBox.cpp */; };
+		E0CAAA13125AED8000D60E3F /* UIButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CAAA09125AED8000D60E3F /* UIButton.cpp */; };
+		E0CAAA14125AED8000D60E3F /* UILabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CAAA0B125AED8000D60E3F /* UILabel.cpp */; };
+		E0CAAA15125AED8000D60E3F /* UIWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CAAA0E125AED8000D60E3F /* UIWidget.cpp */; };
+		E0CAAA33125AEE4F00D60E3F /* libst.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CAAA1E125AEDD300D60E3F /* libst.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0CAAA1D125AEDD300D60E3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0CAAA16125AEDD300D60E3F /* libst.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = libst;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8DD76FB20486AB0100D96B5E /* MicroUI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MicroUI; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8165E2E16276EF7008816DA /* UIDraggableBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIDraggableBox.cpp; sourceTree = "<group>"; };
+		A8165E2F16276EF7008816DA /* UIDraggableBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDraggableBox.h; sourceTree = "<group>"; };
+		A8E81D791627AF8F00B0FF46 /* UILine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILine.cpp; sourceTree = "<group>"; };
+		A8E81D7A1627AF8F00B0FF46 /* UILine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILine.h; sourceTree = "<group>"; };
+		C3E799071624DB49007DE1C0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../System/Library/Frameworks/GLUT.framework; sourceTree = "<group>"; };
+		C3E799091624DB4E007DE1C0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
+		E0CAAA04125AED8000D60E3F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E0CAAA05125AED8000D60E3F /* parseConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parseConfig.cpp; sourceTree = "<group>"; };
+		E0CAAA06125AED8000D60E3F /* parseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseConfig.h; sourceTree = "<group>"; };
+		E0CAAA07125AED8000D60E3F /* UIBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIBox.cpp; sourceTree = "<group>"; };
+		E0CAAA08125AED8000D60E3F /* UIBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBox.h; sourceTree = "<group>"; };
+		E0CAAA09125AED8000D60E3F /* UIButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIButton.cpp; sourceTree = "<group>"; };
+		E0CAAA0A125AED8000D60E3F /* UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButton.h; sourceTree = "<group>"; };
+		E0CAAA0B125AED8000D60E3F /* UILabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UILabel.cpp; sourceTree = "<group>"; };
+		E0CAAA0C125AED8000D60E3F /* UILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabel.h; sourceTree = "<group>"; };
+		E0CAAA0D125AED8000D60E3F /* UIRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRectangle.h; sourceTree = "<group>"; };
+		E0CAAA0E125AED8000D60E3F /* UIWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIWidget.cpp; sourceTree = "<group>"; };
+		E0CAAA0F125AED8000D60E3F /* UIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWidget.h; sourceTree = "<group>"; };
+		E0CAAA16125AEDD300D60E3F /* libst.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libst.xcodeproj; path = ../libst/xcode/libst.xcodeproj; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3E7990A1624DB4E007DE1C0 /* OpenGL.framework in Frameworks */,
+				C3E799081624DB49007DE1C0 /* GLUT.framework in Frameworks */,
+				E0CAAA33125AEE4F00D60E3F /* libst.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* MicroUI */ = {
+			isa = PBXGroup;
+			children = (
+				C3E799091624DB4E007DE1C0 /* OpenGL.framework */,
+				C3E799071624DB49007DE1C0 /* GLUT.framework */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				E0CAAA16125AEDD300D60E3F /* libst.xcodeproj */,
+			);
+			name = MicroUI;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E0CAAA04125AED8000D60E3F /* main.cpp */,
+				E0CAAA05125AED8000D60E3F /* parseConfig.cpp */,
+				E0CAAA06125AED8000D60E3F /* parseConfig.h */,
+				A8E81D791627AF8F00B0FF46 /* UILine.cpp */,
+				A8E81D7A1627AF8F00B0FF46 /* UILine.h */,
+				E0CAAA07125AED8000D60E3F /* UIBox.cpp */,
+				E0CAAA08125AED8000D60E3F /* UIBox.h */,
+				A8165E2E16276EF7008816DA /* UIDraggableBox.cpp */,
+				A8165E2F16276EF7008816DA /* UIDraggableBox.h */,
+				E0CAAA09125AED8000D60E3F /* UIButton.cpp */,
+				E0CAAA0A125AED8000D60E3F /* UIButton.h */,
+				E0CAAA0B125AED8000D60E3F /* UILabel.cpp */,
+				E0CAAA0C125AED8000D60E3F /* UILabel.h */,
+				E0CAAA0D125AED8000D60E3F /* UIRectangle.h */,
+				E0CAAA0E125AED8000D60E3F /* UIWidget.cpp */,
+				E0CAAA0F125AED8000D60E3F /* UIWidget.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* MicroUI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		E0CAAA17125AEDD300D60E3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0CAAA1E125AEDD300D60E3F /* libst.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* MicroUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "MicroUI" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MicroUI;
+			productInstallPath = "$(HOME)/bin";
+			productName = MicroUI;
+			productReference = 8DD76FB20486AB0100D96B5E /* MicroUI */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "MicroUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* MicroUI */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E0CAAA17125AEDD300D60E3F /* Products */;
+					ProjectRef = E0CAAA16125AEDD300D60E3F /* libst.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* MicroUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E0CAAA1E125AEDD300D60E3F /* libst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libst.a;
+			remoteRef = E0CAAA1D125AEDD300D60E3F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0CAAA10125AED8000D60E3F /* main.cpp in Sources */,
+				E0CAAA11125AED8000D60E3F /* parseConfig.cpp in Sources */,
+				E0CAAA12125AED8000D60E3F /* UIBox.cpp in Sources */,
+				E0CAAA13125AED8000D60E3F /* UIButton.cpp in Sources */,
+				E0CAAA14125AED8000D60E3F /* UILabel.cpp in Sources */,
+				E0CAAA15125AED8000D60E3F /* UIWidget.cpp in Sources */,
+				A8165E3016276EF7008816DA /* UIDraggableBox.cpp in Sources */,
+				A8E81D7B1627AF8F00B0FF46 /* UILine.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				PRODUCT_NAME = MicroUI;
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				PRODUCT_NAME = MicroUI;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../libst/include;
+				LIBRARY_SEARCH_PATHS = (
+					/sw/lib,
+					/opt/local/lib,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lpng",
+					"-ljpeg",
+					"-lfreetype",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../libst/include;
+				LIBRARY_SEARCH_PATHS = (
+					/sw/lib,
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lpng",
+					"-ljpeg",
+					"-lfreetype",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "MicroUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "MicroUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
